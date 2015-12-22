@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9BDC2319-4C4E-4BFD-8DA6-138F4E0117F5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yun.Coupon</RootNamespace>
+    <AssemblyName>Yun.Coupon</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CouponDetail.cs" />
+    <Compile Include="CouponTemplate.cs" />
+    <Compile Include="CustomCoupon.cs" />
+    <Compile Include="CustomCouponOverview.cs" />
+    <Compile Include="DailyStatisticalData.cs" />
+    <Compile Include="ItemCouponSaleInfo.cs" />
+    <Compile Include="OrderInfo.cs" />
+    <Compile Include="Request\AddCouponTradeRequest.cs" />
+    <Compile Include="Request\AddCustomCouponRequest.cs" />
+    <Compile Include="Request\AddCouponTemplateRequest.cs" />
+    <Compile Include="Request\ConsumeCouponRequest.cs" />
+    <Compile Include="Request\CountCouponSaleInfoRequest.cs" />
+    <Compile Include="Request\DelayCouponRequest.cs" />
+    <Compile Include="Request\DeleteCustomCouponRequest.cs" />
+    <Compile Include="Request\DeleteTemplateRequest.cs" />
+    <Compile Include="Request\FindCouponSaleInfoRequest.cs" />
+    <Compile Include="Request\FindCustomCouponRequest.cs" />
+    <Compile Include="Request\GetBuyerCouponsRequest.cs" />
+    <Compile Include="Request\GetConsumeCountRequest.cs" />
+    <Compile Include="Request\GetConsumedDailyStatisticalDataRequest.cs" />
+    <Compile Include="Request\GetCouponRequest.cs" />
+    <Compile Include="Request\GetCouponTemplatesRequest.cs" />
+    <Compile Include="Request\GetCouponTemplateRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\GetCustomCouponOverviewRequest.cs" />
+    <Compile Include="Request\GetCustomCouponRequest.cs" />
+    <Compile Include="Request\GetMyVerifyCouponRequest.cs" />
+    <Compile Include="Request\GetSoldCouponsRequest.cs" />
+    <Compile Include="Request\InquiryCouponRequest.cs" />
+    <Compile Include="Request\ResendCouponRequest.cs" />
+    <Compile Include="Request\UpdateTemplateRequest.cs" />
+    <Compile Include="Response\CountCouponSaleInfoResponse.cs" />
+    <Compile Include="Response\CouponTemplateResponse.cs" />
+    <Compile Include="Response\FindCouponSaleInfoResponse.cs" />
+    <Compile Include="Response\FindCustomCouponResponse.cs" />
+    <Compile Include="Response\GetConsumedDailyStatisticalDataResponse.cs" />
+    <Compile Include="Response\GetCouponResponse.cs" />
+    <Compile Include="Response\GetCouponsResponse.cs" />
+    <Compile Include="Response\GetCustomCouponOverviewResponse.cs" />
+    <Compile Include="Response\GetCustomCouponResponse.cs" />
+    <Compile Include="Response\GetTemplateResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Yun\Yun.csproj">
+      <Project>{8d5f06ae-2707-496f-aca8-a3b8d00d2341}</Project>
+      <Name>Yun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF "$(ConfigurationName)"=="Release"  xcopy "$(TargetPath)" "$(SolutionDir)\libs\" /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC8D771C-96EB-4EE4-803D-66B1B9739BCA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yun.Item</RootNamespace>
+    <AssemblyName>Yun.Item</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ItemBookDomain.cs" />
+    <Compile Include="GoodsDetailPromotions.cs" />
+    <Compile Include="Request\AddItemBookRequest.cs" />
+    <Compile Include="Request\BatchUpdateItemCatRequest.cs" />
+    <Compile Include="Request\BatchUpdateShopItemCategoryRequest.cs" />
+    <Compile Include="Request\ChangeBookStatusRequest.cs" />
+    <Compile Include="Request\CopyItemToShopRequest.cs" />
+    <Compile Include="Request\DeleteItemBookRequest.cs" />
+    <Compile Include="Request\GetItemBookListRequest.cs" />
+    <Compile Include="Request\GetItemBookRequest.cs" />
+    <Compile Include="Request\GetItemCatRequest.cs" />
+    <Compile Include="Request\GetItemsByUserTypePromotionsRquest.cs" />
+    <Compile Include="Request\GetPrevsItemCatsRequest.cs" />
+    <Compile Include="Request\GetPrevsShopItemCategoryRequest.cs" />
+    <Compile Include="Request\GetShopItemCountRequest.cs" />
+    <Compile Include="Request\RealDelItemRequest.cs" />
+    <Compile Include="Request\RestoreItemRequest.cs" />
+    <Compile Include="Request\SearchLimitDiscountItemRequest.cs" />
+    <Compile Include="Request\UpdateItemCatRequest.cs" />
+    <Compile Include="Request\UpdateItemStateRequest.cs" />
+    <Compile Include="Request\UpdateShopItemCategoryDisplayRequest.cs" />
+    <Compile Include="Request\UpdatesortItemCategoryRequest.cs" />
+    <Compile Include="Response\GetCategoryPrevsResponse.cs" />
+    <Compile Include="Request\GetShopItemCategorysRequest.cs" />
+    <Compile Include="Response\CategorysResponse.cs" />
+    <Compile Include="Response\GetItemBookListResponse.cs" />
+    <Compile Include="Response\GetItemBookResponse.cs" />
+    <Compile Include="Response\GetItemCatResponse.cs" />
+    <Compile Include="Response\GetPrevsItemCatsResponse.cs" />
+    <Compile Include="ShopItemCategory.cs" />
+    <Compile Include="GoodsDetail.cs" />
+    <Compile Include="ItemAsk.cs" />
+    <Compile Include="ItemCat.cs" />
+    <Compile Include="ItemPropInDetail.cs" />
+    <Compile Include="ItemPropInCat.cs" />
+    <Compile Include="ItemPropName.cs" />
+    <Compile Include="ItemPropValue.cs" />
+    <Compile Include="ItemPropValueInCat.cs" />
+    <Compile Include="ItemShopCat.cs" />
+    <Compile Include="ItemSkuInDetail.cs" />
+    <Compile Include="ItemSpecInDetail.cs" />
+    <Compile Include="ItemSpecInCat.cs" />
+    <Compile Include="ItemSpecName.cs" />
+    <Compile Include="ItemSpecValue.cs" />
+    <Compile Include="ItemSpecValueInCat.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\AddItemCatsRequest.cs" />
+    <Compile Include="Request\AddItemPropNameRequest.cs" />
+    <Compile Include="Request\AddItemPropValueRequest.cs" />
+    <Compile Include="Request\AddItemRequest.cs" />
+    <Compile Include="Request\AddItemSpecNameRequest.cs" />
+    <Compile Include="Request\AddItemSpecValueRequest.cs" />
+    <Compile Include="Request\AddShopItemCategoryRequest.cs" />
+    <Compile Include="Request\AskItemQuestionRequest.cs" />
+    <Compile Include="Request\DeleteItemCatsRequest.cs" />
+    <Compile Include="Request\DeleteItemPropNameRequest.cs" />
+    <Compile Include="Request\DeleteItemPropValueRequest.cs" />
+    <Compile Include="Request\DeleteItemQuestionRequest.cs" />
+    <Compile Include="Request\DeleteItemRequest.cs" />
+    <Compile Include="Request\DeleteItemSpecNameRequest.cs" />
+    <Compile Include="Request\DeleteItemSpecValueRequest.cs" />
+    <Compile Include="Request\DeleteShopItemCategoryRequest.cs" />
+    <Compile Include="Request\GetAuthorizeCategoryRequest.cs" />
+    <Compile Include="Request\GetItemCatChainRequest.cs" />
+    <Compile Include="Request\GetItemCatDetailRequest.cs" />
+    <Compile Include="Request\GetItemCategorysRequest.cs" />
+    <Compile Include="Request\GetItemCatPropChildrenRequest.cs" />
+    <Compile Include="Request\GetItemPropNameRequest.cs" />
+    <Compile Include="Request\GetItemPropNamesRequest.cs" />
+    <Compile Include="Request\GetItemPropValueRequest.cs" />
+    <Compile Include="Request\GetItemPropValuesRequest.cs" />
+    <Compile Include="Request\GetItemRequest.cs" />
+    <Compile Include="Request\GetItemSpecNameRequest.cs" />
+    <Compile Include="Request\GetItemSpecnamesRequest.cs" />
+    <Compile Include="Request\GetItemSpecValueRequest.cs" />
+    <Compile Include="Request\GetItemSpecValuesRequest.cs" />
+    <Compile Include="Request\GetItemsRequest.cs" />
+    <Compile Include="Request\GetQuestionRequest.cs" />
+    <Compile Include="Request\GetQuestionsRequest.cs" />
+    <Compile Include="Request\GetShopItemCategoryRequest.cs" />
+    <Compile Include="Request\OffsheIfItemsRequest.cs" />
+    <Compile Include="Request\OnsheIfItemRequest.cs" />
+    <Compile Include="Request\ReplyQuestionRequest.cs" />
+    <Compile Include="Request\UpdateItemPropNameRequest.cs" />
+    <Compile Include="Request\UpdateItemPropValueRequest.cs" />
+    <Compile Include="Request\UpdateItemRequest.cs" />
+    <Compile Include="Request\UpdateItemSpecNameRequest.cs" />
+    <Compile Include="Request\UpdateItemSpecValueReuqst.cs" />
+    <Compile Include="Request\UpdateQuestionRequest.cs" />
+    <Compile Include="Request\UpdateShopItemCategoryRequest.cs" />
+    <Compile Include="Response\CategoryResponse.cs" />
+    <Compile Include="Response\GetItemsResponse.cs" />
+    <Compile Include="Response\ItemAskResponse.cs" />
+    <Compile Include="Response\ItemCatResponse.cs" />
+    <Compile Include="Response\ItemCatsResponse.cs" />
+    <Compile Include="Response\ItemPropNameResponse.cs" />
+    <Compile Include="Response\ItemPropNamesResponse.cs" />
+    <Compile Include="ItemPropValueInDetail.cs" />
+    <Compile Include="Response\ItemPropValueResponse.cs" />
+    <Compile Include="Response\ItemQuestionsResponse.cs" />
+    <Compile Include="Response\ItemResponse.cs" />
+    <Compile Include="Response\ItemSpecNameResponse.cs" />
+    <Compile Include="Response\PropNamesResponse.cs" />
+    <Compile Include="Response\PropValuesResponse.cs" />
+    <Compile Include="Response\SpecNamesResponse.cs" />
+    <Compile Include="Response\SpecValuesResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Yun\Yun.csproj">
+      <Project>{8d5f06ae-2707-496f-aca8-a3b8d00d2341}</Project>
+      <Name>Yun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF "$(ConfigurationName)"=="Release"  xcopy "$(TargetPath)" "$(SolutionDir)\libs\" /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

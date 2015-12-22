@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ADA0DDDF-AE84-4B13-8650-19E10FA56FD8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yun.Site</RootNamespace>
+    <AssemblyName>Yun.Site</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CityDomain.cs" />
+    <Compile Include="CustomBox.cs" />
+    <Compile Include="Elements.cs" />
+    <Compile Include="EmailSetting.cs" />
+    <Compile Include="ImageText.cs" />
+    <Compile Include="OperationRecord.cs" />
+    <Compile Include="Request\AddBrowsingDataRequest.cs" />
+    <Compile Include="Request\AddCityRequest.cs" />
+    <Compile Include="Request\AddSubscriptionRequest.cs" />
+    <Compile Include="Request\BatchUpdateCitySortRequest.cs" />
+    <Compile Include="Request\BatchUpdateElementSortRequest.cs" />
+    <Compile Include="Request\DeleteCityRequest.cs" />
+    <Compile Include="Request\DeleteSubscriptionRequest.cs" />
+    <Compile Include="Request\GetCitiesRequest.cs" />
+    <Compile Include="Request\GetCityRequest.cs" />
+    <Compile Include="Request\GetEmailSettingRequest.cs" />
+    <Compile Include="Request\GetOperationRecordRequest.cs" />
+    <Compile Include="Request\GetPageModuleRequest.cs" />
+    <Compile Include="Request\GetSubscriptionListRequest.cs" />
+    <Compile Include="Request\GetTextsSiteElementRequest.cs" />
+    <Compile Include="Request\GetWebSettingRequest.cs" />
+    <Compile Include="Request\IsExistSubscriptionRequest.cs" />
+    <Compile Include="Request\ResetAllDataRequest.cs" />
+    <Compile Include="Request\SendEmailRequest.cs" />
+    <Compile Include="Request\SetEmailSettingRequest.cs" />
+    <Compile Include="Request\SetWebSettingRequest.cs" />
+    <Compile Include="Request\UpdateCityRequest.cs" />
+    <Compile Include="Response\GetCitiesResponse.cs" />
+    <Compile Include="Response\GetCityResponse.cs" />
+    <Compile Include="Response\GetEmailSettingResponse.cs" />
+    <Compile Include="Response\GetPageModuleResponse.cs" />
+    <Compile Include="Response\GetOperationRecordsResponse.cs" />
+    <Compile Include="Response\GetSubscriptionListResponse.cs" />
+    <Compile Include="Response\GetWebSettingResponse.cs" />
+    <Compile Include="Response\ModuleTypesResponse.cs" />
+    <Compile Include="SiteModule.cs" />
+    <Compile Include="MultipleInfo.cs" />
+    <Compile Include="Response\MultipleInfosResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\AddSiteElementAdditionalRequest.cs" />
+    <Compile Include="Request\AddSiteElementCustomBoxRequest.cs" />
+    <Compile Include="Request\AddSiteElementImageTextRequest.cs" />
+    <Compile Include="Request\AddSiteElementMultipeinfoRequest.cs" />
+    <Compile Include="Request\AddSiteElementTextRequest.cs" />
+    <Compile Include="Request\AddSitePageModuleRequest.cs" />
+    <Compile Include="Request\AddSitePageRequest.cs" />
+    <Compile Include="Request\DeleteSiteElementRequest.cs" />
+    <Compile Include="Request\DeleteSitePageModuleRequest.cs" />
+    <Compile Include="Request\DeleteSitePageRequest.cs" />
+    <Compile Include="Request\GetCustomSiteElementRequest.cs" />
+    <Compile Include="Request\GetCustomsSiteElementRequest.cs" />
+    <Compile Include="Request\GetImageTextSiteElementRequest.cs" />
+    <Compile Include="Request\GetImageTextsSiteElementRequest.cs" />
+    <Compile Include="Request\GetMultipleInfoSiteElementRequest.cs" />
+    <Compile Include="Request\GetMultipleInfosSiteElementRequest.cs" />
+    <Compile Include="Request\GetSiteElementsRequest.cs" />
+    <Compile Include="Request\GetSiteModulesTypeRequest.cs" />
+    <Compile Include="Request\GetSitePageModulesRequest.cs" />
+    <Compile Include="Request\GetSitePagesRequest.cs" />
+    <Compile Include="Request\GetTextSiteElementRequest.cs" />
+    <Compile Include="Request\UpdateDisplaySiteElementRequest.cs" />
+    <Compile Include="Request\UpdateSiteElementCustomboxRequest.cs" />
+    <Compile Include="Request\UpdateSiteElementImageTextRequest.cs" />
+    <Compile Include="Request\UpdateSiteElementMultipeinfoRequest.cs" />
+    <Compile Include="Request\UpdateSiteElementTextRequest.cs" />
+    <Compile Include="Request\UpdateSitePageModuleRequest.cs" />
+    <Compile Include="Request\UpdateSitePageRequest.cs" />
+    <Compile Include="Request\UpdateSortSiteElementRequest.cs" />
+    <Compile Include="Response\CustomBoxesResponse.cs" />
+    <Compile Include="Response\CustomBoxResponse.cs" />
+    <Compile Include="Response\ElementsResponse.cs" />
+    <Compile Include="Response\ImageTextResponse.cs" />
+    <Compile Include="Response\ImageTextsResponse.cs" />
+    <Compile Include="Response\GetPageModulesResponse.cs" />
+    <Compile Include="Response\MultipleInfoResponse.cs" />
+    <Compile Include="Response\PagesResponse.cs" />
+    <Compile Include="Response\TextResponse.cs" />
+    <Compile Include="Response\TextsResponse.cs" />
+    <Compile Include="OnlyText.cs" />
+    <Compile Include="SitePage.cs" />
+    <Compile Include="SubscriptionModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Yun\Yun.csproj">
+      <Project>{8d5f06ae-2707-496f-aca8-a3b8d00d2341}</Project>
+      <Name>Yun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF "$(ConfigurationName)"=="Release"  xcopy "$(TargetPath)" "$(SolutionDir)\libs\" /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

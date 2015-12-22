@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0E633103-D16D-44D9-8D4A-F18361E968D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yun.Trade</RootNamespace>
+    <AssemblyName>Yun.Trade</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuyItemBatch.cs" />
+    <Compile Include="CartDetail.cs" />
+    <Compile Include="CartItemDetail.cs" />
+    <Compile Include="Comment.cs" />
+    <Compile Include="DynamicRatingJson.cs" />
+    <Compile Include="ItemPromotionInShoppingCart.cs" />
+    <Compile Include="ItemTradeStatistics.cs" />
+    <Compile Include="MemoModel.cs" />
+    <Compile Include="MonthTradeStatistics.cs" />
+    <Compile Include="OnlinePaymentInfo.cs" />
+    <Compile Include="PaymentInfo.cs" />
+    <Compile Include="PromotionsInOrder.cs" />
+    <Compile Include="RefundDetail.cs" />
+    <Compile Include="RefundHistory.cs" />
+    <Compile Include="Request\BatchConfirmTradeRequest.cs" />
+    <Compile Include="Request\BatchSaveMemoTradeRequest.cs" />
+    <Compile Include="Request\ChangeRefundStatusRequest.cs" />
+    <Compile Include="Request\CompleteNoPaidTradeRequest.cs" />
+    <Compile Include="Request\ConfirmTradeRequest.cs" />
+    <Compile Include="Request\CreateRefundRequest.cs" />
+    <Compile Include="Request\DeliveryTradeRequest.cs" />
+    <Compile Include="Request\ExecuteTradeStatisticsRequest.cs" />
+    <Compile Include="Request\GetCartCountRequest.cs" />
+    <Compile Include="Request\GetItemTradeStatisticsReportRequest.cs" />
+    <Compile Include="Response\GetItemTradeStatisticsReportResponse.cs" />
+    <Compile Include="Request\GetMonthTradeStatisticsRequest.cs" />
+    <Compile Include="Request\GetTradeSettingRequest.cs" />
+    <Compile Include="Request\GetIntegralRequest.cs" />
+    <Compile Include="Request\GetMyRefundsRequest.cs" />
+    <Compile Include="Request\GetMyTradeCountRequest.cs" />
+    <Compile Include="Request\GetRefundDetailRequest.cs" />
+    <Compile Include="Request\GetSellerRefundsRequest.cs" />
+    <Compile Include="Request\GetSellerTradeCountResquest.cs" />
+    <Compile Include="Request\GetTradesSoldRequest.cs" />
+    <Compile Include="IntegralDomain.cs" />
+    <Compile Include="Request\GetTradeStatisticsRequest.cs" />
+    <Compile Include="Request\ModifyDeliveryInfoRequest.cs" />
+    <Compile Include="Request\ModifyRefundRequest.cs" />
+    <Compile Include="Request\PayCompleteNotifyRequest.cs" />
+    <Compile Include="Request\PutRecycleBinRequest.cs" />
+    <Compile Include="Request\SaveSystemMemoRequest.cs" />
+    <Compile Include="Request\SetTradeSettingRequest.cs" />
+    <Compile Include="Request\SetIntegralRequest.cs" />
+    <Compile Include="Response\AddmultiExpressTradeResponse.cs" />
+    <Compile Include="Response\CartsResponse.cs" />
+    <Compile Include="EvaluateRecord.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\AddExpressTradeRequest.cs" />
+    <Compile Include="Request\AddMultiexpressTradeRequest.cs" />
+    <Compile Include="Request\AddToCartRequest.cs" />
+    <Compile Include="Request\AddTradeRateRequest.cs" />
+    <Compile Include="Request\CloseTradeRequest.cs" />
+    <Compile Include="Request\DelayReceiveTimeRequest.cs" />
+    <Compile Include="Request\GenerateCombinedPayTradeRequest.cs" />
+    <Compile Include="Request\GeneratePayTradeRequest.cs" />
+    <Compile Include="Request\GetEvaluateRecordRequest.cs" />
+    <Compile Include="Request\GetMyTradesRequest.cs" />
+    <Compile Include="Request\GetShoppingCartsRequest.cs" />
+    <Compile Include="Request\GetTradeDeductionRequest.cs" />
+    <Compile Include="Request\GetTradeRecordRequest.cs" />
+    <Compile Include="Request\GetTradeRequest.cs" />
+    <Compile Include="Request\ModifyPostFareRequest.cs" />
+    <Compile Include="Request\ModifyPriceRequest.cs" />
+    <Compile Include="Request\RemoveCartRequest.cs" />
+    <Compile Include="Request\SaveMemoRequest.cs" />
+    <Compile Include="Request\SetTradeDeductionRequest.cs" />
+    <Compile Include="Request\UpdateCartRequest.cs" />
+    <Compile Include="Request\UpdateMobileRequest.cs" />
+    <Compile Include="Request\UpdateShippingAddressRequest.cs" />
+    <Compile Include="Response\CreateRefundResponse.cs" />
+    <Compile Include="Response\EvaluateRecordResponse.cs" />
+    <Compile Include="Response\GetConfirmReceiptSettingResponse.cs" />
+    <Compile Include="Response\GetIntegralResponse.cs" />
+    <Compile Include="Response\GetMonthTradeStatisticsResponse.cs" />
+    <Compile Include="Response\GetRefundDetailResponse.cs" />
+    <Compile Include="Response\GetRefundsResponse.cs" />
+    <Compile Include="Response\GetTradeCountResponse.cs" />
+    <Compile Include="Response\GetDailyTradeStatisticsResponse.cs" />
+    <Compile Include="Response\GetTradeStringResponse.cs" />
+    <Compile Include="Response\NormalTradeResponse.cs" />
+    <Compile Include="BuyItem.cs" />
+    <Compile Include="SettingContent.cs" />
+    <Compile Include="ShopPromotionInShoppingCart.cs" />
+    <Compile Include="SnapshotOrder.cs" />
+    <Compile Include="Response\TradesResponse.cs" />
+    <Compile Include="Response\TradeRecordResponse.cs" />
+    <Compile Include="TradeCount.cs" />
+    <Compile Include="TradeRecord.cs" />
+    <Compile Include="SnapshotTrade.cs" />
+    <Compile Include="TradeStatistics.cs" />
+    <Compile Include="TradeStatisticsSummary.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Yun\Yun.csproj">
+      <Project>{8d5f06ae-2707-496f-aca8-a3b8d00d2341}</Project>
+      <Name>Yun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF "$(ConfigurationName)"=="Release"  xcopy "$(TargetPath)" "$(SolutionDir)\libs\" /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

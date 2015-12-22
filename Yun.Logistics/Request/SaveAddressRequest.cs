@@ -1,0 +1,87 @@
+﻿using System.Collections.Generic;
+using Yun.Interface;
+using Yun.Response;
+using Yun.Util;
+
+namespace Yun.Logistics.Request
+{
+    public class SaveAddressRequest : ITopRequest<BoolResultResponse>
+    {
+        public int Id { get; set; }
+
+        /// <summary>
+        /// 省
+        /// </summary>
+        public string Province { get; set; }
+        /// <summary>
+        /// 市
+        /// </summary>
+        public string Area { get; set; }
+        /// <summary>
+        /// 区
+        /// </summary>
+        public string City { get; set; }
+        /// <summary>
+        /// 街道
+        /// </summary>
+        public string Street { get; set; }
+        /// <summary>
+        /// 邮编
+        /// </summary>
+        public string Zipcode { get; set; }
+        /// <summary>
+        /// 收件人姓名
+        /// </summary>
+        public string Name { get; set; }
+        /// <summary>
+        /// 联系电话
+        /// </summary>
+        public string Mobile { get; set; }
+        /// <summary>
+        /// 是否默认地址，1或者0
+        /// </summary>
+        public int IsDefault { get; set; }
+
+        /// <summary>
+        /// 地址类型，默认为0
+        /// </summary>
+        public int AddressType { get; set; }
+
+
+        /// <summary>
+        /// 地址详情
+        /// </summary>
+        public string Detail { get; set; }
+
+        public string GetApiName()
+        {
+            return "chenggou.user.address.save";
+        }
+
+        public IDictionary<string, string> GetParameters()
+        {
+            var parameters = new YunDictionary
+            {
+                {"id", Id},
+                {"province", Province},
+                {"area", Area},
+                {"city", City},
+                {"street", Street},
+                {"zipcode", Zipcode},
+                {"name", Name},
+                {"mobile", Mobile},
+                {"isdefault", IsDefault},
+                {"addresstype", AddressType},
+                {"detail", Detail}
+            };
+            return parameters;
+        }
+
+        public void Validate()
+        {
+            RequestValidator.ValidateRequired("mame", Name);
+            RequestValidator.ValidateRequired("mobile", Mobile);
+            RequestValidator.ValidateRequired("street", Street);
+        }
+    }
+}

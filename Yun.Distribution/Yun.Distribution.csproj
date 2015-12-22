@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FA1BE73-70CA-419D-A77E-EFBC7059B117}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yun.Distribution</RootNamespace>
+    <AssemblyName>Yun.Distribution</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DistributionHistory.cs" />
+    <Compile Include="DistributionLevelDomain.cs" />
+    <Compile Include="DistributionTemplate.cs" />
+    <Compile Include="DistributorPerformance.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\AddDistributionLevelRequest.cs" />
+    <Compile Include="Request\AddDistributionTemplateRequest.cs" />
+    <Compile Include="Request\AuditCooperationRequest.cs" />
+    <Compile Include="Request\CreateCooperationRequest.cs" />
+    <Compile Include="Request\DeleteDistributionLevelRequest.cs" />
+    <Compile Include="Request\DeleteDistributionTemplateRequest.cs" />
+    <Compile Include="Request\GetCooperationRequest.cs" />
+    <Compile Include="Request\GetDistributionLevelListRequest.cs" />
+    <Compile Include="Request\GetDistributionLevelRequest.cs" />
+    <Compile Include="Request\GetDistributionTemplateListRequest.cs" />
+    <Compile Include="Request\GetDistributionTemplateRequest.cs" />
+    <Compile Include="Request\GetDistributorsHistoryRequest.cs" />
+    <Compile Include="Request\GetMySiblingDistributorsRequest.cs" />
+    <Compile Include="Request\GetUserDistributionPerformanceRequest.cs" />
+    <Compile Include="Request\RemoveCooperationRequest.cs" />
+    <Compile Include="Request\SaveCooperationMemoRequest.cs" />
+    <Compile Include="Request\UpdateDistributionLevelRequest.cs" />
+    <Compile Include="Request\UpdateDistributionTemplateRequest.cs" />
+    <Compile Include="Response\GetDistributionLevelListResponse.cs" />
+    <Compile Include="Response\GetDistributionLevelResponse.cs" />
+    <Compile Include="Response\GetDistributionTemplateListResponse.cs" />
+    <Compile Include="Response\GetDistributionTemplateResponse.cs" />
+    <Compile Include="Response\GetDistributorsHistoryResponse.cs" />
+    <Compile Include="Response\GetMySiblingDistributorsResponse.cs" />
+    <Compile Include="Response\GetUserDistributionPerformanceResponse.cs" />
+    <Compile Include="DistributionUser.cs" />
+    <Compile Include="Response\GetUsersInfoResponse.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Yun\Yun.csproj">
+      <Project>{8d5f06ae-2707-496f-aca8-a3b8d00d2341}</Project>
+      <Name>Yun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF "$(ConfigurationName)"=="Release"  xcopy "$(TargetPath)" "$(SolutionDir)\libs\" /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

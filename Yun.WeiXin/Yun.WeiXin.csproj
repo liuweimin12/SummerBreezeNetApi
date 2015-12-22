@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{79EE9A9F-543D-4EEF-BAA6-1EF68F733A34}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yun.WeiXin</RootNamespace>
+    <AssemblyName>Yun.WeiXin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountDomain.cs" />
+    <Compile Include="CustomApiReplyModel.cs" />
+    <Compile Include="ImageJsonModel.cs" />
+    <Compile Include="ImageReplyDomain.cs" />
+    <Compile Include="ImageTextReplyModel.cs" />
+    <Compile Include="KeywordType.cs" />
+    <Compile Include="MusicJsonModel.cs" />
+    <Compile Include="MusicReplyModel.cs" />
+    <Compile Include="NewsJsonModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\AddAccountRequest.cs" />
+    <Compile Include="Request\AddWxTextRequest.cs" />
+    <Compile Include="Request\AddWxImageRequest.cs" />
+    <Compile Include="Request\AddModuleRequest.cs" />
+    <Compile Include="Request\AddWxMusicReplyRequest.cs" />
+    <Compile Include="Request\AddWxNewsReplyRequest.cs" />
+    <Compile Include="Request\AddCustomApiRequest.cs" />
+    <Compile Include="Request\AddWxVideoRequest.cs" />
+    <Compile Include="Request\AddWxVoiceRequest.cs" />
+    <Compile Include="Request\DeleteAccountRequest.cs" />
+    <Compile Include="Request\DeleteWxTextRequest.cs" />
+    <Compile Include="Request\DeleteWxImageRequest.cs" />
+    <Compile Include="Request\DeleteWxMusicRequest.cs" />
+    <Compile Include="Request\DeleteWxNewsRequest.cs" />
+    <Compile Include="Request\DeleteCustomApiRequest.cs" />
+    <Compile Include="Request\DeleteWxVideoRequest.cs" />
+    <Compile Include="Request\DeleteWxVoiceRequest.cs" />
+    <Compile Include="Request\GetAccountRequest.cs" />
+    <Compile Include="Request\GetAccountsRequest.cs" />
+    <Compile Include="Request\GetBasicTextReplyRequest.cs" />
+    <Compile Include="Request\GetBasicTextRulesRequest.cs" />
+    <Compile Include="Request\GetImageReplyRequest.cs" />
+    <Compile Include="Request\GetImageRulesRequest.cs" />
+    <Compile Include="Request\GetMusicReplyRequest.cs" />
+    <Compile Include="Request\GetMusicRulesRequest.cs" />
+    <Compile Include="Request\GetNewsReplyRequest.cs" />
+    <Compile Include="Request\GetNewsRulesRequest.cs" />
+    <Compile Include="Request\GetUserApiRepliesRequest.cs" />
+    <Compile Include="Request\GetUserApiRulesRequest.cs" />
+    <Compile Include="Request\GetVideoReplyRequest.cs" />
+    <Compile Include="Request\GetVideoRulesRequest.cs" />
+    <Compile Include="Request\GetVoiceReplyRequest.cs" />
+    <Compile Include="Request\GetVoiceRulesRequest.cs" />
+    <Compile Include="Request\UpdateAccountRequest.cs" />
+    <Compile Include="Request\UpdateWxTextRequest.cs" />
+    <Compile Include="Request\UpdateWxImageRequest.cs" />
+    <Compile Include="Request\UpdateWxMusicRequest.cs" />
+    <Compile Include="Request\UpdateWxNewsRequest.cs" />
+    <Compile Include="Request\UpdateCustomApiRequest.cs" />
+    <Compile Include="Request\UpdateWxVideoRequest.cs" />
+    <Compile Include="Request\UpdateWxVoiceRequest.cs" />
+    <Compile Include="Request\UploadMediaRequest.cs" />
+    <Compile Include="Response\GetAccountResponse.cs" />
+    <Compile Include="Response\GetAccountsResponse.cs" />
+    <Compile Include="Response\GetImageResponse.cs" />
+    <Compile Include="Response\GetImageRulesResponse.cs" />
+    <Compile Include="Response\GetMediaIdResponse.cs" />
+    <Compile Include="Response\GetBasicRepliesResponse.cs" />
+    <Compile Include="Response\GetBasicRulesResponse.cs" />
+    <Compile Include="Response\GetMusicRepliesResponse.cs" />
+    <Compile Include="Response\GetMusicRulesResponse.cs" />
+    <Compile Include="Response\GetNewsRepliyResponse.cs" />
+    <Compile Include="Response\GetNewsRulesResponse.cs" />
+    <Compile Include="Response\GetUserApiRepliesResponse.cs" />
+    <Compile Include="Response\GetUserApiRulesResponse.cs" />
+    <Compile Include="Response\GetVideoRepliesResponse.cs" />
+    <Compile Include="Response\GetVideoRulesResponse.cs" />
+    <Compile Include="Response\GetVoiceRepliesResponse.cs" />
+    <Compile Include="Response\GetVoiceRulesResponse.cs" />
+    <Compile Include="RuleDetail.cs" />
+    <Compile Include="RuleDomain.cs" />
+    <Compile Include="TextReplyDomain.cs" />
+    <Compile Include="TriggerTypeEnum.cs" />
+    <Compile Include="UploadResult.cs" />
+    <Compile Include="VideoJsonModel.cs" />
+    <Compile Include="VideoReplyModel.cs" />
+    <Compile Include="VoiceJsonModel.cs" />
+    <Compile Include="VoiceReplyModel.cs" />
+    <Compile Include="WxTools.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Yun\Yun.csproj">
+      <Project>{8d5f06ae-2707-496f-aca8-a3b8d00d2341}</Project>
+      <Name>Yun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF "$(ConfigurationName)"=="Release"  xcopy "$(TargetPath)" "$(SolutionDir)\libs\" /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

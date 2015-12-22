@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D5F06AE-2707-496F-ACA8-A3B8D00D2341}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yun</RootNamespace>
+    <AssemblyName>Yun</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\ICSharpCode.SharpZipLib.dll.0.85.4.369\lib\net20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Jayrock.Json">
+      <HintPath>..\packages\jayrock-json.0.9.16530.1\lib\net40\Jayrock.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DefaultYunClient.cs" />
+    <Compile Include="DefaultYunLogger.cs" />
+    <Compile Include="Domain\AlbumDetail.cs" />
+    <Compile Include="Domain\CustomerService.cs" />
+    <Compile Include="Domain\DynamicRatings.cs" />
+    <Compile Include="Domain\GiftJson.cs" />
+    <Compile Include="Domain\SeoInfo.cs" />
+    <Compile Include="Domain\StringKeyValuePair.cs" />
+    <Compile Include="Domain\TradeGiftJson.cs" />
+    <Compile Include="Domain\UserCredit.cs" />
+    <Compile Include="Domain\LongKeyValuePair.cs" />
+    <Compile Include="Domain\YunKeyValuePair.cs" />
+    <Compile Include="Interface\IYunClient.cs" />
+    <Compile Include="Interface\IYunLogger.cs" />
+    <Compile Include="Interface\IYunRequest.cs" />
+    <Compile Include="Interface\IYunUploadRequest.cs" />
+    <Compile Include="Parser\ITopParser.cs" />
+    <Compile Include="Parser\ITopReader.cs" />
+    <Compile Include="Parser\TopAttribute.cs" />
+    <Compile Include="Parser\TopJsonParser.cs" />
+    <Compile Include="Parser\TopJsonReader.cs" />
+    <Compile Include="Parser\TopXmlParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Response\BoolResultResponse.cs" />
+    <Compile Include="Response\StringResultResponse.cs" />
+    <Compile Include="Response\YunResponse.cs" />
+    <Compile Include="Response\IntResultResponse.cs" />
+    <Compile Include="Response\IPageResponse.cs" />
+    <Compile Include="Response\IUploadInEditState.cs" />
+    <Compile Include="Util\JSONSerializer.cs" />
+    <Compile Include="YunDictionary.cs" />
+    <Compile Include="YunException.cs" />
+    <Compile Include="YunObject.cs" />
+    <Compile Include="Util\AtsUtils.cs" />
+    <Compile Include="Util\CountDownLatch.cs" />
+    <Compile Include="Util\DateConvert.cs" />
+    <Compile Include="Util\FileItem.cs" />
+    <Compile Include="Util\RequestValidator.cs" />
+    <Compile Include="Util\TopContext.cs" />
+    <Compile Include="Util\TopUtils.cs" />
+    <Compile Include="Util\WebUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF "$(ConfigurationName)"=="Release"  xcopy "$(TargetPath)" "$(SolutionDir)\libs\" /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

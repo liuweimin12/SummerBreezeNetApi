@@ -1,0 +1,77 @@
+﻿using System.Collections.Generic;
+using Yun.Interface;
+using Yun.Response;
+using Yun.Util;
+
+namespace Yun.Archive.Request
+{
+    public class AddCategoryRequest : ITopUploadRequest<IntResultResponse>
+    {
+        public string GetApiName()
+        {
+            return "chenggou.archive.category.add";
+        }
+
+        /// <summary>
+        /// 分类名
+        /// </summary>
+        public string Name { get; set; }
+
+        /// <summary>
+        /// 是否显示
+        /// </summary>
+        public bool Display { get; set; }
+
+        /// <summary>
+        /// 排序
+        /// </summary>
+        public int Sort { get; set; }
+
+        /// <summary>
+        /// 父ID
+        /// </summary>
+        public int ParentId { get; set; }
+
+        /// <summary>
+        /// 文章的缩略图
+        /// </summary>
+        public FileItem Image { get; set; }
+
+
+        /// <summary>
+        /// 缩略图
+        /// </summary>
+        public string Thumb { get; set; }
+
+
+        /// <summary>
+        /// 描述
+        /// </summary>
+        public string Description { get; set; }
+
+        public IDictionary<string, string> GetParameters()
+        {
+            var parameters = new YunDictionary
+            {
+                {"name", Name},
+                {"parentid", ParentId},
+                {"sort", Sort},
+                {"display", Display},
+                {"description", Description},
+                {"thumb", Thumb}
+            };
+            return parameters;
+        }
+
+        public void Validate()
+        {
+            RequestValidator.ValidateRequired("name", Name);
+            RequestValidator.ValidateMaxLength("name", Name, 200);
+        }
+
+        public IDictionary<string, FileItem> GetFileParameters()
+        {
+            return new Dictionary<string, FileItem> { { "Image", Image } };
+        }
+    }
+}
