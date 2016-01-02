@@ -91,5 +91,11 @@ namespace Yun.WeiXin
         /// </summary>
         [XmlElement("subscribe_url")]
         public string SubscribeUrl { get; set; }
+
+        /// <summary>
+        /// 描述
+        /// </summary>
+        [XmlElement("description")]
+        public string Description { get; set; }
     }
 }
