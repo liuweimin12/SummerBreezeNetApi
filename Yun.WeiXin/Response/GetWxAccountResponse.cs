@@ -7,7 +7,7 @@ using Yun.Response;
 
 namespace Yun.WeiXin.Response
 {
-    public class GetAccountResponse : YunResponse
+    public class GetWxAccountResponse : YunResponse
     {
         [XmlElement("account")]
         public AccountDomain Account { get; set; }

@@ -10,7 +10,7 @@ namespace Yun.WeiXin.Request
     /// <summary>
     /// 获取所有微信账号
     /// </summary>
-    public class GetAccountsRequest:ITopRequest<GetAccountsResponse>
+    public class GetWxAccountsRequest:ITopRequest<GetWxAccountsResponse>
     {
         /// <summary>
         /// 店铺ID

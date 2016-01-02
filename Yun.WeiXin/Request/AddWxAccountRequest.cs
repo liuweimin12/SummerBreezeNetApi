@@ -5,7 +5,7 @@ using Yun.Util;
 
 namespace Yun.WeiXin.Request
 {
-   public class AddAccountRequest:ITopRequest<IntResultResponse>
+   public class AddWxAccountRequest:ITopRequest<IntResultResponse>
    {
        /// <summary>
        /// 公众号名称

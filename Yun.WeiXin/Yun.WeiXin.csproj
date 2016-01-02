@@ -45,7 +45,7 @@
     <Compile Include="MusicReplyModel.cs" />
     <Compile Include="NewsJsonModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Request\AddAccountRequest.cs" />
+    <Compile Include="Request\AddWxAccountRequest.cs" />
     <Compile Include="Request\AddWxTextRequest.cs" />
     <Compile Include="Request\AddWxImageRequest.cs" />
     <Compile Include="Request\AddModuleRequest.cs" />
@@ -62,8 +62,8 @@
     <Compile Include="Request\DeleteCustomApiRequest.cs" />
     <Compile Include="Request\DeleteWxVideoRequest.cs" />
     <Compile Include="Request\DeleteWxVoiceRequest.cs" />
-    <Compile Include="Request\GetAccountRequest.cs" />
-    <Compile Include="Request\GetAccountsRequest.cs" />
+    <Compile Include="Request\GetWxAccountRequest.cs" />
+    <Compile Include="Request\GetWxAccountsRequest.cs" />
     <Compile Include="Request\GetBasicTextReplyRequest.cs" />
     <Compile Include="Request\GetBasicTextRulesRequest.cs" />
     <Compile Include="Request\GetImageReplyRequest.cs" />
@@ -80,7 +80,7 @@
     <Compile Include="Request\GetVoiceReplyRequest.cs" />
     <Compile Include="Request\GetVoiceRulesRequest.cs" />
     <Compile Include="Request\SetMsgReplyRuleRequest.cs" />
-    <Compile Include="Request\UpdateAccountRequest.cs" />
+    <Compile Include="Request\UpdateWxAccountRequest.cs" />
     <Compile Include="Request\UpdateWxTextRequest.cs" />
     <Compile Include="Request\UpdateWxImageRequest.cs" />
     <Compile Include="Request\UpdateWxMusicRequest.cs" />
@@ -89,8 +89,8 @@
     <Compile Include="Request\UpdateWxVideoRequest.cs" />
     <Compile Include="Request\UpdateWxVoiceRequest.cs" />
     <Compile Include="Request\UploadMediaRequest.cs" />
-    <Compile Include="Response\GetAccountResponse.cs" />
-    <Compile Include="Response\GetAccountsResponse.cs" />
+    <Compile Include="Response\GetWxAccountResponse.cs" />
+    <Compile Include="Response\GetWxAccountsResponse.cs" />
     <Compile Include="Response\GetDefaultReplyRuleResponse.cs" />
     <Compile Include="Response\GetImageResponse.cs" />
     <Compile Include="Response\GetImageRulesResponse.cs" />

@@ -4,7 +4,7 @@ using Yun.Response;
 
 namespace Yun.WeiXin.Response
 {
-    public class GetAccountsResponse:YunResponse
+    public class GetWxAccountsResponse:YunResponse
     {
         [XmlArray("accounts")]
         [XmlArrayItem("account")]

@@ -11,7 +11,7 @@ namespace Yun.WeiXin.Request
     /// <summary>
     /// 获取微信账号
     /// </summary>
-    public class GetAccountRequest:ITopRequest<GetAccountResponse>
+    public class GetWxAccountRequest:ITopRequest<GetWxAccountResponse>
     {
         /// <summary>
         /// 账号ID

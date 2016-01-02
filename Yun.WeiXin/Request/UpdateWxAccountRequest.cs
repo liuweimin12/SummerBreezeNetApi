@@ -11,7 +11,7 @@ namespace Yun.WeiXin.Request
     /// <summary>
     /// 更新微信账号
     /// </summary>
-    public class UpdateAccountRequest:ITopRequest<BoolResultResponse>
+    public class UpdateWxAccountRequest:ITopRequest<BoolResultResponse>
     {
         /// <summary>
         /// 公众号名称
