@@ -68,6 +68,7 @@
     <Compile Include="Request\GetBasicTextRulesRequest.cs" />
     <Compile Include="Request\GetImageReplyRequest.cs" />
     <Compile Include="Request\GetImageRulesRequest.cs" />
+    <Compile Include="Request\GetMsgReplyRuleRequest.cs" />
     <Compile Include="Request\GetMusicReplyRequest.cs" />
     <Compile Include="Request\GetMusicRulesRequest.cs" />
     <Compile Include="Request\GetNewsReplyRequest.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Request\GetVideoRulesRequest.cs" />
     <Compile Include="Request\GetVoiceReplyRequest.cs" />
     <Compile Include="Request\GetVoiceRulesRequest.cs" />
+    <Compile Include="Request\SetMsgReplyRuleRequest.cs" />
     <Compile Include="Request\UpdateAccountRequest.cs" />
     <Compile Include="Request\UpdateWxTextRequest.cs" />
     <Compile Include="Request\UpdateWxImageRequest.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="Request\UploadMediaRequest.cs" />
     <Compile Include="Response\GetAccountResponse.cs" />
     <Compile Include="Response\GetAccountsResponse.cs" />
+    <Compile Include="Response\GetDefaultReplyRuleResponse.cs" />
     <Compile Include="Response\GetImageResponse.cs" />
     <Compile Include="Response\GetImageRulesResponse.cs" />
     <Compile Include="Response\GetMediaIdResponse.cs" />
