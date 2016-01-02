@@ -57,6 +57,11 @@ namespace Yun.WeiXin.Request
         /// </summary>
         public string EncodingAESKey { get; set; }
 
+        /// <summary>
+        /// Token
+        /// </summary>
+        public string Token { get; set; }
+
         public string GetApiName()
        {
            return "chenggou.weixin.account.add";
@@ -75,7 +80,8 @@ namespace Yun.WeiXin.Request
                 {"appsecret",AppSecret},
                 {"qrcode",Qrcode},
                 {"avatar",Avatar},
-                {"encodingaeskey",EncodingAESKey }
+                {"encodingaeskey",EncodingAESKey },
+                {"token",Token},
             };
            return parameters;
        }
