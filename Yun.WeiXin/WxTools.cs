@@ -5,13 +5,13 @@ namespace Yun.WeiXin
 {
     public class WxTools
     {
-        public static string TryGetKeywords(IList<KeyValuePair<TriggerTypeEnum, string>> keywords)
+        public static List<TriggerTypeJson> TryGetKeywords(IList<KeyValuePair<TriggerTypeEnum, string>> keywords)
         {
             if (keywords == null || !keywords.Any()) return null;
 
-            var r = keywords.Aggregate("", (current, pair) => current + string.Format("{0}^{1},", pair.Value, pair.Key));
-
-            return r.Trim(',');
+            return
+                keywords.Select(m => new TriggerTypeJson {keyword = m.Value, trigger_type = m.Key.ToString().ToLower()})
+                    .ToList();
         }
     }
 }

@@ -111,6 +111,7 @@
     <Compile Include="RuleDomain.cs" />
     <Compile Include="TextReplyDomain.cs" />
     <Compile Include="TriggerTypeEnum.cs" />
+    <Compile Include="TriggerTypeJson.cs" />
     <Compile Include="UploadResult.cs" />
     <Compile Include="VideoJsonModel.cs" />
     <Compile Include="VideoReplyModel.cs" />
