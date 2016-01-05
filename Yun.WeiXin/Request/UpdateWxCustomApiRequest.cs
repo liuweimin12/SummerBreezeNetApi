@@ -11,7 +11,7 @@ namespace Yun.WeiXin.Request
     /// <summary>
     /// 更新自定义回复规则
     /// </summary>
-    public class UpdateCustomApiRequest:ITopRequest<BoolResultResponse>
+    public class UpdateWxCustomApiRequest:ITopRequest<BoolResultResponse>
     {
         /// <summary>
         /// 规则名字

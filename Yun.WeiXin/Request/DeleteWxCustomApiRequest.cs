@@ -4,37 +4,35 @@ using System.Linq;
 using System.Text;
 using Yun.Interface;
 using Yun.Response;
-using Yun.Util;
 
 namespace Yun.WeiXin.Request
 {
     /// <summary>
-    /// 删除微信账号
+    /// 删除自定义回复规则
     /// </summary>
-    public class DeleteAccountRequest:ITopRequest<BoolResultResponse>
+    public class DeleteWxCustomApiRequest:ITopRequest<BoolResultResponse>
     {
         /// <summary>
-        /// 微信账号ID
+        /// 规则ID
         /// </summary>
-        public int AccountId { get; set; }
-
+        public int RuleId { get; set; }
         public string GetApiName()
         {
-            return "chenggou.weixin.account.delete";
+            return "chenggou.weixin.customapireply.delete";
         }
 
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
             {
-                {"accountid", AccountId}
+                {"ruleid",RuleId}
             };
             return parameters;
         }
 
         public void Validate()
         {
-            RequestValidator.ValidateMinValue("accountid", AccountId, 1);
+           
         }
     }
 }

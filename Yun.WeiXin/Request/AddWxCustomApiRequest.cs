@@ -11,7 +11,7 @@ namespace Yun.WeiXin.Request
     /// <summary>
     /// 新增自定义回复
     /// </summary>
-    public class AddCustomApiRequest:ITopRequest<IntResultResponse>
+    public class AddWxCustomApiRequest:ITopRequest<IntResultResponse>
     {
         /// <summary>
         /// 规则名字

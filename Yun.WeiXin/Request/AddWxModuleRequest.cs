@@ -11,7 +11,7 @@ namespace Yun.WeiXin.Request
     /// <summary>
     /// 新增模块
     /// </summary>
-    public class AddModuleRequest:ITopRequest<IntResultResponse>
+    public class AddWxModuleRequest:ITopRequest<IntResultResponse>
     {
         /// <summary>
         /// 模块的标识，全局唯一，只允许英文，和程序集名字对应
