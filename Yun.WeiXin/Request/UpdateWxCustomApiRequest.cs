@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Yun.Interface;
 using Yun.Response;
+using Yun.Util;
 
 namespace Yun.WeiXin.Request
 {
@@ -34,15 +31,6 @@ namespace Yun.WeiXin.Request
         /// </summary>
         public IList<KeyValuePair<TriggerTypeEnum, string>> Keywords { get; set; }
 
-        /// <summary>
-        /// 回复的文字内容，标题^描述,标题^描述
-        /// </summary>
-        public string Description { get; set; }
-
-        /// <summary>
-        /// 图片标题
-        /// </summary>
-        public string Title { get; set; }
 
         /// <summary>
         /// 规则ID
@@ -79,8 +67,6 @@ namespace Yun.WeiXin.Request
                 {"disabled",Disabled},
                 {"sort",Sort},
                 {"keywords", WxTools.TryGetKeywords(Keywords)},
-                {"description",Description},
-                {"title",Title},
                 {"ruleid",RuleId},
                 {"remoteurl",RemoteUrl},
                 {"defaultText",DefaultText},
@@ -91,7 +77,9 @@ namespace Yun.WeiXin.Request
 
         public void Validate()
         {
-            throw new NotImplementedException();
+            RequestValidator.ValidateRequired("name", Name);
+            RequestValidator.ValidateRequired("keywords", Keywords);
+            RequestValidator.ValidateRequired("remoteurl", RemoteUrl);
         }
     }
 }

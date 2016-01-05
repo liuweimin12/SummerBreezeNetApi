@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Yun.Interface;
 using Yun.Response;
 using Yun.Util;
@@ -34,15 +31,6 @@ namespace Yun.WeiXin.Request
         /// </summary>
         public IList<KeyValuePair<TriggerTypeEnum, string>> Keywords { get; set; }
 
-        /// <summary>
-        /// 回复的文字内容，标题^描述,标题^描述
-        /// </summary>
-        public string Description { get; set; }
-
-        /// <summary>
-        /// 图片标题
-        /// </summary>
-        public string Title { get; set; }
 
         /// <summary>
         /// 微信账号ID
@@ -78,8 +66,6 @@ namespace Yun.WeiXin.Request
                 {"disabled",Disabled},
                 {"sort",Sort},
                 {"keywords",WxTools.TryGetKeywords(Keywords)},
-                {"description",Description},
-                {"title",Title},
                 {"accountid",AccountId},
                 {"remoteurl",RemoteUrl},
                 {"defaultText",DefaultText},
