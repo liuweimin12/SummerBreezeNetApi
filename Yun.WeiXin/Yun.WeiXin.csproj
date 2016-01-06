@@ -37,7 +37,6 @@
   <ItemGroup>
     <Compile Include="AccountDomain.cs" />
     <Compile Include="CustomApiReplyModel.cs" />
-    <Compile Include="CustomMenuButton.cs" />
     <Compile Include="ImageJsonModel.cs" />
     <Compile Include="ImageReplyDomain.cs" />
     <Compile Include="ImageTextReplyModel.cs" />
@@ -52,11 +51,9 @@
     <Compile Include="Request\AddWxModuleRequest.cs" />
     <Compile Include="Request\AddWxMusicReplyRequest.cs" />
     <Compile Include="Request\AddWxNewsReplyRequest.cs" />
-    <Compile Include="Request\AddWxCustomApiRequest.cs" />
     <Compile Include="Request\AddWxVideoRequest.cs" />
     <Compile Include="Request\AddWxVoiceRequest.cs" />
     <Compile Include="Request\CreateCustomMenuRequest.cs" />
-    <Compile Include="Request\DeleteCustomMenuRequest.cs" />
     <Compile Include="Request\DeleteWxAccountRequest.cs" />
     <Compile Include="Request\DeleteWxTextRequest.cs" />
     <Compile Include="Request\DeleteWxImageRequest.cs" />
@@ -65,7 +62,6 @@
     <Compile Include="Request\DeleteWxCustomApiRequest.cs" />
     <Compile Include="Request\DeleteWxVideoRequest.cs" />
     <Compile Include="Request\DeleteWxVoiceRequest.cs" />
-    <Compile Include="Request\GetCustomMenuRequest.cs" />
     <Compile Include="Request\GetWxAccountRequest.cs" />
     <Compile Include="Request\GetWxAccountsRequest.cs" />
     <Compile Include="Request\GetBasicTextReplyRequest.cs" />
@@ -93,7 +89,6 @@
     <Compile Include="Request\UpdateWxVideoRequest.cs" />
     <Compile Include="Request\UpdateWxVoiceRequest.cs" />
     <Compile Include="Request\UploadMediaRequest.cs" />
-    <Compile Include="Response\GetCustomMenuResponse.cs" />
     <Compile Include="Response\GetWxAccountResponse.cs" />
     <Compile Include="Response\GetWxAccountsResponse.cs" />
     <Compile Include="Response\GetDefaultReplyRuleResponse.cs" />
