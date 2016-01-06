@@ -69,7 +69,7 @@ namespace Yun.WeiXin.Request
                 {"keywords", WxTools.TryGetKeywords(Keywords)},
                 {"ruleid",RuleId},
                 {"remoteurl",RemoteUrl},
-                {"defaultText",DefaultText},
+                {"defaulttext",DefaultText},
                 {"accesstoken",AccessToken}
             };
             return parameters;
