@@ -46,6 +46,7 @@
     <Compile Include="NewsJsonModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Request\AddWxAccountRequest.cs" />
+    <Compile Include="Request\AddWxCustomApiRequest.cs" />
     <Compile Include="Request\AddWxTextRequest.cs" />
     <Compile Include="Request\AddWxImageRequest.cs" />
     <Compile Include="Request\AddWxModuleRequest.cs" />
