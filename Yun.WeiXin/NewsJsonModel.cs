@@ -15,5 +15,6 @@ namespace Yun.WeiXin
 
         public int sort { get; set; }
 
+        public string creator { get; set; }
     }
 }
