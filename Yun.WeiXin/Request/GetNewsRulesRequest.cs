@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Yun.Interface;
 using Yun.WeiXin.Response;
 
@@ -74,7 +71,6 @@ namespace Yun.WeiXin.Request
 
         public void Validate()
         {
-            throw new NotImplementedException();
         }
     }
 }
