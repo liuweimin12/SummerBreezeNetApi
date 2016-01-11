@@ -66,7 +66,6 @@ namespace Yun.Pay.Request
          {
              RequestValidator.ValidateRequired("cardnumber", this.CardNumber);
              RequestValidator.ValidateRequired("boundnick", this.BoundNick);
-             RequestValidator.ValidateRequired("appsecret", this.AppSecret);
          }
      }
 }
