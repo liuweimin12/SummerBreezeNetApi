@@ -49,7 +49,7 @@
     <Compile Include="Request\AddFunctionRequest.cs" />
     <Compile Include="Request\AddOrganizationRequest.cs" />
     <Compile Include="Request\AddrelationOrganizationRoleRequest.cs" />
-    <Compile Include="Request\AddrelationRoleFunctionRequest.cs" />
+    <Compile Include="Request\AddRelationRoleFunctionRequest.cs" />
     <Compile Include="Request\AddRoleRequest.cs" />
     <Compile Include="Request\AddUserTagRequest.cs" />
     <Compile Include="Request\AllowFunctionRequest.cs" />

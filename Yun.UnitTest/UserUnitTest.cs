@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Yun.User.Request;
 
 namespace Yun.UnitTest
 {
@@ -9,6 +10,8 @@ namespace Yun.UnitTest
         [TestMethod]
         public void ResetFunctionsRequest()
         {
+           var req = YunClient.Instance.Execute(new ResetFunctionsRequest(), YunClient.GetAdminToken()).Result;
+            Assert.IsTrue(req);
         }
     }
 }
