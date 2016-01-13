@@ -36,9 +36,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Web" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -53,9 +55,24 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="TradeUnitTest.cs" />
     <Compile Include="UserUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utility.cs" />
+    <Compile Include="YunClient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Yun.Trade\Yun.Trade.csproj">
+      <Project>{0E633103-D16D-44D9-8D4A-F18361E968D3}</Project>
+      <Name>Yun.Trade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yun.User\Yun.User.csproj">
+      <Project>{E4AC4FEB-E06E-42D4-B11D-5986FC9B2BDB}</Project>
+      <Name>Yun.User</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yun\Yun.csproj">
+      <Project>{8D5F06AE-2707-496F-ACA8-A3B8D00D2341}</Project>
+      <Name>Yun</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
