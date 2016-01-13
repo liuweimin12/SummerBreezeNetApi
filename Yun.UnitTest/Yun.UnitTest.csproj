@@ -58,7 +58,9 @@
     <Compile Include="TradeUnitTest.cs" />
     <Compile Include="UserUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="YunClient.cs" />
+    <Compile Include="YunClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Yun.Trade\Yun.Trade.csproj">
