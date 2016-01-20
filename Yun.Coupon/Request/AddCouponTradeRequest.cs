@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Yun.Domain;
 using Yun.Interface;
 using Yun.Response;
@@ -90,6 +91,12 @@ namespace Yun.Coupon.Request
         /// 代金券ID
         /// </summary>
         public int CashCouponId { get; set; }
+
+
+        /// <summary>
+        /// 订单创建时间，可以人为指定
+        /// </summary>
+        public DateTime? CreateTime { get; set; }
         
 
         public IDictionary<string, string> GetParameters()
@@ -109,7 +116,8 @@ namespace Yun.Coupon.Request
                 {"promotionsactivityidinshop",PromotionsActivityIdInShop},
                 {"giftsjson", GiftsJson},
                 {"ext",Ext},
-                {"cashcouponid",CashCouponId}
+                {"cashcouponid",CashCouponId},
+                {"createtime",CreateTime}
             };
             return parameters;
         }
