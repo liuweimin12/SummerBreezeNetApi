@@ -95,6 +95,7 @@
     <Compile Include="Request\GetWithdrawalsDetailRequest.cs" />
     <Compile Include="Request\ModifyPrepaidCardMoneyRequest.cs" />
     <Compile Include="Request\ModifyPrepaidCardPasswordRequest.cs" />
+    <Compile Include="Request\ModifyUserBankCardRequest.cs" />
     <Compile Include="Request\PerfectWithdrawalsInfoRequest.cs" />
     <Compile Include="Request\PrepaidCardBindUserRequest.cs" />
     <Compile Include="Request\ReNotifyOuterTradeRequest.cs" />
