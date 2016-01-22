@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿
 using System.Xml.Serialization;
 
 namespace Yun.Pay
@@ -55,5 +52,18 @@ namespace Yun.Pay
         /// </summary>
         [XmlElement("create_time")]
         public string CreateTime { get; set; }
+
+        /// <summary>
+        /// 支行
+        /// </summary>
+        [XmlElement("sub_branch")]
+        public string SubBranch { get; set; }
+
+
+        /// <summary>
+        /// 账号名字
+        /// </summary>
+        [XmlElement("account_name")]
+        public string AccountName { get; set; }
     }
 }

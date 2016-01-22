@@ -58,6 +58,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Request\AddPrepaidCardRequest.cs" />
     <Compile Include="Request\AddPrepaidCardTypeRequest.cs" />
+    <Compile Include="Request\AddUserBankCardRequest.cs" />
     <Compile Include="Request\ApplyWithdrawalsRequest.cs" />
     <Compile Include="Request\BatchAddPrepaidCardRequest.cs" />
     <Compile Include="Request\CompleteOnlinePayRequest.cs" />
