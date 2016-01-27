@@ -31,15 +31,12 @@ namespace Yun.User.Request
         /// </summary>
         public string OAuth2Type { get; set; }
 
-        /// <summary>
-        /// 手机号
-        /// </summary>
-        public string Phone { get; set; }
 
         /// <summary>
-        /// 用户头像
+        /// 用户原信息
         /// </summary>
-        public string Avatar { get; set; }
+        public string UserMeta { get; set; }
+
 
 
         /// <summary>
@@ -49,9 +46,26 @@ namespace Yun.User.Request
 
 
         /// <summary>
-        /// 用户原信息
+        /// 店铺ID 
         /// </summary>
-        public string UserMeta { get; set; }
+        public int ShopId { get; set; }
+
+
+        /// <summary>
+        /// 用户头像
+        /// </summary>
+        public string Avatar { get; set; }
+
+        /// <summary>
+        /// 用户登录时候的IP地址
+        /// </summary>
+        public string Ip { get; set; }
+
+
+        /// <summary>
+        /// 手机号
+        /// </summary>
+        public string Phone { get; set; }
 
         public string GetApiName()
         {
@@ -69,7 +83,8 @@ namespace Yun.User.Request
                 {"phone",Phone},
                 {"avatar",Avatar},
                 {"realname",RealName},
-                {"usermeta",UserMeta}
+                {"usermeta",UserMeta},
+                {"shopid",ShopId}
             };
             return parameters;
         }
