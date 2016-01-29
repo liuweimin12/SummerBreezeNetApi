@@ -5,35 +5,34 @@ namespace Yun.User
     public class PermissionUser
     {
         /// <summary>
-        /// 用户名称
+        /// 用户ID
+        /// </summary>
+        [XmlElement("user_id")]
+        public int UserId { get; set; }
+
+        /// <summary>
+        /// 用户名
         /// </summary>
         [XmlElement("user_name")]
         public string UserName { get; set; }
 
         /// <summary>
-        /// 用户id
-        /// </summary>
-        [XmlElement("user_id")]
-        public long UserId { get; set; }
-
-        /// <summary>
-        /// 显示名称
+        /// 显示名字
         /// </summary>
         [XmlElement("display_name")]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// 角色名称
+        /// 角色名字
         /// </summary>
         [XmlElement("role_name")]
         public string RoleName { get; set; }
 
         /// <summary>
-        /// 是否禁用
+        /// 是否被禁用
         /// </summary>
         [XmlElement("is_disabled")]
         public bool IsDisabled { get; set; }
-
 
         /// <summary>
         /// 最后登录时间
@@ -42,34 +41,28 @@ namespace Yun.User
         public string LastLoginTime { get; set; }
 
         /// <summary>
-        /// 创建者
+        /// 创建人
         /// </summary>
         [XmlElement("creator")]
         public string Creator { get; set; }
 
         /// <summary>
-        /// 创建者ID
+        /// 创建人ID
         /// </summary>
         [XmlElement("creator_id")]
-        public long CreatorId { get; set; }
+        public int CreatorId { get; set; }
 
         /// <summary>
-        /// 站点id
-        /// </summary>
-        [XmlElement("site_id")]
-        public long SiteId { get; set; }
-
-        /// <summary>
-        /// 组织名称
+        /// 组织机构名字
         /// </summary>
         [XmlElement("organization_name")]
         public string OrganizationName { get; set; }
 
         /// <summary>
-        /// 组织id
+        /// 组织机构ID
         /// </summary>
         [XmlElement("organization_id")]
-        public long OrganizationId { get; set; }
+        public int OrganizationId { get; set; }
 
         /// <summary>
         /// 是否是女性
@@ -78,10 +71,10 @@ namespace Yun.User
         public bool IsFemale { get; set; }
 
         /// <summary>
-        /// 合作伙伴ID
+        /// 父ID
         /// </summary>
         [XmlElement("partner_id")]
-        public long PartnerId { get; set; }
+        public int PartnerId { get; set; }
 
         /// <summary>
         /// 描述
@@ -89,18 +82,17 @@ namespace Yun.User
         [XmlElement("description")]
         public string Description { get; set; }
 
-
         /// <summary>
-        /// 更高的用户ID
+        /// 上级的用户ID
         /// </summary>
         [XmlElement("higher_user_id")]
-        public long HigherUserId { get; set; }
+        public int HigherUserId { get; set; }
 
         /// <summary>
-        /// 任务id
+        /// 职位ID
         /// </summary>
-       [XmlElement("job_id")]
-        public long JobId { get; set; }
+        [XmlElement("job_id")]
+        public int JobId { get; set; }
 
         /// <summary>
         /// 身份证
@@ -109,25 +101,25 @@ namespace Yun.User
         public string IdCard { get; set; }
 
         /// <summary>
-        /// 进入时间
+        /// 入职时间
         /// </summary>
         [XmlElement("entry_time")]
         public string EntryTime { get; set; }
 
         /// <summary>
-        /// 工作数量
+        /// 工号
         /// </summary>
         [XmlElement("job_num")]
         public string JobNum { get; set; }
 
         /// <summary>
-        /// 其他名称
+        /// 别名
         /// </summary>
         [XmlElement("other_name")]
         public string OtherName { get; set; }
 
         /// <summary>
-        /// 手机
+        /// 联系电话
         /// </summary>
         [XmlElement("phone")]
         public string Phone { get; set; }
@@ -139,15 +131,15 @@ namespace Yun.User
         public string Email { get; set; }
 
         /// <summary>
-        /// 座机
+        /// 原先的Plane改为了Telephone，座机
         /// </summary>
         [XmlElement("telephone")]
-        public string Plane { get; set; }
+        public string Telephone { get; set; }
 
         /// <summary>
-        /// 工作地点
+        /// 工作场所
         /// </summary>
-        [XmlElement("work_place")]
+        [XmlElement("workplace")]
         public string WorkPlace { get; set; }
     }
 }
