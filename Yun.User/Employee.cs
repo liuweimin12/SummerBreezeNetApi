@@ -1,23 +1,26 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Serialization;
+using Yun.Domain;
 
 namespace Yun.User
 {
     public class Employee : PermissionUser
     {
-        
+
         /// <summary>
-        /// 功能
+        /// 该人员所拥有的权限
         /// </summary>
         [XmlArray("functions")]
         [XmlArrayItem("function")]
         public List<Function> Functions { get; set; }
 
         /// <summary>
-        /// 角色
+        /// 该人员所拥有的角色
         /// </summary>
         [XmlArray("roles")]
         [XmlArrayItem("role")]
-        public List<int> Roles { get; set; }
+        public List<LongKeyValuePair> Roles { get; set; }
+
+
     }
 }
