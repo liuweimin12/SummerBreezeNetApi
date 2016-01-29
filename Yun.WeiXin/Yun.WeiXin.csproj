@@ -63,6 +63,7 @@
     <Compile Include="Request\DeleteWxCustomApiRequest.cs" />
     <Compile Include="Request\DeleteWxVideoRequest.cs" />
     <Compile Include="Request\DeleteWxVoiceRequest.cs" />
+    <Compile Include="Request\FindRulesRequest.cs" />
     <Compile Include="Request\GetWxAccountRequest.cs" />
     <Compile Include="Request\GetWxAccountsRequest.cs" />
     <Compile Include="Request\GetBasicTextReplyRequest.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Request\UpdateWxVideoRequest.cs" />
     <Compile Include="Request\UpdateWxVoiceRequest.cs" />
     <Compile Include="Request\UploadMediaRequest.cs" />
+    <Compile Include="Response\FindRulesResponse.cs" />
     <Compile Include="Response\GetWxAccountResponse.cs" />
     <Compile Include="Response\GetWxAccountsResponse.cs" />
     <Compile Include="Response\GetDefaultReplyRuleResponse.cs" />
