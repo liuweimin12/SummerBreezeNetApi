@@ -32,5 +32,13 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req!=null&&req.Any());
         }
+
+        [TestMethod]
+        public void ReceiveVouchersRequest()
+        {
+            var req = YunClient.Instance.Execute(new ReceiveVouchersRequest {CashCouponCatId = 2, UserId = 149313});
+
+            Assert.IsTrue(req.Result>0);
+        }
     }
 }
