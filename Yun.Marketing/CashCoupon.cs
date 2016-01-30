@@ -5,6 +5,21 @@ namespace Yun.Marketing
     public class CashCoupon
     {
         /// <summary>
+        /// 代金券类型
+        /// </summary>
+        [XmlElement("coupon_type")]
+        public string CouponType { get; set; }
+
+        /// <summary>
+        /// 代金券使用时间
+        /// </summary>
+        [XmlElement("use_time")]
+        public long UseTime { get; set; }
+
+        [XmlElement("name")]
+        public string Name { get; set; }
+
+        /// <summary>
         /// 代金券ID
         /// </summary>
         [XmlElement("id")]
@@ -82,17 +97,5 @@ namespace Yun.Marketing
         /// </summary>
         [XmlElement("bind_time")]
         public string BindTime { get; set; }
-
-        /// <summary>
-        /// 代金券名字
-        /// </summary>
-        [XmlElement("name")]
-        public string Name { get; set; }
-
-        /// <summary>
-        /// 代金券类型
-        /// </summary>
-        [XmlElement("coupon_type")]
-        public string CouponType { get; set; }
     }
 }
