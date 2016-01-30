@@ -50,11 +50,14 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="MarketingUnitTest.cs" />
     <Compile Include="TradeUnitTest.cs" />
     <Compile Include="UserUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +66,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Yun.Marketing\Yun.Marketing.csproj">
+      <Project>{66f0ee7b-d76e-402e-8b25-ece884ff66fb}</Project>
+      <Name>Yun.Marketing</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Yun.Trade\Yun.Trade.csproj">
       <Project>{0E633103-D16D-44D9-8D4A-F18361E968D3}</Project>
       <Name>Yun.Trade</Name>

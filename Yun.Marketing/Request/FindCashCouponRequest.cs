@@ -64,6 +64,13 @@ namespace Yun.Marketing.Request
         /// </summary>
         public double MinPrice { get; set; }
 
+
+        /// <summary>
+        /// 代金券分类ID
+        /// </summary>
+        public int CategoryId { get; set; }
+
+
         public string GetApiName()
         {
             return "chenggou.cashcoupon.find";
@@ -81,6 +88,7 @@ namespace Yun.Marketing.Request
                 {"code", Code},
                 {"coupontype",CouponType },
                 {"minprice", MinPrice},
+                {"categoryid",CategoryId }
             };
 
             return parameters;

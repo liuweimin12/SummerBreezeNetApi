@@ -61,15 +61,10 @@ namespace Yun.Marketing.Request
         public string Name { get; set; }
 
         /// <summary>
-        /// 生效时间
+        /// 有效期
+        /// 1：未开始，2：进行中，3：已结束
         /// </summary>
-        public DateTime? BeginTime { get; set; }
-
-
-        /// <summary>
-        /// 过期时间
-        /// </summary>
-        public DateTime? EndTime { get; set; }
+        public int ValidityPeriod { get; set; }
 
         /// <summary>
         /// 状态
@@ -92,8 +87,7 @@ namespace Yun.Marketing.Request
                 {"companyid",CompanyId},
                 {"coupontype",CouponType},
                 {"name",Name},
-                {"begintime",BeginTime},
-                {"endtime",EndTime},
+                {"validityperiod",ValidityPeriod},
                 {"status",Status},
             };
             return parameters;
