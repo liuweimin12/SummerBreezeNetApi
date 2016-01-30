@@ -106,5 +106,11 @@ namespace Yun.Marketing
         /// </summary>
         [XmlElement("relate_object_id")]
         public string RelateObjectId { get; set; }
+
+        /// <summary>
+        /// 描述
+        /// </summary>
+        [XmlElement("description")]
+        public string Description { get; set; }
     }
 }

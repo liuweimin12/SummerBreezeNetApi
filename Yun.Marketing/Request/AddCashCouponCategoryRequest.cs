@@ -82,6 +82,10 @@ namespace Yun.Marketing.Request
         /// </summary>
         public int Status { get; set; }
 
+        /// <summary>
+        /// 描述
+        /// </summary>
+        public string Description { get; set; }
 
         public string GetApiName()
         {
@@ -104,6 +108,7 @@ namespace Yun.Marketing.Request
                 {"perusermaxquantity",PerUserMaxQuantity},
                 {"num",Num},
                 {"status",Status},
+                {"description",Description},
             };
             return parameters;
         }

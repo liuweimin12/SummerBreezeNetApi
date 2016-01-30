@@ -87,6 +87,12 @@ namespace Yun.Marketing.Request
         /// </summary>
         public int CategoryId { get; set; }
 
+        /// <summary>
+        /// 描述
+        /// </summary>
+        public string Description { get; set; }
+
+
         public string GetApiName()
         {
             return "chenggou.cashcoupon.category.update";
@@ -109,6 +115,7 @@ namespace Yun.Marketing.Request
                 {"num",Num},
                 {"status",Status},
                 {"categoryid",CategoryId},
+                {"description",Description}
             };
             return parameters;
         }
