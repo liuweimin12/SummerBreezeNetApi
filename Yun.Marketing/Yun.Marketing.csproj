@@ -127,6 +127,7 @@
     <Compile Include="Request\PlayLotteryGameRequest.cs" />
     <Compile Include="Request\PromotionmiscActivityRangeListGetRequest.cs" />
     <Compile Include="Request\ReceiveVouchersRequest.cs" />
+    <Compile Include="Request\RemoveBindingCashCouponRequest.cs" />
     <Compile Include="Request\RewardGiftActivityRangeAddRequest.cs" />
     <Compile Include="Request\RewardGiftActivityRangeAllRemoveRequest.cs" />
     <Compile Include="Request\RewardGiftActivityRangeRemoveRequest.cs" />
