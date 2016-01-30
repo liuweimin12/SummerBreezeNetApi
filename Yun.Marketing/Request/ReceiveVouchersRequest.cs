@@ -16,6 +16,11 @@ namespace Yun.Marketing.Request
         /// </summary>
         public int CashCouponCatId { get; set; }
 
+        /// <summary>
+        /// 用户ID
+        /// </summary>
+        public int UserId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.cashcoupon.user.receive";
@@ -25,7 +30,8 @@ namespace Yun.Marketing.Request
         {
             var parameters = new YunDictionary
             {
-                {"cashcouponcatid",CashCouponCatId}
+                {"cashcouponcatid",CashCouponCatId},
+                {"userid",UserId}
             };
             return parameters;
         }
@@ -34,6 +40,8 @@ namespace Yun.Marketing.Request
         {
             RequestValidator.ValidateRequired("cashcouponcatid", CashCouponCatId);
             RequestValidator.ValidateMinValue("cashcouponcatid", CashCouponCatId, 1);
+            RequestValidator.ValidateRequired("userid", UserId);
+            RequestValidator.ValidateMinValue("userid", UserId, 1);
         }
     }
 }
