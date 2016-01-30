@@ -98,11 +98,11 @@ namespace Yun.Marketing.Request
             {
                 {"name",Name},
                 {"credit",Credit},
+                {"begintime",BeginTime},
                 {"endtime",EndTime},
                 {"range",Range},
                 {"itemsid",ItemsId},
                 {"minprice",MinPrice},
-                {"name",Name},
                 {"coupontype",CouponType},
                 {"usecustom",UseCustom},
                 {"perusermaxquantity",PerUserMaxQuantity},
