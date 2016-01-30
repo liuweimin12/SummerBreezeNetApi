@@ -10,6 +10,6 @@ namespace Yun.Marketing.Response
         /// 代金券
         /// </summary>
         [XmlElement("cash_coupon")]
-        public CashCouponDomain CashCoupon { get; set; }
+        public CashCoupon CashCoupon { get; set; }
     }
 }

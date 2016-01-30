@@ -1,46 +1,40 @@
 ﻿using System.Collections.Generic;
 using Yun.Interface;
-using Yun.Response;
+using Yun.Marketing.Response;
 using Yun.Util;
 
 namespace Yun.Marketing.Request
 {
     /// <summary>
-    /// 生成自定义代金券
-    /// chenggou.cashcoupon.custom.generate
+    /// 获取代金券类别
+    /// chenggou.cashcoupon.category.get
     /// </summary>
-    public class GenerateCustomCashCouponRequest :ITopRequest<IntResultResponse>
+    public class GetCashCouponCategoryRequest:ITopRequest<GetCashCouponCategoryResponse>
     {
         /// <summary>
-        /// 代金券编码
-        /// </summary>
-        public string Code { get; set; }
-
-        /// <summary>
-        /// 代金券分类ID
+        /// 类别ID
         /// </summary>
         public int CategoryId { get; set; }
 
 
         public string GetApiName()
         {
-            return "chenggou.cashcoupon.custom.generate";
+            return "chenggou.cashcoupon.category.get";
         }
 
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
             {
-                {"code", Code},
-                {"categoryid", CategoryId}
+                {"categoryid",CategoryId}
             };
             return parameters;
         }
 
         public void Validate()
         {
-            RequestValidator.ValidateRequired("code", Code);
             RequestValidator.ValidateRequired("categoryid", CategoryId);
+            RequestValidator.ValidateMinValue("categoryid", CategoryId, 1);
         }
     }
 }

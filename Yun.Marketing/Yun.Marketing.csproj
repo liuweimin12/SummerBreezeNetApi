@@ -43,7 +43,8 @@
     <Compile Include="AddGroupBuyJson.cs" />
     <Compile Include="AddLimitDiscountJson.cs" />
     <Compile Include="AddRewardGiftJson.cs" />
-    <Compile Include="CashCouponDomain.cs" />
+    <Compile Include="CashCoupon.cs" />
+    <Compile Include="CashCouponCateogry.cs" />
     <Compile Include="CombinationBuyDetail.cs" />
     <Compile Include="CombinationBuyList.cs" />
     <Compile Include="CombinationItem.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="PromotionInShop.cs" />
     <Compile Include="PromotionRange.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\AddCashCouponCategoryRequest.cs" />
     <Compile Include="Request\AddCombinationBuyRequest.cs" />
     <Compile Include="Request\AddGameRequest.cs" />
     <Compile Include="Request\AddGroupBuyRequest.cs" />
@@ -77,6 +79,7 @@
     <Compile Include="Request\BindCashCouponRequest.cs" />
     <Compile Include="Request\CreateIntegralGameRuleRequest.cs" />
     <Compile Include="Request\CreateLotteryGameRuleRequest.cs" />
+    <Compile Include="Request\DeleteCashCouponCategoryRequest.cs" />
     <Compile Include="Request\DeleteCashCouponRequest.cs" />
     <Compile Include="Request\DeleteCombinationBuyRequest.cs" />
     <Compile Include="Request\DeleteGameRequest.cs" />
@@ -86,6 +89,7 @@
     <Compile Include="Request\DeleteLotteryGameRuleRequest.cs" />
     <Compile Include="Request\DeleteRewardGiftRequest.cs" />
     <Compile Include="Request\EditIntegralGameRuleRequest.cs" />
+    <Compile Include="Request\FindCashCouponCategoriesRequest.cs" />
     <Compile Include="Request\FindCashCouponRequest.cs" />
     <Compile Include="Request\FindGamesRequest.cs" />
     <Compile Include="Request\FindIntegralGameWinningListRequest.cs" />
@@ -94,6 +98,7 @@
     <Compile Include="Request\GenerateCashCouponRequest.cs" />
     <Compile Include="Request\GenerateCustomCashCouponRequest.cs" />
     <Compile Include="Request\GenerateLotteryAwardRequest.cs" />
+    <Compile Include="Request\GetCashCouponCategoryRequest.cs" />
     <Compile Include="Request\GetCashCouponRequest.cs" />
     <Compile Include="Request\GetCombinationBuyDetailRequest.cs" />
     <Compile Include="Request\GetCombinationBuyListRequest.cs" />
@@ -121,9 +126,11 @@
     <Compile Include="Request\PlayIntegralGameRequest.cs" />
     <Compile Include="Request\PlayLotteryGameRequest.cs" />
     <Compile Include="Request\PromotionmiscActivityRangeListGetRequest.cs" />
+    <Compile Include="Request\ReceiveVouchersRequest.cs" />
     <Compile Include="Request\RewardGiftActivityRangeAddRequest.cs" />
     <Compile Include="Request\RewardGiftActivityRangeAllRemoveRequest.cs" />
     <Compile Include="Request\RewardGiftActivityRangeRemoveRequest.cs" />
+    <Compile Include="Request\UpdateCashCouponCategoryRequest.cs" />
     <Compile Include="Request\UpdateCashCouponRequest.cs" />
     <Compile Include="Request\UpdateCombinationBuyRequest.cs" />
     <Compile Include="Request\UpdateGameRequest.cs" />
@@ -132,11 +139,13 @@
     <Compile Include="Request\UpdateLotteryAwardRequest.cs" />
     <Compile Include="Request\UpdateLotteryGameRuleRequest.cs" />
     <Compile Include="Request\UpdateRewardGiftRequest.cs" />
+    <Compile Include="Response\FindCashCouponCategoriesResponse.cs" />
     <Compile Include="Response\FindCashCouponResponse.cs" />
     <Compile Include="Response\FindGamesResponse.cs" />
     <Compile Include="Response\FindIntegralGameWinningListResponse.cs" />
     <Compile Include="Response\FindLotteryAwardsResponse.cs" />
     <Compile Include="Response\FindPlayGameRecordsResponse.cs" />
+    <Compile Include="Response\GetCashCouponCategoryResponse.cs" />
     <Compile Include="Response\GetCashCouponResponse.cs" />
     <Compile Include="Response\GetCombinationBuyDetailResponse.cs" />
     <Compile Include="Response\GetCombinationBuyListResponse.cs" />

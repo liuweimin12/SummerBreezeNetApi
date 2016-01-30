@@ -2,7 +2,7 @@
 
 namespace Yun.Marketing
 {
-    public class CashCouponDomain
+    public class CashCoupon
     {
         /// <summary>
         /// 代金券ID
