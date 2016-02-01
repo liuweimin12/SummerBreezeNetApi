@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Yun.Interface;
-using Yun.Item.Response;
 using Yun.Response;
 using Yun.Util;
 
@@ -47,7 +46,8 @@ namespace Yun.Item.Request
                 {"value", Value},
                 {"parentid", ParentId},
                 {"sort", Sort},
-                {"ishide", IsHide}
+                {"ishide", IsHide},
+                {"thumb",Thumb }
             };
             return parameters;
         }
@@ -57,13 +57,17 @@ namespace Yun.Item.Request
             RequestValidator.ValidateRequired("propnameid", PropNameId);
             RequestValidator.ValidateRequired("value", Value);
             RequestValidator.ValidateMaxLength("value", this.Value, 200);
-            
         }
 
         /// <summary>
         /// 文章的缩略图，可多张
         /// </summary>
         public FileItem Image { get; set; }
+
+        /// <summary>
+        /// 缩略图
+        /// </summary>
+        public string Thumb { get; set; }
 
         public IDictionary<string, FileItem> GetFileParameters()
         {

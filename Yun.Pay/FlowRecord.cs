@@ -20,7 +20,7 @@ namespace Yun.Pay
         /// <summary>
         /// 商户支付订单号
         /// </summary>
-        [XmlElement("merchanmt_trade_no")]
+        [XmlElement("merchant_trade_no")]
         public string MerchantTradeNo { get; set; }
 
         /// <summary>
