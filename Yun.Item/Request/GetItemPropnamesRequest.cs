@@ -35,6 +35,12 @@ namespace Yun.Item.Request
         /// </summary>
         public int CompanyId { get; set; }
 
+
+        /// <summary>
+        /// 特殊标记类型，可自定义，方便以后索搜用，不能超过255，最小为0
+        /// </summary>
+        public int? SpecialType { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.item.propnames.get";
@@ -48,7 +54,8 @@ namespace Yun.Item.Request
                 {"shopid",ShopId},
                 {"pagenum",PageNum},
                 {"pagesize",PageSize},
-                {"companyid",CompanyId}
+                {"companyid",CompanyId},
+                {"specialtype",SpecialType}
             };
             return parameters;
         }
