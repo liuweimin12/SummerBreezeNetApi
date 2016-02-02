@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
-using Yun;
 using Yun.Interface;
 using Yun.Item.Response;
 using Yun.Util;
 
-namespace CgApi.Shop.Request
+namespace Yun.Item.Request
 {
     public class GetShopItemCategoryRequest : ITopRequest<CategoryResponse>
     {
