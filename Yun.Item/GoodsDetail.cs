@@ -167,7 +167,7 @@ namespace Yun.Item
         /// 是否推荐
         /// </summary>
         [XmlElement("is_recommend")]
-        public bool IsRecommend { get; set; }
+        public int IsRecommend { get; set; }
 
         /// <summary>
         /// 商品修改时间
