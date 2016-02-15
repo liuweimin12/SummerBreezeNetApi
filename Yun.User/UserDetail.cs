@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Xml.Serialization;
 using Yun.Domain;
 
@@ -242,5 +241,11 @@ namespace Yun.User
         /// </summary>
         [XmlElement("is_staff")]
         public bool IsStaff { get; set; }
+
+        /// <summary>
+        /// 是否是管理员
+        /// </summary>
+        [XmlElement("is_manager")]
+        public bool IsManage { get; set; }
     }
 }
