@@ -15,6 +15,11 @@ namespace Yun.Distribution.Request
         /// </summary>
         public int? TemplateId { get; set; }
 
+        /// <summary>
+        /// 店铺ID
+        /// </summary>
+        public int? ShopId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.distribution.level.list.get";
@@ -24,7 +29,8 @@ namespace Yun.Distribution.Request
         {
             var parameters = new YunDictionary
             {
-                {"templateid",TemplateId}
+                {"templateid",TemplateId},
+                {"shopid",ShopId}
             };
             return parameters;
         }
