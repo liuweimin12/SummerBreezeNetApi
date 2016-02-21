@@ -40,6 +40,7 @@
     <Compile Include="CreditDomain.cs" />
     <Compile Include="Function.cs" />
     <Compile Include="OAth2SettingJson.cs" />
+    <Compile Include="Oauth2Login.cs" />
     <Compile Include="OAuth2Setting.cs" />
     <Compile Include="Organizations.cs" />
     <Compile Include="PermissionUser.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Request\BatchUpdateOrganizationRequest.cs" />
     <Compile Include="Request\BatchUpdateFunctionSortRequest.cs" />
     <Compile Include="Request\BindEmailRequest.cs" />
+    <Compile Include="Request\BindOauth2AccountRequest.cs" />
     <Compile Include="Request\BindPhoneRequest.cs" />
     <Compile Include="Request\DeleteAlumbsRequest.cs" />
     <Compile Include="Request\DeleteEmployeeRequest.cs" />
@@ -80,6 +82,7 @@
     <Compile Include="Request\GetFunctionRequest.cs" />
     <Compile Include="Request\GetFunctionsRequest.cs" />
     <Compile Include="Request\GetOAuth2ConfigRequest.cs" />
+    <Compile Include="Request\GetOAuth2LoginInfoRequest.cs" />
     <Compile Include="Request\GetOrganizationRequest.cs" />
     <Compile Include="Request\GetOrganizationsRequest.cs" />
     <Compile Include="Request\GetRoleFunctionsRequest.cs" />
@@ -132,6 +135,7 @@
     <Compile Include="Response\GetAlbumResponse.cs" />
     <Compile Include="Response\GetAuthorizeUrlResponse.cs" />
     <Compile Include="Response\GetOAuth2ConfigResponse.cs" />
+    <Compile Include="Response\GetOAuth2LoginInfoResponse.cs" />
     <Compile Include="Response\GetUserScoreListResponse.cs" />
     <Compile Include="Response\GetUsersResponse.cs" />
     <Compile Include="Response\GetUserTagResponse.cs" />
