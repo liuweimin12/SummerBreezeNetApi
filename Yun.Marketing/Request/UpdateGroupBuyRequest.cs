@@ -46,6 +46,10 @@ namespace Yun.Marketing.Request
         /// </summary>
         public string Detail { get; set; }
 
+        /// <summary>
+        /// 用户自定义的活动类型
+        /// </summary>
+        public string UserType { get; set; }
 
         public string GetApiName()
         {
@@ -61,7 +65,8 @@ namespace Yun.Marketing.Request
                 {"starttime",StartTime},
                 {"endtime",EndTime},
                 {"description",Description},
-                {"detail",Detail}
+                {"detail",Detail},
+                {"usertype",UserType}
             };
             return parameters;
         }

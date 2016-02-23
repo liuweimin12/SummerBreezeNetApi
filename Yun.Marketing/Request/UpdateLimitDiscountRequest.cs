@@ -44,6 +44,11 @@ namespace Yun.Marketing.Request
         /// </summary>
         public string Description { get; set; }
 
+        /// <summary>
+        /// 用户自定义的活动类型
+        /// </summary>
+        public string UserType { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.promotionmisc.limitdiscount.activity.update";
@@ -58,7 +63,8 @@ namespace Yun.Marketing.Request
                 {"participaterange",1},
                 {"starttime",StartTime},
                 {"endtime",EndTime},
-                {"description",Description}
+                {"description",Description},
+                {"usertype",UserType}
             };
             return parameters;
         }
