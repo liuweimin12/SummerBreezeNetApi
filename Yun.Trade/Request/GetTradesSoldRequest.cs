@@ -132,6 +132,11 @@ namespace Yun.Trade.Request
         /// </summary>
         public string Sort { get; set; }
 
+        /// <summary>
+        /// 卖家自定义订单类型
+        /// </summary>
+        public string CustomTradeType { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.trades.sold.get";
@@ -141,27 +146,28 @@ namespace Yun.Trade.Request
         {
             var parameters = new YunDictionary
             {
-                {"pagenum",PageNum},
-                {"pagesize",PageSize},
-                {"itemtitle",ItemTitle},
-                {"mincreatetime",MinCreateTime},
-                {"maxcreatetime",MaxCreateTime},
-                {"minpaytime",MinPayTime},
-                {"maxpaytime",MaxPayTime},
-                {"nick",Nick},
-                {"orderid",OrderId},
-                {"mobile",Mobile},
-                {"tradestatus",TradeStatus},
-                {"commentstatus",CommentStatus},
-                {"logisticsservice",LogisticsService},
-                {"type",Type},
-                {"shopid",ShopId},
-                {"companyid",CompanyId},
-                {"realname",RealName},
-                {"isdelete",IsDelete},
-                {"itemsid",ItemsId},
-                {"ordertypes",OrderTypes },
-                {"sort",Sort }
+                {"pagenum", PageNum},
+                {"pagesize", PageSize},
+                {"itemtitle", ItemTitle},
+                {"mincreatetime", MinCreateTime},
+                {"maxcreatetime", MaxCreateTime},
+                {"minpaytime", MinPayTime},
+                {"maxpaytime", MaxPayTime},
+                {"nick", Nick},
+                {"orderid", OrderId},
+                {"mobile", Mobile},
+                {"tradestatus", TradeStatus},
+                {"commentstatus", CommentStatus},
+                {"logisticsservice", LogisticsService},
+                {"type", Type},
+                {"shopid", ShopId},
+                {"companyid", CompanyId},
+                {"realname", RealName},
+                {"isdelete", IsDelete},
+                {"itemsid", ItemsId},
+                {"ordertypes", OrderTypes},
+                {"sort", Sort},
+                {"customtradetype", CustomTradeType}
             };
             return parameters;
         }
