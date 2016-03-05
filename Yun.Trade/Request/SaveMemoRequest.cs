@@ -13,6 +13,8 @@ namespace Yun.Trade.Request
 
         public int Flag { get; set; }
 
+        public int SlaveFlag { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.trade.memo.save";
@@ -25,6 +27,7 @@ namespace Yun.Trade.Request
                 {"id", Id},
                 {"memo", Memo},
                 {"flag", Flag},
+                {"slaveflag",SlaveFlag }
             };
             return parameters;
         }
