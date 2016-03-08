@@ -27,6 +27,7 @@ namespace Yun.Trade.Request
                 {"id", Id},
                 {"memo", Memo},
                 {"flag", Flag},
+                {"slaveflag",SlaveFlag },
                 {"slaveflag",SlaveFlag }
             };
             return parameters;
