@@ -10,6 +10,11 @@ namespace Yun.Distribution.Request
     public class AuditCooperationRequest : ITopRequest<IntResultResponse>
     {
         /// <summary>
+        /// 店铺ID
+        /// </summary>
+        public int? ShopId { get; set; }
+
+        /// <summary>
         /// 绑定现有用户成为分销用户
         /// </summary>
         public string UserName { get; set; }
@@ -37,11 +42,12 @@ namespace Yun.Distribution.Request
         {
             var parameters = new YunDictionary
             {
-                {"username",UserName},
-                {"ip",Ip},
-                {"note",Note},
-                {"superiordistributor",SuperiorDistributor},
-                {"superiordistributorid",SuperiorDistributorId}
+                {"username", UserName},
+                {"ip", Ip},
+                {"note", Note},
+                {"superiordistributor", SuperiorDistributor},
+                {"superiordistributorid", SuperiorDistributorId},
+                {"shopid", ShopId}
             };
             return parameters;
         }
