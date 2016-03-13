@@ -16,6 +16,13 @@ namespace Yun.Trade
         [XmlElement("online_pay_result")]
         public OnlinePaymentInfo OnlinePayResult { get; set; }
 
+
+        /// <summary>
+        /// 支付商的交易号
+        /// </summary>
+        [XmlElement("out_trade_no")]
+        public string OutTradeNo { get; set; }
+
         /// <summary>
         /// 余额支付
         /// </summary>
