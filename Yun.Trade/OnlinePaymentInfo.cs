@@ -38,5 +38,11 @@ namespace Yun.Trade
         /// </summary>
         [XmlElement("pay_channel")]
         public KeyValuePair<string, string> PayChannel { get; set; }
+
+        /// <summary>
+        /// 支付商的交易号
+        /// </summary>
+        [XmlElement("out_trade_no")]
+        public string OutTradeNo { get; set; }
     }
 }
