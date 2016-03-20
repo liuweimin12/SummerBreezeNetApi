@@ -58,6 +58,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="MarketingUnitTest.cs" />
+    <Compile Include="PrivateUnitTest.cs" />
     <Compile Include="TradeUnitTest.cs" />
     <Compile Include="UserUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,6 +70,10 @@
     <ProjectReference Include="..\Yun.Marketing\Yun.Marketing.csproj">
       <Project>{66f0ee7b-d76e-402e-8b25-ece884ff66fb}</Project>
       <Name>Yun.Marketing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yun.Private\Yun.Private.csproj">
+      <Project>{4179E21D-7656-4155-BFAA-DDE8BC9C5E9E}</Project>
+      <Name>Yun.Private</Name>
     </ProjectReference>
     <ProjectReference Include="..\Yun.Trade\Yun.Trade.csproj">
       <Project>{0E633103-D16D-44D9-8D4A-F18361E968D3}</Project>
