@@ -87,6 +87,11 @@ namespace Yun.User.Request
         /// </summary>
         public string Phone { get; set; }
 
+        /// <summary>
+        /// 身份证
+        /// </summary>
+        public string IdCard { get; set; }
+
 
         public string GetApiName()
         {
@@ -109,7 +114,8 @@ namespace Yun.User.Request
                 {"area",Area},
                 {"address",Address},
                 {"remark",Remark},
-                {"phone",Phone}
+                {"phone",Phone},
+                {"idcard",IdCard }
             };
             return parameters;
         }
