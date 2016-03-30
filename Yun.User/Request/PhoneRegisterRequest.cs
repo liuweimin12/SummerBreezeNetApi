@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.User.Request
 {
+    /// <summary>
+    /// 通过手机号码注册用户
+    /// </summary>
     public class PhoneRegisterRequest : ITopRequest<LoginResponse>
     {
         ///<summary>

@@ -4,6 +4,11 @@ using Yun.Interface;
 
 namespace Yun.Archive.Request
 {
+    /// <summary>
+    /// 获取文章
+    /// 获取文章列表
+    /// 不需要授权
+    /// </summary>
     public class GetArchivesRequest : ITopRequest<ArticlesResponse>
     {
         public string GetApiName()
@@ -56,11 +61,13 @@ namespace Yun.Archive.Request
 
         /// <summary>
         /// 开始发送时间
+        /// UNIX时间戳
         /// </summary>
         public long StartPostTime { get; set; }
 
         /// <summary>
         /// 结束发送时间
+        /// UNIX时间戳
         /// </summary>
         public long EndPostTime { get; set; }
 

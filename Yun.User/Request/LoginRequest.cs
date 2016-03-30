@@ -5,6 +5,10 @@ using Yun.Util;
 
 namespace Yun.User.Request
 {
+    /// <summary>
+    /// 用户登录
+    /// 根据用户名和密码进行登录获取访问口令
+    /// </summary>
     public class LoginRequest : ITopRequest<LoginResponse>
     {
         /// <summary>
@@ -13,7 +17,7 @@ namespace Yun.User.Request
         public string UserName { get; set; }
 
         /// <summary>
-        /// 经过加密的密码
+        /// 经过加密的密码，MD5加密
         /// </summary>
         public string Password { get; set; }
 
@@ -24,11 +28,13 @@ namespace Yun.User.Request
 
         /// <summary>
         /// APP密匙
+        /// 不要写在文档上
         /// </summary>
         public string AppSecret { get; set; }
 
         /// <summary>
-        /// 忽略密码
+        /// 是否忽略密码直接使用用户名获取访问口令
+        /// 该方法不要写在文档上
         /// </summary>
         public bool IgnorePassword { get; set; }
 
@@ -42,7 +48,12 @@ namespace Yun.User.Request
             var parameters = new YunDictionary
             {
                 {"username", this.UserName},
-                {"password", string.IsNullOrWhiteSpace(Password) ? "" : TopUtils.EncryptAes(Password, AppSecret)},
+                {
+                    "password",
+                    string.IsNullOrWhiteSpace(Password)
+                        ? ""
+                        : (Password.Length == 32 ? Password : TopUtils.EncryptAes(Password, AppSecret))
+                },
                 {"ip", this.Ip},
                 {"ignorepassword", IgnorePassword}
             };
@@ -52,7 +63,6 @@ namespace Yun.User.Request
         public void Validate()
         {
             RequestValidator.ValidateRequired("username", this.UserName);
-            RequestValidator.ValidateRequired("appsecret", this.AppSecret);
         }
 
     }

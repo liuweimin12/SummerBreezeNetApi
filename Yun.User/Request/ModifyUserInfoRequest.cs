@@ -8,6 +8,8 @@ namespace Yun.User.Request
 {
     /// <summary>
     /// 修改用户的个人资料
+    /// 根据用户名修改该用户的资料
+    /// 必须授权
     /// </summary>
     public class ModifyUserInfoRequest : ITopUploadRequest<IntResultResponse>
     {

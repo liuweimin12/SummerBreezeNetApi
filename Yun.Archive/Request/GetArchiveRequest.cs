@@ -5,6 +5,10 @@ using Yun.Util;
 
 namespace Yun.Archive.Request
 {
+    /// <summary>
+    /// 获取文章详情
+    /// 根据文章ID获取文章详情
+    /// </summary>
     public class GetArchiveRequest : ITopRequest<ArchiveDetailResponse>
     {
         public string GetApiName()
@@ -12,6 +16,9 @@ namespace Yun.Archive.Request
             return "chenggou.archive.get";
         }
 
+        /// <summary>
+        /// 需要返回的字段信息
+        /// </summary>
         public string Fields { get; set; }
 
         public IDictionary<string, string> GetParameters()
