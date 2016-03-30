@@ -5,6 +5,11 @@ using Yun.Util;
 
 namespace Yun.User.Request
 {
+    /// <summary>
+    /// 修改用户密码
+    /// 修改当前登录人员的密码
+    /// 必须授权
+    /// </summary>
     public class ModifyPasswordRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>
@@ -25,6 +30,7 @@ namespace Yun.User.Request
 
         /// <summary>
         /// APP密匙
+        /// 不要写入文档
         /// </summary>
         public string AppSecret { get; set; }
 
@@ -32,15 +38,14 @@ namespace Yun.User.Request
         {
             var parameters = new YunDictionary
             {
-                {"password",TopUtils.EncryptAes(Password, AppSecret)},
-                {"newpassword",TopUtils.EncryptAes(NewPassword, AppSecret)}
+                {"password", Password.Length == 32 ? Password : TopUtils.EncryptAes(Password, AppSecret)},
+                {"newpassword", NewPassword.Length == 32 ? NewPassword : TopUtils.EncryptAes(NewPassword, AppSecret)}
             };
             return parameters;
         }
 
         public void Validate()
         {
-            RequestValidator.ValidateRequired("appsecret", AppSecret);
             RequestValidator.ValidateRequired("password", Password);
             RequestValidator.ValidateRequired("newpassword", NewPassword);
         }

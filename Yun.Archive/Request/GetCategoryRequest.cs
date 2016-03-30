@@ -5,6 +5,10 @@ using Yun.Util;
 
 namespace Yun.Archive.Request
 {
+    /// <summary>
+    /// 获取文章分类
+    /// 根据分类ID来查找文章分类
+    /// </summary>
     public class GetCategoryRequest : ITopRequest<ArchiveCategoryResponse>
     {
         public string GetApiName()

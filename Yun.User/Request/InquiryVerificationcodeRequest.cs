@@ -8,7 +8,7 @@ using Yun.Util;
 
 namespace Yun.User.Request
 {
-    public class InquiryVerificationcodeRequest : ITopRequest<BoolResultResponse>
+    public class InquiryVerificationCodeRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>
         /// 验证码

@@ -5,17 +5,24 @@ using Yun.Util;
 
 namespace Yun.User.Request
 {
+    /// <summary>
+    /// 发送验证码
+    /// 通用的验证码发送接口
+    /// 不需要授权
+    /// </summary>
     public class SendVerificationCodeRequest : ITopRequest<StringResultResponse>
     {
         /// <summary>
         /// 用户匿名标识
+        /// 进行验证码校验是需要对应用户
         /// </summary>
         public string UserFlag { get; set; }
 
         /// <summary>
         /// 公司ID
+        /// 是否需要使用公司的短信通道，是则传入公司ID
         /// </summary>
-        public int CompanyId { get; set; }
+        public int? CompanyId { get; set; }
 
         /// <summary>
         /// 发送类型
@@ -30,6 +37,7 @@ namespace Yun.User.Request
 
         /// <summary>
         /// 动作名字,最多10个字符
+        /// 例如用户注册，密码找回
         /// </summary>
         public string ActionName { get; set; }
 

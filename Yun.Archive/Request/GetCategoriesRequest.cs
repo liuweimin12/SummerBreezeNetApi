@@ -4,6 +4,10 @@ using Yun.Interface;
 
 namespace Yun.Archive.Request
 {
+    /// <summary>
+    /// 获取文章分类
+    /// 获取文章分类列表
+    /// </summary>
     public class GetCategoriesRequest : ITopRequest<ArchiveCategoriesResponse>
     {
         public string GetApiName()
@@ -18,8 +22,9 @@ namespace Yun.Archive.Request
 
         /// <summary>
         /// 店铺id
+        /// 查找某店铺下的文章
         /// </summary>
-        public int ShopId { get; set; }
+        public int? ShopId { get; set; }
 
         /// <summary>
         /// 父ID

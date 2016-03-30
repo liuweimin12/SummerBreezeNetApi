@@ -93,7 +93,7 @@
     <Compile Include="Request\GetUserScoreListRequest.cs" />
     <Compile Include="Request\GetUserTagRequest.cs" />
     <Compile Include="Request\GetUserTotalScoreRequest.cs" />
-    <Compile Include="Request\InquiryVerificationcodeRequest.cs" />
+    <Compile Include="Request\InquiryVerificationCodeRequest.cs" />
     <Compile Include="Request\LoginMobilePhoneRequest.cs" />
     <Compile Include="Request\LoginOauth2Request.cs" />
     <Compile Include="Request\LoginRequest.cs" />
