@@ -20,5 +20,22 @@ namespace Yun.UnitTest
             var req = YunClient.Instance.Execute(new GerPermissionUserRequest {Id = 172586}, YunClient.GetAdminToken());
             Assert.IsTrue(req.User != null);
         }
+
+        [TestMethod]
+        public void LoginRequest()
+        {
+            YunClient.Format = "json";
+
+            var req =
+                YunClient.Instance.Execute(new LoginRequest
+                {
+                    UserName = "测试网站111",
+                    Password = "888999",
+                    Ip = "192.168.1.1",
+                    AppSecret = YunClient.AppSecret
+                });
+
+            Assert.IsTrue(req.UserId>0);
+        }
     }
 }

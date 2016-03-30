@@ -18,6 +18,8 @@ namespace Yun.UnitTest
         private static readonly string _adminUser = ConfigurationManager.AppSettings["AdminUser"];
         private static readonly string _adminSecret = ConfigurationManager.AppSettings["AdminSecret"];
 
+        public static string Format = "xml";
+
         public static string GetAdminToken()
         {
             return Instance.Execute(new LoginRequest
@@ -48,7 +50,7 @@ namespace Yun.UnitTest
                         throw new Exception("服务端必要数据未初始化");
                     }
 
-                    _yunClient = new DefaultYunClient(_serverUrl, _serverKey, _serverSecret);
+                    _yunClient = new DefaultYunClient(_serverUrl, _serverKey, _serverSecret, Format);
                 }
             }
         }
