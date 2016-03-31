@@ -48,6 +48,7 @@ namespace Yun.User.Request
             var parameters = new YunDictionary
             {
                 {"username", this.UserName},
+
                 {
                     "password",
                     string.IsNullOrWhiteSpace(Password)
