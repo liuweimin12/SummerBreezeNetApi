@@ -57,6 +57,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ItemUnitTest.cs" />
     <Compile Include="MarketingUnitTest.cs" />
     <Compile Include="PrivateUnitTest.cs" />
     <Compile Include="TradeUnitTest.cs" />
@@ -67,6 +68,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Yun.Item\Yun.Item.csproj">
+      <Project>{bc8d771c-96eb-4ee4-803d-66b1b9739bca}</Project>
+      <Name>Yun.Item</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Yun.Marketing\Yun.Marketing.csproj">
       <Project>{66f0ee7b-d76e-402e-8b25-ece884ff66fb}</Project>
       <Name>Yun.Marketing</Name>

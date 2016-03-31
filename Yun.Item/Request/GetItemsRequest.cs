@@ -98,7 +98,7 @@ namespace Yun.Item.Request
         /// </summary>
         public string ItemCode { get; set; }
 
-        public int ShopId { get; set; }
+        public int? ShopId { get; set; }
 
         public string Sorts { get; set; }
 
@@ -113,12 +113,12 @@ namespace Yun.Item.Request
         /// <summary>
         /// 公司ID
         /// </summary>
-        public int CompanyId { get; set; }
+        public int? CompanyId { get; set; }
 
         /// <summary>
         /// 是否需要促销的信息
         /// </summary>
-        public bool NeedPromotion { get; set; }
+        public bool? NeedPromotion { get; set; }
 
 
         public string GetApiName()
