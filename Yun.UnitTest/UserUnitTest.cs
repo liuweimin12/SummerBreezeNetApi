@@ -89,7 +89,7 @@ namespace Yun.UnitTest
                     Remark = "",
                     Phone = "",
                     IdCard = "",
-                    NewImage =
+                    ////NewImage =
              });
 
             Assert.IsTrue(req != null);
