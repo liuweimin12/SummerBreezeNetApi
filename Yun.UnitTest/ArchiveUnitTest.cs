@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Yun.User.Archive;
+
 
 namespace Yun.UnitTest
 {
@@ -11,7 +13,7 @@ namespace Yun.UnitTest
         {
             YunClient.Format = "json";
             var req =
-                YunClient.Instance.Execute(new GetArchivesRequest
+                YunClient.Instance.Execute(new g
                 {
                     Ip = "192.168.1.1",
                     Phone = "12345678996",
