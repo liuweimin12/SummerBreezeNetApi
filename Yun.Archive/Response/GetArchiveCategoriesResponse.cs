@@ -4,7 +4,7 @@ using Yun.Response;
 
 namespace Yun.Archive.Response
 {
-    public class ArchiveCategoriesResponse : YunResponse
+    public class GetArchiveCategoriesResponse : YunResponse
     {
         [XmlArray("categories")]
         [XmlArrayItem("category")]

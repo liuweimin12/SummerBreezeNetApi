@@ -1,10 +1,14 @@
 ﻿using System.Collections.Generic;
 using Yun.Interface;
 using Yun.Logistics.Response;
-using Yun.Response;
 
 namespace Yun.Logistics.Request
 {
+    /// <summary>
+    /// 获取用户的收货地址列表
+    /// 需要授权
+    /// 获取当前用户名下的收货地址列表
+    /// </summary>
     public class GetAddressesRequest : ITopRequest<GetAddressesResponse>
     {
         /// <summary>

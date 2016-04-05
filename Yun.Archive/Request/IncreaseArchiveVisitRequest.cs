@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Yun.Interface;
 using Yun.Response;
 
 namespace Yun.Archive.Request
 {
-    public class IncreaseVisitRequest : ITopRequest<BoolResultResponse>
+    /// <summary>
+    /// 增加浏览量
+    /// 根据文章ID增加对应文章的浏览量
+    /// </summary>
+    public class IncreaseArchiveVisitRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>
         /// 文章ID

@@ -3,7 +3,7 @@ using Yun.Response;
 
 namespace Yun.Archive.Response
 {
-    public class ArchiveCategoryResponse : YunResponse
+    public class GetArchiveCategoryResponse : YunResponse
     {
         [XmlElement("category")]
         public ArticleCategory Category { get; set; }

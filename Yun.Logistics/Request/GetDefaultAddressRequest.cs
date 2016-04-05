@@ -1,10 +1,14 @@
 ﻿using System.Collections.Generic;
 using Yun.Interface;
 using Yun.Logistics.Response;
-using Yun.Response;
 
 namespace Yun.Logistics.Request
 {
+    /// <summary>
+    /// 获取用户的默认地址
+    /// 需要授权
+    /// 根据用户的登录凭证获取用户的默认地址
+    /// </summary>
     public class GetDefaultAddressRequest : ITopRequest<GetDefaultAddressResponse>
     {
         public string GetApiName()

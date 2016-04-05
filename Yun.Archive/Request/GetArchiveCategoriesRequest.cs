@@ -8,7 +8,7 @@ namespace Yun.Archive.Request
     /// 获取文章分类
     /// 获取文章分类列表
     /// </summary>
-    public class GetCategoriesRequest : ITopRequest<ArchiveCategoriesResponse>
+    public class GetArchiveCategoriesRequest : ITopRequest<GetArchiveCategoriesResponse>
     {
         public string GetApiName()
         {
