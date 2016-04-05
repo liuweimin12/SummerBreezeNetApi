@@ -22,11 +22,11 @@ namespace Yun.UnitTest
         [TestMethod]
         public void GetTradeRequest()
         {
-            YunClient.Format = "json";
+           YunClient.Format = "json";
             var req =
                 YunClient.Instance.Execute(new GetTradeRequest
                 {
-                    Id = 123,
+                    Id = 123456,
                     TradeNo="number"
 
                 });
