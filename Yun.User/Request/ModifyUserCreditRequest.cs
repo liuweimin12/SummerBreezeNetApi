@@ -7,6 +7,7 @@ namespace Yun.User.Request
 {
     /// <summary>
     /// 修改用户积分
+    /// 不需要授权
     /// </summary>
     public class ModifyUserCreditRequest : ITopRequest<BoolResultResponse>
     {
