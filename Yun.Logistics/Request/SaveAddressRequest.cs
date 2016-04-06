@@ -12,6 +12,9 @@ namespace Yun.Logistics.Request
     /// </summary>
     public class SaveAddressRequest : ITopRequest<BoolResultResponse>
     {
+        /// <summary>
+        ///用户ID
+        /// </summary>
         public int? Id { get; set; }
 
         /// <summary>
@@ -21,11 +24,11 @@ namespace Yun.Logistics.Request
         /// <summary>
         /// 市
         /// </summary>
-        public string Area { get; set; }
+        public string City { get; set; }
         /// <summary>
         /// 区
         /// </summary>
-        public string City { get; set; }
+        public string Area { get; set; }
         /// <summary>
         /// 街道
         /// </summary>
