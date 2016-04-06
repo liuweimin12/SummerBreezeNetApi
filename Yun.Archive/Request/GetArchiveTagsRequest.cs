@@ -5,7 +5,11 @@ using Yun.Util;
 
 namespace Yun.Archive.Request
 {
-    public class GetTagsRequest : ITopRequest<TagsResponse>
+    /// <summary>
+    /// 获取文章标签
+    /// 获取店铺下所有文章关联的标签
+    /// </summary>
+    public class GetArchiveTagsRequest : ITopRequest<TagsResponse>
     {
         public string GetApiName()
         {
@@ -15,7 +19,7 @@ namespace Yun.Archive.Request
         /// <summary>
         /// 店铺id
         /// </summary>
-        public int ShopId { get; set; }
+        public int? ShopId { get; set; }
 
         /// <summary>
         /// 页码

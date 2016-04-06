@@ -9,7 +9,7 @@ namespace Yun.Archive.Request
     /// 获取文章分类
     /// 根据分类ID来查找文章分类
     /// </summary>
-    public class GetCategoryRequest : ITopRequest<ArchiveCategoryResponse>
+    public class GetArchiveCategoryRequest : ITopRequest<GetArchiveCategoryResponse>
     {
         public string GetApiName()
         {

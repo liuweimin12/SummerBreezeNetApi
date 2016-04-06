@@ -5,9 +5,14 @@ using Yun.Util;
 
 namespace Yun.Logistics.Request
 {
+    /// <summary>
+    /// 保存用户的收货地址
+    /// 需要授权
+    /// 新增/更改用户的收货地址
+    /// </summary>
     public class SaveAddressRequest : ITopRequest<BoolResultResponse>
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// 省
