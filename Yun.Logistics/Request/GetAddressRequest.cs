@@ -15,6 +15,9 @@ namespace Yun.Logistics.Request
         {
             return "chenggou.user.address.get";
         }
+        /// <summary>
+        /// 地址ID
+        /// </summary>
         public int Id { get; set; }
 
         public IDictionary<string, string> GetParameters()
