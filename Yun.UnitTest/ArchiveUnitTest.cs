@@ -82,7 +82,7 @@ namespace Yun.UnitTest
                 {
                     ShopId = 123,
                     PageNum = 1,
-                    PageSize=100
+                    PageSize=20
 
                 });
             Assert.IsTrue(req != null);
