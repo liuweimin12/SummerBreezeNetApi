@@ -69,11 +69,39 @@ namespace Yun.UnitTest
         //        YunClient.Instance.Execute(new GetCategoryRequest
         //        {
         //            Id = 123,
-                    
+
         //        });
         //    Assert.IsTrue(req != null);
         //}
-       
+        [TestMethod]
+        public void GetArchiveTagsRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetArchiveTagsRequest
+                {
+                    ShopId = 123,
+                    PageNum = 1,
+                    PageSize=100
+
+                });
+            Assert.IsTrue(req != null);
         }
+        [TestMethod]
+        public void IncreaseArchiveVisitRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new IncreaseArchiveVisitRequest
+                {
+                    Id = 123,
+                    Visits = 123,
+                 
+
+                });
+            Assert.IsTrue(req != null);
+        }
+
+    }
     }
 
