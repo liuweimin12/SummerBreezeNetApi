@@ -70,42 +70,42 @@ namespace Yun.UnitTest
                 YunClient.Instance.Execute(new GetTheMostExpensiveTemplateRequest
                 {
                     ItemIds = "123"
-                 });
-            Assert.IsTrue(req != null);
-
-        }
-        [TestMethod]
-        public void SaveAddressRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new SaveAddressRequest
-                {
-                    Id = 123,
-                    Province="浙江省",
-                    City="宁波",
-                    Area="高新区",
-                    Street="杨帆街道",
-                    Zipcode="000000",
-                    Name="hello",
-                    Mobile="0000-000000",
-                    IsDefault=0
-
                 });
             Assert.IsTrue(req != null);
 
         }
-        [TestMethod]
-        public void SetDefaultAddressRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new SetDefaultAddressRequest
-                {
-                    Id = 123
-                   });
-            Assert.IsTrue(req != null);
+    [TestMethod]
+    public void SaveAddressRequest()
+    {
+        YunClient.Format = "json";
+        var req =
+            YunClient.Instance.Execute(new SaveAddressRequest
+            {
+                Id = 123,
+                Province = "浙江省",
+                City = "宁波",
+                Area = "高新区",
+                Street = "杨帆街道",
+                Zipcode = "000000",
+                Name = "hello",
+                Mobile = "0000-000000",
+                IsDefault = 0
 
-        }
+            });
+        Assert.IsTrue(req != null);
 
-    } }
+    }
+    [TestMethod]
+    public void SetDefaultAddressRequest()
+    {
+        YunClient.Format = "json";
+        var req =
+            YunClient.Instance.Execute(new SetDefaultAddressRequest
+            {
+                Id = 123
+            });
+        Assert.IsTrue(req != null);
+
+    }
+
+} }
