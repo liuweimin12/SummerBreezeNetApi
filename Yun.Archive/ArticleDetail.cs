@@ -110,11 +110,15 @@ namespace Yun.Archive
         /// </summary>
         [XmlElement("sort")]
         public long Sort { get; set; }
-
+        /// <summary>
+        /// 文章拓展内容
+        /// </summary>
         [XmlArray("post_metas")]
         [XmlArrayItem("post_meta")]
         public List<StringKeyValuePair> PostMeta { get; set; }
-
+        /// <summary>
+        /// 文章状态
+        /// </summary>
         [XmlElement("status")]
         public string Status { get; set; }
     }
