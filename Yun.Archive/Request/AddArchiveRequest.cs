@@ -77,6 +77,11 @@ namespace Yun.Archive.Request
         /// </summary>
         public string Thumb { get; set; }
 
+        /// <summary>
+        /// 自定义类型
+        /// </summary>
+        public int CustomType { get; set; }
+
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
@@ -93,7 +98,8 @@ namespace Yun.Archive.Request
                 {"status",Status},
                 {"visits",Visits},
                 {"posttime",PostTime},
-                {"thumb",Thumb}
+                {"thumb",Thumb},
+                {"customtype",CustomType }
             };
 
             return parameters;

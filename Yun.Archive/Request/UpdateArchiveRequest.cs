@@ -79,6 +79,11 @@ namespace Yun.Archive.Request
         /// </summary>
         public long PostTime { get; set; }
 
+        /// <summary>
+        /// 自定义类型
+        /// </summary>
+        public int CustomType { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.archive.update";
@@ -101,7 +106,8 @@ namespace Yun.Archive.Request
                 {"postmeta", PostMeta},
                 {"status",Status},
                 {"visits",Visits},
-                {"posttime",PostTime}
+                {"posttime",PostTime},
+                {"customtype",CustomType }
             };
             return parameters;
         }
