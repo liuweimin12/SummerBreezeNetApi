@@ -7,6 +7,7 @@ namespace Yun.User.Request
 {
     /// <summary>
     /// 通过手机号码注册用户
+    /// 根据手机号码和动态验证码注册用户
     /// </summary>
     public class PhoneRegisterRequest : ITopRequest<LoginResponse>
     {

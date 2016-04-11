@@ -6,7 +6,8 @@ using Yun.Util;
 namespace Yun.User.Request
 {
     /// <summary>
-    /// 快捷登陆
+    /// 快捷登录
+    /// 根据第三方的oauthid进行用户的快捷登录
     /// chenggou.oauth2.login
     /// </summary>
     public class LoginOauth2Request : ITopRequest<OAuth2LoginResponse>

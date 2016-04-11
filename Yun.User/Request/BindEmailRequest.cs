@@ -8,8 +8,13 @@ using Yun.Util;
 
 namespace Yun.User.Request
 {
+    /// <summary>
+    /// 绑定邮箱
+    /// 通过验证码修改/绑定当前登录人的邮箱
+    /// </summary>
     public class BindEmailRequest : ITopRequest<BoolResultResponse>
     {
+        /// <summary>
         /// 邮箱
         /// </summary>
         public string Email { get; set; }

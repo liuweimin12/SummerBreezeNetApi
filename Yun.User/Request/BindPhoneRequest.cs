@@ -8,6 +8,10 @@ using Yun.Util;
 
 namespace Yun.User.Request
 {
+    /// <summary>
+    /// 绑定邮箱
+    /// 通过验证码修改/绑定当前登录人的手机号
+    /// </summary>
     public class BindPhoneRequest : ITopRequest<BoolResultResponse>
     {
 

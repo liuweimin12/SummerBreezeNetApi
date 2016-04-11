@@ -7,6 +7,7 @@ namespace Yun.User.Request
 {
     /// <summary>
     /// 绑定OAuth2账号
+    /// 根据用户ID绑定第三方账号
     /// chenggou.oauth2.user.bind
     /// </summary>
     public class BindOauth2AccountRequest: ITopRequest<BoolResultResponse>

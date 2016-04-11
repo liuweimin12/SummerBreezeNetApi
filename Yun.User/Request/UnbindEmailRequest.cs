@@ -7,6 +7,10 @@ using Yun.Response;
 
 namespace Yun.User.Request
 {
+    /// <summary>
+    /// 解绑邮箱
+    /// 根据验证码解绑当前登录人的邮箱
+    /// </summary>
     public class UnbindEmailRequest : ITopRequest<BoolResultResponse>
     {
 
