@@ -4,6 +4,10 @@ using Yun.User.Response;
 
 namespace Yun.User.Request
 {
+    /// <summary>
+    /// 获取用户信息
+    /// 根据用户名或者用户ID获取用户信息
+    /// </summary>
     public class GetUserRequest : ITopRequest<UserResponse>
     {
         /// <summary>

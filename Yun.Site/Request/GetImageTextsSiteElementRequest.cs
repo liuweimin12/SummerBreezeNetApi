@@ -5,6 +5,10 @@ using Yun.Util;
 
 namespace Yun.Site.Request
 {
+    /// <summary>
+    /// 获取图文信息
+    /// 根据模块标识或者模块ID获取该模块下的图文信息
+    /// </summary>
     public class GetImageTextsSiteElementRequest : ITopRequest<ImageTextsResponse>    
     {
         /// <summary>

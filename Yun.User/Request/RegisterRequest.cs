@@ -5,19 +5,25 @@ using Yun.Util;
 
 namespace Yun.User.Request
 {
+    /// <summary>
+    /// 注册用户
+    /// 通过用户名、邮箱、手机号等信息注册用户
+    /// </summary>
     public class RegisterRequest : ITopRequest<LoginResponse>
     {
         /// <summary>
         /// 店铺ID
         /// </summary>
-        public int ShopId { get; set; }
+        public int? ShopId { get; set; }
 
         /// <summary>
         /// 公司ID
         /// </summary>
-        public int CompanyId { get; set; }
+        public int? CompanyId { get; set; }
 
-
+        /// <summary>
+        /// 用户在系统中的等级，可以自定义用来进行用户分组
+        /// </summary>
         public int SystemLevel { get; set; }
 
         /// <summary>

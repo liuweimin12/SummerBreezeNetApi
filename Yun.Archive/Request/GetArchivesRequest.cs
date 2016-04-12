@@ -112,6 +112,11 @@ namespace Yun.Archive.Request
         /// </summary>
         public int? CompanyId { get; set; }
 
+        /// <summary>
+        /// 自定义类型
+        /// </summary>
+        public int? CustomType { get; set; }
+
 
         public IDictionary<string, string> GetParameters()
         {
@@ -131,7 +136,8 @@ namespace Yun.Archive.Request
                 {"haspunish", HasPunish},
                 {"tags", Tags},
                 {"categoryname", CategoryName},
-                {"companyid", CompanyId}
+                {"companyid", CompanyId},
+                {"customtype",CustomType }
             };
             return parameters;
         }

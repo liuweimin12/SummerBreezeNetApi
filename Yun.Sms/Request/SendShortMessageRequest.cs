@@ -10,6 +10,7 @@ namespace Yun.Sms.Request
 {
     /// <summary>
     /// 短信发送
+    /// 根据指定的通道发送短信
     /// chenggou.sms.send
     /// </summary>
     public class SendShortMessageRequest : ITopRequest<BoolResultResponse>
@@ -29,7 +30,7 @@ namespace Yun.Sms.Request
         /// <summary>
         /// 公司ID
         /// </summary>
-        public int CompanyId { get; set; }
+        public int? CompanyId { get; set; }
 
         public string GetApiName()
         {

@@ -4,7 +4,11 @@ using Yun.User.Response;
 
 namespace Yun.User.Request
 {
-    public class AuthRequest : ITopRequest<AuthResponse>
+    /// <summary>
+    /// 验证授权信息
+    /// 根据授权信息获取用户信息
+    /// </summary>
+    public class AuthSessionRequest : ITopRequest<AuthSessionResponse>
     {
         public string GetApiName()
         {

@@ -7,6 +7,10 @@ using Yun.Response;
 
 namespace Yun.User.Request
 {
+    /// <summary>
+    /// 解绑手机号
+    /// 根据验证码解绑当前登录人的手机号
+    /// </summary>
     public class UnbindPhoneRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>

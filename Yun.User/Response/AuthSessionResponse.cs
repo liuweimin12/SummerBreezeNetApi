@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 
 namespace Yun.User.Response
 {
-    public class AuthResponse : YunResponse
+    public class AuthSessionResponse : YunResponse
     {
         [XmlElement("user_id")]
         public long UserId { get; set; }

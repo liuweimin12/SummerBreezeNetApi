@@ -56,7 +56,7 @@
     <Compile Include="Request\AllowFunctionRequest.cs" />
     <Compile Include="Request\AnalogShopLoginRequest.cs" />
     <Compile Include="Request\AssociatedUserTagsRequest.cs" />
-    <Compile Include="Request\AuthRequest.cs" />
+    <Compile Include="Request\AuthSessionRequest.cs" />
     <Compile Include="Request\BatchAssociatedUserTagsRequest.cs" />
     <Compile Include="Request\BatchUpdateOrganizationRequest.cs" />
     <Compile Include="Request\BatchUpdateFunctionSortRequest.cs" />
@@ -123,13 +123,13 @@
     <Compile Include="Request\UpdateNestsortFunction.cs" />
     <Compile Include="Request\UpdateOrganizationRequest.cs" />
     <Compile Include="Request\UpdateRoleRequest.cs" />
-    <Compile Include="Request\UpdatesortFunctionRequest.cs" />
+    <Compile Include="Request\UpdateSortFunctionRequest.cs" />
     <Compile Include="Request\UpdateUserTagRequest.cs" />
     <Compile Include="Request\UploadAvatarUserRequest.cs" />
     <Compile Include="Request\UsePrepaidCardRegisterRequest.cs" />
     <Compile Include="Request\UserBindShopRequest.cs" />
     <Compile Include="Request\UserTagRemovesAssociationRequest.cs" />
-    <Compile Include="Response\AuthResponse.cs" />
+    <Compile Include="Response\AuthSessionResponse.cs" />
     <Compile Include="Response\FunctionResponse.cs" />
     <Compile Include="Response\FunctionsResponse.cs" />
     <Compile Include="Response\GetAlbumResponse.cs" />

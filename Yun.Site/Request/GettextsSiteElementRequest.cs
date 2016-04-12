@@ -5,6 +5,10 @@ using Yun.Util;
 
 namespace Yun.Site.Request
 {
+    /// <summary>
+    /// 获取纯文字信息
+    /// 根据模块标识或者模块ID获取该模块下的纯文字信息
+    /// </summary>
     public class GetTextsSiteElementRequest : ITopRequest<TextsResponse>
     {
         /// <summary>
