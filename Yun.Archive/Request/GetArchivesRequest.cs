@@ -102,7 +102,7 @@ namespace Yun.Archive.Request
         public string Tags { get; set; }
 
         /// <summary>
-        /// 标签名字
+        /// 分类名字
         /// </summary>
         public string CategoryName { get; set; }
 
