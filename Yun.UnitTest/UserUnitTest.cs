@@ -44,11 +44,6 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new PhoneDynamicLoginRequest
                 {
-                    Ip = "192.168.1.1",
-                    Phone = "12345678996",
-                    Code = "888999",
-                    ShopId = 123,
-                    CompanyId = 123
                 });
 
             Assert.IsTrue(req.UserId > 0);
@@ -89,7 +84,7 @@ namespace Yun.UnitTest
                     Remark = "",
                     Phone = "",
                     IdCard = "",
-                    ////NewImage =
+                    
              });
 
             Assert.IsTrue(req != null);
@@ -127,6 +122,46 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req != null);
         }
-        
+        [TestMethod]
+        public void PhoneRegisterRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new PhoneRegisterRequest()
+
+                {
+                    
+                });
+
+            Assert.IsTrue(req != null);
         }
+        
+       [TestMethod]
+        public void GetUserRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetUserRequest()
+
+                {
+
+                });
+
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void LoginOauth2Request()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new LoginOauth2Request()
+
+                {
+
+                });
+
+            Assert.IsTrue(req != null);
+        }
+        
+    }
 }
