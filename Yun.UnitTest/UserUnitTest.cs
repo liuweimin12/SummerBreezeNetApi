@@ -174,6 +174,79 @@ namespace Yun.UnitTest
                 });
             Assert.IsTrue(req != null);
         }
+        [TestMethod]
+        public void BindOauth2AccountRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new BindOauth2AccountRequest()
+
+                {
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void BindEmailRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new BindEmailRequest()
+
+                {
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void BindPhoneRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new BindPhoneRequest()
+
+                {
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void AuthSessionRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new AuthSessionRequest()
+
+                {
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void UnbindEmailRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new UnbindEmailRequest()
+
+                {
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void UnbindPhoneRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new UnbindPhoneRequest()
+
+                {
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        
 
     }
 }
