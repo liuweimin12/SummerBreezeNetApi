@@ -11,7 +11,7 @@ namespace Yun.UnitTest
         [TestMethod]
         public void GetArchivesRequest()
         {
-            YunClient.Format = "json";
+            YunClient.Format = "xml";
             var req =
                 YunClient.Instance.Execute(new GetArchivesRequest
                 {
@@ -28,6 +28,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new GetArchiveRequest
                 {
+                   
                 });
             Assert.IsTrue(req != null);
         }
