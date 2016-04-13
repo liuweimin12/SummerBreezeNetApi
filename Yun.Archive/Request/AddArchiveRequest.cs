@@ -5,6 +5,10 @@ using Yun.Util;
 
 namespace Yun.Archive.Request
 {
+    /// <summary>
+    /// 新增文章
+    /// 需要授权
+    /// </summary>
     public class AddArchiveRequest : ITopUploadRequest<IntResultResponse>
     {
         public string GetApiName()
@@ -37,7 +41,10 @@ namespace Yun.Archive.Request
         /// </summary>
         public string Title { get; set; }
 
-        //评论状态
+        /// <summary>
+        /// 评论状态
+        /// OPEN或者CLOSED
+        /// </summary>
         public string CommentStatus { get; set; }
 
         /// <summary>

@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Yun.Archive.Request;
+using Yun.User.Request;
 
 
 namespace Yun.UnitTest
@@ -8,6 +9,31 @@ namespace Yun.UnitTest
     [TestClass]
     public class ArchiveUnitTest
     {
+        [TestMethod]
+        public void AddArchiveRequest()
+        {
+            var req = YunClient.Instance.Execute(new AddArchiveRequest
+            {
+                CategoryId = 0,
+                CommentStatus = "OPEN",
+                CustomType = 0,
+                Password = "",
+                ParentId = 0,
+                PostMeta = null,
+                Image = null,
+                Sort = 0,
+                Detail = "文章详情",
+                PostTime = 0,
+                Status = "",
+                Tags = "",
+                Thumb = "",
+                Title = "测试文章",
+                Visits = 0
+            }, YunClient.GetAdminToken());
+
+            Assert.IsTrue(req.Result>0);
+        }
+
         [TestMethod]
         public void GetArchivesRequest()
         {
@@ -28,6 +54,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new GetArchiveRequest
                 {
+                    Id = 7
                 });
             Assert.IsTrue(req != null);
         }

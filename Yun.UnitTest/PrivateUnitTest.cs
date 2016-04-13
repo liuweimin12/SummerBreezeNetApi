@@ -19,9 +19,9 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new AddSiteRequest
                 {
-                    Email = "chengjie.shen@hotmail.com",
-                    MobilePhone = "17186393785",
-                    SiteName = "夏日微风开放平台",
+                    Email = "1805768571@qq.com",
+                    MobilePhone = "18606683125",
+                    SiteName = "测试网站",
                     Password = "888999",
                     Secret = YunClient.AppSecret,
                     Ip = "192.168.1.1"
