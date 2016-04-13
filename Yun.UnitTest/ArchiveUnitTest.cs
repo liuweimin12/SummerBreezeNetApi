@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Yun.Archive.Request;
+using Yun.User.Request;
 
 
 namespace Yun.UnitTest
@@ -8,6 +9,33 @@ namespace Yun.UnitTest
     [TestClass]
     public class ArchiveUnitTest
     {
+        [TestMethod]
+        public void AddArchiveRequest()
+        {
+            YunClient.Format = "xml";
+            var req = YunClient.Instance.Execute(new AddArchiveRequest
+            {
+                CategoryId = 0,
+                CommentStatus = "OPEN",
+                CustomType = 0,
+                Password = "",
+                ParentId = 0,
+                PostMeta = null,
+                Image = null,
+                Sort = 0,
+                Detail = "文章详情",
+                PostTime = 0,
+                Status = "",
+                Tags = "",
+                Thumb = "",
+                Title = "测试文章",
+                Visits = 0
+            }, YunClient.GetAdminToken());
+
+            Assert.IsTrue(req.Result>0);
+        }
+
+
         [TestMethod]
         public void GetArchivesRequest()
         {
@@ -24,14 +52,31 @@ namespace Yun.UnitTest
         [TestMethod]
         public void GetArchiveRequest()
         {
-            YunClient.Format = "json";
+            YunClient.Format = "xml";
             var req =
                 YunClient.Instance.Execute(new GetArchiveRequest
                 {
-                   
+                   Id = 10
                 });
             Assert.IsTrue(req != null);
         }
+
+        //[TestMethod]
+        //public void AddCategoryRequest()
+        //{
+        //    YunClient.Format = "json";
+        //    var req =
+        //        YunClient.Instance.Execute(new AddCategoryRequest
+        //        {
+        //            Name ="hello" ,
+        //            Description = "hello",
+        //            ParentId = 1,
+        //            Sort = 1,
+        //            Image = null,
+        //            Thumb = "",
+        //        });
+        //    Assert.IsTrue(req != null);
+        //}
 
         [TestMethod]
         public void GetArchiveCategoriesRequest()
