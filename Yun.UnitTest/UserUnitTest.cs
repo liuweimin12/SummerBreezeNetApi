@@ -159,9 +159,21 @@ namespace Yun.UnitTest
                 {
 
                 });
+          Assert.IsTrue(req != null);
 
+        }
+        [TestMethod]
+        public void RegisterRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new RegisterRequest()
+
+                {
+
+                });
             Assert.IsTrue(req != null);
         }
-        
+
     }
 }
