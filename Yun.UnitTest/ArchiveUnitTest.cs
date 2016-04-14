@@ -61,22 +61,22 @@ namespace Yun.UnitTest
             Assert.IsTrue(req != null);
         }
 
-        //[TestMethod]
-        //public void AddCategoryRequest()
-        //{
-        //    YunClient.Format = "json";
-        //    var req =
-        //        YunClient.Instance.Execute(new AddCategoryRequest
-        //        {
-        //            Name ="hello" ,
-        //            Description = "hello",
-        //            ParentId = 1,
-        //            Sort = 1,
-        //            Image = null,
-        //            Thumb = "",
-        //        });
-        //    Assert.IsTrue(req != null);
-        //}
+        [TestMethod]
+        public void AddCategoryRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new AddCategoryRequest
+                {
+                    Name = "hello001",
+                    Description = "123",
+                    ParentId = 1,
+                    Sort = 1,
+                    Image = null,
+                    Thumb = "",
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req.Result > 0);
+        }
 
         [TestMethod]
         public void GetArchiveCategoriesRequest()
@@ -92,10 +92,11 @@ namespace Yun.UnitTest
         [TestMethod]
         public void GetArchiveCategoryRequest()
         {
-            YunClient.Format = "XML";
+            YunClient.Format = "json";
             var req =
                 YunClient.Instance.Execute(new GetArchiveCategoryRequest
                 {
+                    Id = 34,
                 });
             Assert.IsTrue(req != null);
         }
@@ -103,25 +104,27 @@ namespace Yun.UnitTest
         [TestMethod]
         public void GetArchiveTagsRequest()
         {
-            YunClient.Format = "xml";
+            YunClient.Format = "json";
             var req =
                 YunClient.Instance.Execute(new GetArchiveTagsRequest
                 {
+                    PageSize = 100
                 });
             Assert.IsTrue(req != null);
         }
 
-        [TestMethod]
-        public void IncreaseArchiveVisitRequest()
-        {
-            YunClient.Format = "xml";
-            var req =
-                YunClient.Instance.Execute(new IncreaseArchiveVisitRequest
-                {
-                   
-                 });
-            Assert.IsTrue(req != null);
-        }
+        //[TestMethod]
+        //public void IncreaseArchiveVisitRequest()
+        //{
+        //    YunClient.Format = "xml";
+        //    var req =
+        //        YunClient.Instance.Execute(new IncreaseArchiveVisitRequest
+        //        {
+        //            Id = 10,
+        //            Visits =10
+        //        }, YunClient.GetAdminToken());
+        //    Assert.IsTrue(req != null);
+        //}
 
     }
     }
