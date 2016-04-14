@@ -26,5 +26,19 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req != null);
         }
+        [TestMethod]
+        public void GetTextSiteElementRequest()
+        {
+            YunClient.Format = "json";
+
+            var req =
+                YunClient.Instance.Execute(new GetTextSiteElementRequest
+                {
+
+                });
+
+            Assert.IsTrue(req != null);
+        }
+        
     }
 }
