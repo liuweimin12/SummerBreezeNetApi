@@ -14,48 +14,112 @@ namespace Yun.UnitTest
     [TestClass]
     public class SiteUnitTest
     {
+        /// <summary>
+        /// 图片上传问题，占不调试
+        /// </summary>
+        //[TestMethod]
+        //public void AddSiteElementImageTextRequest()
+        //{
+        //    YunClient.Format = "json";
+
+        //    var req =
+        //        YunClient.Instance.Execute(new AddSiteElementImageTextRequest
+        //        {
+        //            Title = "网站图文信息",
+        //            Display = true,
+        //            HyperLink = "http://open.oodso.com/home/api/17347",
+        //            Image = new FileItem("D:/temp.jpg"),
+        //            ModuleId = 1,
+        //            ParentId = 1,
+        //            SortOrder = 0,
+        //            Thumb = "XX",
+        //        }, YunClient.GetAdminToken());
+
+        //    Assert.IsTrue(req != null);
+        //}
         [TestMethod]
-        public void AddSiteElementImageTextRequest()
+        public void AddSiteElementTextRequest()
         {
             YunClient.Format = "json";
 
             var req =
-                YunClient.Instance.Execute(new AddSiteElementImageTextRequest
+                YunClient.Instance.Execute(new AddSiteElementTextRequest
                 {
-                    Title = "网站图文信息",
-                    Display = true,
-                    HyperLink = "http://open.oodso.com/home/api/17347",
-                    Image =new FileItem("D:/TEMP.JPG"),
-                    ModuleId = 1,
-                    ParentId = 1,
-                    SortOrder = 0,
-                    Thumb = "XX",
-                });
+                   Title = "网站文章模板",
+                   Display = true,
+                   HyperLink = "http://open.oodso.com/home/api/17347",
+                   ModuleId = 1,
+                   ParentId = 1,
+                   SortOrder = 0,
+                }, YunClient.GetAdminToken());
+
+            Assert.IsTrue(req != null);
+        }
+
+        [TestMethod]
+        public void AddSitePageModuleRequest()
+        {
+            YunClient.Format = "xml";
+
+            var req =
+                YunClient.Instance.Execute(new AddSitePageModuleRequest
+                {
+                    PageId = 001,
+                    Image = null,
+                    ModuleFlag =null,
+                    ModuleThumb = null,
+                    ModuleType = "xx",
+                    Name = "hello",
+                    Remark = "beizhu"
+                }, YunClient.GetAdminToken());
 
             Assert.IsTrue(req != null);
         }
         [TestMethod]
-        public void GetImageTextsSiteElementRequest()
+        public void AddSitePageRequest()
         {
-            YunClient.Format = "json";
+            YunClient.Format = "xml";
 
             var req =
-                YunClient.Instance.Execute(new GetImageTextsSiteElementRequest
+                YunClient.Instance.Execute(new AddSitePageRequest
                 {
-                    
-                });
+                   Thumb =null,
+                   CompanyId = 001,
+                   Image = null,
+                   Name = "taobaowangzhan",
+                   Remark = "beihzu"
+                }, YunClient.GetAdminToken());
 
             Assert.IsTrue(req != null);
         }
+
+
+        //[TestMethod]
+        //public void GetImageTextsSiteElementRequest()
+        //{
+        //    YunClient.Format = "json";
+
+        //    var req =
+        //        YunClient.Instance.Execute(new GetImageTextsSiteElementRequest
+        //        {
+        //            ModuleId = 1,
+        //            ModuleFlag = "flag",
+        //            Num = 7
+
+        //        });
+
+        //    Assert.IsTrue(req != null);
+        //}
+
         [TestMethod]
         public void GetTextSiteElementRequest()
         {
-            YunClient.Format = "json";
+            YunClient.Format = "xml";
 
             var req =
                 YunClient.Instance.Execute(new GetTextSiteElementRequest
                 {
-
+                    Id = 4,
                 });
 
             Assert.IsTrue(req != null);
