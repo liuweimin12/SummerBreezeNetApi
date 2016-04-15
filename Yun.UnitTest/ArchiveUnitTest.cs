@@ -79,6 +79,21 @@ namespace Yun.UnitTest
         }
 
         [TestMethod]
+        public void ArchiveAskRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new ArchiveAskRequest
+                {
+                    Content = "文章详情",
+                    ArchiveId = 10,
+                    Other = "文章详情备注"
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req.Result > 0);
+        }
+        
+
+        [TestMethod]
         public void GetArchiveCategoriesRequest()
         {
             YunClient.Format = "json";
@@ -113,18 +128,18 @@ namespace Yun.UnitTest
             Assert.IsTrue(req != null);
         }
 
-        //[TestMethod]
-        //public void IncreaseArchiveVisitRequest()
-        //{
-        //    YunClient.Format = "xml";
-        //    var req =
-        //        YunClient.Instance.Execute(new IncreaseArchiveVisitRequest
-        //        {
-        //            Id = 10,
-        //            Visits =10
-        //        }, YunClient.GetAdminToken());
-        //    Assert.IsTrue(req != null);
-        //}
+        [TestMethod]
+        public void IncreaseArchiveVisitRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new IncreaseArchiveVisitRequest
+                {
+                    Id=34,
+                    Visits = 1
+                    });
+            Assert.IsTrue(req != null);
+        }
 
     }
     }
