@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Yun.User.Request;
+using Yun.Util;
 
 namespace Yun.UnitTest
 {
@@ -12,6 +14,20 @@ namespace Yun.UnitTest
         {
             var req = YunClient.Instance.Execute(new ResetFunctionsRequest(), YunClient.GetAdminToken()).Result;
             Assert.IsTrue(req);
+        }
+
+        [TestMethod]
+        public void FileUploadRequest()
+        {
+            var req = YunClient.Instance.Execute(new FileUploadRequest
+            {
+                Images = new List<FileItem>
+                {
+                    new FileItem(@"c:\1.png")
+                }
+            });
+
+            Assert.IsTrue(req.Files!=null);
         }
 
         [TestMethod]
