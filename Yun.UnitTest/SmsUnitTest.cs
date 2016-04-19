@@ -11,10 +11,13 @@ namespace Yun.UnitTest
         [TestMethod]
         public void SendShortMessageRequest()
         {
-            YunClient.Format = "json";
+            YunClient.Format = "xml";
             var req =
                 YunClient.Instance.Execute(new SendShortMessageRequest
                 {
+                    Mobile = "18606683125",
+                    CompanyId = 1,
+                    Content = "chashouduanxin"
                   
                    });
             Assert.IsTrue(req != null);
