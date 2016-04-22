@@ -61,6 +61,7 @@
     <Compile Include="PrivateUnitTest.cs" />
     <Compile Include="TradeUnitTest.cs" />
     <Compile Include="ArchiveUnitTest.cs" />
+    <Compile Include="SmsTest.cs" />
     <Compile Include="UserUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="YunClient.cs">
@@ -79,6 +80,10 @@
     <ProjectReference Include="..\Yun.Private\Yun.Private.csproj">
       <Project>{4179E21D-7656-4155-BFAA-DDE8BC9C5E9E}</Project>
       <Name>Yun.Private</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yun.Sms\Yun.Sms.csproj">
+      <Project>{b0728cbe-6461-4920-8f59-261a99b37a26}</Project>
+      <Name>Yun.Sms</Name>
     </ProjectReference>
     <ProjectReference Include="..\Yun.Trade\Yun.Trade.csproj">
       <Project>{0E633103-D16D-44D9-8D4A-F18361E968D3}</Project>
