@@ -2,8 +2,11 @@
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Yun.Interface;
 using Yun.Marketing.Request;
+using Yun.Response;
 
 namespace Yun.UnitTest
 {
@@ -13,14 +16,25 @@ namespace Yun.UnitTest
     [TestClass]
     public class MarketingUnitTest
     {
+        private string url = "";
+        private string appkey = "";
+        private string secret = "";
+        private string sessionKey = "";
+
         [TestMethod]
         public void GenerateCashCouponRequest()
         {
-            var req =
-                YunClient.Instance.Execute(new GenerateCashCouponRequest {CategoryId = 1, Num = 29},
-                    YunClient.GetAdminToken()).Result;
-
-            Assert.IsTrue(!string.IsNullOrEmpty(req));
+            IYunClient client = new DefaultYunClient(url, appkey, secret);
+            GenerateCashCouponRequest req = new GenerateCashCouponRequest();
+            req.CategoryId = 1;
+            req.Num = 29;
+            StringResultResponse rsp = client.Execute(req, sessionKey);
+            Console.WriteLine(rsp.Body);
+            //var req =
+            //    YunClient.Instance.Execute(new GenerateCashCouponRequest {CategoryId = 1, Num = 29},
+            //        YunClient.GetAdminToken()).Result;
+            //
+            //Assert.IsTrue(!string.IsNullOrEmpty(req));
         }
 
         [TestMethod]
