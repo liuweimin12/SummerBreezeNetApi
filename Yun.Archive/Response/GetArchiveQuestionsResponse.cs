@@ -8,7 +8,7 @@ using Yun.Response;
 namespace Yun.Archive.Response
 {
     [XmlRoot("get_archive_questions_response")]
-    public class ArchiveQuestionsResponse:YunResponse
+    public class GetArchiveQuestionsResponse:YunResponse
     {
         [XmlArray("questions")]
         [XmlArrayItem("question")]

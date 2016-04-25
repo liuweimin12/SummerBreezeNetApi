@@ -9,7 +9,7 @@ namespace Yun.Archive.Request
     /// 获取文章标签
     /// 获取店铺下所有文章关联的标签
     /// </summary>
-    public class GetArchiveTagsRequest : ITopRequest<TagsResponse>
+    public class GetArchiveTagsRequest : ITopRequest<GetArchiveTagsResponse>
     {
         public string GetApiName()
         {

@@ -5,7 +5,11 @@ using Yun.Util;
 
 namespace Yun.Archive.Request
 {
-    public class AddCategoryRequest : ITopUploadRequest<IntResultResponse>
+    /// <summary>
+    /// 新增文章分类
+    /// 需要授权
+    /// </summary>
+    public class AddArchiveCategoryRequest : ITopUploadRequest<IntResultResponse>
     {
         public string GetApiName()
         {

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Yun.Archive.Response;
 using Yun.Interface;
 using Yun.Util;
@@ -12,7 +9,7 @@ namespace Yun.Archive.Request
     /// 获取文章下的留言列表
     /// chenggou.archive.questions.get
     /// </summary>
-    public class GetQuestionsRequest : ITopRequest<ArchiveQuestionsResponse>
+    public class GetArchiveQuestionsRequest : ITopRequest<GetArchiveQuestionsResponse>
     {
         /// <summary>
         /// 页码

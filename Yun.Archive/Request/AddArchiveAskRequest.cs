@@ -12,7 +12,7 @@ namespace Yun.Archive.Request
     /// 在某文章下进行留言
     /// chenggou.archive.question.ask
     /// </summary>
-    public class ArchiveAskRequest : ITopRequest<IntResultResponse>
+    public class AddArchiveAskRequest : ITopRequest<IntResultResponse>
     {
         /// <summary>
         /// 文章ID

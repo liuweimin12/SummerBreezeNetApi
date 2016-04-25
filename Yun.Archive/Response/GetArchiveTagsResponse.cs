@@ -4,7 +4,7 @@ using Yun.Response;
 
 namespace Yun.Archive.Response
 {
-    public class TagsResponse : YunResponse, IPageResponse
+    public class GetArchiveTagsResponse : YunResponse, IPageResponse
     {
         [XmlArray("tags")]
         [XmlArrayItem("tag")]

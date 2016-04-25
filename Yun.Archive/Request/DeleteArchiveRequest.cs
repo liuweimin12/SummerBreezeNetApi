@@ -5,6 +5,10 @@ using Yun.Util;
 
 namespace Yun.Archive.Request
 {
+    /// <summary>
+    /// 删除文章
+    /// 需要授权
+    /// </summary>
     public class DeleteArchiveRequest : ITopRequest<BoolResultResponse>
     {
         public string GetApiName()

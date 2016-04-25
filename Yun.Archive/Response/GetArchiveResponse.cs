@@ -3,7 +3,7 @@ using Yun.Response;
 
 namespace Yun.Archive.Response
 {
-    public class ArchiveDetailResponse : YunResponse
+    public class GetArchiveResponse : YunResponse
     {
         [XmlElement("article")]
         public ArticleDetail Article { get; set; }
