@@ -37,33 +37,33 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req.UserId > 0);
         }
-        //[TestMethod]
-        //public void AddEmployeeRequest()
-        //{
-        //    YunClient.Format = "json";
+        [TestMethod]
+        public void AddEmployeeRequest()
+        {
+            YunClient.Format = "json";
 
-        //    var req =
-        //        YunClient.Instance.Execute(new AddEmployeeRequest
-        //        {
-        //          UserName = "测试网站",
-        //          AppSecret = YunClient.AppSecret,
-        //            Password = "566020b543fd462ca57fcac847c816ef",
-        //            Description = null,
-        //            DisplayName = null,
-        //            Email = "1805768571@qq.com",
-        //            EntryTime = null,
-        //            IdCard = null,
-        //            Ip = "192.168.1.1",
-        //            Phone = "18606683125",
-        //            WorkPlace = "china",
-        //            JobNum = "testing",
-        //            OtherName = null,
-        //            Plane = null,
-        //            RoleIds = null
-        //        }, YunClient.GetAdminToken());
+            var req =
+                YunClient.Instance.Execute(new AddEmployeeRequest
+                {
+                    UserName = "测试网站111",
+                    AppSecret = YunClient.AppSecret,
+                    Password = "888999",
+                    Description = null,
+                    DisplayName = null,
+                    Email = "1805768571@qq.com",
+                    EntryTime = null,
+                    IdCard = null,
+                    Ip = "192.168.1.1",
+                    Phone = null,
+                    WorkPlace = null,
+                    JobNum = null,
+                    OtherName = null,
+                    Plane = null,
+                    RoleIds = null
+                }, YunClient.GetAdminToken());
 
-        //    Assert.IsTrue(req.Result > 0);
-        //}
+            Assert.IsTrue(req.Result > 0);
+        }
         [TestMethod]
         public void AddRoleRequest
 ()
