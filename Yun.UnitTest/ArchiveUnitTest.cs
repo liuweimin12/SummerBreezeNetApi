@@ -99,7 +99,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new IncreaseArchiveVisitRequest
                 {
-                   
+                   Id = 10
                  });
             Assert.IsTrue(req != null);
         }
