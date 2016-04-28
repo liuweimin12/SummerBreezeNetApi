@@ -31,7 +31,7 @@ namespace Yun.UnitTest
                 Visits = 0
             }, YunClient.GetAdminToken());
 
-            Assert.IsTrue(req.Result>0);
+            Assert.IsTrue(req.Result > 0);
         }
 
         [TestMethod]
@@ -43,7 +43,7 @@ namespace Yun.UnitTest
                 {
                     PageNum = 1,
                     PageSize = 10,
-                   });
+                });
             Assert.IsTrue(req != null);
         }
 
@@ -54,7 +54,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new GetArchiveRequest
                 {
-                    Id = 7
+                    Id = 70
                 });
             Assert.IsTrue(req != null);
         }
@@ -73,12 +73,13 @@ namespace Yun.UnitTest
         [TestMethod]
         public void GetArchiveCategoryRequest()
         {
-            YunClient.Format = "XML";
+            //YunClient.Format = "XML";
             var req =
                 YunClient.Instance.Execute(new GetArchiveCategoryRequest
                 {
+                    Id = 2
                 });
-            Assert.IsTrue(req != null);
+            Assert.IsTrue(req.Category != null);
         }
 
         [TestMethod]
@@ -99,11 +100,12 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new IncreaseArchiveVisitRequest
                 {
-                   Id = 10
-                 });
+                    Id = 70,
+                    Visits = 15
+                });
             Assert.IsTrue(req != null);
         }
 
     }
-    }
+}
 
