@@ -111,6 +111,13 @@ namespace Yun.Trade.Request
         /// </summary>
         public DateTime? CreateTime { get; set; }
 
+
+        /// <summary>
+        /// 扩展字段2
+        /// </summary>
+        public string Ext2 { get; set; }
+
+
         public string GetApiName()
         {
             return "chenggou.trade.multiexpress.add";
@@ -138,7 +145,8 @@ namespace Yun.Trade.Request
                 {"giftsjson", GiftsJson},
                 {"ext",Ext},
                 {"cashcouponid",CashCouponId},
-                {"createtime",CreateTime}
+                {"createtime",CreateTime},
+                {"ext2", Ext2}
             };
             return parameters;
         }

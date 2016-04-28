@@ -9,6 +9,7 @@ namespace Yun.Coupon.Request
 {
     public class AddCouponTradeRequest : ITopRequest<IntResultResponse>
     {
+        
         public string GetApiName()
         {
             return "chenggou.trade.coupon.add";
@@ -97,7 +98,13 @@ namespace Yun.Coupon.Request
         /// 订单创建时间，可以人为指定
         /// </summary>
         public DateTime? CreateTime { get; set; }
-        
+
+
+        /// <summary>
+        /// 扩展字段2
+        /// </summary>
+        public string Ext2 { get; set; }
+
 
         public IDictionary<string, string> GetParameters()
         {
@@ -112,12 +119,13 @@ namespace Yun.Coupon.Request
                 {"mobile", Mobile},
                 {"sendtype", SendType},
                 {"integral", Integral},
-                {"promotionsactivityidinitem",PromotionsActivityIdInItem},
-                {"promotionsactivityidinshop",PromotionsActivityIdInShop},
+                {"promotionsactivityidinitem", PromotionsActivityIdInItem},
+                {"promotionsactivityidinshop", PromotionsActivityIdInShop},
                 {"giftsjson", GiftsJson},
-                {"ext",Ext},
-                {"cashcouponid",CashCouponId},
-                {"createtime",CreateTime}
+                {"ext", Ext},
+                {"cashcouponid", CashCouponId},
+                {"createtime", CreateTime},
+                {"ext2", Ext2}
             };
             return parameters;
         }
