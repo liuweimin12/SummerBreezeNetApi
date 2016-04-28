@@ -10,6 +10,8 @@ namespace Yun.User.Request
     /// </summary>
     public class ResetFunctionsRequest :ITopRequest<BoolResultResponse>
     {
+        public int CompanyId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.permission.function.rest";
@@ -17,7 +19,10 @@ namespace Yun.User.Request
 
         public IDictionary<string, string> GetParameters()
         {
-            var parameters = new YunDictionary();
+            var parameters = new YunDictionary
+            {
+                {"companyid", CompanyId}
+            };
             return parameters;
         }
 
