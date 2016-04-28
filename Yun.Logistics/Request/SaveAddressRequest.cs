@@ -61,6 +61,11 @@ namespace Yun.Logistics.Request
         /// </summary>
         public string Detail { get; set; }
 
+        /// <summary>
+        /// 镇
+        /// </summary>
+        public string Town { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.user.address.save";
@@ -80,7 +85,8 @@ namespace Yun.Logistics.Request
                 {"mobile", Mobile},
                 {"isdefault", IsDefault},
                 {"addresstype", AddressType},
-                {"detail", Detail}
+                {"detail", Detail},
+                {"town",Town }
             };
             return parameters;
         }
