@@ -6,7 +6,11 @@ using Yun.Util;
 
 namespace Yun.Archive.Request
 {
-    public class AddCommentRequest : ITopRequest<IntResultResponse>
+    /// <summary>
+    /// 发布某文章的评论
+    /// 需要授权
+    /// </summary>
+    public class AddArchiveCommentRequest : ITopRequest<IntResultResponse>
     {
         /// <summary>
         /// 文章内容

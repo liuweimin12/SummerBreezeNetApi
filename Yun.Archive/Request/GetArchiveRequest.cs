@@ -9,7 +9,7 @@ namespace Yun.Archive.Request
     /// 获取文章详情
     /// 根据文章ID获取文章详情
     /// </summary>
-    public class GetArchiveRequest : ITopRequest<ArchiveDetailResponse>
+    public class GetArchiveRequest : ITopRequest<GetArchiveResponse>
     {
         public string GetApiName()
         {

@@ -65,5 +65,12 @@ namespace Yun.Logistics
         /// </summary>
         [XmlElement("detail")]
         public string Detail { get; set; }
+
+
+        /// <summary>
+        /// 镇
+        /// </summary>
+        [XmlElement("town")]
+        public string Town { get; set; }
     }
 }

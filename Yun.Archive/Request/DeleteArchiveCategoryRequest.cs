@@ -5,7 +5,11 @@ using Yun.Util;
 
 namespace Yun.Archive.Request
 {
-    public class DeleteCategoryRequest : ITopRequest<BoolResultResponse>
+    /// <summary>
+    /// 删除文章分类
+    /// 需要授权
+    /// </summary>
+    public class DeleteArchiveCategoryRequest : ITopRequest<BoolResultResponse>
     {
         public int Id { get; set; }
 

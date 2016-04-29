@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Yun.User.Request;
+using Yun.Util;
 
 namespace Yun.UnitTest
 {
@@ -10,8 +12,22 @@ namespace Yun.UnitTest
         [TestMethod]
         public void ResetFunctionsRequest()
         {
-            var req = YunClient.Instance.Execute(new ResetFunctionsRequest(), YunClient.GetAdminToken()).Result;
+            var req = YunClient.Instance.Execute(new ResetFunctionsRequest {CompanyId = 3}, YunClient.GetAdminToken()).Result;
             Assert.IsTrue(req);
+        }
+
+        [TestMethod]
+        public void FileUploadRequest()
+        {
+            var req = YunClient.Instance.Execute(new FileUploadRequest
+            {
+                Images = new List<FileItem>
+                {
+                    new FileItem(@"c:\1.png")
+                }
+            });
+
+            Assert.IsTrue(req.Files!=null);
         }
 
         [TestMethod]
@@ -24,12 +40,12 @@ namespace Yun.UnitTest
         [TestMethod]
         public void LoginRequest()
         {
-            YunClient.Format = "json";
+            //YunClient.Format = "json";
 
             var req =
                 YunClient.Instance.Execute(new LoginRequest
                 {
-                    UserName = "测试网站111",
+                    UserName = "宁波雨辰环保旗舰店",
                     Password = "888999",
                     Ip = "192.168.1.1",
                     AppSecret = YunClient.AppSecret

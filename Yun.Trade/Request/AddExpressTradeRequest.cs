@@ -122,7 +122,13 @@ namespace Yun.Trade.Request
         /// 订单创建时间，可以人为指定
         /// </summary>
         public DateTime? CreateTime { get; set; }
-        
+
+
+        /// <summary>
+        /// 扩展字段2
+        /// </summary>
+        public string Ext2 { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.trade.express.add";
@@ -151,7 +157,8 @@ namespace Yun.Trade.Request
                 {"transactiontype",TransactionType},
                 {"ext",Ext},
                 {"cashcouponid",CashCouponId},
-                {"createtime",CreateTime}
+                {"createtime",CreateTime},
+                {"ext2", Ext2}
             };
             return parameters;
         }

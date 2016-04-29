@@ -5,7 +5,11 @@ using Yun.Util;
 
 namespace Yun.Archive.Request
 {
-    public class AddCategoryRequest : ITopUploadRequest<IntResultResponse>
+    /// <summary>
+    /// 新增文章分类
+    /// 需要授权
+    /// </summary>
+    public class AddArchiveCategoryRequest : ITopUploadRequest<IntResultResponse>
     {
         public string GetApiName()
         {
@@ -49,6 +53,11 @@ namespace Yun.Archive.Request
         /// </summary>
         public string Description { get; set; }
 
+        /// <summary>
+        /// 扩展字段
+        /// </summary>
+        public string Extension { get; set; }
+
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
@@ -58,7 +67,8 @@ namespace Yun.Archive.Request
                 {"sort", Sort},
                 {"display", Display},
                 {"description", Description},
-                {"thumb", Thumb}
+                {"thumb", Thumb},
+                {"extension",Extension }
             };
             return parameters;
         }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Yun.Interface;
 using Yun.Response;
 using Yun.Util;
@@ -12,7 +9,7 @@ namespace Yun.Archive.Request
     /// 删除文章留言
     /// chenggou.archive.question.delete
     /// </summary>
-    public class DeleteAskRequest : ITopRequest<BoolResultResponse>
+    public class DeleteArchiveAskRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>
         /// 留言ID

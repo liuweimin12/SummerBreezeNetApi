@@ -51,5 +51,11 @@ namespace Yun.Archive
         /// </summary>
          [XmlElement("image")]
         public string Image { get; set; }
+
+        /// <summary>
+        /// 扩展字段
+        /// </summary>
+        [XmlElement("extension")]
+        public string Extension { get; set; }
     }
 }

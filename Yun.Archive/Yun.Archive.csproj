@@ -42,22 +42,22 @@
     <Compile Include="ArticleCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Request\AddArchiveRequest.cs" />
-    <Compile Include="Request\AddCategoryRequest.cs" />
-    <Compile Include="Request\AddCommentRequest.cs" />
-    <Compile Include="Request\ArchiveAskRequest.cs" />
+    <Compile Include="Request\AddArchiveCategoryRequest.cs" />
+    <Compile Include="Request\AddArchiveCommentRequest.cs" />
+    <Compile Include="Request\AddArchiveAskRequest.cs" />
     <Compile Include="Request\AssociateArchiveReaderRequest.cs" />
     <Compile Include="Request\BatchUpdateArchiveSortRequest.cs" />
     <Compile Include="Request\DeleteArchiveRequest.cs" />
-    <Compile Include="Request\DeleteAskRequest.cs" />
-    <Compile Include="Request\DeleteCategoryRequest.cs" />
-    <Compile Include="Request\DeleteTagRequest.cs" />
+    <Compile Include="Request\DeleteArchiveAskRequest.cs" />
+    <Compile Include="Request\DeleteArchiveCategoryRequest.cs" />
+    <Compile Include="Request\DeleteArchiveTagRequest.cs" />
     <Compile Include="Request\GetArchiveReaderRequest.cs" />
     <Compile Include="Request\GetArchiveRequest.cs" />
     <Compile Include="Request\GetArchivesRequest.cs" />
     <Compile Include="Request\GetArchiveCategoriesRequest.cs" />
     <Compile Include="Request\GetArchiveCategoryRequest.cs" />
-    <Compile Include="Request\GetQuestionRequest.cs" />
-    <Compile Include="Request\GetQuestionsRequest.cs" />
+    <Compile Include="Request\GetArchiveQuestionRequest.cs" />
+    <Compile Include="Request\GetArchiveQuestionsRequest.cs" />
     <Compile Include="Request\GetArchiveTagsRequest.cs" />
     <Compile Include="Request\IncreaseArchiveVisitRequest.cs" />
     <Compile Include="Request\UpdateArchiveRequest.cs" />
@@ -65,11 +65,11 @@
     <Compile Include="Request\UpdateQuestionRequest.cs" />
     <Compile Include="Response\GetArchiveCategoriesResponse.cs" />
     <Compile Include="Response\GetArchiveCategoryResponse.cs" />
-    <Compile Include="Response\ArchiveDetailResponse.cs" />
-    <Compile Include="Response\ArchiveQuestionResponse.cs" />
-    <Compile Include="Response\ArchiveQuestionsResponse.cs" />
+    <Compile Include="Response\GetArchiveResponse.cs" />
+    <Compile Include="Response\GetArchiveQuestionResponse.cs" />
+    <Compile Include="Response\GetArchiveQuestionsResponse.cs" />
     <Compile Include="Response\ArticlesResponse.cs" />
-    <Compile Include="Response\TagsResponse.cs" />
+    <Compile Include="Response\GetArchiveTagsResponse.cs" />
     <Compile Include="Tag.cs" />
   </ItemGroup>
   <ItemGroup>

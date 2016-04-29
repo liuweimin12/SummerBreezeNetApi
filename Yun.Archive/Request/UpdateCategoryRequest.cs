@@ -53,6 +53,11 @@ namespace Yun.Archive.Request
         /// </summary>
         public int ParentId { get; set; }
 
+        /// <summary>
+        /// 扩展字段
+        /// </summary>
+        public string Extension { get; set; }
+
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
@@ -63,7 +68,8 @@ namespace Yun.Archive.Request
                 {"display", Display},
                 {"image",Image},
                 {"description",Description},
-                {"parentid",ParentId}
+                {"parentid",ParentId},
+                {"extension",Extension }
             };
             return parameters;
         }

@@ -3,7 +3,7 @@ using System.Linq;
 using Yun.Interface;
 using Yun.Response;
 
-namespace Yun.Item.Request
+namespace Yun.Archive.Request
 {
     /// <summary>
     /// 批量更新文章分类排序

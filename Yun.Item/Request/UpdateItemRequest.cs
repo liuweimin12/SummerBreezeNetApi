@@ -335,8 +335,8 @@ namespace Yun.Item.Request
 
         public void Validate()
         {
-            RequestValidator.ValidateMaxLength("itemtitle", ItemTitle, 60);
-            RequestValidator.ValidateMaxLength("msgtitle", MsgTitle, 15);
+            RequestValidator.ValidateMaxLength("itemtitle", ItemTitle, 200);
+            RequestValidator.ValidateMaxLength("msgtitle", MsgTitle, 20);
         }
     }
 }

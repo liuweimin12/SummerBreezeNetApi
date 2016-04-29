@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Yun.Archive.Response;
 using Yun.Interface;
 using Yun.Util;
 
 namespace Yun.Archive.Request
 {
+    /// <summary>
+    /// 根据读者的用户名获取文章
+    /// </summary>
     public class GetArchiveReaderRequest: ITopRequest<ArticlesResponse>
     {
         /// <summary>
@@ -65,7 +65,7 @@ namespace Yun.Archive.Request
         public string Fields { get; set; }
 
         /// <summary>
-        /// 真实姓名
+        /// 用户名
         /// </summary>
         public string ReaderName { get; set; }
 
@@ -98,7 +98,7 @@ namespace Yun.Archive.Request
 
         public void Validate()
         {
-            RequestValidator.ValidateMaxValue("pagesize", PageSize, 40);
+            RequestValidator.ValidateMaxValue("pagesize", PageSize, 100);
         }
     }
 }

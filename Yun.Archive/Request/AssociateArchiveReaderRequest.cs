@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Yun.Interface;
 using Yun.Response;
 using Yun.Util;
 
 namespace Yun.Archive.Request
 {
+    /// <summary>
+    /// 关联文章的授权越都对象
+    /// 需要授权
+    /// </summary>
     public class AssociateArchiveReaderRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>

@@ -1,33 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Yun.Archive.Response;
+﻿using System.Collections.Generic;
 using Yun.Interface;
+using Yun.Response;
 using Yun.Util;
 
 namespace Yun.Archive.Request
 {
     /// <summary>
-    /// 获取单条文章留言
-    /// chenggou.archive.question.get
+    /// 删除文章标签
+    /// 需要授权
     /// </summary>
-    public class GetQuestionRequest : ITopRequest<ArchiveQuestionResponse>
+    public class DeleteArchiveTagRequest : ITopRequest<BoolResultResponse>
     {
+        /// <summary>
+        /// 标签ID
+        /// </summary>
         public int Id { get; set; }
+
 
         public string GetApiName()
         {
-            return "chenggou.archive.question.get";
+            return "chenggou.archive.tag.delete";
         }
 
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
             {
-                {"id",Id}
+                {"id", Id }
             };
-
             return parameters;
         }
 

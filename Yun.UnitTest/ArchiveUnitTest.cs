@@ -12,7 +12,6 @@ namespace Yun.UnitTest
         [TestMethod]
         public void AddArchiveRequest()
         {
-            YunClient.Format = "xml";
             var req = YunClient.Instance.Execute(new AddArchiveRequest
             {
                 CategoryId = 0,
@@ -32,66 +31,33 @@ namespace Yun.UnitTest
                 Visits = 0
             }, YunClient.GetAdminToken());
 
-            Assert.IsTrue(req.Result>0);
+            Assert.IsTrue(req.Result > 0);
         }
-
 
         [TestMethod]
         public void GetArchivesRequest()
         {
-            YunClient.Format = "xml";
+            YunClient.Format = "json";
             var req =
                 YunClient.Instance.Execute(new GetArchivesRequest
                 {
                     PageNum = 1,
                     PageSize = 10,
-                   });
+                });
             Assert.IsTrue(req != null);
         }
 
         [TestMethod]
         public void GetArchiveRequest()
         {
-            YunClient.Format = "xml";
+            YunClient.Format = "json";
             var req =
                 YunClient.Instance.Execute(new GetArchiveRequest
                 {
-                   Id = 10
+                    Id = 70
                 });
             Assert.IsTrue(req != null);
         }
-
-        [TestMethod]
-        public void AddCategoryRequest()
-        {
-            YunClient.Format = "xml";
-            var req =
-                YunClient.Instance.Execute(new AddCategoryRequest
-                {
-                    Name = "hello001",
-                    Description = "123",
-                    ParentId = 1,
-                    Sort = 1,
-                    Image = null,
-                    Thumb = "",
-                }, YunClient.GetAdminToken());
-            Assert.IsTrue(req.Result > 0);
-        }
-
-        [TestMethod]
-        public void ArchiveAskRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new ArchiveAskRequest
-                {
-                    Content = "文章详情",
-                    ArchiveId = 10,
-                    Other = "文章详情备注"
-                }, YunClient.GetAdminToken());
-            Assert.IsTrue(req.Result > 0);
-        }
-        
 
         [TestMethod]
         public void GetArchiveCategoriesRequest()
@@ -107,23 +73,22 @@ namespace Yun.UnitTest
         [TestMethod]
         public void GetArchiveCategoryRequest()
         {
-            YunClient.Format = "json";
+            //YunClient.Format = "XML";
             var req =
                 YunClient.Instance.Execute(new GetArchiveCategoryRequest
                 {
-                    Id = 34,
+                    Id = 2
                 });
-            Assert.IsTrue(req != null);
+            Assert.IsTrue(req.Category != null);
         }
 
         [TestMethod]
         public void GetArchiveTagsRequest()
         {
-            YunClient.Format = "json";
+            YunClient.Format = "xml";
             var req =
                 YunClient.Instance.Execute(new GetArchiveTagsRequest
                 {
-                    PageSize = 100
                 });
             Assert.IsTrue(req != null);
         }
@@ -135,12 +100,12 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new IncreaseArchiveVisitRequest
                 {
-                    Id=34,
-                    Visits = 1
-                    });
+                    Id = 70,
+                    Visits = 15
+                });
             Assert.IsTrue(req != null);
         }
 
     }
-    }
+}
 
