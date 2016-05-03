@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 新增商品
+    /// </summary>
     public class AddItemRequest : ITopRequest<IntResultResponse>
     {
         /// <summary>

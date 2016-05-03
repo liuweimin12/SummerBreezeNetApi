@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 新增店铺内商品分类
+    /// </summary>
     public class AddShopItemCategoryRequest : ITopUploadRequest<IntResultResponse>
     {
         /// <summary>

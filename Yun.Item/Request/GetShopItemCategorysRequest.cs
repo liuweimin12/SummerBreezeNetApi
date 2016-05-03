@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 获取店铺内商品分类
+    /// </summary>
     public class GetShopItemCategorysRequest : ITopRequest<CategorysResponse>
     {
         /// <summary>
