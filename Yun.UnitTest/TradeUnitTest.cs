@@ -26,7 +26,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new GetTradeRequest
                 {
-                    Id = 123456,
+                    Id = 123,
                     TradeNo="number"
 
                 });
