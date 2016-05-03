@@ -210,6 +210,22 @@ namespace Yun.UnitTest
             Assert.IsTrue(req != null);
         }
         [TestMethod]
+        public void ModifyPasswordUserRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new ModifyPasswordUserRequest()
+
+                {
+                    Id = 172586,
+                    Password = "12345678996",
+                    
+                });
+
+            Assert.IsTrue(req != null);
+        }
+        
+        [TestMethod]
         public void ModifyUserCreditRequest()
         {
             YunClient.Format = "json";
