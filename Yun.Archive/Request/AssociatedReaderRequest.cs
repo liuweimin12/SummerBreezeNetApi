@@ -27,7 +27,7 @@ namespace Yun.Archive.Request
 
         public IDictionary<string, string> GetParameters()
         {
-            var parameters = new TopDictionary
+            var parameters = new YunDictionary
             {
                 {"archiveid",ArchiveId},
                 {"type",Type},
@@ -35,6 +35,8 @@ namespace Yun.Archive.Request
             };
             return parameters;
         }
+
+      
 
         public void Validate()
         {
