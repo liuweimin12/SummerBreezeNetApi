@@ -16,12 +16,30 @@ namespace Yun.UnitTest
         [TestMethod]
         public void GetItemsRequest()
         {
-            YunClient.Format = "json";
+            YunClient.Format = "xml";
 
             var req = YunClient.Instance.Execute(new GetItemsRequest {PageSize = 20, PageNum = 1});
 
             Assert.IsTrue(req.Items != null);
         }
+
+        [TestMethod]
+        public void AddItemBookRequest()
+        {
+            YunClient.Format = "xml";
+
+            var req = YunClient.Instance.Execute(new AddItemBookRequest()
+            {
+               SkuId = 1,
+               BookerName = "amy",
+               ItemId = 1,
+               Mobile = null,
+               Quantity = 10
+            }, YunClient.GetAdminToken());
+
+            Assert.IsTrue(req != null);
+        }
+        
 
         [TestMethod]
         public void AddShopItemCategoryRequest()
@@ -30,16 +48,14 @@ namespace Yun.UnitTest
 
             var req = YunClient.Instance.Execute(new AddShopItemCategoryRequest()
             {
-                Title = "商量名称",
+                Title = "good",
                 Display = true,
                 ParentId = 1,
-                Sort = 1,
+                Sort = 0,
                 Thumb = null,
                 Image = null
-
-            });
-
-            Assert.IsTrue(req != null);
+             });
+           Assert.IsTrue(req != null);
         }
 
         [TestMethod]
@@ -49,49 +65,13 @@ namespace Yun.UnitTest
 
             var req = YunClient.Instance.Execute(new AddItemRequest()
             {
-                Description = "商品",
-                AdditionalInfo = null,
-                BuyLimit = 1,
-                CloseTimeDelay = 1,
-                CouponTemplateId = 1,
-                CustomPropNames = null,
-                CustomPropValues = null,
-                CustomSkus = null,
-                CustomSpecNames = null,
-                DistributionTemplateId = 1,
-                ExpireDays = 1,
-                ExpireRule = 1,
-                ExpireStart = 1,
-                ExpireTime = 1,
-                ExtItemCatIds = null,
-                FreightTemplateId = 1,
-                Integrallimit = 1,
-                InventoryCount = 1,
-                IsRecommend = 1,
-                ItemCatId = 1,
-                ItemCode = null,
-                ItemPartnerIds = null,
-                ItemPropValues = null,
-                ItemSkus = null,
-                ItemTitle = "高级商品",
-                MarketPrice = 10.9,
-                MsgTitle = "优等",
-                OffshelfTime = 1,
-                OnShelfTime = 1,
-                OnShelfType = 1,
-                Pictures = null,
-                Price = 100,
-                SaleType = 1,
-                SeoDescription = null,
-                SeoKeyword = null,
-                SeoTitle = null,
-                ShopCatIds = null,
-                SortOrder = 1,
-                Stock = 100,
-                SubTitle = null,
-                Volume = 10.9,
-                Weight = 10.8,
-            });
+                ItemTitle = "goodtwo",
+                MsgTitle = "123",
+                ItemCatId = 2,
+                SortOrder = 0,
+
+
+             }, YunClient.GetAdminToken());
 
             Assert.IsTrue(req != null);
         }
@@ -103,10 +83,8 @@ namespace Yun.UnitTest
 
             var req = YunClient.Instance.Execute(new GetItemRequest()
             {
-                Id = 1,
-                Fields = null,
-                NeedPromotion = true,
-                ShopId = 1
+                Id = 2,
+               
 
             });
 
@@ -126,8 +104,36 @@ namespace Yun.UnitTest
 
 
             });
-
-
+            Assert.IsTrue(req != null);
         }
+        [TestMethod]
+        public void AddItemCatsRequest()
+        {
+            YunClient.Format = "xml";
+
+            var req = YunClient.Instance.Execute(new AddItemCatsRequest()
+            {
+               Name = "goodone",
+             }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void AddItemSpecNameRequest()
+        {
+            YunClient.Format = "json";
+
+            var req = YunClient.Instance.Execute(new AddItemSpecNameRequest
+()
+            {
+                ItemCatId = 2,
+                Name = "good",
+                
+
+
+            });
+            Assert.IsTrue(req != null);
+        }
+
     }
-}
+    }
+
