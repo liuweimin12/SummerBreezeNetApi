@@ -61,7 +61,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new LoginMobilePhoneRequest
                 {
-                    Code = null,
+                    Code = "879417",
                     CompanyId = 3,
                     IsDestroy = true,
                     UserFlag = null
@@ -79,24 +79,13 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new AddEmployeeRequest
                 {
-                    UserName = "宁波雨辰环保旗舰店",
+                    UserName = "AA",
                     AppSecret = YunClient.AppSecret,
                     Password = "888999",
-                    Description = null,
-                    DisplayName = null,
-                    Email = "1805768571@qq.com",
-                    EntryTime = null,
-                    IdCard = null,
-                    Ip = "192.168.1.1",
-                    Phone = null,
-                    WorkPlace = null,
-                    JobNum = null,
-                    OtherName = null,
-                    Plane = null,
-                    RoleIds = null
-                }, YunClient.GetAdminToken());
+                 
+                });
 
-            Assert.IsTrue(req.Result > 0);
+           Assert.IsTrue(req != null);
         }
         [TestMethod]
         public void AddRoleRequest
@@ -122,16 +111,16 @@ namespace Yun.UnitTest
         [TestMethod]
         public void PhoneDynamicLoginRequest()
         {
-            YunClient.Format = "json";
+            YunClient.Format = "xml";
             var req =
                 YunClient.Instance.Execute(new PhoneDynamicLoginRequest
                 {
                     Ip = "192.168.1.1",
                     Phone = "18606683125",
-                    Code = "566020b543fd462ca57fcac847c816ef",
-                    ShopId = 123,
-                    CompanyId = 123,
-                }, YunClient.GetAdminToken());
+                    Code = "879417",
+                    ShopId = 1,
+                    CompanyId = 3,
+                });
 
             Assert.IsTrue(req != null);
         }
@@ -139,13 +128,13 @@ namespace Yun.UnitTest
         [TestMethod]
         public void SendLoginCodePhoneRequest()
         {
-            YunClient.Format = "xml";
+            YunClient.Format = "json";
             var req =
                 YunClient.Instance.Execute(new SendLoginCodePhoneRequest
                 {
                     MobilePhone = "18606683125",
                     CompanyId = null
-                }, YunClient.GetAdminToken());
+                });
 
             Assert.IsTrue(req != null);
         }
@@ -158,21 +147,21 @@ namespace Yun.UnitTest
                 YunClient.Instance.Execute(new ModifyUserInfoRequest()
 
                 {
-                    Nick = "hello",
+                    Nick = "宁波雨辰环保旗舰店",
                     IsMale = 0,
-                    Avatar = "",
-                    Email = "",
-                    Mobile = "",
-                    RealName = "",
+                    Avatar = null,
+                    Email = null,
+                    Mobile = null,
+                    RealName = null,
                     Birthday = DateTime.Now,
-                    Province = "",
-                    City = "",
-                    Area = "",
-                    Address = "",
-                    Remark = "",
-                    Phone = "",
-                    IdCard = "",
-                     });
+                    Province = null,
+                    City = null,
+                    Area = null,
+                    Address = null,
+                    Remark = null,
+                    Phone = null,
+                    IdCard = null,
+                });
 
             Assert.IsTrue(req != null);
         }
@@ -185,9 +174,9 @@ namespace Yun.UnitTest
 
                 {
                     UserFlag = null,
-                    CompanyId = 123,
-                    SendType = "1805768571@qq.com",
-                    Target = null,
+                    CompanyId = 3,
+                    SendType = "email",
+                    Target = "1805768571@qq.com",
                     ActionName = "密码找回"
 
                 });
@@ -275,13 +264,13 @@ namespace Yun.UnitTest
                     Area = "china",
                     City="ningbo",
                     Code = null,
-                    CompanyId = 123,
+                    CompanyId = 3,
                     IdCard = "199202061644",
                     Password = "123",
                     Phone = "18606683125",
-                    Province = "zhejiang",
+                    Province = null,
                     Secret = YunClient.AppSecret,
-                    ShopId = 123,
+                    ShopId = 1,
                     UserFlag = "flag"
                 }, YunClient.GetAdminToken());
 
@@ -294,11 +283,11 @@ namespace Yun.UnitTest
             YunClient.Format = "json";
             var req =
                 YunClient.Instance.Execute(new GetUserRequest()
-
                 {
-                    Nick = "hello",
-                    UserId = 172586,
-                }, YunClient.GetAdminToken());
+                    
+                    UserId = 52510,
+
+                });
 
             Assert.IsTrue(req != null);
         }
@@ -329,9 +318,12 @@ namespace Yun.UnitTest
             YunClient.Format = "json";
             var req =
                 YunClient.Instance.Execute(new RegisterRequest()
-
                 {
-
+                    ShopId=1,
+                    CompanyId=3,
+                    UserName="lily",
+                    Ip="192.168.1.1",
+                    AppSecret=YunClient.AppSecret,
                 });
             Assert.IsTrue(req != null);
         }
