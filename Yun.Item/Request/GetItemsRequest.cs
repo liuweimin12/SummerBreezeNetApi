@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 获取商品列表
+    /// </summary>
     public class GetItemsRequest : ITopRequest<GetItemsResponse>
     {
         /// <summary>
@@ -71,6 +74,9 @@ namespace Yun.Item.Request
         /// </summary>
         public string ShopCatIds { get; set; }
 
+        /// <summary>
+        /// 需要显示的字段，商品详情内的真实
+        /// </summary>
         public string Fields { get; set; }
 
         /// <summary>
@@ -97,11 +103,20 @@ namespace Yun.Item.Request
         /// 商品编码
         /// </summary>
         public string ItemCode { get; set; }
-
+        
+        /// <summary>
+        /// 店铺ID
+        /// </summary>
         public int? ShopId { get; set; }
 
+        /// <summary>
+        /// 排序字段，支持sales,salesdesc,price,pricedesc,praises,praisesdesc,onshelftime,onshelftimedesc,id,iddesc,keywords,default,sort,sortdesc,stock,stockdesc
+        /// </summary>
         public string Sorts { get; set; }
 
+        /// <summary>
+        /// 推荐类型，可以使用英文逗号进行分割进行并列搜索，例如可以输入如下格式0,1,2,3，意思是搜索这4种推荐类型的商品
+        /// </summary>
         public string Recommend { get; set; }
 
         /// <summary>

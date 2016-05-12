@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 获取商品详情
+    /// </summary>
     public class GetItemRequest : ITopRequest<ItemResponse>
     {
         /// <summary>
@@ -17,7 +20,6 @@ namespace Yun.Item.Request
         /// </summary>
         public string Fields { get; set; }
 
-        public int ShopId { get; set; }
 
         /// <summary>
         /// 是否需要促销的信息
@@ -35,7 +37,6 @@ namespace Yun.Item.Request
             {
                 {"id", Id},
                 {"fields", Fields},
-                {"shopid",ShopId},
                 {"needpromotion", NeedPromotion}
             };
             return parameters;
