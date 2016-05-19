@@ -5,10 +5,13 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 删除商品，放入回收站
+    /// </summary>
     public class DeleteItemRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>
-        /// 商品名ID
+        /// 商品名ID，多个商品用英文逗号分隔
         /// </summary>
         public string ItemId { get; set; }
 

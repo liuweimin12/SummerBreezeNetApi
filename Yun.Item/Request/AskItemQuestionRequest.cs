@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 对商品进行留言
+    /// </summary>
     public class AskItemQuestionRequest:ITopRequest<IntResultResponse>
     {
         /// <summary>

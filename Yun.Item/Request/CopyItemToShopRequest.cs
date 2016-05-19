@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 拷贝商品
+    /// </summary>
     public class CopyItemToShopRequest : ITopRequest<IntResultResponse>
     {
 

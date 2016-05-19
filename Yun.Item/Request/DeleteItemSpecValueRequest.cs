@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 删除商品规格值
+    /// </summary>
     public class DeleteItemSpecValueRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>

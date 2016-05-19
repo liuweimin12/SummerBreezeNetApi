@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 获取全局类目下拥有的SPU列表
+    /// </summary>
     public class GetItemCatPropChildrenRequest : ITopRequest<PropNamesResponse>
     {
         /// <summary>

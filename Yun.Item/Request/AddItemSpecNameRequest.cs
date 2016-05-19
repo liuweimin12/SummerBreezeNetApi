@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using Yun.Interface;
-using Yun.Item.Response;
 using Yun.Response;
 using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 新增商品规格名
+    /// </summary>
     public class AddItemSpecNameRequest : ITopRequest<IntResultResponse>
     {
         /// <summary>

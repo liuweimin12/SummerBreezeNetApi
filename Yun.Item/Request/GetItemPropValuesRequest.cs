@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 获取SPU名称ID获取对应的值列表
+    /// </summary>
     public class GetItemPropValuesRequest : ITopRequest<PropValuesResponse>
     {
         /// <summary>

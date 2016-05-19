@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 删除店铺内商品分类
+    /// </summary>
     public class DeleteShopItemCategoryRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>

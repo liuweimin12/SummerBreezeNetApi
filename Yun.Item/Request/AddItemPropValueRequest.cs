@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 新增商品SPU的值
+    /// </summary>
     public class AddItemPropValueRequest : ITopUploadRequest<IntResultResponse>
     {
         /// <summary>

@@ -11,7 +11,7 @@ namespace Yun.Item.Request
     public class RealDelItemRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>
-        /// 商品名ID
+        /// 商品ID，多个用英文逗号分隔
         /// </summary>
         public string ItemId { get; set; }
 

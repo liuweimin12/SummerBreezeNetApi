@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 删除商品留言
+    /// </summary>
     public class DeleteItemQuestionRequest:ITopRequest<BoolResultResponse>
     {
         /// <summary>

@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 新增商品SPU名字
+    /// </summary>
     public class AddItemPropNameRequest : ITopRequest<IntResultResponse>
     {
         /// <summary>
