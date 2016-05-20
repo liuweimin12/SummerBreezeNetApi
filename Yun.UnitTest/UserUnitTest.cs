@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Yun.User.Request;
 using Yun.Util;
+using Yun.Item.Request;
 
 namespace Yun.UnitTest
 {
@@ -12,7 +13,7 @@ namespace Yun.UnitTest
         [TestMethod]
         public void ResetFunctionsRequest()
         {
-            var req = YunClient.Instance.Execute(new ResetFunctionsRequest {CompanyId = 3}, YunClient.GetAdminToken()).Result;
+            var req = YunClient.Instance.Execute(new ResetFunctionsRequest { CompanyId = 3 }, YunClient.GetAdminToken()).Result;
             Assert.IsTrue(req);
         }
 
@@ -27,7 +28,7 @@ namespace Yun.UnitTest
                 }
             });
 
-            Assert.IsTrue(req.Files!=null);
+            Assert.IsTrue(req.Files != null);
         }
 
         [TestMethod]
@@ -70,7 +71,7 @@ namespace Yun.UnitTest
             Assert.IsTrue(req != null);
         }
 
-        
+
         [TestMethod]
         public void AddEmployeeRequest()
         {
@@ -82,10 +83,11 @@ namespace Yun.UnitTest
                     UserName = "AA",
                     AppSecret = YunClient.AppSecret,
                     Password = "888999",
-                 
+
+
                 });
 
-           Assert.IsTrue(req != null);
+            Assert.IsTrue(req != null);
         }
         [TestMethod]
         public void AddRoleRequest
@@ -138,7 +140,7 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req != null);
         }
-        
+
         [TestMethod]
         public void ModifyUserInfoRequest()
         {
@@ -208,12 +210,12 @@ namespace Yun.UnitTest
                 {
                     Id = 172586,
                     Password = "12345678996",
-                    
+
                 });
 
             Assert.IsTrue(req != null);
         }
-        
+
         [TestMethod]
         public void ModifyUserCreditRequest()
         {
@@ -244,13 +246,13 @@ namespace Yun.UnitTest
                     Ip = "192.168.1.1",
                     Money = 0.1,
                     Remark = null,
-             
-                    
+
+
                 });
 
             Assert.IsTrue(req != null);
         }
-        
+
         [TestMethod]
         public void PhoneRegisterRequest()
         {
@@ -262,7 +264,7 @@ namespace Yun.UnitTest
                     Ip = "192.168.1.1",
                     Address = "gaoxinqu",
                     Area = "china",
-                    City="ningbo",
+                    City = "ningbo",
                     Code = null,
                     CompanyId = 3,
                     IdCard = "199202061644",
@@ -284,7 +286,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new GetUserRequest()
                 {
-                    
+
                     UserId = 52510,
 
                 });
@@ -297,7 +299,7 @@ namespace Yun.UnitTest
             YunClient.Format = "json";
             var req =
                 YunClient.Instance.Execute(new LoginOauth2Request()
-                 {
+                {
                     NickName = null,
                     OAuthId = "1",
                     Avatar = null,
@@ -309,7 +311,7 @@ namespace Yun.UnitTest
                     ShopId = 1,
                     UserMeta = null,
                 });
-          Assert.IsTrue(req != null);
+            Assert.IsTrue(req != null);
 
         }
         [TestMethod]
@@ -319,11 +321,26 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new RegisterRequest()
                 {
-                    ShopId=1,
-                    CompanyId=3,
-                    UserName="lily",
-                    Ip="192.168.1.1",
-                    AppSecret=YunClient.AppSecret,
+                    ShopId = 1,
+                    CompanyId = 3,
+                    UserName = "lily",
+                    Ip = "192.168.1.1",
+                    AppSecret = YunClient.AppSecret,
+                    SystemLevel = 1,
+                    Password = "123",
+                    RegisterType = 0,
+                    Email = null,
+                    Mobile = "18606683125",
+                    SiteName = null,
+                    IdCard = null,
+                    Province = null,
+                    City = null,
+                    Area = null,
+                    Address = null,
+                    RealName = null,
+
+
+
                 });
             Assert.IsTrue(req != null);
         }
@@ -363,7 +380,7 @@ namespace Yun.UnitTest
             YunClient.Format = "json";
             var req =
                 YunClient.Instance.Execute(new BindPhoneRequest()
-               {
+                {
                     Phone = "1860668215",
                     Code = "0"
 
@@ -409,7 +426,223 @@ namespace Yun.UnitTest
                 });
             Assert.IsTrue(req != null);
         }
+        [TestMethod]
+        public void UploadAvatarUserRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new UploadAvatarUserRequest()
+
+                {
+                    Image = new FileItem(@"c:\1.png")
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void InquiryVerificationCodeRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new InquiryVerificationCodeRequest()
+
+                {
+                    Code = "56578",
+                    Isdestroy = true,
+                    CompanyId = 1,
+                    UserFlag = null,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void AddAlumbsRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new AddAlumbsRequest()
+
+                {
+                    Type = 1,
+                    ObjectId = 1,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void AddFunctionRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new AddFunctionRequest()
+
+                {
+                    Name = "lily",
+                    Sort = 1,
+                    ParentId = 1,
+                    Url = null,
+                    Description = null,
+                    Display = true,
+                    AllowBlock = null,
+                    Type = 1,
+                    Image = null,
+                    CompanyId = 3,
+
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void AddRelationOrganizationRoleRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new AddRelationOrganizationRoleRequest()
+                {
+                    OrganizationId = 1,
+                    RoleIds = "1",
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void AddRelationRoleFunctionRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new AddRelationRoleFunctionRequest()
+                {
+                    FunctionIds = "1",
+                    RoleId = 1,
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void AddUserTagRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new AddUserTagRequest()
+                {
+                  TagName="xx"
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void AllowFunctionRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new AllowFunctionRequest()
+                {
+                    Url=null,
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void AnalogShopLoginRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new AnalogShopLoginRequest()
+                {
+                    ShopId=1,
+                    ShopName="xx"
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void AssociatedUserTagsRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new AssociatedUserTagsRequest()
+                {
+                    UserNick="xx",
+                    TagId=1
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void BatchAssociatedUserTagsRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new BatchAssociatedUserTagsRequest()
+                {
+                    UserNick = "xx",
+                    TagId = 1
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void BatchUpdateFunctionSortRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new BatchUpdateFunctionSortRequest()
+                {
+                   Sort=null
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void BatchUpdateOrganizationRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new BatchUpdateOrganizationRequest()
+                {
+                    Sort = null
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void DeleteAlumbsRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new DeleteAlumbsRequest()
+                {
+                   Ids=null,
+                   ObjectId=1,
+                   Type=1,
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void DeleteEmployeeRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new DeleteEmployeeRequest()
+                {
+                    Id=1
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void DeleteFunctionRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new DeleteFunctionRequest()
+                {
+                    Id = 1
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void DeleteOrganizationRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new DeleteOrganizationRequest()
+                {
+                    Id = 1
+                });
+            Assert.IsTrue(req != null);
+        }
         
+
 
     }
 }
