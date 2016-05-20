@@ -32,5 +32,20 @@ namespace Yun.UnitTest
                 });
             Assert.IsTrue(req != null);
         }
+        
+        [TestMethod]
+        public void AddExpressTradeRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new AddExpressTradeRequest
+                {
+                    Mobile="18606683125",
+                    TradeNum="1",
+                    Quantity=1,
+                    ItemId=1,
+              });
+            Assert.IsTrue(req != null);
+        }
     }
 }
