@@ -11,7 +11,7 @@ namespace Yun.User.Request
     /// <summary>
     /// 上传用户头像并修改
     /// </summary>
-    public class UploadAvatarUserRequest:ITopUploadRequest<FileResultResponse>
+    public class UploadAvatarUserRequest:ITopUploadRequest<ModifyAvatarResponse>
     {
         /// <summary>
         /// 上传头像

@@ -40,6 +40,7 @@ namespace Yun.UnitTest
         public void GetArchivesRequest()
         {
             YunClient.Format = "json";
+            
             var req =
                 YunClient.Instance.Execute(new GetArchivesRequest
                 {

@@ -116,7 +116,7 @@
     <Compile Include="Request\UnbindEmailRequest.cs" />
     <Compile Include="Request\UnbindPhoneRequest.cs" />
     <Compile Include="Request\UpdateAlumbRequest.cs" />
-    <Compile Include="Request\UpdatedisabledUserRequest.cs" />
+    <Compile Include="Request\UpdateDisabledUserRequest.cs" />
     <Compile Include="Request\UpdateDisplayFunctionRequest.cs" />
     <Compile Include="Request\UpdateEmployeeRequest.cs" />
     <Compile Include="Request\UpdateFunctionRequest.cs" />
@@ -142,6 +142,7 @@
     <Compile Include="Response\GetUserTagsListResponse.cs" />
     <Compile Include="Response\GetUserTotalScoreResponse.cs" />
     <Compile Include="Response\LoginResponse.cs" />
+    <Compile Include="Response\ModifyAvatarResponse.cs" />
     <Compile Include="Response\OAuth2LoginResponse.cs" />
     <Compile Include="Response\OrganizationResponse.cs" />
     <Compile Include="Response\OrganizationsResponse.cs" />
