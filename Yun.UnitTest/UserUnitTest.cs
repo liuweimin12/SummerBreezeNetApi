@@ -10,6 +10,43 @@ namespace Yun.UnitTest
     public class UserUnitTest
     {
         [TestMethod]
+        public void ResetPasswordRequest()
+        {
+            var reqCode =
+                YunClient.Instance.Execute(new SendVerificationCodeRequest
+                {
+                    SendType = "SMS",
+                    Target = "15958805628",
+                    ActionName = "用户注册",
+                    UserFlag = "15958805628"
+                }).Result;
+
+            var resetReq = YunClient.Instance.Execute(new ResetPasswordRequest
+            {
+                AppSecret = YunClient.AppSecret,
+                Code = reqCode,
+                Password = "12345678",
+                Phone = "15958805628",
+                UserFlag = "15958805628"
+            });
+
+            if (!resetReq.Result)
+            {
+                Assert.Fail("修改密码失败");
+            }
+
+            var loginReq = YunClient.Instance.Execute(new LoginRequest
+            {
+                AppSecret = YunClient.AppSecret,
+                Password = "12345678",
+                Ip = "192.168.1.1",
+                UserName = "15958805628"
+            });
+
+            Assert.IsTrue(loginReq.UserId>0);
+        }
+
+        [TestMethod]
         public void ResetFunctionsRequest()
         {
             var req = YunClient.Instance.Execute(new ResetFunctionsRequest {CompanyId = 3}, YunClient.GetAdminToken()).Result;

@@ -8,6 +8,9 @@ using Yun.Util;
 
 namespace Yun.User.Request
 {
+    /// <summary>
+    /// 重置密码
+    /// </summary>
     public class ResetPasswordRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>
