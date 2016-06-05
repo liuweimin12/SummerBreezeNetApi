@@ -46,6 +46,7 @@ namespace Yun.UnitTest
                 {
                     PageNum = 1,
                     PageSize = 10,
+                    Fields = "postmetas"
                 });
             Assert.IsTrue(req != null);
         }
