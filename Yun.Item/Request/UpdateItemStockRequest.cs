@@ -9,7 +9,7 @@ namespace Yun.Item.Request
     /// 修改库存接口
     /// yun.item.stock.update
     /// </summary>
-    public class UpdateStockRequest : ITopRequest<IntResultResponse>
+    public class UpdateItemStockRequest : ITopRequest<IntResultResponse>
     {
         /// <summary>
         /// 商品ID

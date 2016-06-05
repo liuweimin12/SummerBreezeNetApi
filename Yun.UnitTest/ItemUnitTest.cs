@@ -18,7 +18,7 @@ namespace Yun.UnitTest
         {
             YunClient.Format = "json";
 
-            var req = YunClient.Instance.Execute(new UpdateStockRequest {ItemId = 21087, Stock = 10});
+            var req = YunClient.Instance.Execute(new UpdateItemStockRequest {ItemId = 21087, Stock = 10});
 
             Assert.IsTrue(req.Result>0);
         }
