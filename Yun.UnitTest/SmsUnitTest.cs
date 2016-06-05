@@ -2,7 +2,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Yun.Sms.Request;
 
-
 namespace Yun.UnitTest
 {
     [TestClass]
@@ -11,20 +10,15 @@ namespace Yun.UnitTest
         [TestMethod]
         public void SendShortMessageRequest()
         {
-            YunClient.Format = "xml";
             var req =
                 YunClient.Instance.Execute(new SendShortMessageRequest
                 {
-                    Mobile = "18606683125",
-                    CompanyId = 1,
-                    Content = "chashouduanxin"
-                  
-                   });
-            Assert.IsTrue(req != null);
+                    CompanyId = 3,
+                    Content = new Random().Next(10000,99999)+ "（手机登录验证码，请完成验证），如非本人操作，请忽略本信息。",
+                    Mobile = "15958805628"
+                });
+
+            Assert.IsTrue(req.Result);
         }
-        
-      
-
     }
-    }
-
+}
