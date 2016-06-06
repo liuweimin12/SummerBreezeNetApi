@@ -31,13 +31,19 @@ namespace Yun.Archive.Request
         /// </summary>
         public int? ParentId { get; set; }
 
+        /// <summary>
+        /// 公司ID
+        /// </summary>
+        public int? CompanyId { get; set; }
+
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
             {
                 {"display", Display},
                 {"shopid",ShopId},
-                {"parentid",ParentId}
+                {"parentid",ParentId},
+                {"companyid",CompanyId}
             };
 
             return parameters;
