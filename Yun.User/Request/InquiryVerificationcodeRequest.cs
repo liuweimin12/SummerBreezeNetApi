@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Yun.Interface;
 using Yun.Response;
 using Yun.Util;
 
 namespace Yun.User.Request
 {
+    /// <summary>
+    /// 查询验证码是否有效
+    /// </summary>
     public class InquiryVerificationCodeRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>
