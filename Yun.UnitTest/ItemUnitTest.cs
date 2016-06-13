@@ -14,6 +14,26 @@ namespace Yun.UnitTest
     public class ItemUnitTest
     {
         [TestMethod]
+        public void UpdateItemPriceRequest()
+        {
+            YunClient.Format = "json";
+
+            var req = YunClient.Instance.Execute(new UpdateItemPriceRequest { ItemId = 21089, Price = 91});
+
+            Assert.IsTrue(req.Result>0);
+        }
+
+        [TestMethod]
+        public void UpdateStockRequest()
+        {
+            YunClient.Format = "json";
+
+            var req = YunClient.Instance.Execute(new UpdateItemStockRequest {ItemId = 21087, Stock = 10});
+
+            Assert.IsTrue(req.Result>0);
+        }
+
+        [TestMethod]
         public void GetItemsRequest()
         {
             YunClient.Format = "json";
