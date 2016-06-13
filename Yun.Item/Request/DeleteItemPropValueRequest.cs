@@ -5,12 +5,16 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 商品商品SPU值
+    /// </summary>
     public class DeleteItemPropValueRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>
         /// 属性值ID
         /// </summary>
         public int PropValueId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.item.propvalue.delete";
