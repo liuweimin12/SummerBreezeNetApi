@@ -6,6 +6,9 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 新增商品规格值
+    /// </summary>
     public class AddItemSpecValueRequest : ITopRequest<IntResultResponse>
     {
         /// <summary>
