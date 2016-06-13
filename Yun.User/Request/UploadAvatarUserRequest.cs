@@ -8,7 +8,10 @@ using Yun.Util;
 
 namespace Yun.User.Request
 {
-    public class UploadAvatarUserRequest:ITopUploadRequest<FileResultResponse>
+    /// <summary>
+    /// 上传用户头像并修改
+    /// </summary>
+    public class UploadAvatarUserRequest:ITopUploadRequest<ModifyAvatarResponse>
     {
         /// <summary>
         /// 上传头像
