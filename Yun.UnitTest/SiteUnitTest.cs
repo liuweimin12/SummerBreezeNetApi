@@ -124,6 +124,19 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req != null);
         }
+        [TestMethod]
+        public void GetCitiesRequest()
+        {
+            YunClient.Format = "xml";
+
+            var req =
+                YunClient.Instance.Execute(new GetCitiesRequest
+                {
+                    
+                });
+
+            Assert.IsTrue(req != null);
+        }
         
     }
 }
