@@ -8,7 +8,7 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
-    public class UpdatesortItemCategoryRequest : ITopRequest<BoolResultResponse>
+    public class UpdateSortItemCategoryRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>
         /// 分类的id
