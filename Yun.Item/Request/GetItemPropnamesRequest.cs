@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 根据全局商品类目获取属性名
+    /// </summary>
     public class GetItemPropNamesRequest : ITopRequest<ItemPropNamesResponse>     
     {
 
