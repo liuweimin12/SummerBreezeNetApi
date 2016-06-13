@@ -97,6 +97,7 @@
     <Compile Include="Request\LoginMobilePhoneRequest.cs" />
     <Compile Include="Request\LoginOauth2Request.cs" />
     <Compile Include="Request\LoginRequest.cs" />
+    <Compile Include="Request\ModifyAvatarResponse.cs" />
     <Compile Include="Request\ModifyPasswordRequest.cs" />
     <Compile Include="Request\ModifyPasswordUserRequest.cs" />
     <Compile Include="Request\ModifyUserCreditRequest.cs" />

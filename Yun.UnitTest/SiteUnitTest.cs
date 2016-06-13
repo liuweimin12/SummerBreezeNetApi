@@ -138,8 +138,8 @@ namespace Yun.UnitTest
                     State = 1,
                     Sort = 1,
                     Ext = null
-                    
-                });
+
+                }, YunClient.GetAdminToken());
 
             Assert.IsTrue(req != null);
         }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Yun.Interface;
 using Yun.Response;
 using Yun.Util;
@@ -12,7 +9,7 @@ namespace Yun.Item.Request
     /// 批量修改店铺内商品分类排序
     /// chenggou.itemcat.batchupdatesort
     /// </summary>
-    public class BatchUpdateItemCatRequest : ITopRequest<BoolResultResponse>
+    public class BatchUpdateItemCatSortRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>
         /// 排序内容，格式需要id:sort#id:sort以次进行循环

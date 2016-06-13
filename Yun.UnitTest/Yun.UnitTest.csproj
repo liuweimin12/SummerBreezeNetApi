@@ -62,10 +62,9 @@
     <Compile Include="MarketingUnitTest.cs" />
     <Compile Include="PrivateUnitTest.cs" />
     <Compile Include="SiteUnitTest.cs" />
-    <Compile Include="SmsUnitTest.cs" />
     <Compile Include="TradeUnitTest.cs" />
     <Compile Include="ArchiveUnitTest.cs" />
-    <Compile Include="SmsTest.cs" />
+    <Compile Include="SmsUnitTest.cs" />
     <Compile Include="UserUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="YunClient.cs">
@@ -78,11 +77,11 @@
       <Name>Yun.Archive</Name>
     </ProjectReference>
     <ProjectReference Include="..\Yun.Item\Yun.Item.csproj">
-      <Project>{bc8d771c-96eb-4ee4-803d-66b1b9739bca}</Project>
+      <Project>{BC8D771C-96EB-4EE4-803D-66B1B9739BCA}</Project>
       <Name>Yun.Item</Name>
     </ProjectReference>
     <ProjectReference Include="..\Yun.Logistics\Yun.Logistics.csproj">
-      <Project>{bca135ca-73e4-4119-9bc6-373a08946f54}</Project>
+      <Project>{BCA135CA-73E4-4119-9BC6-373A08946F54}</Project>
       <Name>Yun.Logistics</Name>
     </ProjectReference>
     <ProjectReference Include="..\Yun.Marketing\Yun.Marketing.csproj">
@@ -94,7 +93,7 @@
       <Name>Yun.Private</Name>
     </ProjectReference>
     <ProjectReference Include="..\Yun.Site\Yun.Site.csproj">
-      <Project>{ada0dddf-ae84-4b13-8650-19e10fa56fd8}</Project>
+      <Project>{ADA0DDDF-AE84-4B13-8650-19E10FA56FD8}</Project>
       <Name>Yun.Site</Name>
     </ProjectReference>
     <ProjectReference Include="..\Yun.Sms\Yun.Sms.csproj">
@@ -116,35 +115,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="bin\Debug\Yun.UnitTest.dll.config" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\Debug\Yun.UnitTest.csprojResolveAssemblyReference.cache" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\Debug\ICSharpCode.SharpZipLib.dll" />
-    <Content Include="bin\Debug\Jayrock.Json.dll" />
-    <Content Include="bin\Debug\Yun.Archive.dll" />
-    <Content Include="bin\Debug\Yun.Archive.pdb" />
-    <Content Include="bin\Debug\Yun.dll" />
-    <Content Include="bin\Debug\Yun.Marketing.dll" />
-    <Content Include="bin\Debug\Yun.Marketing.pdb" />
-    <Content Include="bin\Debug\Yun.pdb" />
-    <Content Include="bin\Debug\Yun.Private.dll" />
-    <Content Include="bin\Debug\Yun.Private.pdb" />
-    <Content Include="bin\Debug\Yun.Sms.dll" />
-    <Content Include="bin\Debug\Yun.Sms.pdb" />
-    <Content Include="bin\Debug\Yun.Trade.dll" />
-    <Content Include="bin\Debug\Yun.Trade.pdb" />
-    <Content Include="bin\Debug\Yun.User.dll" />
-    <Content Include="bin\Debug\Yun.User.pdb" />
-    <Content Include="obj\Debug\Yun.UnitTest.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\Yun.UnitTest.dll" />
-    <Content Include="obj\Debug\Yun.UnitTest.pdb" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Release\" />
-    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

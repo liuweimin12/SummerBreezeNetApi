@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Yun.Item.Request;
+using Yun.Interface;
 
 namespace Yun.UnitTest
 {
@@ -13,25 +14,25 @@ namespace Yun.UnitTest
     [TestClass]
     public class ItemUnitTest
     {
-        [TestMethod]
-        public void UpdateItemPriceRequest()
-        {
-            YunClient.Format = "json";
+        //[TestMethod]
+        //public void UpdateItemPriceRequest()
+        //{
+        //    YunClient.Format = "json";
 
-            var req = YunClient.Instance.Execute(new UpdateItemPriceRequest { ItemId = 21089, Price = 91});
+        //    var req = YunClient.Instance.Execute(new UpdateItemPriceRequest { ItemId = 21089, Price = 91});
 
-            Assert.IsTrue(req.Result>0);
-        }
+        //    Assert.IsTrue(req.Result>0);
+        //}
 
-        [TestMethod]
-        public void UpdateStockRequest()
-        {
-            YunClient.Format = "json";
+        //[TestMethod]
+        //public void UpdateStockRequest()
+        //{
+        //    YunClient.Format = "json";
 
-            var req = YunClient.Instance.Execute(new UpdateItemStockRequest {ItemId = 21087, Stock = 10});
+        //    var req = YunClient.Instance.Execute(new UpdateItemStockRequest {ItemId = 21087, Stock = 10});
 
-            Assert.IsTrue(req.Result>0);
-        }
+        //    Assert.IsTrue(req.Result>0);
+        //}
 
         [TestMethod]
         public void GetItemsRequest()
@@ -251,17 +252,17 @@ namespace Yun.UnitTest
             });
             Assert.IsTrue(req != null);
         }
-        [TestMethod]
-        public void BatchUpdateItemCatRequest()
-        {
-            YunClient.Format = "xml";
+        //[TestMethod]
+        //public void BatchUpdateItemCatRequest()
+        //{
+        //    YunClient.Format = "xml";
 
-            var req = YunClient.Instance.Execute(new BatchUpdateItemCatRequest()
-            {
-                SortContent = "2:1",
-            }, YunClient.GetAdminToken());
-            Assert.IsTrue(req != null);
-        }
+        //    var req = YunClient.Instance.Execute(new BatchUpdateItemCatRequest()
+        //    {
+        //        SortContent = "2:1",
+        //    }, YunClient.GetAdminToken());
+        //    Assert.IsTrue(req != null);
+        //}
         [TestMethod]
         public void ChangeBookStatusRequest()
         {
@@ -867,18 +868,18 @@ namespace Yun.UnitTest
             }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
-        [TestMethod]
-        public void UpdatesortItemCategoryRequest()
-        {
-            YunClient.Format = "xml";
+        //[TestMethod]
+        //public void UpdatesortItemCategoryRequest()
+        //{
+        //    YunClient.Format = "xml";
 
-            var req = YunClient.Instance.Execute(new UpdatesortItemCategoryRequest()
-            {
-                Id = 1,
-                Sort = 1
-            }, YunClient.GetAdminToken());
-            Assert.IsTrue(req != null);
-        }
+        //    var req = YunClient.Instance.Execute(new UpdatesortItemCategoryRequest()
+        //    {
+        //        Id = 1,
+        //        Sort = 1
+        //    }, YunClient.GetAdminToken());
+        ////    Assert.IsTrue(req != null);
+        //}
         [TestMethod]
         public void UpdateShopItemCategoryRequest()
         {
@@ -901,5 +902,23 @@ namespace Yun.UnitTest
 
 
     }
+
+    //internal class UpdatesortItemCategoryRequest : ITopRequest<object>
+    //{
+    //    public int Id { get; set; }
+    //    public int Sort { get; set; }
+    //}
+
+    //internal class UpdateItemStockRequest : ITopRequest<object>
+    //{
+    //    public int ItemId { get; set; }
+    //    public int Stock { get; set; }
+    //}
+
+    //internal class UpdateItemPriceRequest : ITopRequest<object>
+    //{
+    //    public int ItemId { get; set; }
+    //    public int Price { get; set; }
+    //}
 }
 

@@ -39,8 +39,8 @@
     <Compile Include="ItemBookDomain.cs" />
     <Compile Include="GoodsDetailPromotions.cs" />
     <Compile Include="Request\AddItemBookRequest.cs" />
-    <Compile Include="Request\BatchUpdateItemCatRequest.cs" />
-    <Compile Include="Request\BatchUpdateShopItemCategoryRequest.cs" />
+    <Compile Include="Request\BatchUpdateItemCatSortRequest.cs" />
+    <Compile Include="Request\BatchUpdateShopItemCategorySortRequest.cs" />
     <Compile Include="Request\ChangeBookStatusRequest.cs" />
     <Compile Include="Request\CopyItemToShopRequest.cs" />
     <Compile Include="Request\DeleteItemBookRequest.cs" />
@@ -55,9 +55,11 @@
     <Compile Include="Request\RestoreItemRequest.cs" />
     <Compile Include="Request\SearchLimitDiscountItemRequest.cs" />
     <Compile Include="Request\UpdateItemCatRequest.cs" />
+    <Compile Include="Request\UpdateItemPriceRequest.cs" />
     <Compile Include="Request\UpdateItemStateRequest.cs" />
     <Compile Include="Request\UpdateShopItemCategoryDisplayRequest.cs" />
-    <Compile Include="Request\UpdatesortItemCategoryRequest.cs" />
+    <Compile Include="Request\UpdateSortItemCategoryRequest.cs" />
+    <Compile Include="Request\UpdateItemStockRequest.cs" />
     <Compile Include="Response\GetCategoryPrevsResponse.cs" />
     <Compile Include="Request\GetShopItemCategorysRequest.cs" />
     <Compile Include="Response\CategorysResponse.cs" />
