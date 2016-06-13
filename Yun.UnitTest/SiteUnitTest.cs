@@ -124,6 +124,25 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req != null);
         }
+        
+        [TestMethod]
+        public void AddCityRequest()
+        {
+            YunClient.Format = "xml";
+
+            var req =
+                YunClient.Instance.Execute(new AddCityRequest
+                {
+                    Name = "北京",
+                    ParentId = 1,
+                    State = 1,
+                    Sort = 1,
+                    Ext = null
+                    
+                });
+
+            Assert.IsTrue(req != null);
+        }
         [TestMethod]
         public void GetCitiesRequest()
         {
