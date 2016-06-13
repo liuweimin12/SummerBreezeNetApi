@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 删除全局商品类目
+    /// </summary>
     public class DeleteItemCatsRequest : ITopRequest<BoolResultResponse>
     {
         public string GetApiName()
