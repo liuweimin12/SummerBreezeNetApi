@@ -40,11 +40,13 @@ namespace Yun.UnitTest
         public void GetArchivesRequest()
         {
             YunClient.Format = "json";
+            
             var req =
                 YunClient.Instance.Execute(new GetArchivesRequest
                 {
                     PageNum = 1,
                     PageSize = 10,
+                    Fields = "postmetas"
                 });
             Assert.IsTrue(req != null);
         }
