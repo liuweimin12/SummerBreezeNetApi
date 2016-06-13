@@ -77,7 +77,7 @@ namespace Yun.Site.Request
                 {"getcustomcity",GetCustomCity},
                 {"cityname",CityName},
                 {"state",State},
-                {"parentId",ParentId }
+                {"parentid",ParentId }
             };
             return parameters;
         }
