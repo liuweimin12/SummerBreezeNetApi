@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 商品的留言回复
+    /// </summary>
     public class ReplyQuestionRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>
@@ -16,6 +19,7 @@ namespace Yun.Item.Request
         ///  回复内容
         /// </summary>
         public string Content { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.item.question.reply";
