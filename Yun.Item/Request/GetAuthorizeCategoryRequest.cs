@@ -4,6 +4,9 @@ using Yun.Item.Response;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 获取当前用户所属店铺的全局类目信息
+    /// </summary>
     public class GetAuthorizeCategoryRequest : ITopRequest<ItemCatsResponse>
     {
         public string GetApiName()
