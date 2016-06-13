@@ -41,34 +41,36 @@
     <Compile Include="ArticleDetail.cs" />
     <Compile Include="ArticleCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Request\AddArchiveRequest.cs" />
+    <Compile Include="Request\AddArchiveAskRequest.cs" />
     <Compile Include="Request\AddArchiveCategoryRequest.cs" />
     <Compile Include="Request\AddArchiveCommentRequest.cs" />
-    <Compile Include="Request\AddArchiveAskRequest.cs" />
+    <Compile Include="Request\AddArchiveRequest.cs" />
     <Compile Include="Request\AssociateArchiveReaderRequest.cs" />
+    <Compile Include="Request\AssociatedReaderRequest.cs" />
     <Compile Include="Request\BatchUpdateArchiveSortRequest.cs" />
-    <Compile Include="Request\DeleteArchiveRequest.cs" />
     <Compile Include="Request\DeleteArchiveAskRequest.cs" />
     <Compile Include="Request\DeleteArchiveCategoryRequest.cs" />
+    <Compile Include="Request\DeleteArchiveRequest.cs" />
     <Compile Include="Request\DeleteArchiveTagRequest.cs" />
+    <Compile Include="Request\GetArchiveQuestionRequest.cs" />
+    <Compile Include="Request\GetArchiveQuestionsRequest.cs" />
     <Compile Include="Request\GetArchiveReaderRequest.cs" />
     <Compile Include="Request\GetArchiveRequest.cs" />
     <Compile Include="Request\GetArchivesRequest.cs" />
     <Compile Include="Request\GetArchiveCategoriesRequest.cs" />
     <Compile Include="Request\GetArchiveCategoryRequest.cs" />
-    <Compile Include="Request\GetArchiveQuestionRequest.cs" />
-    <Compile Include="Request\GetArchiveQuestionsRequest.cs" />
     <Compile Include="Request\GetArchiveTagsRequest.cs" />
     <Compile Include="Request\IncreaseArchiveVisitRequest.cs" />
+    <Compile Include="Request\TopDictionary.cs" />
     <Compile Include="Request\UpdateArchiveRequest.cs" />
     <Compile Include="Request\UpdateCategoryRequest.cs" />
     <Compile Include="Request\UpdateQuestionRequest.cs" />
     <Compile Include="Response\GetArchiveCategoriesResponse.cs" />
     <Compile Include="Response\GetArchiveCategoryResponse.cs" />
-    <Compile Include="Response\GetArchiveResponse.cs" />
+    <Compile Include="Response\ArticlesResponse.cs" />
     <Compile Include="Response\GetArchiveQuestionResponse.cs" />
     <Compile Include="Response\GetArchiveQuestionsResponse.cs" />
-    <Compile Include="Response\ArticlesResponse.cs" />
+    <Compile Include="Response\GetArchiveResponse.cs" />
     <Compile Include="Response\GetArchiveTagsResponse.cs" />
     <Compile Include="Tag.cs" />
   </ItemGroup>
@@ -77,6 +79,20 @@
       <Project>{8d5f06ae-2707-496f-aca8-a3b8d00d2341}</Project>
       <Name>Yun</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\Yun.Archive.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Yun.Archive.dll" />
+    <Content Include="obj\Debug\Yun.Archive.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Yun.Archive.csprojResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
