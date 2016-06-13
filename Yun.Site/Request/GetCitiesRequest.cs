@@ -58,6 +58,11 @@ namespace Yun.Site.Request
         /// </summary>
         public int? State { get; set; }
 
+        /// <summary>
+        /// 父ID
+        /// </summary>
+        public int? ParentId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.city.list.get";
@@ -71,7 +76,8 @@ namespace Yun.Site.Request
                 {"pagesize",PageSize},
                 {"getcustomcity",GetCustomCity},
                 {"cityname",CityName},
-                {"state",State}
+                {"state",State},
+                {"parentId",ParentId }
             };
             return parameters;
         }
