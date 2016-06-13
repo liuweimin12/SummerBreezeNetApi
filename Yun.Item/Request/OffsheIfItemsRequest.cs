@@ -5,10 +5,13 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 下架商品
+    /// </summary>
     public class OffsheIfItemsRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>
-        /// 商品Ids
+        /// 商品Ids，多个用英文逗号分隔
         /// </summary>
         public string ItemIds { get; set; }
 
