@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.Item.Request
 {
+    /// <summary>
+    /// 获取全局类目链
+    /// </summary>
     public class GetItemCatChainRequest : ITopRequest<ItemCatsResponse>
     {
         /// <summary>
