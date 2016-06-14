@@ -474,7 +474,9 @@ namespace Yun.UnitTest
                 AppSecret = YunClient.AppSecret
             }).Token;
 
-            var req = YunClient.Instance.Execute(new UploadAvatarUserRequest {Image = new FileItem(@"C:\finally.png") }, loginReq);
+            var req = YunClient.Instance.Execute(new UploadAvatarUserRequest {Image = new FileItem(@"C:\finally.png")},
+                loginReq);
+
             Assert.IsTrue(req.Result);
         }
 
