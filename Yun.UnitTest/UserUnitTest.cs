@@ -183,16 +183,20 @@ namespace Yun.UnitTest
 
             var loginReq = YunClient.Instance.Execute(new LoginRequest
             {
-                UserName = "15958805615",
+                UserName = "15958805628",
                 IgnorePassword = true,
                 Ip = "192.168.1.1",
                 AppSecret = YunClient.AppSecret
             }).Token;
 
+            var user = YunClient.Instance.Execute(new GetUserRequest(), loginReq);
+
             var req =
                 YunClient.Instance.Execute(new ModifyUserInfoRequest
                 {
-                    Mobile = "15958805111"
+                    //IdCard = "11111",
+                    Mobile = "15958805628",
+                    //IsMale = 1
                 }, loginReq);
 
             Assert.IsTrue(req != null);

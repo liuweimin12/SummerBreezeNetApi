@@ -23,7 +23,7 @@ namespace Yun.User.Request
         /// <summary>
         /// 是否是男性
         /// </summary>
-        public int IsMale { get; set; }
+        public int? IsMale { get; set; }
 
         /// <summary>
         /// 用户头像
