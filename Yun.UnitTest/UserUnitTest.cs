@@ -180,25 +180,20 @@ namespace Yun.UnitTest
         public void ModifyUserInfoRequest()
         {
             YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new ModifyUserInfoRequest()
 
+            var loginReq = YunClient.Instance.Execute(new LoginRequest
+            {
+                UserName = "15958805615",
+                IgnorePassword = true,
+                Ip = "192.168.1.1",
+                AppSecret = YunClient.AppSecret
+            }).Token;
+
+            var req =
+                YunClient.Instance.Execute(new ModifyUserInfoRequest
                 {
-                    Nick = "宁波雨辰环保旗舰店",
-                    IsMale = 0,
-                    Avatar = null,
-                    Email = null,
-                    Mobile = null,
-                    RealName = null,
-                    Birthday = DateTime.Now,
-                    Province = null,
-                    City = null,
-                    Area = null,
-                    Address = null,
-                    Remark = null,
-                    Phone = null,
-                    IdCard = null,
-                });
+                    Mobile = "15958805111"
+                }, loginReq);
 
             Assert.IsTrue(req != null);
         }

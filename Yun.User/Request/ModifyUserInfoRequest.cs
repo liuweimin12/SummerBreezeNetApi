@@ -124,7 +124,6 @@ namespace Yun.User.Request
 
         public void Validate()
         {
-            RequestValidator.ValidateRequired("nick", Nick);
         }
 
         public IDictionary<string, FileItem> GetFileParameters()
