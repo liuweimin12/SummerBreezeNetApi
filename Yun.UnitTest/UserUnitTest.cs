@@ -298,17 +298,28 @@ namespace Yun.UnitTest
         [TestMethod]
         public void PhoneRegisterRequest()
         {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new PhoneRegisterRequest()
+            var mobile = "15958805615";
 
+            YunClient.Format = "json";
+
+            var phoneReq =
+                YunClient.Instance.Execute(new SendVerificationCodeRequest
+                {
+                    SendType = "SMS",
+                    Target = mobile,
+                    ActionName = "用户注册",
+                    UserFlag = mobile
+                });
+
+            var req =
+                YunClient.Instance.Execute(new PhoneRegisterRequest
                 {
                     Ip = "192.168.1.1",
-                    Code = "361896",
-                    Password = "123",
-                    Phone = "13521127643",
+                    Code = phoneReq.Result,
+                    Phone = mobile,
                     Secret = YunClient.AppSecret,
-                    UserFlag = "13521127643"
+                    UserFlag = mobile,
+                    Password = "888999"
                 });
 
             Assert.IsTrue(req != null);
