@@ -16,6 +16,7 @@ namespace Yun.UnitTest
         [TestMethod]
         public void ExecuteTradeStatisticsRequest()
         {
+            YunClient.Format = "json";
             var req = YunClient.Instance.Execute(new ExecuteTradeStatisticsRequest { Day = 30 }, YunClient.GetAdminToken());
             Assert.IsTrue(req.Result);
         }
@@ -217,7 +218,244 @@ namespace Yun.UnitTest
                 });
             Assert.IsTrue(req != null);
         }
+        [TestMethod]
+        public void GenerateCombinedPayTradeRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GenerateCombinedPayTradeRequest
+                {
+                    Ip ="192.168.1.1",
+                    Ids = "1",
+                    BankCode = null,
+                    Cash = null,
+                    ClientType = null,
+                    OnlineMoney = 100,
+                    OverMoney = 20,
+                    PayChannel = null,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GeneratePayTradeRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GeneratePayTradeRequest
+                {
+                    Ip = "192.168.1.1",
+                    Id = 1,
+                    BankCode = null,
+                    Cash = 100,
+                    ClientType = null,
+                    OnlineMoney = 100,
+                    OverMoney = 20,
+                    PayChannel = null,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetCartCountRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetCartCountRequest
+                {
+                    ShopId =0,
+                    CartType = 0,
+                    UserFlag = null,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetEvaluateRecordRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetEvaluateRecordRequest
+                {
+                    ShopId = 0,
+                    ItemId = 1,
+                    PageSize = 10,
+                    PageNum = 1,
+                    HasContent = true,
+  
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetIntegralRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetIntegralRequest
+                {
+                   
+                    CompanyId = 1,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetItemTradeStatisticsReportRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetItemTradeStatisticsReportRequest
+                {
+
+                    ShopId = 1,
+                    CompanyId = 1,
+                    MinDateTime = DateTime.Now,
+                    MaxDateTime = DateTime.Now,
+                    PageSize = 1,
+                    PageNum = 1,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetMonthTradeStatisticsRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetMonthTradeStatisticsRequest
+                {
+
+                    ShopId = 1,
+                    CompanyId = 1,
+                    Year = 2016,
+                    
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetMyRefundsRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetMyRefundsRequest
+                {
+                    MaxCreateTime = DateTime.Now,
+                    MinCreateTime = DateTime.Now,
+                    OrderId = 1,
+                    LoadHistory = 1,
+                    OrderRefundId = 1,
+                    PageSize = 1,
+                    PageNum = 1,
+                    Status = null,
+
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetMyTradeCountRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetMyTradeCountRequest
+                {
+                    UserId = 1,
+ 
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetRefundDetailRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetRefundDetailRequest
+                {
+                    RefundId = 1,
+                    OrderId = 1,
+                    
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetSellerRefundsRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetSellerRefundsRequest
+                {
+                    
+                    OrderId = 1,
+                    CompanyId = 1,
+                    LoadHistory = 1,
+                    MinCreateTime = DateTime.Now,
+                    MaxCreateTime = DateTime.Now,
+                    Nick = null,
+                    OrderRefundId = 1,
+                    PageSize = 1,
+                    PageNum = 10,
+                    Status = null,
+
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetSellerTradeCountResquest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetSellerTradeCountResquest
+                {
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetShoppingCartsRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetShoppingCartsRequest
+                {
+                    ShopId = 1,
+                    CartType = 1,
+                    UserFlag = null,
+                    CartIds = null,
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetTradeDeductionRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetTradeDeductionRequest
+                {
+                   CompanyId = 1,
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetTradeRecordRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetTradeRecordRequest
+                {
+                    ShopId = 1,
+                    ItemId = 1,
+                    PageNum = 1,
+                    PageSize = 10
+                   
+                });
+            Assert.IsTrue(req != null);
+        }
         
+
+
+
 
 
     }
