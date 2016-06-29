@@ -452,7 +452,241 @@ namespace Yun.UnitTest
                 });
             Assert.IsTrue(req != null);
         }
+        [TestMethod]
+        public void GetTradeSettingRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetTradeSettingRequest
+                {
+                
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetTradesSoldRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetTradesSoldRequest
+                {
+                    PageSize = 10,
+                    PageNum = 1,
+                   
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetTradeStatisticsRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetTradeStatisticsRequest
+                {
+                    PageSize = 10,
+                    PageNum = 1,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void ModifyDeliveryInfoRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new ModifyDeliveryInfoRequest
+                {
+                    TradeId = 1,
+                    ExpressEnName = null,
+                    ExpressName = null,
+                    Remark = null,
+                    TrackingNumber = null,
+                   
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void ModifyPostFareRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new ModifyPostFareRequest
+                {
+                    Id = 1,
+                    Postfee = 100,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void ModifyPriceRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new ModifyPriceRequest
+                {
+                    Price = "1",
+                    Postfee = 100,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void ModifyRefundRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new ModifyRefundRequest
+                {
+                   OrderRefundId = 1,
+                   Balance = 10,
+                   OnlineMoney = 10,
+                   PrepaidCard = 10,
+                   Remark = null,
+                   Reason =null,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void PayCompleteNotifyRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new PayCompleteNotifyRequest
+                {
+                    TradeId =1,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void PutRecycleBinRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new PutRecycleBinRequest
+                {
+                    TradeId = 1,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void RemoveCartRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new RemoveCartRequest
+                {
+                    CartIds = "1",
+                    UserFlag = null,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void SaveMemoRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new SaveMemoRequest
+                {
+                  Flag = 1,
+                  Id = 1,
+                  Memo = null,
+                  SlaveFlag = 1,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void SaveSystemMemoRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new SaveSystemMemoRequest
+                {
+                    TradeId = 1,
+                    Memo = null,
+                    
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void SetIntegralRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new SetIntegralRequest
+                {
+                    OneIntegralEqualMoney = 100,
+                    Enabled = 1,
+                    TradeEndMoneyToCredit = 1
+
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void SetTradeDeductionRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new SetTradeDeductionRequest
+                {
+                  CompanyId = 1,
+                  Content = 0,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void UpdateCartRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+              YunClient.Instance.Execute(new UpdateCartRequest
+              {
+                 CartId = 1,
+                 Quantity = 10,
+                 UserFlag = null
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void UpdateMobileRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+              YunClient.Instance.Execute(new UpdateMobileRequest
+              {
+                 OrderId = 1,
+                 Mobile = "15662414748"
+
+              });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void UpdateShippingAddressRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+              YunClient.Instance.Execute(new UpdateShippingAddressRequest
+              {
+                  OrderId = 1,
+                  Mobile = "15662414748",
+                  RealName = "hh",
+                  Zipcode = null
+
+              });
+            Assert.IsTrue(req != null);
+        }
         
+
+
 
 
 
