@@ -16,18 +16,18 @@ namespace Yun.UnitTest
                 YunClient.Instance.Execute(new SendVerificationCodeRequest
                 {
                     SendType = "SMS",
-                    Target = "15958805628",
+                    Target = "13621157636",
                     ActionName = "用户注册",
-                    UserFlag = "15958805628"
+                    UserFlag = "13621157636"
                 }).Result;
 
             var resetReq = YunClient.Instance.Execute(new ResetPasswordRequest
             {
                 AppSecret = YunClient.AppSecret,
                 Code = reqCode,
-                Password = "12345678",
-                Phone = "15958805628",
-                UserFlag = "15958805628"
+                Password = "123456",
+                Phone = "13621157636",
+                UserFlag = "13621157636"
             });
 
             if (!resetReq.Result)
@@ -206,23 +206,25 @@ namespace Yun.UnitTest
         [TestMethod]
         public void SendVerificationCodeRequest()
         {
-            YunClient.Format = "json";
+            YunClient.Format = "xml";
 
-            var loginReq = YunClient.Instance.Execute(new LoginRequest
-            {
-                UserName = "15958805628",
-                IgnorePassword = true,
-                Ip = "192.168.1.1",
-                AppSecret = YunClient.AppSecret
-            }).Token;
+            //var loginReq = YunClient.Instance.Execute(new LoginRequest
+            //{
+            //    UserName = "15958805628",
+            //    IgnorePassword = true,
+            //    Ip = "192.168.1.1",
+            //    AppSecret = YunClient.AppSecret
+            //}).Token;
 
             var req =
                 YunClient.Instance.Execute(new SendVerificationCodeRequest
                 {
-                    SendType = "SMS",
-                    Target = "15958805628",
-                    ActionName = "用户注册",
-                }, loginReq);
+                    SendType = "EMAIL",
+                    Target = "tianzhongluan@163.com",
+                    ActionName = "发送验证码",
+                    UserFlag = "15958805628"
+
+                });
 
             Assert.IsTrue(req != null);
         }
@@ -282,15 +284,14 @@ namespace Yun.UnitTest
                 YunClient.Instance.Execute(new ModifyUserMoneyRequest()
 
                 {
-                    UserNick = null,
-                    UserId = 1,
-                    AllowNegative = true,
-                    Ip = "192.168.1.1",
-                    Money = 0.1,
+                    UserNick = "13521127648",
+                    UserId = 52049,
+                    AllowNegative =false,
+                    Ip = "192.168.1.127",
+                    Money = 100,
                     Remark = null,
              
-                    
-                });
+                     });
 
             Assert.IsTrue(req != null);
         }
@@ -382,13 +383,13 @@ namespace Yun.UnitTest
         public void BindEmailRequest()
         {
             YunClient.Format = "json";
+          
             var req =
                 YunClient.Instance.Execute(new BindEmailRequest()
 
                 {
                     Email = "1805768571@qq.com",
-                    Code = "1"
-
+                    Code = "879417"
                 });
             Assert.IsTrue(req != null);
         }
@@ -461,22 +462,22 @@ namespace Yun.UnitTest
             Assert.IsTrue(req.Result);
         }
 
-        [TestMethod]
-        public void UploadAvatarUserRequest()
-        {
-            YunClient.Format = "json";
+        //[TestMethod]
+        //public void UploadAvatarUserRequest()
+        //{
+        //    YunClient.Format = "json";
 
-            var loginReq = YunClient.Instance.Execute(new LoginRequest
-            {
-                UserName = "15958805628",
-                IgnorePassword = true,
-                Ip = "192.168.1.1",
-                AppSecret = YunClient.AppSecret
-            }).Token;
+        //    var loginReq = YunClient.Instance.Execute(new LoginRequest
+        //    {
+        //        UserName = "15958805628",
+        //        IgnorePassword = true,
+        //        Ip = "192.168.1.1",
+        //        AppSecret = YunClient.AppSecret
+        //    }).Token;
 
-            var req = YunClient.Instance.Execute(new UploadAvatarUserRequest {Image = new FileItem(@"C:\finally.png") }, loginReq);
-            Assert.IsTrue(req.Result);
-        }
+        //    var req = YunClient.Instance.Execute(new UploadAvatarUserRequest {Image = new FileItem(@"C:\finally.png") }, loginReq);
+        //    Assert.IsTrue(req.Result);
+        //}
 
     }
 }
