@@ -3,459 +3,157 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Yun.Trade.Request;
+using Yun.Pay;
+using Yun.Pay.Request;
 
 namespace Yun.UnitTest
 {
-    /// <summary>
-    /// TradeUnitTest 的摘要说明
-    /// </summary>
+
     [TestClass]
-    public class TradeUnitTest
+    public class PayUnitTest
     {
         [TestMethod]
-        public void ExecuteTradeStatisticsRequest()
+        public void AddPrepaidCardRequest()
         {
-            YunClient.Format = "json";
-            var req = YunClient.Instance.Execute(new ExecuteTradeStatisticsRequest { Day = 30 }, YunClient.GetAdminToken());
-            Assert.IsTrue(req.Result);
-        }
-        [TestMethod]
-        public void GetTradeRequest()
-        {
-           YunClient.Format = "json";
+            YunClient.Format = "xml";
             var req =
-                YunClient.Instance.Execute(new GetTradeRequest
+                YunClient.Instance.Execute(new AddPrepaidCardRequest
                 {
-                    Id = 123,
-                    TradeNo="number"
-
-                });
-            Assert.IsTrue(req != null);
-        }
-        
-        [TestMethod]
-        public void AddExpressTradeRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new AddExpressTradeRequest
-                {
-                    Mobile="18560237296",
-                    TradeNum="001",
-                    Quantity=1,
-                    ItemId=1,
-                    Address = null,
-                    CashCouponId = 1,
-                    DeliveryType = null,
-                    CreateTime = DateTime.Now,
-                    ExpressRemark = null,
-                    Ext = null,
-                    Ext2 = null,
-                    GiftsJson =null,
-                    Integral = 10,
-                    
+                    PrepaidCardTypeId =2,
+                    CardNumber = "272302",
+                    CardPassword = "1234561",
+                    BindShopId = 1,
+                    BindCompanyId = 1,
+                    Money = 1000,
+                    AppSecret =YunClient.AppSecret,
+                 
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
         [TestMethod]
-        public void AddmultiExpressTradeRequest()
+        public void AddPrepaidCardTypeRequest()
         {
             YunClient.Format = "json";
             var req =
-                YunClient.Instance.Execute(new AddmultiExpressTradeRequest
+                YunClient.Instance.Execute(new AddPrepaidCardTypeRequest
                 {
-                    Items = null,
-                    Mobile = "18560237296",
-                    TradeNum = "001",                 
-                    Address = null,
-                    CashCouponId = 1,                  
-                    CreateTime = DateTime.Now,
-                    ExpressRemark = null,
-                    Ext = null,
-                    Ext2 = null,
-                    GiftsJson = null,
-                    Integral = 10,
+                    CardName = "充值卡",
+                    CardType = 2,
+                    Description = null,
+                    Denomination = 1000,
+
 
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
         [TestMethod]
-        public void AddToCartRequest()
+        public void AddUserBankCardRequest()
         {
-            YunClient.Format = "json";
+            YunClient.Format = "xml";
             var req =
-                YunClient.Instance.Execute(new AddToCartRequest
+                YunClient.Instance.Execute(new AddUserBankCardRequest
                 {
-                   Quantity = 1,
-                   ItemId = 1,
-                   SkuId = 0,
-                   UserFlag = null,
-                  
-                   Delivery = "1",
+                 BankName = "cc",
+                 AccountName = "dd",
+                 BankNum = "98765432111",
+                 IdCard = "1231456789622",
+                 Location = null,
+                 Phone = "15662414748",
+                 RealName = "AMY",
+                 SubBranch = "高新区支行",
 
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
         [TestMethod]
-        public void AddTradeRateRequest()
+        public void ApplyWithdrawalsRequest()
         {
             YunClient.Format = "json";
             var req =
-                YunClient.Instance.Execute(new AddTradeRateRequest
+                YunClient.Instance.Execute(new ApplyWithdrawalsRequest
                 {
-                   OrderId = 1,
-                   Content = null,
-                   RateResult = null,
-                   RatingJson = null,
+                   BankId =1,
+                   Money = 10,
 
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
         [TestMethod]
-        public void BatchConfirmTradeRequest()
+        public void BatchAddPrepaidCardRequest()
         {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new BatchConfirmTradeRequest
-                {
+            YunClient.Format = "xml";
+            List<BatchAddCardJson> myBatchAddCardJson = new List<BatchAddCardJson>();
+            BatchAddCardJson BatchAddCardJson1 = new BatchAddCardJson();
+            BatchAddCardJson1.card_number = "111222";
+            BatchAddCardJson1.card_password = "1234554321";
+            BatchAddCardJson1.bind_shopId = 1;
+            BatchAddCardJson1.bind_companyId = 1;
+            BatchAddCardJson1.expired_time = null;
+            myBatchAddCardJson.Add(BatchAddCardJson1);
 
-                });
-            Assert.IsTrue(req != null);
-        }
-        [TestMethod]
-        public void BatchSaveMemoTradeRequest()
-        {
-            YunClient.Format = "json";
             var req =
-                YunClient.Instance.Execute(new BatchSaveMemoTradeRequest
+                YunClient.Instance.Execute(new BatchAddPrepaidCardRequest
                 {
-                    Ids = "1",
-                    Flag = 1,
-                    Memo = null,
-                });
-            Assert.IsTrue(req != null);
-        }
-        [TestMethod]
-        public void ChangeRefundStatusRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new ChangeRefundStatusRequest
-                {
-                   OrderRefundId = 1,
-                   Remark = null,
-                   Status = "close"
-                });
-            Assert.IsTrue(req != null);
-        }
-        [TestMethod]
-        public void CloseTradeRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new CloseTradeRequest
-                {
-                   Id = 1,
-                   CloseReason = null,
-                });
-            Assert.IsTrue(req != null);
-        }
-        [TestMethod]
-        public void CompleteNoPaidTradeRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new CompleteNoPaidTradeRequest
-                {
-                    TradeId = 1
-                });
-            Assert.IsTrue(req != null);
-        }
-        [TestMethod]
-        public void CreateRefundRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new CreateRefundRequest
-                {
-                    OrderId = 1,
-                    Balance = 100,
-                    OnlineMoney = 10,
-                    PrepaidCardMoney = 10,
-                    Remark = null,
-                    Reason = null,
-                });
-            Assert.IsTrue(req != null);
-        }
-        [TestMethod]
-        public void DelayReceiveTimeRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new DelayReceiveTimeRequest
-                {
-                    OrderId = 1,
-                    Days = 10,
-                   
-                });
-            Assert.IsTrue(req != null);
-        }
-        [TestMethod]
-        public void DeliveryTradeRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new DeliveryTradeRequest
-                {
-                    OrderId = 1,
-                    ExpressName = null,
-                    ExpressEnName = null,
-                    Remark = null,
-                    TrackingNumber = null,
-                    
-
-                });
-            Assert.IsTrue(req != null);
-        }
-        [TestMethod]
-        public void GenerateCombinedPayTradeRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new GenerateCombinedPayTradeRequest
-                {
-                    Ip ="192.168.1.1",
-                    Ids = "1",
-                    BankCode = null,
-                    Cash = null,
-                    ClientType = null,
-                    OnlineMoney = 100,
-                    OverMoney = 20,
-                    PayChannel = null,
-
-                });
-            Assert.IsTrue(req != null);
-        }
-        [TestMethod]
-        public void GeneratePayTradeRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new GeneratePayTradeRequest
-                {
-                    Ip = "192.168.1.1",
-                    Id = 1,
-                    BankCode = null,
-                    Cash = 100,
-                    ClientType = null,
-                    OnlineMoney = 100,
-                    OverMoney = 20,
-                    PayChannel = null,
-
-                });
-            Assert.IsTrue(req != null);
-        }
-        [TestMethod]
-        public void GetCartCountRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new GetCartCountRequest
-                {
-                    ShopId =0,
-                    CartType = 0,
-                    UserFlag = null,
-
-                });
-            Assert.IsTrue(req != null);
-        }
-        [TestMethod]
-        public void GetEvaluateRecordRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new GetEvaluateRecordRequest
-                {
-                    ShopId = 0,
-                    ItemId = 1,
-                    PageSize = 10,
-                    PageNum = 1,
-                    HasContent = true,
-  
-                });
-            Assert.IsTrue(req != null);
-        }
-        [TestMethod]
-        public void GetIntegralRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new GetIntegralRequest
-                {
-                   
-                    CompanyId = 1,
-
-                });
-            Assert.IsTrue(req != null);
-        }
-        [TestMethod]
-        public void GetItemTradeStatisticsReportRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new GetItemTradeStatisticsReportRequest
-                {
-
-                    ShopId = 1,
-                    CompanyId = 1,
-                    MinDateTime = DateTime.Now,
-                    MaxDateTime = DateTime.Now,
-                    PageSize = 1,
-                    PageNum = 1,
-
-                });
-            Assert.IsTrue(req != null);
-        }
-        [TestMethod]
-        public void GetMonthTradeStatisticsRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new GetMonthTradeStatisticsRequest
-                {
-
-                    ShopId = 1,
-                    CompanyId = 1,
-                    Year = 2016,
-                    
-
-                });
-            Assert.IsTrue(req != null);
-        }
-        [TestMethod]
-        public void GetMyRefundsRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new GetMyRefundsRequest
-                {
-                    MaxCreateTime = DateTime.Now,
-                    MinCreateTime = DateTime.Now,
-                    OrderId = 1,
-                    LoadHistory = 1,
-                    OrderRefundId = 1,
-                    PageSize = 1,
-                    PageNum = 1,
-                    Status = null,
+                   PrepaidCardTypeId = 1,
+                   BatchAddCardJson = myBatchAddCardJson,
+                   AppSecret = YunClient.AppSecret
 
 
-                });
+                }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
         [TestMethod]
-        public void GetMyTradeCountRequest()
+        public void CompleteOnlinePayRequest()
         {
-            YunClient.Format = "json";
+            YunClient.Format = "xml";
             var req =
-                YunClient.Instance.Execute(new GetMyTradeCountRequest
+                YunClient.Instance.Execute(new CompleteOnlinePayRequest
                 {
-                    UserId = 1,
- 
+                    Id =1,
+                    PayPassword = "123456",
+                    Money = 10,
+                    TradeNum = "123456",
                 });
             Assert.IsTrue(req != null);
         }
         [TestMethod]
-        public void GetRefundDetailRequest()
+        public void CompletePayRequest()
         {
             YunClient.Format = "json";
             var req =
-                YunClient.Instance.Execute(new GetRefundDetailRequest
+                YunClient.Instance.Execute(new CompletePayRequest
+                {
+                    Id = 2,
+                    PayPassword = "123456",
+                   OutTradeNum = "1112",
+                   AppSecret = YunClient.AppSecret,
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void CompleteRefundRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new CompleteRefundRequest
                 {
                     RefundId = 1,
-                    OrderId = 1,
-                    
-
-                });
+                }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
         [TestMethod]
-        public void GetSellerRefundsRequest()
+        public void CompleteWithdrawalsRequest()
         {
             YunClient.Format = "json";
             var req =
-                YunClient.Instance.Execute(new GetSellerRefundsRequest
+                YunClient.Instance.Execute(new CompleteWithdrawalsRequest
                 {
-                    
-                    OrderId = 1,
-                    CompanyId = 1,
-                    LoadHistory = 1,
-                    MinCreateTime = DateTime.Now,
-                    MaxCreateTime = DateTime.Now,
-                    Nick = null,
-                    OrderRefundId = 1,
-                    PageSize = 1,
-                    PageNum = 10,
-                    Status = null,
-
-
-                });
-            Assert.IsTrue(req != null);
-        }
-        [TestMethod]
-        public void GetSellerTradeCountResquest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new GetSellerTradeCountResquest
-                {
-                });
-            Assert.IsTrue(req != null);
-        }
-        [TestMethod]
-        public void GetShoppingCartsRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new GetShoppingCartsRequest
-                {
-                    ShopId = 1,
-                    CartType = 1,
-                    UserFlag = null,
-                    CartIds = null,
-                });
-            Assert.IsTrue(req != null);
-        }
-        [TestMethod]
-        public void GetTradeDeductionRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new GetTradeDeductionRequest
-                {
-                   CompanyId = 1,
-                });
-            Assert.IsTrue(req != null);
-        }
-        [TestMethod]
-        public void GetTradeRecordRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new GetTradeRecordRequest
-                {
-                    ShopId = 1,
-                    ItemId = 1,
-                    PageNum = 1,
-                    PageSize = 10
-                   
-                });
+                    Id = 1,
+                    Ip = "192.168.1.1"
+                }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
         
-
-
-
 
 
     }
