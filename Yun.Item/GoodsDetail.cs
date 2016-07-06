@@ -7,6 +7,12 @@ namespace Yun.Item
     public class GoodsDetail
     {
         /// <summary>
+        /// 每账号限购，控制时间间隔
+        /// </summary>
+        [XmlElement("per_limit_buy_hour")]
+        public int PerLimitBuyHour { get; set; }
+
+        /// <summary>
         /// 分销模板ID
         /// </summary>
         [XmlElement("distribution_template_id")]

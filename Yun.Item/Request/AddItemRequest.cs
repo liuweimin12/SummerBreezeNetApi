@@ -11,6 +11,12 @@ namespace Yun.Item.Request
     public class AddItemRequest : ITopRequest<IntResultResponse>
     {
         /// <summary>
+        /// 每账号限购，控制时间间隔
+        /// </summary>
+        public int PerLimitBuyHour { get; set; }
+
+
+        /// <summary>
         /// 分销模板ID
         /// </summary>
         public int DistributionTemplateId { get; set; }
@@ -298,7 +304,8 @@ namespace Yun.Item.Request
                 {"integrallimit",Integrallimit},
                 {"distributiontemplateid",DistributionTemplateId},
                 {"sortorder",SortOrder },
-                {"closetimedelay",CloseTimeDelay }
+                {"closetimedelay",CloseTimeDelay },
+                {"perlimitbuyhour",PerLimitBuyHour }
             };
             return parameters;
         }
