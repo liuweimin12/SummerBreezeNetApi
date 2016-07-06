@@ -5,6 +5,9 @@ using Yun.Util;
 
 namespace Yun.Trade.Request
 {
+    /// <summary>
+    /// 关闭订单
+    /// </summary>
     public class CloseTradeRequest : ITopRequest<BoolResultResponse>
     {
         public int Id { get; set; }
