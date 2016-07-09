@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Yun.User.Request;
 using Yun.Util;
@@ -47,9 +48,18 @@ namespace Yun.UnitTest
         }
 
         [TestMethod]
+        public void GetFunctionsRequest()
+        {
+            var req = YunClient.Instance.Execute(new GetFunctionsRequest {OnlyShowDisplay = true},
+                YunClient.GetAdminToken());
+
+            Assert.IsTrue(req.Functions.Any());
+        }
+
+        [TestMethod]
         public void ResetFunctionsRequest()
         {
-            var req = YunClient.Instance.Execute(new ResetFunctionsRequest {CompanyId = 3}, YunClient.GetAdminToken()).Result;
+            var req = YunClient.Instance.Execute(new ResetFunctionsRequest {CompanyId = 100}, YunClient.GetAdminToken()).Result;
             Assert.IsTrue(req);
         }
 
@@ -148,18 +158,23 @@ namespace Yun.UnitTest
         [TestMethod]
         public void PhoneDynamicLoginRequest()
         {
-            YunClient.Format = "xml";
+            YunClient.Format = "json";
+
+            var sendReq =
+                YunClient.Instance.Execute(new SendLoginCodePhoneRequest
+                {
+                    MobilePhone = "13736169996"
+                });
+
             var req =
                 YunClient.Instance.Execute(new PhoneDynamicLoginRequest
                 {
                     Ip = "192.168.1.1",
-                    Phone = "18606683125",
-                    Code = "879417",
-                    ShopId = 1,
-                    CompanyId = 3,
+                    Phone = "13736169996",
+                    Code = sendReq.Result
                 });
 
-            Assert.IsTrue(req != null);
+            Assert.IsTrue(req.UserId>0);
         }
 
         [TestMethod]
