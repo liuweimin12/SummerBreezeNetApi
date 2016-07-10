@@ -51,10 +51,12 @@ namespace Yun.UnitTest
         [TestMethod]
         public void GetFunctionsRequest()
         {
-            var req = YunClient.Instance.Execute(new GetFunctionsRequest {OnlyShowDisplay = true},
-                YunClient.GetAdminToken());
+            var req =
+                YunClient.Instance.Execute(
+                    new GetFunctionsRequest {OnlyShowDisplay = true, CompanyId = 100, FunctionType = 0},
+                    YunClient.GetAdminToken());
 
-            Assert.IsTrue(req.Functions.Any());
+            Assert.IsTrue(req.Functions.All(e => e.Type == 0));
         }
 
         [TestMethod]
