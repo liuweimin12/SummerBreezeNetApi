@@ -28,8 +28,9 @@ namespace Yun.Shop
         /// <summary>
         /// 店铺所属类目
         /// </summary>
-        [XmlElement("category_id")]
-        public long CategoryId { get; set; }
+        [XmlArray("shop_categories")]
+        [XmlArrayItem("shop_category")]
+        public List<LongKeyValuePair> CategoryId { get; set; }
 
         /// <summary>
         /// 店名
@@ -106,7 +107,7 @@ namespace Yun.Shop
         /// <summary>
         /// 坐标（谷歌）
         /// </summary>
-        [XmlElement("Coordinate")]
+        [XmlElement("coordinate")]
         public string Coordinate { get; set; }
 
         /// <summary>
