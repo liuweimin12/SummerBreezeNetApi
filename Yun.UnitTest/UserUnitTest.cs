@@ -10,6 +10,7 @@ namespace Yun.UnitTest
     [TestClass]
     public class UserUnitTest
     {
+
         [TestMethod]
         public void ResetPasswordRequest()
         {
@@ -102,6 +103,7 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req.UserId > 0);
         }
+
         [TestMethod]
         public void LoginMobilePhoneRequest()
         {
@@ -443,15 +445,20 @@ namespace Yun.UnitTest
         [TestMethod]
         public void AuthSessionRequest()
         {
-            YunClient.Format = "json";
             var req =
-                YunClient.Instance.Execute(new AuthSessionRequest()
-
+                YunClient.Instance.Execute(new LoginRequest
                 {
-
+                    UserName = "宁波人保分公司",
+                    Password = "888999",
+                    Ip = "192.168.1.1",
+                    AppSecret = YunClient.AppSecret
                 });
-            Assert.IsTrue(req != null);
+
+            var authReq = YunClient.Instance.Execute(new AuthSessionRequest(), req.Token);
+
+            Assert.IsTrue(authReq.UserId > 0);
         }
+
         [TestMethod]
         public void UnbindEmailRequest()
         {
