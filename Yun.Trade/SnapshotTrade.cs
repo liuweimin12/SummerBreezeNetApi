@@ -7,6 +7,18 @@ namespace Yun.Trade
     public class SnapshotTrade
     {
         /// <summary>
+        /// 关闭订单/退款理由
+        /// </summary>
+        [XmlElement("close_reason")]
+        public string CloseReason { get; set; }
+
+        /// <summary>
+        /// 丢弃理由
+        /// </summary>
+        [XmlElement("trade_reason")]
+        public string DropReason { get; set; }
+
+        /// <summary>
         /// 订单
         /// </summary>
         [XmlArray("orders")]

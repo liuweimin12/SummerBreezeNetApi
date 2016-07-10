@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Yun.Interface;
 using Yun.Response;
 using Yun.Util;
@@ -45,7 +42,8 @@ namespace Yun.Shop.Request
             {
                 {"name", Name},
                 {"sort",Sort},
-                {"parentid", ParentId}
+                {"parentid", ParentId},
+                {"id", Id}
             };
             return parameters;
         }

@@ -10,7 +10,15 @@ namespace Yun.User.Request
     /// </summary>
     public class ResetFunctionsRequest :ITopRequest<BoolResultResponse>
     {
+        /// <summary>
+        /// 公司ID
+        /// </summary>
         public int CompanyId { get; set; }
+
+        /// <summary>
+        /// 类型ID
+        /// </summary>
+        public int TypeId { get; set; }
 
         public string GetApiName()
         {
@@ -21,7 +29,8 @@ namespace Yun.User.Request
         {
             var parameters = new YunDictionary
             {
-                {"companyid", CompanyId}
+                {"companyid", CompanyId},
+                {"typeid", TypeId}
             };
             return parameters;
         }

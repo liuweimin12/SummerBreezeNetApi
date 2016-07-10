@@ -93,6 +93,11 @@ namespace Yun.Shop.Request
 
         public string Description { get; set; }
 
+        /// <summary>
+        /// 首页
+        /// </summary>
+        public string HomeUrl { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.shop.add";
@@ -138,7 +143,8 @@ namespace Yun.Shop.Request
                 {"systemlevel",SystemLevel},
                 {"ip",Ip},
                 {"companyid",CompanyId},
-                {"deliverytime",DeliveryTime }
+                {"deliverytime",DeliveryTime },
+                {"homeurl",HomeUrl }
             };
             return parameters;
         }
