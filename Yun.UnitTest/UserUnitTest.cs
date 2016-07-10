@@ -59,7 +59,9 @@ namespace Yun.UnitTest
         [TestMethod]
         public void ResetFunctionsRequest()
         {
-            var req = YunClient.Instance.Execute(new ResetFunctionsRequest {CompanyId = 100}, YunClient.GetAdminToken()).Result;
+            var req =
+                YunClient.Instance.Execute(new ResetFunctionsRequest {CompanyId = 100, TypeId = 1},
+                    YunClient.GetAdminToken()).Result;
             Assert.IsTrue(req);
         }
 

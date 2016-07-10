@@ -61,6 +61,7 @@
     <Compile Include="LogisticsUnitTest.cs" />
     <Compile Include="MarketingUnitTest.cs" />
     <Compile Include="PrivateUnitTest.cs" />
+    <Compile Include="ShopUnitTest.cs" />
     <Compile Include="SiteUnitTest.cs" />
     <Compile Include="TradeUnitTest.cs" />
     <Compile Include="ArchiveUnitTest.cs" />
@@ -76,6 +77,14 @@
       <Project>{f4ce84b6-084e-4647-90af-4eaa6145bd25}</Project>
       <Name>Yun.Archive</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Yun.Coupon\Yun.Coupon.csproj">
+      <Project>{9bdc2319-4c4e-4bfd-8da6-138f4e0117f5}</Project>
+      <Name>Yun.Coupon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yun.Distribution\Yun.Distribution.csproj">
+      <Project>{4fa1be73-70ca-419d-a77e-efbc7059b117}</Project>
+      <Name>Yun.Distribution</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Yun.Item\Yun.Item.csproj">
       <Project>{BC8D771C-96EB-4EE4-803D-66B1B9739BCA}</Project>
       <Name>Yun.Item</Name>
@@ -88,9 +97,17 @@
       <Project>{66f0ee7b-d76e-402e-8b25-ece884ff66fb}</Project>
       <Name>Yun.Marketing</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Yun.Pay\Yun.Pay.csproj">
+      <Project>{39d5ed2e-4f75-4ecd-83ff-4c5cc11f6ad3}</Project>
+      <Name>Yun.Pay</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Yun.Private\Yun.Private.csproj">
       <Project>{4179E21D-7656-4155-BFAA-DDE8BC9C5E9E}</Project>
       <Name>Yun.Private</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yun.Shop\Yun.Shop.csproj">
+      <Project>{cf675a00-89b4-442a-a1b9-07c3070ad3f4}</Project>
+      <Name>Yun.Shop</Name>
     </ProjectReference>
     <ProjectReference Include="..\Yun.Site\Yun.Site.csproj">
       <Project>{ADA0DDDF-AE84-4B13-8650-19E10FA56FD8}</Project>
@@ -107,6 +124,10 @@
     <ProjectReference Include="..\Yun.User\Yun.User.csproj">
       <Project>{E4AC4FEB-E06E-42D4-B11D-5986FC9B2BDB}</Project>
       <Name>Yun.User</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yun.WeiXin\Yun.WeiXin.csproj">
+      <Project>{79ee9a9f-543d-4eef-baa6-1ef68f733a34}</Project>
+      <Name>Yun.WeiXin</Name>
     </ProjectReference>
     <ProjectReference Include="..\Yun\Yun.csproj">
       <Project>{8D5F06AE-2707-496F-ACA8-A3B8D00D2341}</Project>
