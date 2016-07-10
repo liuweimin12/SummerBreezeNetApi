@@ -26,5 +26,13 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req.TotalItem>0);
         }
+
+        [TestMethod]
+        public void GetShopRequest()
+        {
+            var req = YunClient.Instance.Execute(new GetShopRequest {ShopId = 12868});
+
+            Assert.IsTrue(req.Shop!=null);
+        }
     }
 }
