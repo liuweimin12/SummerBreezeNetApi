@@ -88,7 +88,7 @@ namespace Yun.Shop
         /// <summary>
         /// 首页Url
         /// </summary>
-        [XmlElement("home_page")]
+        [XmlElement("home_url")]
         public string HomePage { get; set; }
 
         /// <summary>
