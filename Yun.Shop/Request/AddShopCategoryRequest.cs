@@ -29,6 +29,11 @@ namespace Yun.Shop.Request
         /// </summary>
         public int ParentId { get; set; }
 
+        /// <summary>
+        /// 其他ID
+        /// </summary>
+        public int OtherId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.shop.category.add";
@@ -40,7 +45,8 @@ namespace Yun.Shop.Request
             {
                 {"name", Name},
                 {"sort",Sort},
-                {"parentid",ParentId}
+                {"parentid",ParentId},
+                {"otherid",OtherId }
             };
             return parameters;
         }

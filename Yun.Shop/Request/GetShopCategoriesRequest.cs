@@ -16,6 +16,12 @@ namespace Yun.Shop.Request
         /// 店铺id
         /// </summary>
         public int? ParentId { get; set; }
+
+        /// <summary>
+        /// 其他ID
+        /// </summary>
+        public int OtherId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.shop.categories.get";
@@ -25,7 +31,8 @@ namespace Yun.Shop.Request
         {
             var parameters = new YunDictionary
             {
-                {"parentid", ParentId}
+                {"parentid", ParentId},
+                {"otherid",OtherId }
             };
             return parameters;
         }
