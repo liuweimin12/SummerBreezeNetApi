@@ -5,6 +5,8 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Yun.Pay;
 using Yun.Pay.Request;
+using Yun.Pay.Response;
+using Yun.Shop.Request;
 
 namespace Yun.UnitTest
 {
@@ -19,8 +21,8 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new AddPrepaidCardRequest
                 {
-                    PrepaidCardTypeId =2,
-                    CardNumber = "272302",
+                    PrepaidCardTypeId =4,
+                    CardNumber = "272306",
                     CardPassword = "1234561",
                     BindShopId = 1,
                     BindCompanyId = 1,
@@ -153,7 +155,537 @@ namespace Yun.UnitTest
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
+        [TestMethod]
+        public void CreateRefundLinkRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new CreateRefundLinkRequest
+                {
+                    BatchNo = "301",
+                    HtmlMethod = "GET",
+                    
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void DeletePrepaidCardRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new DeletePrepaidCardRequest
+                {
+                    PrepaidCardId = 1,
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void DeletePrepaidCardTypeRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new DeletePrepaidCardTypeRequest
+                {
+                   PrepaidCardTypeId = 1,
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void ExecutePrepaidCardBalanceStatisticsRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new ExecutePrepaidCardBalanceStatisticsRequest
+                {
+                  
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void ExecuteShopPrepaidCardStatisticsRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new ExecuteShopPrepaidCardStatisticsRequest
+                {
+                    Day = 10,
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GenerateJsApiPayParmRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new GenerateJsApiPayParmRequest
+                {
+                    PrepayId = "1",
+                    CompanyId = 1,
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GeneratePayHtmlRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new GeneratePayHtmlRequest
+                {
+                    Id =2,
+                    HtmlMethod = "GET",
+                    MerchantUrl = null,
+                    OutTradeNum = "1112",
+                    ReturnUrl = null,
+                    CompanyId = 1,
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetAccountReportRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetAccountReportRequest
+                {
+                PageSize = 1,
+                PageNum = 10,
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetBandBankRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetBandBankRequest
+                {
+                  Id =4,
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetBandBanksRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetBandBanksRequest
+                {
+                   
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetCompanyPaymentRateRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetCompanyPaymentRateRequest
+                {
+                    CompanyId = 1,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetCompanyReportRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetCompanyReportRequest
+                {
+                    CompanyId = 1,
+                    Direction = null,
+                    StartTime = DateTime.Now,
+                    EndTime = DateTime.Now,
+                    MerchantOrderNo = null,
+                    PageSize = 1,
+                    PageNum = 10,
+                    OppositeName = null,
+                    OwnerId = 1,
+                    ShopId = 1,
+                    Status = null,
+                    TradeType = null,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        //[TestMethod]
+        //public void GetDefaultPayMentRateResponse()
+        //{
+        //    YunClient.Format = "json";
+        //    var req =
+        //        YunClient.Instance.Execute(new GetDefaultPayMentRateResponse
+        //        {
+             
+
+        //        });
+        //    Assert.IsTrue(req != null);
+        //}
+        [TestMethod]
+        public void GetOnlinePaymentRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetOnlinePaymentRequest
+                {
+                    PayMethod = "MOBILE",
+                    CompanyId = 1,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetPaymentInstitutionRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetPaymentInstitutionRequest
+                {
+                    PayMethod = "MOBILE",
+                    CompanyId = 1,
+                    ShopId = 1,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetPrepaidCardBalanceRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetPrepaidCardBalanceRequest
+                {
+                PageNum = 1,
+                PageSize = 10,
+                StatisticsData = DateTime.Now,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetPrepaidCardDetailRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new GetPrepaidCardDetailRequest
+                {
+                  CardNumber = "272304",
+                  PrepaidCardId = 6
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetPrepaidCardMoneyRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new GetPrepaidCardMoneyRequest
+                {
+                    UserId = 1,
+                    Nick = null
+                
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetPrepaidCardsListRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetPrepaidCardsListRequest
+                {
+                    PageSize =1,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetPrepaidCardTypeListRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetPrepaidCardTypeListRequest
+                {
+                    PageSize = 1,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetPrepaidCardTypeRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new GetPrepaidCardTypeRequest
+                {
+                   PrepaidCardTypeId = 2,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetPrepaidTypeStatisticsRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetPrepaidTypeStatisticsRequest
+                {
+                    PrepaidCardTypeId = 2,
+                    BindCompanyId = 1,
+                    BindShopId = 1,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetShopPrepaidCardStatisticsRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new GetShopPrepaidCardStatisticsRequest
+                {
+                   PageSize = 10,
+                   PageNum = 1,
+                   MaxStatisticsData = DateTime.Now,
+                   MinStatisticsData = DateTime.Parse("2016-07-01"),
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetSitePaymentrateRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new GetSitePaymentrateRequest
+                {
+                    DeveloperId = 1,
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetWithdrawalsDetailListRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetWithdrawalsDetailListRequest
+                {
+                   PageSize = 10,
+                   PageNum = 1,
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetWithdrawalsDetailRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetWithdrawalsDetailRequest
+                {
+                    Id =2,
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void ModifyPrepaidCardMoneyRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new ModifyPrepaidCardMoneyRequest
+                {
+                   CardId =4,
+                   Money = 10000
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void ModifyPrepaidCardPasswordRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new ModifyPrepaidCardPasswordRequest
+                {
+                    PrepaidCardId = 6,
+                    CardPassword = "123",
+                    AppSecret = YunClient.AppSecret,
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void ModifyUserBankCardRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new ModifyUserBankCardRequest
+                {
+                   BankName = "98765432111",
+                   Id = 1,
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void PerfectWithdrawalsInfoRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new PerfectWithdrawalsInfoRequest
+                {
+                    BankName = "9876543211",
+                    RealName = "AMY",
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void PrepaidCardBindUserRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new PrepaidCardBindUserRequest
+                {
+                    BoundNick = "aa",
+                    AppSecret = YunClient.AppSecret,
+                    CardNumber = "272306",
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void ReNotifyOuterTradeRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new ReNotifyOuterTradeRequest
+                {
+                    FlowId = 1,
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void SetCompanyPaymentRateRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new SetCompanyPaymentRateRequest
+                {
+                    CompanyId = 1,
+                    Pc = 50,
+                    Mobile = 40,
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void SetDefaultPaymengRateRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new SetDefaultPaymengRateRequest
+                {
+                    
+                    Pc = 50,
+                    Mobile = 40,
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void SetOnlinePaymentRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new SetOnlinePaymentRequest
+                {
+                    PayMethod = "aa"
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void SetSitePaymentrateRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new SetSitePaymentrateRequest
+                {
+                   Pc = 50,
+                   DeveloperId = 1,
+                   Mobile = 18606683125
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void TransfersMoneyRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new TransfersMoneyRequest
+                {
+                  Money = 100,
+                  TargetUserId = 1,
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void UnBindPrepaidCardRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new UnBindPrepaidCardRequest
+                {
+                    
+                    CardNumber = "272306",
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void UpdatePrepaidCardTypeRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new UpdatePrepaidCardTypeRequest
+                {
+
+                   PrepaidCardTypeId = 4,
+                   CardName = "充值卡"
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void VerificationPrepaidCardRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new VerificationPrepaidCardRequest
+                {
+                    CardNumber = "272306",
+                    AppSecret = YunClient.AppSecret,
+                    CardPassword = "1234561"
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
         
+
+
+
+
+
 
 
     }
