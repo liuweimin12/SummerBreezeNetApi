@@ -52,5 +52,11 @@ namespace Yun.Logistics
         /// </summary>
         [XmlElement("price_type")]
         public int PriceType { get; set; }
+
+        /// <summary>
+        /// 店铺ID
+        /// </summary>
+        [XmlElement("shop_id")]
+        public int ShopId { get; set; }
     }
 }

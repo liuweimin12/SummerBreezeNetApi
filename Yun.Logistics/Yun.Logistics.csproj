@@ -61,7 +61,6 @@
     <Compile Include="Request\GetDefaultAddressRequest.cs" />
     <Compile Include="Request\GetDeliveryTemplatesRequest.cs" />
     <Compile Include="Request\GetExpressTemplateRequest.cs" />
-    <Compile Include="Request\GetExpressTemplatesRequest.cs" />
     <Compile Include="Request\SaveAddressRequest.cs" />
     <Compile Include="Request\SetDefaultAddressRequest.cs" />
     <Compile Include="Request\UpdateDeliveryTemplateRequest.cs" />

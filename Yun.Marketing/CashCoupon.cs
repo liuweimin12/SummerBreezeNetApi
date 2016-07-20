@@ -97,5 +97,11 @@ namespace Yun.Marketing
         /// </summary>
         [XmlElement("bind_time")]
         public string BindTime { get; set; }
+
+        /// <summary>
+        /// 店铺ID
+        /// </summary>
+        [XmlElement("shop_id")]
+        public int ShopId { get; set; }
     }
 }
