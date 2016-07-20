@@ -58,6 +58,13 @@ namespace Yun.Archive.Request
         /// </summary>
         public string Extension { get; set; }
 
+
+        /// <summary>
+        /// 分类缩写，需要唯一
+        /// </summary>
+        public int Slug { get; set; }
+
+
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
@@ -69,7 +76,8 @@ namespace Yun.Archive.Request
                 {"image",Image},
                 {"description",Description},
                 {"parentid",ParentId},
-                {"extension",Extension }
+                {"extension",Extension },
+                { "slug",Slug }
             };
             return parameters;
         }
