@@ -43,6 +43,9 @@ namespace Yun.Logistics
         [XmlArrayItem("freight")]
         public List<PostfareDetail> Freight { get; set; }
 
+        /// <summary>
+        /// 包邮条件
+        /// </summary>
         [XmlArray("fare_free_conditions")]
         [XmlArrayItem("fare_free_condition")]
         public List<FareFreeCondition> FareFreeConditions { get; set; }

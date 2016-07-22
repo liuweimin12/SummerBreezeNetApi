@@ -57,5 +57,12 @@ namespace Yun.Archive
         /// </summary>
         [XmlElement("extension")]
         public string Extension { get; set; }
+
+
+        /// <summary>
+        /// 分类的缩写，唯一
+        /// </summary>
+        [XmlElement("slug")]
+        public string Slug { get; set; }
     }
 }
