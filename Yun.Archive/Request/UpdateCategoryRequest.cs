@@ -62,7 +62,7 @@ namespace Yun.Archive.Request
         /// <summary>
         /// 分类缩写，需要唯一
         /// </summary>
-        public int Slug { get; set; }
+        public string Slug { get; set; }
 
 
         public IDictionary<string, string> GetParameters()
