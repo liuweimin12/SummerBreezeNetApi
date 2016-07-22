@@ -18,11 +18,14 @@ namespace Yun.Archive.Request
 
         public int Id { get; set; }
 
+        public string Slug { get; set; }
+
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
             {
-                {"id", Id }
+                {"id", Id },
+                {"slug",Slug }
             };
             return parameters;
         }
