@@ -59,5 +59,11 @@ namespace Yun.Marketing
         /// </summary>
         [XmlElement("ext")]
         public string Ext { get; set; }
+
+        /// <summary>
+        /// 商品ID
+        /// </summary>
+        [XmlElement("item_id")]
+        public long ItemId { get; set; }
     }
 }
