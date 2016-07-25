@@ -41,11 +41,11 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new AddExpressTradeRequest
                 {
-                    Mobile="18560237296",
+                    Mobile="18606683125",
                     TradeNum="001",
                     Quantity=1,
                     ItemId=1,
-                    Address = null,
+                    Address = "aa",
                     CashCouponId = 1,
                     DeliveryType = null,
                     CreateTime = DateTime.Now,
@@ -83,16 +83,16 @@ namespace Yun.UnitTest
         [TestMethod]
         public void AddToCartRequest()
         {
-            YunClient.Format = "json";
+            YunClient.Format = "xml";
             var req =
                 YunClient.Instance.Execute(new AddToCartRequest
                 {
                    Quantity = 1,
-                   ItemId = 1,
+                   ItemId = 3,
                    SkuId = 0,
                    UserFlag = null,
                   
-                   Delivery = "1",
+                   Delivery = "express",
 
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
@@ -263,7 +263,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new GetCartCountRequest
                 {
-                    ShopId =0,
+                    ShopId =1,
                     CartType = 0,
                     UserFlag = null,
 
@@ -419,10 +419,8 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new GetShoppingCartsRequest
                 {
-                    ShopId = 1,
-                    CartType = 1,
-                    UserFlag = null,
-                    CartIds = null,
+                    ShopId =1,
+                  
                 });
             Assert.IsTrue(req != null);
         }
