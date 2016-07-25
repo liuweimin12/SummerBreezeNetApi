@@ -155,7 +155,6 @@ namespace Yun.Shop
         public List<LongKeyValuePair> Areas { get; set; }
 
 
-
         /// <summary>
         /// 店主ID
         /// </summary>
@@ -169,5 +168,35 @@ namespace Yun.Shop
         [XmlElement("shopkeeper")]
         public string ShopKeeper { get; set; }
 
+        /// <summary>
+        /// 好评数量
+        /// </summary>
+        [XmlElement("praise_quantity")]
+        public int PraiseQuantity { get; set; }
+
+        /// <summary>
+        /// 中评数量
+        /// </summary>
+        [XmlElement("medium_quantity")]
+        public int MediumQuantity { get; set; }
+
+        /// <summary>
+        /// 差评数量
+        /// </summary>
+        [XmlElement("bad_quantity")]
+        public int BadQuantity { get; set; }
+
+
+        /// <summary>
+        /// 商品数量
+        /// </summary>
+        [XmlElement("goods_count")]
+        public int GoodsCount { get; set; }
+
+        /// <summary>
+        /// 动态文章数量
+        /// </summary>
+        [XmlElement("article_count")]
+        public int ArticleCount { get; set; }
     }
 }
