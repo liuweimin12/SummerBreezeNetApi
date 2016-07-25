@@ -14,15 +14,61 @@ namespace Yun.UnitTest
     public class LogisticsUnitTest
     {
         [TestMethod]
+        public void AddDeliveryTemplateRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new AddDeliveryTemplateRequest
+                {
+                    Title = "AA",
+                    Farefree = 10,
+                    PriceType = 0,
+                    FareFreeStrategy = null,
+                    LogisticsPrice =null
+                   
+
+                }, YunClient.GetAdminToken());
+
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void DeleteDeliveryTemplateRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new DeleteDeliveryTemplateRequest
+                {
+                  Id = 1
+                }, YunClient.GetAdminToken());
+
+            Assert.IsTrue(req != null);
+        }
+
+        [TestMethod]
+        public void DeleteExpressTemplateRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new DeleteExpressTemplateRequest
+                {
+                    Id = 1
+                }, YunClient.GetAdminToken());
+
+            Assert.IsTrue(req != null);
+
+        }
+
+        [TestMethod]
         public void GetAddressesRequest()
         {
             YunClient.Format = "json";
             var req =
                 YunClient.Instance.Execute(new GetAddressesRequest
                 {
-                    Sort = "desc",
-                    AddressType = 0
+                   
+                   
                 });
+
             Assert.IsTrue(req != null);
         }
         [TestMethod]
@@ -32,7 +78,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new GetAddressRequest
                 {
-                    Id = 123
+                    Id =1
 
                 });
             Assert.IsTrue(req != null);
@@ -56,7 +102,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new GetExpressTemplateRequest
                 {
-                    Id = 0
+                    Id =1
 
                 });
             Assert.IsTrue(req != null);
@@ -77,22 +123,25 @@ namespace Yun.UnitTest
     [TestMethod]
     public void SaveAddressRequest()
     {
-        YunClient.Format = "json";
+        YunClient.Format = "xml";
         var req =
             YunClient.Instance.Execute(new SaveAddressRequest
             {
-                Id = 123,
+                Id = 110,
                 Province = "浙江省",
                 City = "宁波",
                 Area = "高新区",
                 Street = "杨帆街道",
-                Zipcode = "000000",
-                Name = "hello",
-                Mobile = "0000-000000",
-                IsDefault = 0
+                Zipcode = null,
+                Name = "lily",
+                Mobile = "13250958899",
+                IsDefault = 1,
+                AddressType = 0,
+                Detail = null,
+                Town = null,
 
-            });
-        Assert.IsTrue(req != null);
+            }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
 
     }
     [TestMethod]
@@ -107,5 +156,85 @@ namespace Yun.UnitTest
         Assert.IsTrue(req != null);
 
     }
+        [TestMethod]
+        public void DeleteAddressRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new DeleteAddressRequest
+                {
+                    Id = 1
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
 
-} }
+        }
+        [TestMethod]
+        public void GetDeliveryTemplatesRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new GetDeliveryTemplatesRequest
+                {
+                    ShopId = 1
+                });
+            Assert.IsTrue(req != null);
+
+        }
+        [TestMethod]
+        public void GetLogisticsCompanyNameRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new GetLogisticsCompanyNameRequest
+                {
+                    
+                });
+            Assert.IsTrue(req != null);
+
+        }
+        [TestMethod]
+        public void GetLogisticsRecordRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new GetLogisticsRecordRequest
+                {
+                    LogisticsName = "ems",
+                    LogisticsNumber = "123466789",
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetShippingRecordRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new GetShippingRecordRequest
+                {
+                    OrderId = 1
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void UpdateDeliveryTemplateRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new UpdateDeliveryTemplateRequest
+                {
+                    Id = 1,
+                    Title = "aa",
+                    Farefree = 10,
+                    FareFreeStrategy = null,
+                    LogisticsPrice = null,
+                    PriceType = 1
+
+                });
+            Assert.IsTrue(req != null);
+        }
+        
+
+
+    } }
