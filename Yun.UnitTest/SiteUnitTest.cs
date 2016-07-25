@@ -128,12 +128,12 @@ namespace Yun.UnitTest
         [TestMethod]
         public void AddCityRequest()
         {
-            YunClient.Format = "xml";
+            YunClient.Format = "json";
 
             var req =
                 YunClient.Instance.Execute(new AddCityRequest
                 {
-                    Name = "北京",
+                    Name = "杭州",
                     ParentId = 1,
                     State = 1,
                     Sort = 1,
@@ -146,12 +146,17 @@ namespace Yun.UnitTest
         [TestMethod]
         public void GetCitiesRequest()
         {
-            YunClient.Format = "xml";
+            YunClient.Format = "json";
 
             var req =
                 YunClient.Instance.Execute(new GetCitiesRequest
                 {
+                    PageNum = 1,
+                    PageSize = 100,
                     
+                    ParentId =0,
+                    
+                   
                 });
 
             Assert.IsTrue(req != null);
