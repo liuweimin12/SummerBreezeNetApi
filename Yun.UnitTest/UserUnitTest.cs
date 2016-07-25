@@ -40,7 +40,7 @@ namespace Yun.UnitTest
                 AppSecret = YunClient.AppSecret,
                 Password = "12345678",
                 Ip = "192.168.1.1",
-                UserName = "15958805628"
+                UserName = "15662414748"
             });
 
             Assert.IsTrue(loginReq.UserId>0);
@@ -82,30 +82,32 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new LoginRequest
                 {
-                    UserName = "宁波雨辰环保旗舰店",
-                    Password = "888999",
+                    UserName = "18606683125",
+                    Password = "111111",
                     Ip = "192.168.1.1",
                     AppSecret = YunClient.AppSecret
                 });
 
             Assert.IsTrue(req.UserId > 0);
         }
-        [TestMethod]
-        public void LoginMobilePhoneRequest()
-        {
-            YunClient.Format = "json";
+        /// <summary>
+        /// 已删除该接口
+        /// </summary>
+        //[TestMethod]
+        //public void LoginMobilePhoneRequest()
+        //{
+        //    YunClient.Format = "json";
 
-            var req =
-                YunClient.Instance.Execute(new LoginMobilePhoneRequest
-                {
-                    Code = "879417",
-                    CompanyId = 3,
-                    IsDestroy = true,
-                    UserFlag = null
-                });
+        //    var req =
+        //        YunClient.Instance.Execute(new LoginMobilePhoneRequest
+        //        {
+        //            Code = "846737",
+        //            IsDestroy = false,
+        //            UserFlag = "13521127648"
+        //        });
 
-            Assert.IsTrue(req != null);
-        }
+        //    Assert.IsTrue(req != null);
+        //}
 
         
         [TestMethod]
@@ -153,10 +155,9 @@ namespace Yun.UnitTest
                 YunClient.Instance.Execute(new PhoneDynamicLoginRequest
                 {
                     Ip = "192.168.1.1",
-                    Phone = "18606683125",
-                    Code = "879417",
-                    ShopId = 1,
-                    CompanyId = 3,
+                    Phone = "13621157636",
+                    Code = "276185",
+                   
                 });
 
             Assert.IsTrue(req != null);
@@ -169,7 +170,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new SendLoginCodePhoneRequest
                 {
-                    MobilePhone = "18606683125",
+                    MobilePhone = "13621157636",
                     CompanyId = null
                 });
 
@@ -305,11 +306,11 @@ namespace Yun.UnitTest
 
                 {
                     Ip = "192.168.1.1",
-                    Code = "361896",
+                    Code = "422647",
                     Password = "123",
-                    Phone = "13521127643",
+                    Phone = "18606683125",
                     Secret = YunClient.AppSecret,
-                    UserFlag = "13521127643"
+                    UserFlag = "18606683125"
                 });
 
             Assert.IsTrue(req != null);
@@ -400,7 +401,7 @@ namespace Yun.UnitTest
             YunClient.Format = "json";
             var loginReq = YunClient.Instance.Execute(new LoginRequest
             {
-                UserName = "15958805628",
+                UserName = "18606683125",
                 IgnorePassword = true,
                 Ip = "192.168.1.1",
                 AppSecret = YunClient.AppSecret
@@ -408,8 +409,8 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new BindPhoneRequest()
                {
-                    Phone = "15958805628",
-                    Code = "098265"
+                    Phone = "18606683125",
+                    Code = "422647"
                 }, loginReq);
             Assert.IsTrue(req.Result);
         }
