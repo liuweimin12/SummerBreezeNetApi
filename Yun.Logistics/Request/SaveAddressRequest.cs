@@ -66,6 +66,26 @@ namespace Yun.Logistics.Request
         /// </summary>
         public string Town { get; set; }
 
+        /// <summary>
+        /// 省ID
+        /// </summary>
+        public int? ProvinceId { get; set; }
+
+        /// <summary>
+        /// 区ID
+        /// </summary>
+        public int? AreaId { get; set; }
+
+        /// <summary>
+        /// 城市ID
+        /// </summary>
+        public int? CityId { get; set; }
+
+        /// <summary>
+        /// 城镇ID
+        /// </summary>
+        public int? TownId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.user.address.save";
@@ -86,7 +106,11 @@ namespace Yun.Logistics.Request
                 {"isdefault", IsDefault},
                 {"addresstype", AddressType},
                 {"detail", Detail},
-                {"town",Town }
+                {"town",Town },
+                {"provinceid", ProvinceId},
+                {"areaid", AreaId},
+                {"cityid", CityId},
+                {"townid", TownId}
             };
             return parameters;
         }
