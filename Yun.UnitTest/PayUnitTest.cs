@@ -680,6 +680,19 @@ namespace Yun.UnitTest
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
+        [TestMethod]
+        public void WeixinUnifiedorderRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new WeixinUnifiedorderRequest
+                {
+                    Id = 1,
+                    TradeType = "1"
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
         
 
 
