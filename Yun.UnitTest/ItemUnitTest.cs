@@ -139,7 +139,7 @@ namespace Yun.UnitTest
 
             var req = YunClient.Instance.Execute(new GetItemRequest()
             {
-                Id = 2,
+                Id = 16666,
                
             });
 
