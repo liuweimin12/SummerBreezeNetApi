@@ -143,6 +143,7 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void GetCitiesRequest()
         {
@@ -151,12 +152,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new GetCitiesRequest
                 {
-                    PageNum = 1,
-                    PageSize = 100,
                     
-                    ParentId =0,
-                    
-                   
                 });
 
             Assert.IsTrue(req != null);

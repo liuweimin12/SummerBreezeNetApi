@@ -4,6 +4,9 @@ using Yun.Interface;
 
 namespace Yun.Shop.Request
 {
+    /// <summary>
+    /// 获取商户信息
+    /// </summary>
     public class GetShopRequest : ITopRequest<ShopResponse>
     {
         /// <summary>

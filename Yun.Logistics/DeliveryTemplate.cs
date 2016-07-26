@@ -43,6 +43,9 @@ namespace Yun.Logistics
         [XmlArrayItem("freight")]
         public List<PostfareDetail> Freight { get; set; }
 
+        /// <summary>
+        /// 包邮条件
+        /// </summary>
         [XmlArray("fare_free_conditions")]
         [XmlArrayItem("fare_free_condition")]
         public List<FareFreeCondition> FareFreeConditions { get; set; }
@@ -52,5 +55,11 @@ namespace Yun.Logistics
         /// </summary>
         [XmlElement("price_type")]
         public int PriceType { get; set; }
+
+        /// <summary>
+        /// 店铺ID
+        /// </summary>
+        [XmlElement("shop_id")]
+        public int ShopId { get; set; }
     }
 }

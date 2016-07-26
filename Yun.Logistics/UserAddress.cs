@@ -1,5 +1,4 @@
-﻿using System;
-using System.Xml.Serialization;
+﻿using System.Xml.Serialization;
 
 namespace Yun.Logistics
 {
@@ -72,5 +71,29 @@ namespace Yun.Logistics
         /// </summary>
         [XmlElement("town")]
         public string Town { get; set; }
+
+        /// <summary>
+        /// 省ID
+        /// </summary>
+        [XmlElement("province_id")]
+        public int ProvinceId { get; set; }
+
+        /// <summary>
+        /// 区ID
+        /// </summary>
+        [XmlElement("area_id")]
+        public int AreaId { get; set; }
+
+        /// <summary>
+        /// 城市ID
+        /// </summary>
+        [XmlElement("city_id")]
+        public int CityId { get; set; }
+
+        /// <summary>
+        /// 城镇ID
+        /// </summary>
+        [XmlElement("town_id")]
+        public int TownId { get; set; }
     }
 }

@@ -5,10 +5,10 @@ namespace Yun.User.Response
 {
     public class AuthSessionResponse : YunResponse
     {
-        [XmlElement("user_id")]
+        [XmlElement("userid")]
         public long UserId { get; set; }
 
-        [XmlElement("user_name")]
+        [XmlElement("username")]
         public string UserName { get; set; }
     }
 }

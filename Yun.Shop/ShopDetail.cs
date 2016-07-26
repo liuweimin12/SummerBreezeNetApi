@@ -28,8 +28,9 @@ namespace Yun.Shop
         /// <summary>
         /// 店铺所属类目
         /// </summary>
-        [XmlElement("category_id")]
-        public long CategoryId { get; set; }
+        [XmlArray("shop_categories")]
+        [XmlArrayItem("shop_category")]
+        public List<LongKeyValuePair> CategoryId { get; set; }
 
         /// <summary>
         /// 店名
@@ -88,7 +89,7 @@ namespace Yun.Shop
         /// <summary>
         /// 首页Url
         /// </summary>
-        [XmlElement("home_page")]
+        [XmlElement("home_url")]
         public string HomePage { get; set; }
 
         /// <summary>
@@ -106,7 +107,7 @@ namespace Yun.Shop
         /// <summary>
         /// 坐标（谷歌）
         /// </summary>
-        [XmlElement("Coordinate")]
+        [XmlElement("coordinate")]
         public string Coordinate { get; set; }
 
         /// <summary>
@@ -154,7 +155,6 @@ namespace Yun.Shop
         public List<LongKeyValuePair> Areas { get; set; }
 
 
-
         /// <summary>
         /// 店主ID
         /// </summary>
@@ -168,5 +168,35 @@ namespace Yun.Shop
         [XmlElement("shopkeeper")]
         public string ShopKeeper { get; set; }
 
+        /// <summary>
+        /// 好评数量
+        /// </summary>
+        [XmlElement("praise_quantity")]
+        public int PraiseQuantity { get; set; }
+
+        /// <summary>
+        /// 中评数量
+        /// </summary>
+        [XmlElement("medium_quantity")]
+        public int MediumQuantity { get; set; }
+
+        /// <summary>
+        /// 差评数量
+        /// </summary>
+        [XmlElement("bad_quantity")]
+        public int BadQuantity { get; set; }
+
+
+        /// <summary>
+        /// 商品数量
+        /// </summary>
+        [XmlElement("goods_count")]
+        public int GoodsCount { get; set; }
+
+        /// <summary>
+        /// 动态文章数量
+        /// </summary>
+        [XmlElement("article_count")]
+        public int ArticleCount { get; set; }
     }
 }

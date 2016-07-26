@@ -12,6 +12,11 @@ namespace Yun.Shop.Request
         /// </summary>
         public int? ParentId { get; set; }
 
+        /// <summary>
+        /// 其他ID
+        /// </summary>
+        public int OtherId { get; set; }
+
 
         public string GetApiName()
         {
@@ -22,7 +27,8 @@ namespace Yun.Shop.Request
         {
             var parameters = new YunDictionary
             {
-                {"parentid", ParentId}
+                {"parentid", ParentId},
+                {"otherid",OtherId }
             };
             return parameters;
         }

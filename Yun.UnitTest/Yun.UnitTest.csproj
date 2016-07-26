@@ -61,6 +61,7 @@
     <Compile Include="LogisticsUnitTest.cs" />
     <Compile Include="MarketingUnitTest.cs" />
     <Compile Include="PrivateUnitTest.cs" />
+    <Compile Include="ShopUnitTest.cs" />
     <Compile Include="SiteUnitTest.cs" />
     <Compile Include="PayUnitTest.cs" />
     <Compile Include="TradeUnitTest.cs" />

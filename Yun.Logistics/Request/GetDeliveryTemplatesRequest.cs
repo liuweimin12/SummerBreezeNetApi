@@ -4,6 +4,9 @@ using Yun.Logistics.Response;
 
 namespace Yun.Logistics.Request
 {
+    /// <summary>
+    /// 获取物流模板的列表
+    /// </summary>
     public class GetDeliveryTemplatesRequest : ITopRequest<ExpressTemplateResponse>
     {
 

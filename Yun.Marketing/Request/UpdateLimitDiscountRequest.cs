@@ -60,7 +60,7 @@ namespace Yun.Marketing.Request
             {
                 {"activityid",ActivityId},
                 {"name",Name},
-                {"participaterange",1},
+                {"participaterange",ParticipateRange},
                 {"starttime",StartTime},
                 {"endtime",EndTime},
                 {"description",Description},

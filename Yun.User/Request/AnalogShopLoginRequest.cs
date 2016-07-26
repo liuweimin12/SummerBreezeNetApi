@@ -7,9 +7,13 @@ using Yun.User.Response;
 
 namespace Yun.User.Request
 {
+    /// <summary>
+    /// 获取店铺管理人员的登录凭证
+    /// </summary>
     public class AnalogShopLoginRequest : ITopRequest<LoginResponse>
     {
-        /// 店铺名字
+        /// <summary>
+        /// 商户名字
         /// </summary>
         public string ShopName { get; set; }
 

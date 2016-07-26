@@ -69,6 +69,11 @@ namespace Yun.Archive.Request
         /// </summary>
         public int? CompanyId { get; set; }
 
+        /// <summary>
+        /// 分类缩写，需要唯一
+        /// </summary>
+        public string Slug { get; set; }
+
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
@@ -81,7 +86,8 @@ namespace Yun.Archive.Request
                 {"thumb", Thumb},
                 {"extension", Extension},
                 {"shopid", ShopId},
-                {"companyid", CompanyId}
+                {"companyid", CompanyId},
+                { "slug",Slug }
             };
             return parameters;
         }
