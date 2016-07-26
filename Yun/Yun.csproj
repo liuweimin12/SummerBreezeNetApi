@@ -50,6 +50,7 @@
     <Compile Include="Domain\CustomerService.cs" />
     <Compile Include="Domain\DynamicRatings.cs" />
     <Compile Include="Domain\GiftJson.cs" />
+    <Compile Include="Domain\MultiState.cs" />
     <Compile Include="Domain\SeoInfo.cs" />
     <Compile Include="Domain\StringKeyValuePair.cs" />
     <Compile Include="Domain\TradeGiftJson.cs" />
