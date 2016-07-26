@@ -59,7 +59,9 @@
     <Compile Include="Request\DropTradeRequest.cs" />
     <Compile Include="Request\ExecuteTradeStatisticsRequest.cs" />
     <Compile Include="Request\GetCartCountRequest.cs" />
+    <Compile Include="Request\GetItemEvaluateRequest.cs" />
     <Compile Include="Request\GetItemTradeStatisticsReportRequest.cs" />
+    <Compile Include="Response\GetItemEvaluateResponse.cs" />
     <Compile Include="Response\GetItemTradeStatisticsReportResponse.cs" />
     <Compile Include="Request\GetMonthTradeStatisticsRequest.cs" />
     <Compile Include="Request\GetTradeSettingRequest.cs" />
@@ -123,6 +125,7 @@
     <Compile Include="Response\TradesResponse.cs" />
     <Compile Include="Response\TradeRecordResponse.cs" />
     <Compile Include="TradeCount.cs" />
+    <Compile Include="TradeEvaluate.cs" />
     <Compile Include="TradeRecord.cs" />
     <Compile Include="SnapshotTrade.cs" />
     <Compile Include="TradeStatistics.cs" />
