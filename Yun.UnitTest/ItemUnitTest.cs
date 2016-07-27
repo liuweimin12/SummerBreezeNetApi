@@ -896,29 +896,50 @@ namespace Yun.UnitTest
             }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
+        [TestMethod]
+        public void AddFavoritesItemRequest()
+        {
+            YunClient.Format = "json";
+
+            var req = YunClient.Instance.Execute(new AddFavoritesItemRequest()
+            {
+                ItemIds = "001",
+            }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void DeleteFavoritesItemRequest()
+        {
+            YunClient.Format = "json";
+
+            var req = YunClient.Instance.Execute(new DeleteFavoritesItemRequest()
+            {
+                FavoriteIds = "151113"
+            
+            }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetFavoritesItemRequest()
+        {
+            YunClient.Format = "json";
+
+            var req = YunClient.Instance.Execute(new GetFavoritesItemRequest()
+            {
+               PageSize = 1,
+               PageNum = 1,
+               UserId = 1,
+
+            }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
         
 
 
 
 
+
     }
-
-    //internal class UpdatesortItemCategoryRequest : ITopRequest<object>
-    //{
-    //    public int Id { get; set; }
-    //    public int Sort { get; set; }
-    //}
-
-    //internal class UpdateItemStockRequest : ITopRequest<object>
-    //{
-    //    public int ItemId { get; set; }
-    //    public int Stock { get; set; }
-    //}
-
-    //internal class UpdateItemPriceRequest : ITopRequest<object>
-    //{
-    //    public int ItemId { get; set; }
-    //    public int Price { get; set; }
-    //}
+    
 }
 
