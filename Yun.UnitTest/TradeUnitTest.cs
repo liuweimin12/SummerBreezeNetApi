@@ -682,8 +682,21 @@ namespace Yun.UnitTest
               });
             Assert.IsTrue(req != null);
         }
-        
+        [TestMethod]
+        public void GetItemEvaluateRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+              YunClient.Instance.Execute(new GetItemEvaluateRequest
+              {
+                 ItemId=1,
+               
 
+              });
+            Assert.IsTrue(req != null);
+        }
+
+        
 
 
 
