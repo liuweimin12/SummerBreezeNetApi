@@ -110,18 +110,18 @@ namespace Yun.UnitTest
         {
             YunClient.Format = "json";
 
-        //    var req =
-        //        YunClient.Instance.Execute(new LoginMobilePhoneRequest
-        //        {
-        //            Code = "846737",
-        //            IsDestroy = false,
-        //            UserFlag = "13521127648"
-        //        });
+            var req =
+                YunClient.Instance.Execute(new LoginMobilePhoneRequest
+                {
+                    Code = "846737",
+                    IsDestroy = false,
+                    UserFlag = "13521127648"
+                });
 
-        //    Assert.IsTrue(req != null);
-        //}
+            Assert.IsTrue(req != null);
+        }
 
-        
+
         [TestMethod]
         public void AddEmployeeRequest()
         {
@@ -498,18 +498,18 @@ namespace Yun.UnitTest
             Assert.IsTrue(req.Result);
         }
 
-        //[TestMethod]
-        //public void UploadAvatarUserRequest()
-        //{
-        //    YunClient.Format = "json";
+        [TestMethod]
+        public void UploadAvatarUserRequest()
+        {
+            YunClient.Format = "json";
 
-        //    var loginReq = YunClient.Instance.Execute(new LoginRequest
-        //    {
-        //        UserName = "15958805628",
-        //        IgnorePassword = true,
-        //        Ip = "192.168.1.1",
-        //        AppSecret = YunClient.AppSecret
-        //    }).Token;
+            var loginReq = YunClient.Instance.Execute(new LoginRequest
+            {
+                UserName = "15958805628",
+                IgnorePassword = true,
+                Ip = "192.168.1.1",
+                AppSecret = YunClient.AppSecret
+            }).Token;
 
             var req = YunClient.Instance.Execute(new UploadAvatarUserRequest {Image = new FileItem(@"C:\finally.png") }, loginReq);
             Assert.IsTrue(req.Result);
