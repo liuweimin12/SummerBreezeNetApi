@@ -36,14 +36,18 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommodityFavorites.cs" />
     <Compile Include="ItemBookDomain.cs" />
     <Compile Include="GoodsDetailPromotions.cs" />
+    <Compile Include="Request\AddFavoritesItemRequest.cs" />
     <Compile Include="Request\AddItemBookRequest.cs" />
     <Compile Include="Request\BatchUpdateItemCatSortRequest.cs" />
     <Compile Include="Request\BatchUpdateShopItemCategorySortRequest.cs" />
     <Compile Include="Request\ChangeBookStatusRequest.cs" />
     <Compile Include="Request\CopyItemToShopRequest.cs" />
+    <Compile Include="Request\DeleteFavoritesItemRequest.cs" />
     <Compile Include="Request\DeleteItemBookRequest.cs" />
+    <Compile Include="Request\GetFavoritesItemRequest.cs" />
     <Compile Include="Request\GetItemBookListRequest.cs" />
     <Compile Include="Request\GetItemBookRequest.cs" />
     <Compile Include="Request\GetItemCatRequest.cs" />
@@ -60,9 +64,12 @@
     <Compile Include="Request\UpdateShopItemCategoryDisplayRequest.cs" />
     <Compile Include="Request\UpdateSortItemCategoryRequest.cs" />
     <Compile Include="Request\UpdateItemStockRequest.cs" />
+    <Compile Include="Response\AddFavoritesItemResponse.cs" />
+    <Compile Include="Response\DeleteFavoritesItemResponse.cs" />
     <Compile Include="Response\GetCategoryPrevsResponse.cs" />
     <Compile Include="Request\GetShopItemCategorysRequest.cs" />
     <Compile Include="Response\CategorysResponse.cs" />
+    <Compile Include="Response\GetFavoritesItemResponse.cs" />
     <Compile Include="Response\GetItemBookListResponse.cs" />
     <Compile Include="Response\GetItemBookResponse.cs" />
     <Compile Include="Response\GetItemCatResponse.cs" />
