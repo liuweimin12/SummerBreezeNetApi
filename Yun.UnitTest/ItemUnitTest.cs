@@ -85,8 +85,8 @@ namespace Yun.UnitTest
 
             var req = YunClient.Instance.Execute(new AddItemRequest()
             {
-                ItemTitle = "goodtwo",
-                MsgTitle = "123",
+                ItemTitle = "20160727",
+                MsgTitle = "123456",
                 OffshelfTime = 1,
                 OnShelfTime = 1,
                 OnShelfType = 1,
@@ -928,9 +928,9 @@ namespace Yun.UnitTest
             {
                PageSize = 1,
                PageNum = 1,
-               UserId = 1,
+               
 
-            }, YunClient.GetAdminToken());
+            });
             Assert.IsTrue(req != null);
         }
         
