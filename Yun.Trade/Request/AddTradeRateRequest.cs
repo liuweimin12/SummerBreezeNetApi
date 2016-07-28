@@ -27,6 +27,11 @@ namespace Yun.Trade.Request
         /// </summary>
         public DynamicRatingJson RatingJson { get; set; }
 
+        /// <summary>
+        /// 图片集合，多个用英文逗号分隔
+        /// </summary>
+        public string Imgs { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.traderate.add";
@@ -39,7 +44,8 @@ namespace Yun.Trade.Request
                 {"orderid", OrderId},
                 {"rateresult", RateResult},
                 {"content", Content},
-                {"ratingjson", RatingJson}
+                {"ratingjson", RatingJson},
+                {"imgs",Imgs }
             };
             return parameters;
         }
