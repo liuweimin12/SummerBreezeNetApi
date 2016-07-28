@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Yun.Trade.Request;
+using Yun.User.Request;
 
 namespace Yun.UnitTest
 {
@@ -101,15 +102,43 @@ namespace Yun.UnitTest
         public void AddTradeRateRequest()
         {
             YunClient.Format = "json";
+            var reqLogin =
+          YunClient.Instance.Execute(new LoginRequest
+          {
+             UserName = "18606683125",
+             Password = "111111",
+             AppSecret = YunClient.AppSecret
+         }).Token;
             var req =
                 YunClient.Instance.Execute(new AddTradeRateRequest
                 {
-                   OrderId = 1,
-                   Content = null,
-                   RateResult = null,
+                   OrderId = 145129,
+                   Content = "差评",
+                   RateResult = "差评",
                    RatingJson = null,
 
-                }, YunClient.GetAdminToken());
+                }, reqLogin);
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void ConfirmTradeRequest()
+        {
+            YunClient.Format = "xml";
+
+            var reqLogin =
+       YunClient.Instance.Execute(new LoginRequest
+       {
+           UserName = "18606683125",
+           Password = "111111",
+
+           AppSecret = YunClient.AppSecret
+       }).Token;
+
+            var req =
+                YunClient.Instance.Execute(new ConfirmTradeRequest
+                {
+                    TradeId = 145129,
+                }, reqLogin);
             Assert.IsTrue(req != null);
         }
         [TestMethod]
@@ -123,6 +152,8 @@ namespace Yun.UnitTest
                 });
             Assert.IsTrue(req != null);
         }
+       
+        
         [TestMethod]
         public void BatchSaveMemoTradeRequest()
         {
@@ -650,6 +681,7 @@ namespace Yun.UnitTest
                  CartId = 1,
                  Quantity = 10,
                  UserFlag = null
+
 
                 });
             Assert.IsTrue(req != null);
