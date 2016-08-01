@@ -129,6 +129,16 @@ namespace Yun.Trade.Request
         /// </summary>
         public string Ext2 { get; set; }
 
+        /// <summary>
+        /// 发票抬头
+        /// </summary>
+        public string InvoiceTitle { get; set; }
+
+        /// <summary>
+        /// 发票内容
+        /// </summary>
+        public string InvoiceContent { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.trade.express.add";
@@ -158,7 +168,9 @@ namespace Yun.Trade.Request
                 {"ext",Ext},
                 {"cashcouponid",CashCouponId},
                 {"createtime",CreateTime},
-                {"ext2", Ext2}
+                {"ext2", Ext2},
+                {"invoicetitle", InvoiceTitle},
+                {"invoicecontent", InvoiceContent}
             };
             return parameters;
         }

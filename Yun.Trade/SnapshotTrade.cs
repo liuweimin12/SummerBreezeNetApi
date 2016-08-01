@@ -296,5 +296,17 @@ namespace Yun.Trade
         /// </summary>
         [XmlElement("system_memo")]
         public string SystemMemo { get; set; }
+
+        /// <summary>
+        /// 发票抬头
+        /// </summary>
+        [XmlElement("invoice_title")]
+        public string InvoiceTitle { get; set; }
+
+        /// <summary>
+        /// 发票内容
+        /// </summary>
+        [XmlElement("invoice_content")]
+        public string InvoiceContent { get; set; }
     }
 }
