@@ -135,6 +135,21 @@ namespace Yun.User.Request
         /// </summary>
         public string IdCard { get; set; }
 
+        /// <summary>
+        /// 认证状态
+        /// null：未提交；1：申请中，2：申请成功，3：成功，-1：作废，0：未申请
+        /// </summary>
+        public int? AuthenticatedState { get; set; }
+
+        /// <summary>
+        /// 待搜索的开始认证时间
+        /// </summary>
+        public DateTime? AuthenticatedStartTime { get; set; }
+
+        /// <summary>
+        /// 待搜索的截至认证时间
+        /// </summary>
+        public DateTime? AuthenticatedEndTime { get; set; }
 
         public string GetApiName()
         {
@@ -164,7 +179,10 @@ namespace Yun.User.Request
                 {"excludeusers", ExcludeUsers},
                 {"minprepaidcard", MinPrepaidCard},
                 {"maxprepaidcard", MaxPrepaidCard},
-                {"idcard", IdCard}
+                {"idcard", IdCard},
+                {"authenticatedstate",AuthenticatedState },
+                {"authenticatedstarttime",AuthenticatedStartTime },
+                {"authenticatedendtime",AuthenticatedEndTime }
             };
             return parameters;
         }
