@@ -55,6 +55,7 @@
     <Compile Include="Request\AddUserTagRequest.cs" />
     <Compile Include="Request\AllowFunctionRequest.cs" />
     <Compile Include="Request\AnalogShopLoginRequest.cs" />
+    <Compile Include="Request\ApplyRealNameAuthenticationRequest.cs" />
     <Compile Include="Request\AssociatedUserTagsRequest.cs" />
     <Compile Include="Request\AuthSessionRequest.cs" />
     <Compile Include="Request\BatchAssociatedUserTagsRequest.cs" />
@@ -104,8 +105,10 @@
     <Compile Include="Request\ModifyUserInfoRequest.cs" />
     <Compile Include="Request\ModifyUserMoneyRequest.cs" />
     <Compile Include="Request\MoveOrganizationRequest.cs" />
+    <Compile Include="Request\PassRealNameAuthenticationRequest.cs" />
     <Compile Include="Request\PhoneDynamicLoginRequest.cs" />
     <Compile Include="Request\PhoneRegisterRequest.cs" />
+    <Compile Include="Request\RefuseRealNameAuthenticationRequest.cs" />
     <Compile Include="Request\RegisterRequest.cs" />
     <Compile Include="Request\ResetFunctionsRequest.cs" />
     <Compile Include="Request\ResetPasswordRequest.cs" />
