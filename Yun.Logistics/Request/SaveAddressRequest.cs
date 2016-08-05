@@ -117,7 +117,7 @@ namespace Yun.Logistics.Request
 
         public void Validate()
         {
-            RequestValidator.ValidateRequired("mame", Name);
+            RequestValidator.ValidateRequired("name", Name);
             RequestValidator.ValidateRequired("mobile", Mobile);
             RequestValidator.ValidateRequired("street", Street);
         }
