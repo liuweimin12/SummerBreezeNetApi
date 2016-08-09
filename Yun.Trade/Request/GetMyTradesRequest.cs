@@ -115,6 +115,11 @@ namespace Yun.Trade.Request
         /// </summary>
         public string OrderTypes { get; set; }
 
+        /// <summary>
+        /// 获取哪家店铺的ID
+        /// </summary>
+        public int ShopId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.trades.buy.get";
@@ -124,20 +129,21 @@ namespace Yun.Trade.Request
         {
             var parameters = new YunDictionary
             {
-                {"pagenum",PageNum},
-                {"pagesize",PageSize},
-                {"itemtitle",ItemTitle},
-                {"mincreatetime",MinCreateTime},
-                {"maxcreatetime",MaxCreateTime},
-                {"nick",Nick},
-                {"orderid",OrderId},
-                {"mobile",Mobile},
-                {"tradestatus",TradeStatus},
-                {"commentstatus",CommentStatus},
-                {"logisticsservice",LogisticsService},
-                {"type",Type},
-                {"itemids",ItemIds!=null&&ItemIds.Any()? string.Join(",",ItemIds):""},
-                {"ordertypes",OrderTypes }
+                {"pagenum", PageNum},
+                {"pagesize", PageSize},
+                {"itemtitle", ItemTitle},
+                {"mincreatetime", MinCreateTime},
+                {"maxcreatetime", MaxCreateTime},
+                {"nick", Nick},
+                {"orderid", OrderId},
+                {"mobile", Mobile},
+                {"tradestatus", TradeStatus},
+                {"commentstatus", CommentStatus},
+                {"logisticsservice", LogisticsService},
+                {"type", Type},
+                {"itemids", ItemIds != null && ItemIds.Any() ? string.Join(",", ItemIds) : ""},
+                {"ordertypes", OrderTypes},
+                {"shopid", ShopId}
             };
             return parameters;
         }
