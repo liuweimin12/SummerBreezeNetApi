@@ -59,9 +59,9 @@
     <Compile Include="Request\GetArchivesRequest.cs" />
     <Compile Include="Request\GetArchiveCategoriesRequest.cs" />
     <Compile Include="Request\GetArchiveCategoryRequest.cs" />
+    <Compile Include="Request\GetArchiveTagRequest.cs" />
     <Compile Include="Request\GetArchiveTagsRequest.cs" />
     <Compile Include="Request\IncreaseArchiveVisitRequest.cs" />
-    <Compile Include="Request\TopDictionary.cs" />
     <Compile Include="Request\UpdateArchiveRequest.cs" />
     <Compile Include="Request\UpdateCategoryRequest.cs" />
     <Compile Include="Request\UpdateQuestionRequest.cs" />
@@ -71,6 +71,7 @@
     <Compile Include="Response\GetArchiveQuestionResponse.cs" />
     <Compile Include="Response\GetArchiveQuestionsResponse.cs" />
     <Compile Include="Response\GetArchiveResponse.cs" />
+    <Compile Include="Response\GetArchiveTagResponse.cs" />
     <Compile Include="Response\GetArchiveTagsResponse.cs" />
     <Compile Include="Tag.cs" />
   </ItemGroup>
