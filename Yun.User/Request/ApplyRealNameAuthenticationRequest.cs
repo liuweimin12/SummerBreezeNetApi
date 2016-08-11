@@ -50,8 +50,8 @@ namespace Yun.User.Request
             {
                 {"authenticationname",AuthenticationName},
                 {"idcard",IdCard},
-                {"positiveIdentitycard",PositiveIdentityCard},
-                {"backofIdcard",BackOfIdCard},
+                {"positiveidentitycard",PositiveIdentityCard},
+                {"backofidcard",BackOfIdCard},
                 {"idcardhandheid",IdCardHandheld}
             };
             return parameters;

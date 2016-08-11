@@ -98,6 +98,21 @@ namespace Yun.Shop.Request
         /// </summary>
         public string HomeUrl { get; set; }
 
+        /// <summary>
+        /// 是否开放
+        /// </summary>
+        public bool IsOpen { get; set; }
+
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bool IsEnabled { get; set; }
+
+        /// <summary>
+        /// 是否显示在前台
+        /// </summary>
+        public bool IsDisplay { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.shop.add";
@@ -144,7 +159,10 @@ namespace Yun.Shop.Request
                 {"ip",Ip},
                 {"companyid",CompanyId},
                 {"deliverytime",DeliveryTime },
-                {"homeurl",HomeUrl }
+                {"homeurl",HomeUrl },
+                {"isopen",IsOpen},
+                {"isenabled",IsEnabled },
+                {"isdisplay",IsDisplay }
             };
             return parameters;
         }
