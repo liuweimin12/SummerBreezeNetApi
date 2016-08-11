@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Xml.Serialization;
 using Yun.Domain;
 
@@ -7,6 +6,36 @@ namespace Yun.Shop
 {
     public class ShopDetail
     {
+        /// <summary>
+        /// 店铺认证状态
+        /// </summary>
+        [XmlElement("certification_status")]
+        public int CertificationStatus { get; set; }
+
+        /// <summary>
+        /// 营业执照号码
+        /// </summary>
+        [XmlElement("business_license")]
+        public string BusinessLicense { get; set; }
+
+        /// <summary>
+        /// 认证操作的最后时间
+        /// </summary>
+        [XmlElement("certified_time")]
+        public string CertifiedTime { get; set; }
+
+        /// <summary>
+        /// 店铺主营类目
+        /// </summary>
+        [XmlElement("cat_id")]
+        public int CatId { get; set; }
+
+        /// <summary>
+        /// 认证的相关照片
+        /// </summary>
+        [XmlElement("certified_photos")]
+        public string CertifiedPhotos { get; set; }
+
         /// <summary>
         /// 配送时间，按秒计算
         /// </summary>

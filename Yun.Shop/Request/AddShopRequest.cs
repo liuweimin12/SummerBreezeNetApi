@@ -134,6 +134,22 @@ namespace Yun.Shop.Request
         /// 配送时间
         /// </summary>
         public int DeliveryTime { get; set; }
+        
+
+        /// <summary>
+        /// 营业执照号码
+        /// </summary>
+        public string BusinessLicense { get; set; }
+
+        /// <summary>
+        /// 营业执照号码
+        /// </summary>
+        public string CertifiedPhotos { get; set; }
+
+        /// <summary>
+        /// 主营类目
+        /// </summary>
+        public int MainCategoryId { get; set; }
 
         public IDictionary<string, string> GetParameters()
         {
@@ -162,7 +178,10 @@ namespace Yun.Shop.Request
                 {"homeurl",HomeUrl },
                 {"isopen",IsOpen},
                 {"isenabled",IsEnabled },
-                {"isdisplay",IsDisplay }
+                {"isdisplay",IsDisplay },
+                {"businesslicense",BusinessLicense},
+                {"certifiedphotos",CertifiedPhotos },
+                {"maincategoryid",MainCategoryId }
             };
             return parameters;
         }

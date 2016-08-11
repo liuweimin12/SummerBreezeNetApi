@@ -94,6 +94,38 @@ namespace Yun.Shop.Request
         /// </summary>
         public int DeliveryTime { get; set; }
 
+
+        /// <summary>
+        /// 营业执照号码
+        /// </summary>
+        public string BusinessLicense { get; set; }
+
+        /// <summary>
+        /// 营业执照号码
+        /// </summary>
+        public string CertifiedPhotos { get; set; }
+
+        /// <summary>
+        /// 主营类目
+        /// </summary>
+        public int MainCategoryId { get; set; }
+
+
+        /// <summary>
+        /// 是否开放
+        /// </summary>
+        public bool IsOpen { get; set; }
+
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bool IsEnabled { get; set; }
+
+        /// <summary>
+        /// 是否显示在前台
+        /// </summary>
+        public bool IsDisplay { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.shop.update";
@@ -119,7 +151,13 @@ namespace Yun.Shop.Request
                 {"cityid",CityId},
                 {"areaid",AreaId},
                 {"categoryid",CategoryId},
-                {"deliverytime",DeliveryTime }
+                {"deliverytime",DeliveryTime },
+                {"isopen",IsOpen},
+                {"isenabled",IsEnabled },
+                {"isdisplay",IsDisplay },
+                {"businesslicense",BusinessLicense},
+                {"certifiedphotos",CertifiedPhotos },
+                {"maincategoryid",MainCategoryId }
             };
             return parameters;
         }
