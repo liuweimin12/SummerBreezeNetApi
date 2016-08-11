@@ -81,6 +81,7 @@
     <Compile Include="Request\UpdateCompanyRequest.cs" />
     <Compile Include="Request\UpdateShopAlumbRequest.cs" />
     <Compile Include="Request\UpdateShopAreaRequest.cs" />
+    <Compile Include="Request\UpdateShopAuditStatusRequest.cs" />
     <Compile Include="Request\UpdateShopCategoryRequest.cs" />
     <Compile Include="Request\UpdateShopCustomerserviceRequest.cs" />
     <Compile Include="Request\UpdateShopQuestionRequest.cs" />
