@@ -156,6 +156,11 @@ namespace Yun.Shop.Request
         /// </summary>
         public string Banner { get; set; }
 
+        /// <summary>
+        /// 联系人
+        /// </summary>
+        public string Contacts { get; set; }
+
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
@@ -187,7 +192,8 @@ namespace Yun.Shop.Request
                 {"businesslicense",BusinessLicense},
                 {"certifiedphotos",CertifiedPhotos },
                 {"maincategoryid",MainCategoryId },
-                {"banner",Banner }
+                {"banner",Banner },
+                {"contacts",Contacts }
             };
             return parameters;
         }

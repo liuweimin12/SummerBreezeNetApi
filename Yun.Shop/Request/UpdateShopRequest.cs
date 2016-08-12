@@ -131,6 +131,11 @@ namespace Yun.Shop.Request
         /// </summary>
         public string Banner { get; set; }
 
+        /// <summary>
+        /// 联系人
+        /// </summary>
+        public string Contacts { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.shop.update";
@@ -163,7 +168,8 @@ namespace Yun.Shop.Request
                 {"businesslicense",BusinessLicense},
                 {"certifiedphotos",CertifiedPhotos },
                 {"maincategoryid",MainCategoryId },
-                {"banner",Banner }
+                {"banner",Banner },
+                {"contacts",Contacts }
             };
             return parameters;
         }
