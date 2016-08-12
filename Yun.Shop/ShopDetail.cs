@@ -7,6 +7,18 @@ namespace Yun.Shop
     public class ShopDetail
     {
         /// <summary>
+        /// 横幅，多个图片用英文逗号分隔
+        /// </summary>
+        [XmlElement("banner")]
+        public string Banner { get; set; }
+
+        /// <summary>
+        /// 联系人
+        /// </summary>
+        [XmlElement("contacts")]
+        public string Contacts { get; set; }
+
+        /// <summary>
         /// 店铺认证状态
         /// </summary>
         [XmlElement("certification_status")]
