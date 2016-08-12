@@ -41,6 +41,11 @@ namespace Yun.User.Request
         /// </summary>
         public string ActionName { get; set; }
 
+        /// <summary>
+        /// 短信模板ID
+        /// </summary>
+        public int? SmsTemplateTypeId { get; set; }
+
 
         public string GetApiName()
         {
@@ -55,7 +60,8 @@ namespace Yun.User.Request
                 {"companyid",CompanyId},
                 {"sendtype",SendType},
                 {"target",Target},
-                {"actionname",ActionName}
+                {"actionname",ActionName},
+                {"smstemplatetypeid",SmsTemplateTypeId}
             };
             return parameters;
         }
