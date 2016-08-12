@@ -47,6 +47,7 @@
     <Compile Include="Request\AddShopAreaRequest.cs" />
     <Compile Include="Request\AddShopCategoryRequest.cs" />
     <Compile Include="Request\AddShopCustomerserviceRequest.cs" />
+    <Compile Include="Request\AddShopFavouriteRequest.cs" />
     <Compile Include="Request\AddShopRequest.cs" />
     <Compile Include="Request\AskShopQuestionRequest.cs" />
     <Compile Include="Request\BatchUpdateShopCategoryRequest.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Request\DeleteShopAreaRequest.cs" />
     <Compile Include="Request\DeleteShopCategoryRequest.cs" />
     <Compile Include="Request\DeleteShopCustomerServiceRequest.cs" />
+    <Compile Include="Request\DeleteShopFavoriteRequest.cs" />
     <Compile Include="Request\DeleteShopQuestionRequest.cs" />
     <Compile Include="Request\ExistCompanyRequest.cs" />
     <Compile Include="Request\FindCompaniesRequest.cs" />
@@ -69,6 +71,7 @@
     <Compile Include="Request\GetShopCategoriesRequest.cs" />
     <Compile Include="Request\GetShopCategoryRequest.cs" />
     <Compile Include="Request\GetShopCustomerserviceDetailRequest.cs" />
+    <Compile Include="Request\GetShopFavoritesRequest.cs" />
     <Compile Include="Request\GetShopHomeSeoRequest.cs" />
     <Compile Include="Request\GetShopQuestionRequest.cs" />
     <Compile Include="Request\GetShopQuestionsRequest.cs" />
@@ -84,6 +87,7 @@
     <Compile Include="Request\UpdateShopAuditStatusRequest.cs" />
     <Compile Include="Request\UpdateShopCategoryRequest.cs" />
     <Compile Include="Request\UpdateShopCustomerserviceRequest.cs" />
+    <Compile Include="Request\UpdateShopFavoriteRemarkRequest.cs" />
     <Compile Include="Request\UpdateShopQuestionRequest.cs" />
     <Compile Include="Request\UpdateShopRequest.cs" />
     <Compile Include="Request\UpdateTradePostageRequest.cs" />
@@ -96,6 +100,7 @@
     <Compile Include="Response\GetCompanyResponse.cs" />
     <Compile Include="Response\GetShopCategoriesResponse.cs" />
     <Compile Include="Response\GetShopCategoryResponse.cs" />
+    <Compile Include="Response\GetShopFavoritesResponse.cs" />
     <Compile Include="Response\GetShopsResponse.cs" />
     <Compile Include="Response\LongResponse.cs" />
     <Compile Include="Response\QuestionResponse.cs" />
@@ -105,6 +110,7 @@
     <Compile Include="Response\ShopResponse.cs" />
     <Compile Include="ShopAsk.cs" />
     <Compile Include="ShopDetail.cs" />
+    <Compile Include="ShopFavorite.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Yun\Yun.csproj">
