@@ -151,6 +151,11 @@ namespace Yun.Shop.Request
         /// </summary>
         public int MainCategoryId { get; set; }
 
+        /// <summary>
+        /// 广告横幅
+        /// </summary>
+        public string Banner { get; set; }
+
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
@@ -181,7 +186,8 @@ namespace Yun.Shop.Request
                 {"isdisplay",IsDisplay },
                 {"businesslicense",BusinessLicense},
                 {"certifiedphotos",CertifiedPhotos },
-                {"maincategoryid",MainCategoryId }
+                {"maincategoryid",MainCategoryId },
+                {"banner",Banner }
             };
             return parameters;
         }

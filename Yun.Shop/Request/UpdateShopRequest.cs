@@ -77,12 +77,12 @@ namespace Yun.Shop.Request
         /// <summary>
         /// 城市ID
         /// </summary>
-        public int CityId { get; set; }
+        public int? CityId { get; set; }
 
         /// <summary>
         /// 区域ID
         /// </summary>
-        public int AreaId { get; set; }
+        public int? AreaId { get; set; }
 
         /// <summary>
         /// 分类ID
@@ -114,17 +114,22 @@ namespace Yun.Shop.Request
         /// <summary>
         /// 是否开放
         /// </summary>
-        public bool IsOpen { get; set; }
+        public bool? IsOpen { get; set; }
 
         /// <summary>
         /// 是否启用
         /// </summary>
-        public bool IsEnabled { get; set; }
+        public bool? IsEnabled { get; set; }
 
         /// <summary>
         /// 是否显示在前台
         /// </summary>
-        public bool IsDisplay { get; set; }
+        public bool? IsDisplay { get; set; }
+
+        /// <summary>
+        /// 广告横幅
+        /// </summary>
+        public string Banner { get; set; }
 
         public string GetApiName()
         {
@@ -157,7 +162,8 @@ namespace Yun.Shop.Request
                 {"isdisplay",IsDisplay },
                 {"businesslicense",BusinessLicense},
                 {"certifiedphotos",CertifiedPhotos },
-                {"maincategoryid",MainCategoryId }
+                {"maincategoryid",MainCategoryId },
+                {"banner",Banner }
             };
             return parameters;
         }
