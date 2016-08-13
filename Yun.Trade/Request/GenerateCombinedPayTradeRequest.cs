@@ -52,6 +52,11 @@ namespace Yun.Trade.Request
         public string Cash { get; set; }
 
         /// <summary>
+        /// 充值卡金额
+        /// </summary>
+        public double PrepaidCard { get; set; }
+
+        /// <summary>
         /// 支付渠道，主要用作区分是否是信用卡支付功能
         /// </summary>
         public string PayChannel { get; set; }
@@ -68,7 +73,8 @@ namespace Yun.Trade.Request
                 {"paymentins", PaymentIns},
                 {"bankcode",BankCode},
                 {"cash",Cash},
-                {"paychannel",PayChannel}
+                {"paychannel",PayChannel},
+                {"prepaidcard",PrepaidCard }
             };
             return parameters;
         }
@@ -76,7 +82,6 @@ namespace Yun.Trade.Request
         public void Validate()
         {
             RequestValidator.ValidateRequired("ids", Ids);
-            RequestValidator.ValidateRequired("ip", Ip);
         }
     }
 }
