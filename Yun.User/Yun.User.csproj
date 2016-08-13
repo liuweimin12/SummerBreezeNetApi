@@ -101,6 +101,7 @@
     <Compile Include="Request\ModifyAvatarResponse.cs" />
     <Compile Include="Request\ModifyPasswordRequest.cs" />
     <Compile Include="Request\ModifyPasswordUserRequest.cs" />
+    <Compile Include="Request\ModifyPayPasswordRequest.cs" />
     <Compile Include="Request\ModifyUserCreditRequest.cs" />
     <Compile Include="Request\ModifyUserInfoRequest.cs" />
     <Compile Include="Request\ModifyUserMoneyRequest.cs" />
