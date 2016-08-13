@@ -49,7 +49,7 @@ namespace Yun.Trade.Request
         /// <summary>
         /// 线下现金支付
         /// </summary>
-        public string Cash { get; set; }
+        public double Cash { get; set; }
 
         /// <summary>
         /// 充值卡金额
