@@ -133,5 +133,11 @@ namespace Yun.Pay
         /// </summary>
         [XmlElement("prepaid_card")]
         public double PrepaidCard { get; set; }
+
+        /// <summary>
+        /// 公司ID
+        /// </summary>
+        [XmlElement("compamy_id")]
+        public int CompanyId { get; set; }
     }
 }
