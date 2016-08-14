@@ -75,6 +75,7 @@
     <Compile Include="Request\GetAccountReportRequest.cs" />
     <Compile Include="Request\GetBandBankRequest.cs" />
     <Compile Include="Request\GetBandBanksRequest.cs" />
+    <Compile Include="Request\GetCashFlowRecordRequest.cs" />
     <Compile Include="Request\GetCompanyPaymentRateRequest.cs" />
     <Compile Include="Request\GetCompanyReportRequest.cs" />
     <Compile Include="Request\GetDefaultPaymentRateRequest.cs" />
@@ -108,11 +109,12 @@
     <Compile Include="Request\UpdatePrepaidCardTypeRequest.cs" />
     <Compile Include="Request\VerificationPrepaidCardRequest.cs" />
     <Compile Include="Request\WeixinUnifiedorderRequest.cs" />
-    <Compile Include="Response\AccountReportResponse.cs" />
+    <Compile Include="Response\GetAccountReportResponse.cs" />
     <Compile Include="Response\GenerateJsApiPayParmResponse.cs" />
     <Compile Include="Response\GeneratePayHtmlResponse.cs" />
     <Compile Include="Response\GetBandBankResponse.cs" />
     <Compile Include="Response\GetBandBanksResponse.cs" />
+    <Compile Include="Response\GetCashFlowRecordResponse.cs" />
     <Compile Include="Response\GetCompanyPaymentRateResponse.cs" />
     <Compile Include="Response\GetDefaultPayMentRateResponse.cs" />
     <Compile Include="Response\GetPaymentInstitutionResponse.cs" />

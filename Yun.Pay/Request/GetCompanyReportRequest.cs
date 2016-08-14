@@ -5,7 +5,7 @@ using Yun.Pay.Response;
 
 namespace Yun.Pay.Request
 {
-    public class GetCompanyReportRequest : ITopRequest<AccountReportResponse>
+    public class GetCompanyReportRequest : ITopRequest<GetAccountReportResponse>
     {
         public string Direction { get; set; }
 
