@@ -61,13 +61,13 @@
     <Compile Include="LogisticsUnitTest.cs" />
     <Compile Include="MarketingUnitTest.cs" />
     <Compile Include="PrivateUnitTest.cs" />
-    <Compile Include="ShopUnitTest.cs" />
     <Compile Include="SiteUnitTest.cs" />
     <Compile Include="PayUnitTest.cs" />
+    <Compile Include="ShopUnitTest.cs" />
+    <Compile Include="CouponUnitTest.cs" />
     <Compile Include="TradeUnitTest.cs" />
     <Compile Include="ArchiveUnitTest.cs" />
     <Compile Include="SmsUnitTest.cs" />
-    <Compile Include="ShopUnitTest.cs" />
     <Compile Include="UserUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="YunClient.cs">
