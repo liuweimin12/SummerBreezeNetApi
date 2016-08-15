@@ -5,6 +5,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Yun.Trade.Request;
 using Yun.User.Request;
+using Yun.Util;
 
 namespace Yun.UnitTest
 {
@@ -44,17 +45,9 @@ namespace Yun.UnitTest
                 {
                     Mobile="18606683125",
                     TradeNum="001",
-                    Quantity=1,
-                    ItemId=1,
-                    Address = "aa",
-                    CashCouponId = 1,
-                    DeliveryType = null,
-                    CreateTime = DateTime.Now,
-                    ExpressRemark = null,
-                    Ext = null,
-                    Ext2 = null,
-                    GiftsJson =null,
-                    Integral = 10,
+                    Quantity=2,
+                    ItemId=16670,
+                   
                     
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
@@ -67,7 +60,7 @@ namespace Yun.UnitTest
                 YunClient.Instance.Execute(new AddmultiExpressTradeRequest
                 {
                     Items = null,
-                    Mobile = "18560237296",
+                    Mobile = "18606683125",
                     TradeNum = "001",                 
                     Address = null,
                     CashCouponId = 1,                  
@@ -98,28 +91,9 @@ namespace Yun.UnitTest
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
-        [TestMethod]
-        public void AddTradeRateRequest()
-        {
-            YunClient.Format = "json";
-            var reqLogin =
-          YunClient.Instance.Execute(new LoginRequest
-          {
-             UserName = "18606683125",
-             Password = "111111",
-             AppSecret = YunClient.AppSecret
-         }).Token;
-            var req =
-                YunClient.Instance.Execute(new AddTradeRateRequest
-                {
-                   OrderId = 145129,
-                   Content = "差评",
-                   RateResult = "差评",
-                   RatingJson = null,
-
-                }, reqLogin);
-            Assert.IsTrue(req != null);
-        }
+        /// <summary>
+        /// 确认收货
+        /// </summary>
         [TestMethod]
         public void ConfirmTradeRequest()
         {
@@ -137,10 +111,55 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new ConfirmTradeRequest
                 {
-                    TradeId = 145129,
+                    TradeId = 145159,
                 }, reqLogin);
             Assert.IsTrue(req != null);
         }
+        /// <summary>
+        /// 评价商品
+        /// </summary>
+        [TestMethod]
+        public void AddTradeRateRequest()
+        {
+            YunClient.Format = "json";
+            var reqLogin =
+          YunClient.Instance.Execute(new LoginRequest
+          {
+             UserName = "18606683125",
+             Password = "111111",
+             AppSecret = YunClient.AppSecret
+         }).Token;
+            var req =
+                YunClient.Instance.Execute(new AddTradeRateRequest
+                {
+                   OrderId = 145159,
+                   Content = "五颗星好评",
+                   RateResult = "五颗星好评!!",
+                   RatingJson = null,
+                   Imgs = @"F:\pic",                 
+                }, reqLogin);
+            Assert.IsTrue(req != null);
+        }
+        /// <summary>
+        ///获取评价信息
+        /// </summary>
+        [TestMethod]
+        public void GetItemEvaluateRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+              YunClient.Instance.Execute(new GetItemEvaluateRequest
+              {
+                  ItemId = 16670,
+                  PageSize = 10,
+                  PageNum = 1,
+              });
+            Assert.IsTrue(req != null);
+        }
+
+      /// <summary>
+      /// 批量确认收货
+      /// </summary>
         [TestMethod]
         public void BatchConfirmTradeRequest()
         {
@@ -259,7 +278,7 @@ namespace Yun.UnitTest
                     Ip ="192.168.1.1",
                     Ids = "1",
                     BankCode = null,
-                    Cash = null,
+                    Cash = 1,
                     ClientType = null,
                     OnlineMoney = 100,
                     OverMoney = 20,
@@ -714,20 +733,7 @@ namespace Yun.UnitTest
               });
             Assert.IsTrue(req != null);
         }
-        [TestMethod]
-        public void GetItemEvaluateRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-              YunClient.Instance.Execute(new GetItemEvaluateRequest
-              {
-                 ItemId=1,
-               
-
-              });
-            Assert.IsTrue(req != null);
-        }
-
+       
         
 
 
