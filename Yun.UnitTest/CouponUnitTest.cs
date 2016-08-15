@@ -15,7 +15,7 @@ namespace Yun.UnitTest
                 {
                     ItemId = 1,
                     Quantity = 10,
-                    TradeNum = "",
+                    TradeNum = "001",
                     Mobile = "18606683125",
                     SendType = "0",
                 }, YunClient.GetAdminToken());
