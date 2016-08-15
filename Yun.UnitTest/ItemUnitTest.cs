@@ -651,7 +651,7 @@ namespace Yun.UnitTest
 
             var req = YunClient.Instance.Execute(new GetShopItemCategoryRequest()
             {
-               Id= 1
+               Id= 2
 
             });
             Assert.IsTrue(req != null);
