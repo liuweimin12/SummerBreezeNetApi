@@ -77,7 +77,7 @@
     <Compile Include="Request\GetShopQuestionsRequest.cs" />
     <Compile Include="Request\GetShopRequest.cs" />
     <Compile Include="Request\GetShopsRequest.cs" />
-    <Compile Include="Request\GetsShopCustomerserviceRequest.cs" />
+    <Compile Include="Request\GetsShopCustomerServiceRequest.cs" />
     <Compile Include="Request\ReplyShopQuestionRequest.cs" />
     <Compile Include="Request\SaveShopHomeSeoRequest.cs" />
     <Compile Include="Request\SearchShopsRequest.cs" />
@@ -102,7 +102,6 @@
     <Compile Include="Response\GetShopCategoryResponse.cs" />
     <Compile Include="Response\GetShopFavoritesResponse.cs" />
     <Compile Include="Response\GetShopsResponse.cs" />
-    <Compile Include="Response\LongResponse.cs" />
     <Compile Include="Response\QuestionResponse.cs" />
     <Compile Include="Response\QuestionsResponse.cs" />
     <Compile Include="Response\SearchShopsResponse.cs" />
