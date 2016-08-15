@@ -259,7 +259,6 @@ namespace Yun.UnitTest
                     Ip ="192.168.1.1",
                     Ids = "1",
                     BankCode = null,
-                    Cash = null,
                     ClientType = null,
                     OnlineMoney = 100,
                     OverMoney = 20,

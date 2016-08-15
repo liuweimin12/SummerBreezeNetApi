@@ -93,23 +93,37 @@ namespace Yun.UnitTest
             Assert.IsTrue(req != null);
         }
 
+        [TestMethod]
+        public void GetTextsSiteElementRequest()
+        {
 
-        //[TestMethod]
-        //public void GetImageTextsSiteElementRequest()
-        //{
-        //    YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new GetTextsSiteElementRequest
+                {
+                    ModuleFlag = "hot-search-view",
+                    Num = 10
+                });
 
-        //    var req =
-        //        YunClient.Instance.Execute(new GetImageTextsSiteElementRequest
-        //        {
-        //            ModuleId = 1,
-        //            ModuleFlag = "flag",
-        //            Num = 7
+            Assert.IsTrue(req != null);
+        }
 
-        //        });
 
-        //    Assert.IsTrue(req != null);
-        //}
+        [TestMethod]
+        public void GetImageTextsSiteElementRequest()
+        {
+            YunClient.Format = "json";
+
+            var req =
+                YunClient.Instance.Execute(new GetImageTextsSiteElementRequest
+                {
+                    ModuleId = 1,
+                    ModuleFlag = "flag",
+                    Num = 7
+
+                });
+
+            Assert.IsTrue(req != null);
+        }
 
         [TestMethod]
         public void GetTextSiteElementRequest()
