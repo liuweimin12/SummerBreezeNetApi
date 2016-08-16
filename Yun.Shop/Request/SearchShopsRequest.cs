@@ -9,6 +9,9 @@ namespace Yun.Shop.Request
     /// </summary>
     public class SearchShopsRequest : ITopRequest<SearchShopsResponse>   
     {
+        /// <summary>
+        /// 需要返回的字段
+        /// </summary>
         public string Fields { get; set; }
 
         /// <summary>
@@ -38,6 +41,27 @@ namespace Yun.Shop.Request
         /// </summary>
         public int AreaId { get; set; }
 
+        /// <summary>
+        /// 认证状态
+        /// </summary>
+        public int? CertificationStatus { get; set; }
+
+
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bool? IsEnabled { get; set; }
+
+        /// <summary>
+        /// 最小的创建时间
+        /// </summary>
+        public long MinCreateTime { get; set; }
+
+        /// <summary>
+        /// 最大的创建时间
+        /// </summary>
+        public long MaxCreateTime { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.shops.search";
@@ -49,11 +73,15 @@ namespace Yun.Shop.Request
             {
                 {"pagenum", PageNum},
                 {"pagesize", PageSize},
-                {"shopname",ShopName},
-                {"categoryid",CategoryId},
-                {"areaid",AreaId},
-                {"companyid",CompanyId},
-               {"fields",Fields}
+                {"shopname", ShopName},
+                {"categoryid", CategoryId},
+                {"areaid", AreaId},
+                {"companyid", CompanyId},
+                {"fields", Fields},
+                {"mincreatetime", MinCreateTime},
+                {"maxcreatetime", MaxCreateTime},
+                {"isenabled", IsEnabled},
+                {"certificationstatus", CertificationStatus}
             };
             return parameters;
         }
