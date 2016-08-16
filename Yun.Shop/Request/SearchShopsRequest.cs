@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Yun.Shop.Response;
 using Yun.Interface;
 
@@ -43,24 +44,26 @@ namespace Yun.Shop.Request
 
         /// <summary>
         /// 认证状态
+        /// null全部，0：未申请；1：已申请；2：已通过；-1:拒绝
         /// </summary>
         public int? CertificationStatus { get; set; }
 
 
         /// <summary>
         /// 是否启用
+        /// null全部，True是启用，False是系统关闭
         /// </summary>
         public bool? IsEnabled { get; set; }
 
         /// <summary>
         /// 最小的创建时间
         /// </summary>
-        public long MinCreateTime { get; set; }
+        public DateTime? MinCreateTime { get; set; }
 
         /// <summary>
         /// 最大的创建时间
         /// </summary>
-        public long MaxCreateTime { get; set; }
+        public DateTime? MaxCreateTime { get; set; }
 
         public string GetApiName()
         {
