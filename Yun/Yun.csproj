@@ -56,6 +56,7 @@
     <Compile Include="Domain\TradeGiftJson.cs" />
     <Compile Include="Domain\UserCredit.cs" />
     <Compile Include="Domain\LongKeyValuePair.cs" />
+    <Compile Include="Domain\UserDetail.cs" />
     <Compile Include="Domain\YunKeyValuePair.cs" />
     <Compile Include="Interface\IYunClient.cs" />
     <Compile Include="Interface\IYunLogger.cs" />

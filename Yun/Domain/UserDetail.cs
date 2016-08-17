@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Serialization;
-using Yun.Domain;
 
-namespace Yun.User
+namespace Yun.Domain
 {
    public class UserDetail
     {

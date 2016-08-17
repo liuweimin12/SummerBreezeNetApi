@@ -7,6 +7,25 @@ namespace Yun.Shop
     public class ShopDetail
     {
         /// <summary>
+        /// 是否显示
+        /// </summary>
+        [XmlElement("is_display")]
+        public bool IsDisplay { get; set; }
+
+
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        [XmlElement("is_enabled")]
+        public bool IsEnabled { get; set; }
+
+        /// <summary>
+        /// 店主信息
+        /// </summary>
+        [XmlElement("shopkeeper_detail")]
+        public UserDetail ShopkeeperDetail { get; set; }
+
+        /// <summary>
         /// 横幅，多个图片用英文逗号分隔
         /// </summary>
         [XmlElement("banner")]
@@ -19,7 +38,7 @@ namespace Yun.Shop
         public string Contacts { get; set; }
 
         /// <summary>
-        /// 店铺认证状态
+        /// 实体店店铺认证状态
         /// </summary>
         [XmlElement("certification_status")]
         public int CertificationStatus { get; set; }
@@ -61,17 +80,17 @@ namespace Yun.Shop
         public long CompanyId { get; set; }
 
         /// <summary>
-        /// 文章ID
+        /// 店铺ID
         /// </summary>
         [XmlElement("id")]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
-        /// 店铺所属类目
+        /// 店铺所属全局类目
         /// </summary>
         [XmlArray("shop_categories")]
         [XmlArrayItem("shop_category")]
-        public List<LongKeyValuePair> CategoryId { get; set; }
+        public List<YunKeyValuePair<int, string>> CategoryId { get; set; }
 
         /// <summary>
         /// 店名
@@ -110,51 +129,53 @@ namespace Yun.Shop
         public string Hours { get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 开店时间
         /// </summary>
         [XmlElement("create_time")]
         public string CreateTime { get; set; }
 
+
         /// <summary>
-        /// 修改时间
+        /// 最后修改时间
         /// </summary>
         [XmlElement("modify_time")]
         public string ModifyTime { get; set; }
 
+
         /// <summary>
-        /// 动态评分
+        /// 店铺动态评分
         /// </summary>
         [XmlElement("score")]
         public DynamicRatings Score { get; set; }
 
         /// <summary>
-        /// 首页Url
+        /// 首页地址
         /// </summary>
         [XmlElement("home_url")]
         public string HomePage { get; set; }
 
         /// <summary>
-        /// 电话
+        /// 联系电话
         /// </summary>
         [XmlElement("phone")]
         public string Phone { get; set; }
 
         /// <summary>
-        /// 地址
+        /// 联系地址
         /// </summary>
         [XmlElement("address")]
         public string Address { get; set; }
 
         /// <summary>
-        /// 坐标（谷歌）
+        /// 店铺坐标
         /// </summary>
         [XmlElement("coordinate")]
-        public string Coordinate { get; set; }
+        public string Longlat { get; set; }
 
         /// <summary>
         /// 好评率
         /// </summary>
-        [XmlElement("feedback")]
+        [XmlElement("feed_back")]
         public UserCredit Feedback { get; set; }
 
         /// <summary>
@@ -164,16 +185,16 @@ namespace Yun.Shop
         public bool IsOpen { get; set; }
 
         /// <summary>
-        /// 域名
+        /// 二级域名
         /// </summary>
         [XmlElement("domain")]
         public string Domain { get; set; }
 
         /// <summary>
-        /// 用户I
+        /// 店主ID
         /// </summary>
         [XmlElement("user_id")]
-        public long UserId { get; set; }
+        public int UserId { get; set; }
 
         /// <summary>
         /// 客服
@@ -181,6 +202,7 @@ namespace Yun.Shop
         [XmlArray("customer_services")]
         [XmlArrayItem("customer_service")]
         public List<CustomerService> CustomerServices { get; set; }
+
 
         /// <summary>
         /// 靠近
@@ -193,7 +215,7 @@ namespace Yun.Shop
         /// </summary>
         [XmlArray("areas")]
         [XmlArrayItem("area")]
-        public List<LongKeyValuePair> Areas { get; set; }
+        public List<YunKeyValuePair<int, string>> Areas { get; set; }
 
 
         /// <summary>
@@ -208,6 +230,7 @@ namespace Yun.Shop
         /// </summary>
         [XmlElement("shopkeeper")]
         public string ShopKeeper { get; set; }
+
 
         /// <summary>
         /// 好评数量
