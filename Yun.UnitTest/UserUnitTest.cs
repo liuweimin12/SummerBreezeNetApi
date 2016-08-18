@@ -116,7 +116,7 @@ namespace Yun.UnitTest
                     Password = "111111",
                     AppSecret = YunClient.AppSecret,
                     Phone = "18606683125",
-                    Code = "737717",
+                    Code = "094461",
 
                 });
 
@@ -352,22 +352,27 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req != null);
         }
+        /// <summary>
+        /// 修改用户金额
+        /// </summary>
         [TestMethod]
         public void ModifyUserMoneyRequest()
         {
             YunClient.Format = "json";
+            var loginReq = YunClient.Instance.Execute(new LoginRequest
+            {
+                UserName = "18606683125",
+                IgnorePassword = true,
+                Ip = "192.168.1.1",
+                AppSecret = YunClient.AppSecret
+            }).Token;
             var req =
                 YunClient.Instance.Execute(new ModifyUserMoneyRequest()
 
                 {
-                    UserNick = "13521127648",
-                    UserId = 52049,
-                    AllowNegative =false,
-                    Ip = "192.168.1.127",
-                    Money = 100,
-                    Remark = null,
-             
-                });
+                    UserNick = "18606683125",                 
+                    Money = 10000,
+                }, loginReq);
 
             Assert.IsTrue(req != null);
         }
