@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Yun.Shop.Response;
 using Yun.Interface;
 
@@ -9,6 +10,9 @@ namespace Yun.Shop.Request
     /// </summary>
     public class SearchShopsRequest : ITopRequest<SearchShopsResponse>   
     {
+        /// <summary>
+        /// 需要返回的字段
+        /// </summary>
         public string Fields { get; set; }
 
         /// <summary>
@@ -38,6 +42,29 @@ namespace Yun.Shop.Request
         /// </summary>
         public int AreaId { get; set; }
 
+        /// <summary>
+        /// 认证状态
+        /// null全部，0：未申请；1：已申请；2：已通过；-1:拒绝
+        /// </summary>
+        public int? CertificationStatus { get; set; }
+
+
+        /// <summary>
+        /// 是否启用
+        /// null全部，True是启用，False是系统关闭
+        /// </summary>
+        public bool? IsEnabled { get; set; }
+
+        /// <summary>
+        /// 最小的创建时间
+        /// </summary>
+        public DateTime? MinCreateTime { get; set; }
+
+        /// <summary>
+        /// 最大的创建时间
+        /// </summary>
+        public DateTime? MaxCreateTime { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.shops.search";
@@ -49,11 +76,15 @@ namespace Yun.Shop.Request
             {
                 {"pagenum", PageNum},
                 {"pagesize", PageSize},
-                {"shopname",ShopName},
-                {"categoryid",CategoryId},
-                {"areaid",AreaId},
-                {"companyid",CompanyId},
-               {"fields",Fields}
+                {"shopname", ShopName},
+                {"categoryid", CategoryId},
+                {"areaid", AreaId},
+                {"companyid", CompanyId},
+                {"fields", Fields},
+                {"mincreatetime", MinCreateTime},
+                {"maxcreatetime", MaxCreateTime},
+                {"isenabled", IsEnabled},
+                {"certificationstatus", CertificationStatus}
             };
             return parameters;
         }
