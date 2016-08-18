@@ -5,7 +5,7 @@ using Yun.Util;
 
 namespace Yun.Shop.Request
 {
-    public class GetsShopCustomerserviceRequest : ITopRequest<CustomerServicesResponse>    
+    public class GetsShopCustomerServiceRequest : ITopRequest<CustomerServicesResponse>    
     {
         /// <summary>
         /// 店铺ID
