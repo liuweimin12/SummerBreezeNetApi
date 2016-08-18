@@ -111,7 +111,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new ConfirmTradeRequest
                 {
-                    TradeId = 145159,
+                    TradeId = 146038,
                 }, reqLogin);
             Assert.IsTrue(req != null);
         }
@@ -186,17 +186,27 @@ namespace Yun.UnitTest
                 });
             Assert.IsTrue(req != null);
         }
+        /// <summary>
+        /// 修改退款状态
+        /// </summary>
         [TestMethod]
         public void ChangeRefundStatusRequest()
         {
             YunClient.Format = "json";
+            var reqLogin =
+                 YunClient.Instance.Execute(new LoginRequest
+                 {
+                     UserName = "18606683125",
+                     Password = "111111",
+                     AppSecret = YunClient.AppSecret
+                 }).Token;
             var req =
-                YunClient.Instance.Execute(new ChangeRefundStatusRequest
+          YunClient.Instance.Execute(new ChangeRefundStatusRequest
                 {
-                   OrderRefundId = 1,
+                   OrderRefundId = 14048,
                    Remark = null,
-                   Status = "close"
-                });
+                   Status = "SELLER_REFUSE_BUYER"
+          }, reqLogin);
             Assert.IsTrue(req != null);
         }
         [TestMethod]
@@ -222,20 +232,25 @@ namespace Yun.UnitTest
                 });
             Assert.IsTrue(req != null);
         }
+        /// <summary>
+        /// 创建退款
+        /// </summary>
         [TestMethod]
         public void CreateRefundRequest()
         {
             YunClient.Format = "json";
+            var reqLogin =
+                 YunClient.Instance.Execute(new LoginRequest
+                 {
+                     UserName = "18606683125",
+                     Password = "111111",
+                     AppSecret = YunClient.AppSecret
+                 }).Token;
             var req =
                 YunClient.Instance.Execute(new CreateRefundRequest
                 {
-                    OrderId = 1,
-                    Balance = 100,
-                    OnlineMoney = 10,
-                    PrepaidCardMoney = 10,
-                    Remark = null,
-                    Reason = null,
-                });
+                    OrderId = 14048,                
+                }, reqLogin);
             Assert.IsTrue(req != null);
         }
         [TestMethod]
@@ -444,11 +459,9 @@ namespace Yun.UnitTest
                     MaxCreateTime = DateTime.Now,
                     Nick = null,
                     OrderRefundId = 1,
-                    PageSize = 1,
-                    PageNum = 10,
+                    PageSize = 10,
+                    PageNum = 1,
                     Status = null,
-
-
                 });
             Assert.IsTrue(req != null);
         }
