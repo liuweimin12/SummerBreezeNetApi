@@ -55,6 +55,12 @@ namespace Yun.Shop.Request
         /// </summary>
         public bool? IsEnabled { get; set; }
 
+
+        /// <summary>
+        /// 是否开店
+        /// </summary>
+        public bool? IsOpen { get; set; }
+
         /// <summary>
         /// 最小的创建时间
         /// </summary>
@@ -84,6 +90,7 @@ namespace Yun.Shop.Request
                 {"mincreatetime", MinCreateTime},
                 {"maxcreatetime", MaxCreateTime},
                 {"isenabled", IsEnabled},
+                {"isopen",IsOpen },
                 {"certificationstatus", CertificationStatus}
             };
             return parameters;

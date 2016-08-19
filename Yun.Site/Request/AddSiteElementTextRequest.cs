@@ -32,6 +32,11 @@ namespace Yun.Site.Request
         /// </summary>
         public string HyperLink { get; set; }
 
+        /// <summary>
+        /// 文本类型
+        /// </summary>
+        public int TextType { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.site.element.text.add";
@@ -51,7 +56,8 @@ namespace Yun.Site.Request
                 {"sortorder",SortOrder},
                 {"moduleid",ModuleId},
                 {"hyperlink",HyperLink},
-                {"parentid",ParentId}
+                {"parentid",ParentId},
+                {"texttype",TextType }
             };
             return parameters;
         }

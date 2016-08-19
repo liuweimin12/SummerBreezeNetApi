@@ -38,5 +38,11 @@ namespace Yun.Site
         /// </summary>
         [XmlElement("sort")]
         public string Sort { get; set; }
+
+        /// <summary>
+        /// 文本类型
+        /// </summary>
+        [XmlElement("text_type")]
+        public int TextType { get; set; }
     }
 }

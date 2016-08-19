@@ -136,6 +136,12 @@ namespace Yun.Shop.Request
         /// </summary>
         public string Contacts { get; set; }
 
+
+        /// <summary>
+        /// 店铺类型
+        /// </summary>
+        public int ShopType { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.shop.update";
@@ -169,7 +175,8 @@ namespace Yun.Shop.Request
                 {"certifiedphotos",CertifiedPhotos },
                 {"maincategoryid",MainCategoryId },
                 {"banner",Banner },
-                {"contacts",Contacts }
+                {"contacts",Contacts },
+                {"shoptype",ShopType }
             };
             return parameters;
         }
