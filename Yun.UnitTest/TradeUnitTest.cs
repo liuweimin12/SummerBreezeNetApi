@@ -111,7 +111,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new ConfirmTradeRequest
                 {
-                    TradeId = 146038,
+                    TradeId = 146121,
                 }, reqLogin);
             Assert.IsTrue(req != null);
         }
@@ -203,7 +203,7 @@ namespace Yun.UnitTest
             var req =
           YunClient.Instance.Execute(new ChangeRefundStatusRequest
                 {
-                   OrderRefundId = 14048,
+                   OrderRefundId = 146062,
                    Remark = null,
                    Status = "SELLER_REFUSE_BUYER"
           }, reqLogin);
@@ -249,7 +249,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new CreateRefundRequest
                 {
-                    OrderId = 14048,                
+                    OrderId = 146062,
                 }, reqLogin);
             Assert.IsTrue(req != null);
         }
