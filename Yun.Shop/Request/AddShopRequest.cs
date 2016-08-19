@@ -161,6 +161,12 @@ namespace Yun.Shop.Request
         /// </summary>
         public string Contacts { get; set; }
 
+
+        /// <summary>
+        /// 店铺类型
+        /// </summary>
+        public int ShopType { get; set; }
+
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
@@ -193,7 +199,8 @@ namespace Yun.Shop.Request
                 {"certifiedphotos",CertifiedPhotos },
                 {"maincategoryid",MainCategoryId },
                 {"banner",Banner },
-                {"contacts",Contacts }
+                {"contacts",Contacts },
+                {"shoptype",ShopType }
             };
             return parameters;
         }
