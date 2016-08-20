@@ -35,13 +35,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Request\AddSiteRequest.cs" />
-    <Compile Include="Request\GetAppInfoRequest.cs" />
-    <Compile Include="Request\SiteMasterLoginRequest.cs" />
-    <Compile Include="Response\AddSiteResponse.cs" />
-    <Compile Include="Response\GetAppInfoResponse.cs" />
     <Compile Include="Response\LoginResponse.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +43,9 @@
       <Project>{8d5f06ae-2707-496f-aca8-a3b8d00d2341}</Project>
       <Name>Yun</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Request\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

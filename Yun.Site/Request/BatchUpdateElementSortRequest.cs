@@ -3,7 +3,7 @@ using System.Linq;
 using Yun.Interface;
 using Yun.Response;
 
-namespace Yun.Shop.Request
+namespace Yun.Site.Request
 {
     /// <summary>
     /// 批量更新页面元素的排序

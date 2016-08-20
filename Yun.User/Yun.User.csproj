@@ -118,6 +118,7 @@
     <Compile Include="Request\SendLoginCodePhoneRequest.cs" />
     <Compile Include="Request\SendVerificationCodeRequest.cs" />
     <Compile Include="Request\SetOAuth2ConfigRequest.cs" />
+    <Compile Include="Request\SiteMasterLoginRequest.cs" />
     <Compile Include="Request\UnbindEmailRequest.cs" />
     <Compile Include="Request\UnbindPhoneRequest.cs" />
     <Compile Include="Request\UpdateAlumbRequest.cs" />

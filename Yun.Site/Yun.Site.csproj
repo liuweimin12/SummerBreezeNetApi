@@ -37,6 +37,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppInfo.cs" />
     <Compile Include="CityDomain.cs" />
     <Compile Include="CustomBox.cs" />
     <Compile Include="Elements.cs" />
@@ -45,11 +46,14 @@
     <Compile Include="OperationRecord.cs" />
     <Compile Include="Request\AddBrowsingDataRequest.cs" />
     <Compile Include="Request\AddCityRequest.cs" />
+    <Compile Include="Request\AddSiteRequest.cs" />
     <Compile Include="Request\AddSubscriptionRequest.cs" />
     <Compile Include="Request\BatchUpdateCitySortRequest.cs" />
     <Compile Include="Request\BatchUpdateElementSortRequest.cs" />
     <Compile Include="Request\DeleteCityRequest.cs" />
     <Compile Include="Request\DeleteSubscriptionRequest.cs" />
+    <Compile Include="Request\GetAppInfoRequest.cs" />
+    <Compile Include="Request\GetChildAppInfoRequest.cs" />
     <Compile Include="Request\GetCitiesRequest.cs" />
     <Compile Include="Request\GetCityRequest.cs" />
     <Compile Include="Request\GetEmailSettingRequest.cs" />
@@ -64,6 +68,9 @@
     <Compile Include="Request\SetEmailSettingRequest.cs" />
     <Compile Include="Request\SetWebSettingRequest.cs" />
     <Compile Include="Request\UpdateCityRequest.cs" />
+    <Compile Include="Response\AddSiteResponse.cs" />
+    <Compile Include="Response\GetAppInfoResponse.cs" />
+    <Compile Include="Response\GetChildAppInfoResponse.cs" />
     <Compile Include="Response\GetCitiesResponse.cs" />
     <Compile Include="Response\GetCityResponse.cs" />
     <Compile Include="Response\GetEmailSettingResponse.cs" />
