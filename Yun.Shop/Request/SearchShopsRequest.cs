@@ -71,6 +71,12 @@ namespace Yun.Shop.Request
         /// </summary>
         public DateTime? MaxCreateTime { get; set; }
 
+
+        /// <summary>
+        /// 店铺ID，多个用英文逗号分隔
+        /// </summary>
+        public string ShopIds { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.shops.search";
@@ -91,7 +97,8 @@ namespace Yun.Shop.Request
                 {"maxcreatetime", MaxCreateTime},
                 {"isenabled", IsEnabled},
                 {"isopen",IsOpen },
-                {"certificationstatus", CertificationStatus}
+                {"certificationstatus", CertificationStatus},
+                { "shopids",ShopIds}
             };
             return parameters;
         }
