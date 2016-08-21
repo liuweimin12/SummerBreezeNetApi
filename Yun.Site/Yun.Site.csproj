@@ -43,6 +43,8 @@
     <Compile Include="Elements.cs" />
     <Compile Include="EmailSetting.cs" />
     <Compile Include="ImageText.cs" />
+    <Compile Include="NotifySetting.cs" />
+    <Compile Include="NotifySettingJson.cs" />
     <Compile Include="OperationRecord.cs" />
     <Compile Include="Request\AddBrowsingDataRequest.cs" />
     <Compile Include="Request\AddCityRequest.cs" />
@@ -57,6 +59,7 @@
     <Compile Include="Request\GetCitiesRequest.cs" />
     <Compile Include="Request\GetCityRequest.cs" />
     <Compile Include="Request\GetEmailSettingRequest.cs" />
+    <Compile Include="Request\GetNotifySettingRequest.cs" />
     <Compile Include="Request\GetOperationRecordRequest.cs" />
     <Compile Include="Request\GetPageModuleRequest.cs" />
     <Compile Include="Request\GetSubscriptionListRequest.cs" />
@@ -64,6 +67,7 @@
     <Compile Include="Request\GetWebSettingRequest.cs" />
     <Compile Include="Request\IsExistSubscriptionRequest.cs" />
     <Compile Include="Request\ResetAllDataRequest.cs" />
+    <Compile Include="Request\SaveNotifySettingRequest.cs" />
     <Compile Include="Request\SendEmailRequest.cs" />
     <Compile Include="Request\SetEmailSettingRequest.cs" />
     <Compile Include="Request\SetWebSettingRequest.cs" />
@@ -74,6 +78,7 @@
     <Compile Include="Response\GetCitiesResponse.cs" />
     <Compile Include="Response\GetCityResponse.cs" />
     <Compile Include="Response\GetEmailSettingResponse.cs" />
+    <Compile Include="Response\GetNotifySettingResponse.cs" />
     <Compile Include="Response\GetPageModuleResponse.cs" />
     <Compile Include="Response\GetOperationRecordsResponse.cs" />
     <Compile Include="Response\GetSubscriptionListResponse.cs" />
