@@ -22,14 +22,6 @@ namespace Yun.Shop.Request
         /// </summary>
         public double? PayDeduction { get; set; }
 
-
-        /// <summary>
-        /// 充值卡兑换比例
-        /// </summary>
-        public double? PrepaidCardProportion { get; set; }
-
-
-
         /// <summary>
         /// 用户名
         /// </summary>
@@ -70,7 +62,6 @@ namespace Yun.Shop.Request
             {
                 {"name", Name},
                 {"paydeduction", PayDeduction},
-                {"prepaidcardproportion", PrepaidCardProportion},
                 {"username", UserName},
                 {"password", string.IsNullOrEmpty(Password) ? null : TopUtils.EncryptAes(Password, AppSecret)},
                 {"useremail", UserEmail},
@@ -83,7 +74,6 @@ namespace Yun.Shop.Request
         public void Validate()
         {
             RequestValidator.ValidateRequired("name", Name);
-            RequestValidator.ValidateMinValue("prepaidcardproportion", PrepaidCardProportion, 0);
         }
     }
 }

@@ -30,11 +30,7 @@ namespace Yun.Shop.Request
         /// </summary>
         public double? PayDeduction { get; set; }
 
-
-        /// <summary>
-        /// 充值卡兑换比例
-        /// </summary>
-        public double? PrepaidCardProportion { get; set; }
+        
 
         public string GetApiName()
         {
@@ -47,8 +43,7 @@ namespace Yun.Shop.Request
             {
                 {"id",Id},
                 {"name",Name},
-                {"paydeduction",PayDeduction},
-                {"prepaidcardproportion",PrepaidCardProportion}
+                {"paydeduction",PayDeduction}
             };
             return parameters;
         }
