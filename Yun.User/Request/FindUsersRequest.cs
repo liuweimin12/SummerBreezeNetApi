@@ -151,6 +151,12 @@ namespace Yun.User.Request
         /// </summary>
         public DateTime? AuthenticatedEndTime { get; set; }
 
+        /// <summary>
+        /// 用户类型，客户端自定义
+        /// </summary>
+        public int? UserType { get; set; }
+
+
         public string GetApiName()
         {
             return "chenggou.users.search";
@@ -182,7 +188,8 @@ namespace Yun.User.Request
                 {"idcard", IdCard},
                 {"authenticatedstate",AuthenticatedState },
                 {"authenticatedstarttime",AuthenticatedStartTime },
-                {"authenticatedendtime",AuthenticatedEndTime }
+                {"authenticatedendtime",AuthenticatedEndTime },
+                {"usertype",UserType }
             };
             return parameters;
         }
