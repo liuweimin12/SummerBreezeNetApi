@@ -1,7 +1,7 @@
 ﻿using System.Xml.Serialization;
 using Yun.Response;
 
-namespace Yun.Private.Response
+namespace Yun.Site.Response
 {
     public class AddSiteResponse : YunResponse
     {

@@ -246,5 +246,13 @@ namespace Yun.Domain
         /// </summary>
         [XmlElement("is_manager")]
         public bool IsManage { get; set; }
+
+
+        /// <summary>
+        /// 用户类型，客户端自定义
+        /// </summary>
+        [XmlElement("user_type")]
+        public int UserType { get; set; }
+
     }
 }

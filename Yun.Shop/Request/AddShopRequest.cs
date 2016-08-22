@@ -163,6 +163,13 @@ namespace Yun.Shop.Request
 
 
         /// <summary>
+        /// 父ID
+        /// </summary>
+        public int ParentId { get; set; }
+
+
+
+        /// <summary>
         /// 店铺类型
         /// </summary>
         public int ShopType { get; set; }
@@ -200,7 +207,8 @@ namespace Yun.Shop.Request
                 {"maincategoryid",MainCategoryId },
                 {"banner",Banner },
                 {"contacts",Contacts },
-                {"shoptype",ShopType }
+                {"shoptype",ShopType },
+                {"parentid",ParentId }
             };
             return parameters;
         }

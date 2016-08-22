@@ -39,6 +39,7 @@
     <Compile Include="CartDetail.cs" />
     <Compile Include="CartItemDetail.cs" />
     <Compile Include="Comment.cs" />
+    <Compile Include="CreateRefundResult.cs" />
     <Compile Include="DynamicRatingJson.cs" />
     <Compile Include="ItemPromotionInShoppingCart.cs" />
     <Compile Include="ItemTradeStatistics.cs" />
@@ -55,12 +56,14 @@
     <Compile Include="Request\CompleteNoPaidTradeRequest.cs" />
     <Compile Include="Request\ConfirmTradeRequest.cs" />
     <Compile Include="Request\CreateRefundRequest.cs" />
+    <Compile Include="Request\CreateTradeRefundRequest.cs" />
     <Compile Include="Request\DeliveryTradeRequest.cs" />
     <Compile Include="Request\DropTradeRequest.cs" />
     <Compile Include="Request\ExecuteTradeStatisticsRequest.cs" />
     <Compile Include="Request\GetCartCountRequest.cs" />
     <Compile Include="Request\GetItemEvaluateRequest.cs" />
     <Compile Include="Request\GetItemTradeStatisticsReportRequest.cs" />
+    <Compile Include="Response\CreateTradeRefundResponse.cs" />
     <Compile Include="Response\GetItemEvaluateResponse.cs" />
     <Compile Include="Response\GetItemTradeStatisticsReportResponse.cs" />
     <Compile Include="Request\GetMonthTradeStatisticsRequest.cs" />

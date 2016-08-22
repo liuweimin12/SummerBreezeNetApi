@@ -37,6 +37,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChildShop.cs" />
     <Compile Include="CommonCategory.cs" />
     <Compile Include="Company.cs" />
     <Compile Include="CompanyDomain.cs" />
@@ -111,6 +112,7 @@
     <Compile Include="ShopAsk.cs" />
     <Compile Include="ShopDetail.cs" />
     <Compile Include="ShopFavorite.cs" />
+    <Compile Include="UserAssociation.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Yun\Yun.csproj">

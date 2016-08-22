@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using Yun.Interface;
-using Yun.Private.Response;
+using Yun.Site.Response;
 using Yun.Util;
 
-namespace Yun.Private.Request
+namespace Yun.Site.Request
 {
     public class AddSiteRequest : ITopRequest<AddSiteResponse>
     {

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Yun.Interface;
-using Yun.Private.Response;
+using Yun.Site.Response;
 
-namespace Yun.Private.Request
+namespace Yun.Site.Request
 {
     /// <summary>
     /// 获取当前登录用户的APP信息，必须是管理员，必须授权

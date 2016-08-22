@@ -4,15 +4,8 @@ using Yun.Domain;
 
 namespace Yun.Shop
 {
-    public class ShopDetail
+    public class ChildShop
     {
-        /// <summary>
-        /// 子店铺
-        /// </summary>
-        [XmlArray("child_shops")]
-        [XmlArrayItem("child_shop")]
-        public List<ChildShop> ChildShops { get; set; }
-
         /// <summary>
         /// 是否显示
         /// </summary>
@@ -25,12 +18,6 @@ namespace Yun.Shop
         /// </summary>
         [XmlElement("is_enabled")]
         public bool IsEnabled { get; set; }
-
-        /// <summary>
-        /// 店主信息
-        /// </summary>
-        [XmlElement("shopkeeper_detail")]
-        public UserDetail ShopkeeperDetail { get; set; }
 
         /// <summary>
         /// 横幅，多个图片用英文逗号分隔
@@ -81,12 +68,6 @@ namespace Yun.Shop
         public int DeliveryTime { get; set; }
 
         /// <summary>
-        /// 公司ID
-        /// </summary>
-        [XmlElement("company_id")]
-        public long CompanyId { get; set; }
-
-        /// <summary>
         /// 店铺ID
         /// </summary>
         [XmlElement("id")]
@@ -96,7 +77,7 @@ namespace Yun.Shop
         /// 店铺所属全局类目
         /// </summary>
         [XmlArray("shop_categories")]
-        [XmlArrayItem("shop_category")]
+        [XmlArrayItem("shop_category__list")]
         public List<YunKeyValuePair<int, string>> CategoryId { get; set; }
 
         /// <summary>
@@ -198,16 +179,10 @@ namespace Yun.Shop
         public string Domain { get; set; }
 
         /// <summary>
-        /// 店主ID
-        /// </summary>
-        [XmlElement("user_id")]
-        public int UserId { get; set; }
-
-        /// <summary>
         /// 客服
         /// </summary>
         [XmlArray("customer_services")]
-        [XmlArrayItem("customer_service")]
+        [XmlArrayItem("customer_service__list")]
         public List<CustomerService> CustomerServices { get; set; }
 
 
@@ -221,23 +196,8 @@ namespace Yun.Shop
         /// 店铺所在区域
         /// </summary>
         [XmlArray("areas")]
-        [XmlArrayItem("area")]
+        [XmlArrayItem("area__list")]
         public List<YunKeyValuePair<int, string>> Areas { get; set; }
-
-
-        /// <summary>
-        /// 店主ID
-        /// </summary>
-        [XmlElement("shopkeeper_id")]
-        public int ShopKeeperId { get; set; }
-
-
-        /// <summary>
-        /// 店主用户名
-        /// </summary>
-        [XmlElement("shopkeeper")]
-        public string ShopKeeper { get; set; }
-
 
         /// <summary>
         /// 好评数量
@@ -264,10 +224,19 @@ namespace Yun.Shop
         [XmlElement("goods_count")]
         public int GoodsCount { get; set; }
 
+
         /// <summary>
         /// 动态文章数量
         /// </summary>
         [XmlElement("article_count")]
         public int ArticleCount { get; set; }
+
+
+        /// <summary>
+        /// 店铺类型
+        /// </summary>
+        [XmlElement("shop_type")]
+        public int ShopType { get; set; }
+
     }
 }

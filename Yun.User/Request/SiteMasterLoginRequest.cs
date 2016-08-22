@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Yun.Interface;
-using Yun.Private.Response;
+using Yun.User.Response;
 using Yun.Util;
 
-namespace Yun.Private.Request
+namespace Yun.User.Request
 {
     /// <summary>
     /// 云商管理员登录

@@ -103,10 +103,6 @@
       <Project>{39d5ed2e-4f75-4ecd-83ff-4c5cc11f6ad3}</Project>
       <Name>Yun.Pay</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Yun.Private\Yun.Private.csproj">
-      <Project>{4179E21D-7656-4155-BFAA-DDE8BC9C5E9E}</Project>
-      <Name>Yun.Private</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Yun.Shop\Yun.Shop.csproj">
       <Project>{cf675a00-89b4-442a-a1b9-07c3070ad3f4}</Project>
       <Name>Yun.Shop</Name>
