@@ -447,13 +447,14 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new RegisterRequest()
                 {
-                    ShopId=1,
-                    CompanyId=1,
+                    ShopId= 11618,
+                    CompanyId= 115,
                     UserName="tt",
+                    UserType = 1,
                     Ip="192.168.1.1",
-                    Mobile = "18606683125",
+                    Mobile = "15662414749",
                     Password = "111111",
-                    Address = "宁波",
+                    Address = "宁波市高新区杨帆路999号",
                     Email = "1805768571@qq.com",
                     AppSecret=YunClient.AppSecret,
                 }, YunClient.GetAdminToken());
@@ -630,6 +631,21 @@ namespace Yun.UnitTest
                     
 
                 }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void FindUsersRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new FindUsersRequest()
+
+                {
+                    PageSize = 10,
+                    PageNum = 1,
+
+
+                });
             Assert.IsTrue(req != null);
         }
         
