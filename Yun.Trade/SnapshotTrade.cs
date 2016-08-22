@@ -308,5 +308,11 @@ namespace Yun.Trade
         /// </summary>
         [XmlElement("invoice_content")]
         public string InvoiceContent { get; set; }
+
+        /// <summary>
+        /// 代金券抵扣金额
+        /// </summary>
+        [XmlElement("cash_coupon")]
+        public double CashCoupon { get; set; }
     }
 }
