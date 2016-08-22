@@ -38,6 +38,11 @@ namespace Yun.User.Request
         /// </summary>
         public int CompanyId { get; set; }
 
+        /// <summary>
+        /// 用户类型
+        /// </summary>
+        public int UserType { get; set; }
+
 
         public string GetApiName()
         {
@@ -48,12 +53,13 @@ namespace Yun.User.Request
         {
             var parameters = new YunDictionary
             {
-                {"ip",Ip},
-                {"phone",Phone},
+                {"ip", Ip},
+                {"phone", Phone},
                 {"code", Code},
-                {"shopid",ShopId},
-                {"userflag",Phone},
-                {"companyid",CompanyId}
+                {"shopid", ShopId},
+                {"userflag", Phone},
+                {"companyid", CompanyId},
+                {"usertype", UserType}
             };
             return parameters;
         }

@@ -12,6 +12,7 @@ namespace Yun.Domain
         [XmlArrayItem("oauth_id")]
         public List<string> OauthId { get; set; }
 
+
         /// <summary>
         /// 用户iD
         /// </summary>

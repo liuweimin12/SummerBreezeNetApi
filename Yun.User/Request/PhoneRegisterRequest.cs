@@ -83,6 +83,12 @@ namespace Yun.User.Request
         public string Address { get; set; }
 
 
+        /// <summary>
+        /// 用户类型
+        /// </summary>
+        public int UserType { get; set; }
+
+
         public string GetApiName()
         {
             return "chenggou.user.mobilephone.register";
@@ -104,6 +110,7 @@ namespace Yun.User.Request
                 {"city", City},
                 {"area", Area},
                 {"address", Address},
+                {"usertype",UserType }
             };
             return parameters;
         }

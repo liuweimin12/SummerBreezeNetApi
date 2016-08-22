@@ -99,6 +99,11 @@ namespace Yun.User.Request
         /// </summary>
         public string RealName { get; set; }
 
+        /// <summary>
+        /// 用户类型
+        /// </summary>
+        public int UserType { get; set; }
+
 
 
         public string GetApiName()
@@ -130,7 +135,8 @@ namespace Yun.User.Request
                 {"city", City},
                 {"area", Area},
                 {"address", Address},
-                {"realname", RealName}
+                {"realname", RealName},
+                {"usertype",UserType }
             };
 
             return parameters;
