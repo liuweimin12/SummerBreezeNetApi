@@ -47,6 +47,11 @@ namespace Yun.Trade.Request
         public string Remark { get; set; }
 
 
+        /// <summary>
+        /// 凭证照片
+        /// </summary>
+        public string Images { get; set; }
+
 
         public string GetApiName()
         {
@@ -62,7 +67,8 @@ namespace Yun.Trade.Request
                 {"onlinemoney",OnlineMoney},
                 {"reason",Reason},
                 {"remark",Remark},
-                {"prepaidcardmoney",PrepaidCardMoney}
+                {"prepaidcardmoney",PrepaidCardMoney},
+                {"images",Images }
             };
             return parameters;
         }

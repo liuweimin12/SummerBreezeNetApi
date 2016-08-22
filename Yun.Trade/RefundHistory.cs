@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿
 using System.Xml.Serialization;
 
 namespace Yun.Trade
 {
     public class RefundHistory
     {
+        /// <summary>
+        /// 凭证照片
+        /// </summary>
+        [XmlElement("images")]
+        public string Images { get; set; }
+
         /// <summary>
         /// 历史记录编号
         /// </summary>

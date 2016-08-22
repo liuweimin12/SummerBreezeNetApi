@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Yun.Interface;
 using Yun.Response;
 
@@ -29,6 +26,11 @@ namespace Yun.Trade.Request
         /// </summary>
         public string Status { get; set; }
 
+        /// <summary>
+        /// 凭证照片
+        /// </summary>
+        public string Images { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.trade.refund.changeprocedure";
@@ -40,7 +42,8 @@ namespace Yun.Trade.Request
             {
                 {"orderrefundid",OrderRefundId},
                 {"remark",Remark},
-                {"status",Status}
+                {"status",Status},
+                {"images",Images }
             };
             return parameters;
         }
