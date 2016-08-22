@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Yun.Site.Request;
+using Yun.User.Request;
 using Yun.Util;
 
 namespace Yun.UnitTest
@@ -41,17 +42,25 @@ namespace Yun.UnitTest
         public void AddSiteElementTextRequest()
         {
             YunClient.Format = "json";
-
+            var reqLogin =
+    YunClient.Instance.Execute(new LoginRequest
+    {
+        UserName = "18606683125",
+        Password = "111111",
+        AppSecret = YunClient.AppSecret
+    }).Token;
             var req =
                 YunClient.Instance.Execute(new AddSiteElementTextRequest
                 {
-                   Title = "网站文章模板",
+                   Title = "测试001",
                    Display = true,
-                   HyperLink = "http://open.oodso.com/home/api/17347",
+                   HyperLink = "http://open.oodso.com/home/api/17345",
                    ModuleId = 1,
-                   ParentId = 1,
+                   ParentId = 0,
                    SortOrder = 0,
-                }, YunClient.GetAdminToken());
+                   TextType = 1,
+
+                }, reqLogin);
 
             Assert.IsTrue(req != null);
         }
