@@ -78,5 +78,17 @@ namespace Yun.Trade
 
         [XmlElement("order_info")]
         public SnapshotOrder OrderInfo { get; set; }
+
+        /// <summary>
+        /// 店铺ID
+        /// </summary>
+        [XmlElement("shop_id")]
+        public int ShopId { get; set; }
+
+        /// <summary>
+        /// 店铺名字
+        /// </summary>
+        [XmlElement("shop_name")]
+        public string ShopName { get; set; }
     }
 }

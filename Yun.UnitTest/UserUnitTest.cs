@@ -523,7 +523,7 @@ namespace Yun.UnitTest
                     AppSecret = YunClient.AppSecret
                 });
 
-            var authReq = YunClient.Instance.Execute(new AuthSessionRequest(), req.Token);
+            var authReq = YunClient.Instance.Execute(new UserAuthRequest(), req.Token);
 
             Assert.IsTrue(authReq.UserId > 0);
         }

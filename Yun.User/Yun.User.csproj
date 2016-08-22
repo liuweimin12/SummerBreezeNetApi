@@ -57,7 +57,7 @@
     <Compile Include="Request\AnalogShopLoginRequest.cs" />
     <Compile Include="Request\ApplyRealNameAuthenticationRequest.cs" />
     <Compile Include="Request\AssociatedUserTagsRequest.cs" />
-    <Compile Include="Request\AuthSessionRequest.cs" />
+    <Compile Include="Request\UserAuthRequest.cs" />
     <Compile Include="Request\BatchAssociatedUserTagsRequest.cs" />
     <Compile Include="Request\BatchUpdateOrganizationRequest.cs" />
     <Compile Include="Request\BatchUpdateFunctionSortRequest.cs" />
