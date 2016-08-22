@@ -648,6 +648,21 @@ namespace Yun.UnitTest
                 });
             Assert.IsTrue(req != null);
         }
+        [TestMethod]
+        public void UserAuthRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new UserAuthRequest()
+
+                {
+                   Password = "111111",
+                   AppSecret = YunClient.AppSecret,
+
+
+                });
+            Assert.IsTrue(req != null);
+        }
         
 
     }
