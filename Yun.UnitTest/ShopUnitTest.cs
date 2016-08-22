@@ -26,9 +26,31 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new AddShopRequest
                 {
-                    Name = "IDO" ,
-                    UserName = "TIANTIAN",
+                    Name = "雨辰的店铺" ,
+                    UserName = "amy",
+                    Password = "128128",
+                    CompanyId = 114,
+                    ShopType = 1,
+                    Email = "1805768571@qq.com",
+                    Ip = "192.168.1.1",
+                    ShopkeeperPhone = "18606683125",
+                    BusinessLicense = "123456",
+                    Bulletin = "1",
+                    Banner = "1",
+                    Businesslicense="AA001",
+                    Address = "浙江宁波",
+                    AreaId = 1,
                     AppSecret = YunClient.AppSecret,
+                    CategoryId = 1,
+                    CertifiedPhotos = "1",
+                    CityId = 1,
+                    Contacts = "tiantian",
+                    Coordinate = "50",
+                    Description = "公司主要销售电子产品",
+                    DeliveryTime = 10,
+                    Hours = "12",
+                    HomeUrl = "a",
+                    Image = null,
 
                 }, reqLogin);
             Assert.IsTrue(req != null);
@@ -64,7 +86,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new AddCompanyRequest
                 {
-                    Name = "公司03",
+                    Name = "宁波雨辰公司",
                     PrepaidCardProportion = 10,
 
                     AppSecret = YunClient.AppSecret,
@@ -79,8 +101,8 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new SearchShopsRequest
                 {
-
-
+                    
+                    
 
                 });
             Assert.IsTrue(req != null);
@@ -94,7 +116,7 @@ namespace Yun.UnitTest
                 {
                     PageSize = 10,
                     PageNum = 1,
-
+                    Name = "宁波雨辰公司"
 
                 });
             Assert.IsTrue(req != null);
