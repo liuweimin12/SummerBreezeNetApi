@@ -246,12 +246,6 @@ namespace Yun.Trade
         [XmlElement("service")]
         public string Service { get; set; }
 
-        /// <summary>
-        /// 网站ID
-        /// </summary>
-        [XmlElement("site_id")]
-        public int SiteId { get; set; }
-
 
         /// <summary>
         /// 付款情况
