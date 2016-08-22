@@ -90,5 +90,13 @@ namespace Yun.Trade
         /// </summary>
         [XmlElement("shop_name")]
         public string ShopName { get; set; }
+
+
+        /// <summary>
+        /// 退款件数
+        /// </summary>
+        [XmlElement("refund_quantity")]
+        public int RefundQuantity { get; set; }
+
     }
 }

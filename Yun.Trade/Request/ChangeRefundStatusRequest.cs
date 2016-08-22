@@ -31,6 +31,12 @@ namespace Yun.Trade.Request
         /// </summary>
         public string Images { get; set; }
 
+        /// <summary>
+        /// 退款件数
+        /// </summary>
+        public int? RefundQuantity { get; set; }
+
+
         public string GetApiName()
         {
             return "chenggou.trade.refund.changeprocedure";
@@ -40,10 +46,11 @@ namespace Yun.Trade.Request
         {
             var parameters = new YunDictionary
             {
-                {"orderrefundid",OrderRefundId},
-                {"remark",Remark},
-                {"status",Status},
-                {"images",Images }
+                {"orderrefundid", OrderRefundId},
+                {"remark", Remark},
+                {"status", Status},
+                {"images", Images},
+                {"refundquantity", RefundQuantity}
             };
             return parameters;
         }

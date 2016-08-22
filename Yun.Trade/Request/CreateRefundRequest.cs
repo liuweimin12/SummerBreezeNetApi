@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Yun.Interface;
-using Yun.Response;
 using Yun.Trade.Response;
 using Yun.Util;
 
@@ -46,26 +42,34 @@ namespace Yun.Trade.Request
        /// </summary>
        public double PrepaidCardMoney { get; set; }
 
-       public string GetApiName()
+
+        /// <summary>
+        /// 退款件数
+        /// </summary>
+        public int? RefundQuantity { get; set; }
+
+
+        public string GetApiName()
        {
            return "chenggou.trade.refund.create";
        }
 
-       public IDictionary<string, string> GetParameters()
-       {
-           var parameters = new YunDictionary
+        public IDictionary<string, string> GetParameters()
+        {
+            var parameters = new YunDictionary
             {
-                {"orderid",OrderId},
-                {"balance",Balance},
-                {"onlinemoney",OnlineMoney},
-                {"reason",Reason},
-                {"remark",Remark},
-                {"prepaidcardmoney",PrepaidCardMoney}
+                {"orderid", OrderId},
+                {"balance", Balance},
+                {"onlinemoney", OnlineMoney},
+                {"reason", Reason},
+                {"remark", Remark},
+                {"prepaidcardmoney", PrepaidCardMoney},
+                {"refundquantity", RefundQuantity}
             };
-           return parameters;
-       }
+            return parameters;
+        }
 
-       public void Validate()
+        public void Validate()
        {
            RequestValidator.ValidateMinValue("orderid", OrderId, 1);
        }
