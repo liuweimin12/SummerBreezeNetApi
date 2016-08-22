@@ -15,43 +15,24 @@ namespace Yun.UnitTest
         [TestMethod]
         public void AddShopRequest()
         {
-            YunClient.Format = "xml";
+            YunClient.Format = "json";
             var reqLogin =
         YunClient.Instance.Execute(new LoginRequest
-         {
-           UserName = "18606683125",
-           Password = "111111",
-          AppSecret = YunClient.AppSecret
-          }).Token;
+        {
+            UserName = "18606683125",
+            Password = "111111",
+            AppSecret = YunClient.AppSecret
+        }).Token;
             var req =
                 YunClient.Instance.Execute(new AddShopRequest
                 {
-                    Name = "雨辰的店铺" ,
-                    UserName = "amy",
-                    Password = "128128",
-                    CompanyId = 114,
+                    Name = "消费搜店铺001",
+                    CompanyId = 115,
                     ShopType = 1,
-                    Email = "1805768571@qq.com",
-                    Ip = "192.168.1.1",
-                    ShopkeeperPhone = "18606683125",
-                    BusinessLicense = "123456",
-                    Bulletin = "1",
-                    Banner = "1",
-                    Businesslicense="AA001",
-                    Address = "浙江宁波",
-                    AreaId = 1,
-                    AppSecret = YunClient.AppSecret,
-                    CategoryId = 1,
-                    CertifiedPhotos = "1",
-                    CityId = 1,
-                    Contacts = "tiantian",
-                    Coordinate = "50",
-                    Description = "公司主要销售电子产品",
-                    DeliveryTime = 10,
-                    Hours = "12",
-                    HomeUrl = "a",
-                    Image = null,
-
+                    Address = "宁波研发园B5-903",
+                    ParentId = 11618,
+                    
+                    
                 }, reqLogin);
             Assert.IsTrue(req != null);
         }
@@ -86,8 +67,8 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new AddCompanyRequest
                 {
-                    Name = "宁波雨辰公司",
-                    PrepaidCardProportion = 10,
+                    Name = "消费搜店铺",
+                   
 
                     AppSecret = YunClient.AppSecret,
 
@@ -101,7 +82,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new SearchShopsRequest
                 {
-                    
+                    ShopIds = "11617"
                     
 
                 });
@@ -116,7 +97,7 @@ namespace Yun.UnitTest
                 {
                     PageSize = 10,
                     PageNum = 1,
-                    Name = "宁波雨辰公司"
+                    Name = "消费搜店铺"
 
                 });
             Assert.IsTrue(req != null);
@@ -338,7 +319,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new GetCompanyRequest
                 {
-                    Id = 7,
+                    Id = 115,
 
 
                 });
@@ -578,6 +559,25 @@ YunClient.Instance.Execute(new LoginRequest
                 YunClient.Instance.Execute(new GetShopFavoritesRequest
                 {
                     
+
+                }, reqLogin);
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetShopsRequest()
+        {
+            YunClient.Format = "json";
+            var reqLogin =
+           YunClient.Instance.Execute(new LoginRequest
+              {
+              UserName = "18606683125",
+               Password = "111111",
+               AppSecret = YunClient.AppSecret
+             }).Token;
+            var req =
+                YunClient.Instance.Execute(new GetShopsRequest
+                {
+                    Ids = "11618",
 
                 }, reqLogin);
             Assert.IsTrue(req != null);
