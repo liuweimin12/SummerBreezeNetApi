@@ -49,6 +49,12 @@ namespace Yun.Trade.Request
         public int? RefundQuantity { get; set; }
 
 
+        /// <summary>
+        /// 凭证照片,多个用英文逗号隔开
+        /// </summary>
+        public string Images { get; set; }
+
+
         public string GetApiName()
        {
            return "chenggou.trade.refund.create";
@@ -64,7 +70,8 @@ namespace Yun.Trade.Request
                 {"reason", Reason},
                 {"remark", Remark},
                 {"prepaidcardmoney", PrepaidCardMoney},
-                {"refundquantity", RefundQuantity}
+                {"refundquantity", RefundQuantity},
+                {"images",Images }
             };
             return parameters;
         }

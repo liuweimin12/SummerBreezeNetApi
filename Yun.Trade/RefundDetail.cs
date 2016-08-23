@@ -1,4 +1,5 @@
-﻿using System.Xml.Serialization;
+﻿using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace Yun.Trade
 {
@@ -97,6 +98,13 @@ namespace Yun.Trade
         /// </summary>
         [XmlElement("refund_quantity")]
         public int RefundQuantity { get; set; }
+
+        /// <summary>
+        /// 退款历史记录
+        /// </summary>
+        [XmlArray("refund_histories")]
+        [XmlArrayItem("refund_history")]
+        public List<RefundHistory> RefundHistories { get; set; }
 
     }
 }
