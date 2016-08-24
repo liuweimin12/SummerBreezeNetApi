@@ -21,21 +21,22 @@ namespace Yun.UnitTest
         private string secret = "";
         private string sessionKey = "";
 
-        [TestMethod]
-        public void GenerateCashCouponRequest()
-        {
-            IYunClient client = new DefaultYunClient(url, appkey, secret);
-            GenerateCashCouponRequest req = new GenerateCashCouponRequest();
-            req.CategoryId = 1;
-            req.Num = 29;
-            StringResultResponse rsp = client.Execute(req, sessionKey);
-            Console.WriteLine(rsp.Body);
-            //var req =
-            //    YunClient.Instance.Execute(new GenerateCashCouponRequest {CategoryId = 1, Num = 29},
-            //        YunClient.GetAdminToken()).Result;
-            //
-            //Assert.IsTrue(!string.IsNullOrEmpty(req));
-        }
+        //[TestMethod]
+        //public void GenerateCashCouponRequest()
+        //{
+        //    IYunClient client = new DefaultYunClient(url, appkey, secret);
+        //    GenerateCashCouponRequest req = new GenerateCashCouponRequest();
+        //    req.CategoryId = 1;
+        //    req.Num = 29;
+        //    StringResultResponse rsp = client.Execute(req, sessionKey);
+        //    Console.WriteLine(rsp.Body);
+        //    //var req =
+        //    //    YunClient.Instance.Execute(new GenerateCashCouponRequest {CategoryId = 1, Num = 29},
+        //    //        YunClient.GetAdminToken()).Result;
+        //    //
+        //    //Assert.IsTrue(!string.IsNullOrEmpty(req));
+        //}
+        
 
         [TestMethod]
         public void FindCashCouponRequest()
@@ -54,5 +55,37 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req.Result>0);
         }
+        
+        [TestMethod]
+        public void GenerateCashCouponRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new GenerateCashCouponRequest
+                {
+                   
+                    CategoryId = 151113,
+                    Num = 10,
+
+                }, YunClient.GetAdminToken());
+
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void AddCashCouponCategoryRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new AddCashCouponCategoryRequest
+                {
+                    Credit = 10,
+                    Name = "10元优惠券",
+                    Num = 5,
+
+                });
+
+            Assert.IsTrue(req != null);
+        }
+        
     }
 }
