@@ -43,12 +43,25 @@ namespace Yun.Shop.Request
         /// </summary>
         public string Password { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string AppSecret { get; set; }
 
         /// <summary>
         /// IP地址
         /// </summary>
         public string Ip { get; set; }
+
+        /// <summary>
+        /// 用户类型
+        /// </summary>
+        public int UserType { get; set; }
+
+        /// <summary>
+        /// 需要绑定的用户ID
+        /// </summary>
+        public int? BindUserId { get; set; }
 
 
         public string GetApiName()
@@ -66,7 +79,9 @@ namespace Yun.Shop.Request
                 {"password", string.IsNullOrEmpty(Password) ? null : TopUtils.EncryptAes(Password, AppSecret)},
                 {"useremail", UserEmail},
                 {"sserphone", UserPhone},
-                {"ip", Ip}
+                {"ip", Ip},
+                {"usertype", UserType},
+                {"binduserid", BindUserId}
             };
             return parameters;
         }
