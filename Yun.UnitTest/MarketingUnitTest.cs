@@ -7,6 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Yun.Interface;
 using Yun.Marketing.Request;
 using Yun.Response;
+using Yun.User.Request;
 
 namespace Yun.UnitTest
 {
@@ -48,13 +49,13 @@ namespace Yun.UnitTest
             Assert.IsTrue(req!=null&&req.Any());
         }
 
-        [TestMethod]
-        public void ReceiveVouchersRequest()
-        {
-            var req = YunClient.Instance.Execute(new ReceiveVouchersRequest {CashCouponCatId = 2, UserId = 149313});
+        //[TestMethod]
+        //public void ReceiveVouchersRequest()
+        //{
+        //    var req = YunClient.Instance.Execute(new ReceiveVouchersRequest {CashCouponCatId = 2, UserId = 149313});
 
-            Assert.IsTrue(req.Result>0);
-        }
+        //    Assert.IsTrue(req.Result>0);
+        //}
         
         [TestMethod]
         public void GenerateCashCouponRequest()
@@ -71,21 +72,56 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req != null);
         }
+        /// <summary>
+        /// 创建代金券
+        /// </summary>
         [TestMethod]
         public void AddCashCouponCategoryRequest()
         {
-            YunClient.Format = "xml";
+            YunClient.Format = "json";
+            var reqLogin =
+          YunClient.Instance.Execute(new LoginRequest
+                {
+                  UserName = "18606683125",
+                  Password = "111111",
+              AppSecret = YunClient.AppSecret
+        }).Token;
             var req =
                 YunClient.Instance.Execute(new AddCashCouponCategoryRequest
                 {
                     Credit = 10,
                     Name = "10元优惠券",
-                    Num = 5,
+                    Num = 10,
 
-                });
+                }, reqLogin);
+
+            Assert.IsTrue(req != null);
+        }
+        /// <summary>
+        /// 领取代金券
+        /// </summary>
+        [TestMethod]
+        public void ReceiveVouchersRequest()
+        {
+            YunClient.Format = "json";
+            var reqLogin =
+          YunClient.Instance.Execute(new LoginRequest
+          {
+              UserName = "18606683125",
+              Password = "111111",
+              AppSecret = YunClient.AppSecret
+          }).Token;
+            var req =
+                YunClient.Instance.Execute(new ReceiveVouchersRequest
+                {
+                   CashCouponCatId =2,
+                   
+
+                }, reqLogin);
 
             Assert.IsTrue(req != null);
         }
         
+
     }
 }
