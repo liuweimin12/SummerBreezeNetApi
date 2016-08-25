@@ -410,7 +410,7 @@ namespace Yun.UnitTest
         [TestMethod]
         public void GetUserRequest()
         {
-            YunClient.Format = "xml";
+            YunClient.Format = "json";
             var req =
                 YunClient.Instance.Execute(new GetUserRequest()
                 {

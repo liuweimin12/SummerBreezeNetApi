@@ -67,7 +67,7 @@ namespace Yun.UnitTest
                 {
                    
                    
-                });
+                }, YunClient.GetAdminToken());
 
             Assert.IsTrue(req != null);
         }
@@ -127,19 +127,15 @@ namespace Yun.UnitTest
         var req =
             YunClient.Instance.Execute(new SaveAddressRequest
             {
-                Id = 110,
-                Province = "浙江省",
-                City = "宁波",
-                Area = "高新区",
                 Street = "杨帆街道",
                 Zipcode = null,
                 Name = "lily",
                 Mobile = "13250958899",
                 IsDefault = 1,
                 AddressType = 0,
-                Detail = null,
-                Town = null,
-
+                ProvinceId = 26063,
+                CityId = 26064,
+                AreaId = 26065
             }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
 

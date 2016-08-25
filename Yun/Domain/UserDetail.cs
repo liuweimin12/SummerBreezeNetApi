@@ -194,6 +194,11 @@ namespace Yun.Domain
         [XmlElement("last_trade")]
         public long LastTrade { get; set; }
 
+        /// <summary>
+        /// 认证时间
+        /// </summary>
+        [XmlElement("authenticated_time")]
+        public string AuthenticatedTime { get; set; }
 
 
 
