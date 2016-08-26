@@ -116,7 +116,7 @@ namespace Yun.UnitTest
                     Password = "111111",
                     AppSecret = YunClient.AppSecret,
                     Phone = "18606683125",
-                    Code = "094461",
+                    Code = "899958",
 
                 });
 
@@ -148,7 +148,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new LoginMobilePhoneRequest
                 {
-                    Code = "737717",
+                    Code = "261519",
                     IsDestroy = false,
                     UserFlag = "18606683125"
                 });
@@ -228,7 +228,7 @@ namespace Yun.UnitTest
                 {
                     Ip = "192.168.1.2",
                     Phone = "18606683125",
-                    Code = "737717",
+                    Code = "261519",
                    
                 });
 
@@ -245,7 +245,6 @@ namespace Yun.UnitTest
                 YunClient.Instance.Execute(new SendLoginCodePhoneRequest
                 {
                     MobilePhone = "18606683125",
-                    CompanyId = null
                 });
 
             Assert.IsTrue(req != null);
