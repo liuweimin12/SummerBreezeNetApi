@@ -87,9 +87,7 @@ namespace Yun.Trade.Request
 
         public void Validate()
         {
-
             RequestValidator.ValidateRequired("id", Id);
-            RequestValidator.ValidateRequired("ip", Ip);
         }
     }
 }

@@ -91,6 +91,7 @@
     <Compile Include="Request\UpdateShopFavoriteRemarkRequest.cs" />
     <Compile Include="Request\UpdateShopQuestionRequest.cs" />
     <Compile Include="Request\UpdateShopRequest.cs" />
+    <Compile Include="Request\UpdateShopStatusRequest.cs" />
     <Compile Include="Request\UpdateTradePostageRequest.cs" />
     <Compile Include="Response\AlbumsResponse.cs" />
     <Compile Include="Response\CategoriesResponse.cs" />

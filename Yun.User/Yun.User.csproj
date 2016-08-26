@@ -135,6 +135,7 @@
     <Compile Include="Request\UsePrepaidCardRegisterRequest.cs" />
     <Compile Include="Request\UserBindShopRequest.cs" />
     <Compile Include="Request\UserTagRemovesAssociationRequest.cs" />
+    <Compile Include="Request\VerifyPayPasswordRequest.cs" />
     <Compile Include="Response\AuthSessionResponse.cs" />
     <Compile Include="Response\FunctionResponse.cs" />
     <Compile Include="Response\FunctionsResponse.cs" />

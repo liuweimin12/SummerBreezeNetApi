@@ -9,38 +9,6 @@ namespace Yun.Shop.Request
     public class AddShopRequest : ITopUploadRequest<IntResultResponse>
     {
         /// <summary>
-        /// 店主用户名，如果为空，则自动创建用户
-        /// </summary>
-        public string UserName { get; set; }
-
-        /// <summary>
-        /// 密码
-        /// </summary>
-        public string Password { get; set; }
-
-        /// <summary>
-        /// 店主电子邮箱
-        /// </summary>
-        public string Email { get; set; }
-
-        /// <summary>
-        /// 店主手机号
-        /// </summary>
-        public string ShopkeeperPhone { get; set; }
-
-
-        /// <summary>
-        /// 店主类别/层级
-        /// 该层级和权限的类型相关联
-        /// </summary>
-        public int SystemLevel { get; set; }
-
-        /// <summary>
-        /// 操作者的IP地址
-        /// </summary>
-        public string Ip { get; set; }
-
-        /// <summary>
         /// 店铺名称
         /// </summary>
         public string Name { get; set; }
@@ -71,7 +39,7 @@ namespace Yun.Shop.Request
         public string Summary { get; set; }
 
         /// <summary>
-        /// 地址附近描述
+        /// 区域介绍
         /// </summary>
         public string Location { get; set; }
 
@@ -86,17 +54,60 @@ namespace Yun.Shop.Request
         public int AreaId { get; set; }
 
         /// <summary>
-        /// 分类ID
+        /// 店铺分类ID
         /// </summary>
         public int CategoryId { get; set; }
 
-
-        public string Description { get; set; }
+        /// <summary>
+        /// 公告
+        /// </summary>
+        public string Bulletin { get; set; }
 
         /// <summary>
         /// 首页
         /// </summary>
         public string HomeUrl { get; set; }
+
+        /// <summary>
+        /// 描述
+        /// </summary>
+        public string Description { get; set; }
+
+        /// <summary>
+        /// 需要成为店主的用户名
+        /// </summary>
+        public string UserName { get; set; }
+
+        /// <summary>
+        /// 密码
+        /// </summary>
+        public string Password { get; set; }
+
+        /// <summary>
+        /// 店主电子邮箱
+        /// </summary>
+        public string Email { get; set; }
+
+        /// <summary>
+        /// 店主手机号
+        /// </summary>
+        public string ShopkeeperPhone { get; set; }
+
+
+        /// <summary>
+        /// 操作者的IP地址
+        /// </summary>
+        public string Ip { get; set; }
+
+        /// <summary>
+        /// 公司ID
+        /// </summary>
+        public int CompanyId { get; set; }
+
+        /// <summary>
+        /// 客户下单后至少需要延时的配送时间,秒为单位
+        /// </summary>
+        public int DeliveryTime { get; set; }
 
         /// <summary>
         /// 是否开放
@@ -112,29 +123,6 @@ namespace Yun.Shop.Request
         /// 是否显示在前台
         /// </summary>
         public bool IsDisplay { get; set; }
-
-        public string GetApiName()
-        {
-            return "chenggou.shop.add";
-        }
-
-        public string Bulletin { get; set; }
-
-        /// <summary>
-        /// APP密匙
-        /// </summary>
-        public string AppSecret { get; set; }
-
-        /// <summary>
-        /// 公司ID
-        /// </summary>
-        public int CompanyId { get; set; }
-
-        /// <summary>
-        /// 配送时间
-        /// </summary>
-        public int DeliveryTime { get; set; }
-        
 
         /// <summary>
         /// 营业执照号码
@@ -161,6 +149,10 @@ namespace Yun.Shop.Request
         /// </summary>
         public string Contacts { get; set; }
 
+        /// <summary>
+        /// 店铺类型
+        /// </summary>
+        public int ShopType { get; set; }
 
         /// <summary>
         /// 父ID
@@ -168,11 +160,20 @@ namespace Yun.Shop.Request
         public int ParentId { get; set; }
 
 
-
         /// <summary>
-        /// 店铺类型
+        /// 新创建的用户类型
         /// </summary>
-        public int ShopType { get; set; }
+        public int UserType { get; set; }
+
+
+        public string AppSecret { get; set; }
+
+
+        public string GetApiName()
+        {
+            return "chenggou.shop.add";
+        }
+
 
         public IDictionary<string, string> GetParameters()
         {
@@ -194,7 +195,6 @@ namespace Yun.Shop.Request
                 {"password", string.IsNullOrEmpty(Password)?null: TopUtils.EncryptAes(Password, AppSecret)},
                 {"email",Email},
                 {"shopkeeperphone",ShopkeeperPhone},
-                {"systemlevel",SystemLevel},
                 {"ip",Ip},
                 {"companyid",CompanyId},
                 {"deliverytime",DeliveryTime },
@@ -208,7 +208,8 @@ namespace Yun.Shop.Request
                 {"banner",Banner },
                 {"contacts",Contacts },
                 {"shoptype",ShopType },
-                {"parentid",ParentId }
+                {"parentid",ParentId },
+                {"usertype",UserType }
             };
             return parameters;
         }
