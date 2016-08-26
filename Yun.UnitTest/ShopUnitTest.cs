@@ -26,11 +26,8 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new AddShopRequest
                 {
-                    Name = "消费搜店铺001",
-                    CompanyId = 115,
+                    Name = "玩具店03",
                     ShopType = 1,
-                    Address = "宁波研发园B5-903",
-                    ParentId = 11618,
                     
                     
                 }, reqLogin);
@@ -67,7 +64,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new AddCompanyRequest
                 {
-                    Name = "消费搜店铺",
+                    Name = "消费搜店铺003",
                    
 
                     AppSecret = YunClient.AppSecret,
