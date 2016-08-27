@@ -37,6 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommodityFavorites.cs" />
+    <Compile Include="GroupingShopItem.cs" />
     <Compile Include="ItemBookDomain.cs" />
     <Compile Include="GoodsDetailPromotions.cs" />
     <Compile Include="Request\AddFavoritesItemRequest.cs" />
@@ -48,6 +49,7 @@
     <Compile Include="Request\DeleteFavoritesItemRequest.cs" />
     <Compile Include="Request\DeleteItemBookRequest.cs" />
     <Compile Include="Request\GetFavoritesItemRequest.cs" />
+    <Compile Include="Request\GetGroupingShopItemRequest.cs" />
     <Compile Include="Request\GetItemBookListRequest.cs" />
     <Compile Include="Request\GetItemBookRequest.cs" />
     <Compile Include="Request\GetItemCatRequest.cs" />
@@ -70,6 +72,7 @@
     <Compile Include="Request\GetShopItemCategorysRequest.cs" />
     <Compile Include="Response\CategorysResponse.cs" />
     <Compile Include="Response\GetFavoritesItemResponse.cs" />
+    <Compile Include="Response\GetGroupingShopItemResponse.cs" />
     <Compile Include="Response\GetItemBookListResponse.cs" />
     <Compile Include="Response\GetItemBookResponse.cs" />
     <Compile Include="Response\GetItemCatResponse.cs" />
