@@ -38,6 +38,17 @@ namespace Yun.User.Request
         /// </summary>
         public bool IgnorePassword { get; set; }
 
+        /// <summary>
+        /// 0为PC，1为APP登录
+        /// </summary>
+        public int LoginType { get; set; }
+
+
+        /// <summary>
+        /// 客户端信息
+        /// </summary>
+        public string ClientInfo { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.user.login";
@@ -56,7 +67,9 @@ namespace Yun.User.Request
                         : (Password.Length == 32 ? Password : TopUtils.EncryptAes(Password, AppSecret))
                 },
                 {"ip", this.Ip},
-                {"ignorepassword", IgnorePassword}
+                {"ignorepassword", IgnorePassword},
+                {"logintype", LoginType},
+                {"clientinfo", ClientInfo}
             };
             return parameters;
         }
