@@ -106,7 +106,7 @@
     <Compile Include="Request\SetDefaultPaymentRateRequest.cs" />
     <Compile Include="Request\SetExchangeRateRequest.cs" />
     <Compile Include="Request\SetOnlinePaymentRequest.cs" />
-    <Compile Include="Request\SetSitePaymentrateRequest.cs" />
+    <Compile Include="Request\SetSitePaymenTrateRequest.cs" />
     <Compile Include="Request\TransfersMoneyRequest.cs" />
     <Compile Include="Request\UnBindPrepaidCardRequest.cs" />
     <Compile Include="Request\UpdatePrepaidCardTypeRequest.cs" />

@@ -15,7 +15,14 @@ namespace Yun.Trade
         /// </summary>
         [XmlElement("online_pay_result")]
         public OnlinePaymentInfo OnlinePayResult { get; set; }
-        
+
+
+        /// <summary>
+        /// 汇率比值
+        /// </summary>
+        [XmlElement("exchange_rate")]
+        public ExchangeRate ExchangeRate { get; set; }
+
         /// <summary>
         /// 余额支付
         /// </summary>

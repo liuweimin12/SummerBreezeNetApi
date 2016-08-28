@@ -41,6 +41,7 @@
     <Compile Include="Comment.cs" />
     <Compile Include="CreateRefundResult.cs" />
     <Compile Include="DynamicRatingJson.cs" />
+    <Compile Include="ExchangeRate.cs" />
     <Compile Include="ItemPromotionInShoppingCart.cs" />
     <Compile Include="ItemTradeStatistics.cs" />
     <Compile Include="MemoModel.cs" />
