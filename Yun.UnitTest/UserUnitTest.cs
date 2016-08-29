@@ -67,7 +67,9 @@ namespace Yun.UnitTest
                     YunClient.GetAdminToken()).Result;
             Assert.IsTrue(req);
         }
-
+        /// <summary>
+        /// 上传图片
+        /// </summary>
         [TestMethod]
         public void FileUploadRequest()
         {
@@ -75,7 +77,9 @@ namespace Yun.UnitTest
             {
                 Images = new List<FileItem>
                 {
-                    new FileItem(@"c:\1.png")
+                    new FileItem(@"F:\1.jpg"),
+                    new FileItem(@"F:\2.jpg"),
+                    new FileItem(@"F:\3.jpg")
                 }
             });
 
@@ -405,6 +409,9 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req != null);
         }
+        /// <summary>
+        /// 获取用户信息
+        /// </summary>
 
         [TestMethod]
         public void GetUserRequest()
@@ -413,7 +420,9 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new GetUserRequest()
                 {
-                    Nick = "AMY",
+                    
+                    UserId = 176848
+                    
                 });
 
             Assert.IsTrue(string.IsNullOrEmpty(req.User.Mobile));
@@ -579,6 +588,9 @@ namespace Yun.UnitTest
             var req = YunClient.Instance.Execute(new UploadAvatarUserRequest {Image = new FileItem(@"C:\finally.png") }, loginReq);
             Assert.IsTrue(req.Result);
         }
+        /// <summary>
+        /// 实名认证
+        /// </summary>
         [TestMethod]
         public void ApplyRealNameAuthenticationRequest()
         {
@@ -597,10 +609,10 @@ namespace Yun.UnitTest
 
                 {
                    AuthenticationName = "kity",
-                   IdCard = "123456",
-                   PositiveIdentityCard = "1",
-                   BackOfIdCard = "2",
-                   IdCardHandheld = "3"
+                   IdCard = "37082719920101",
+                   PositiveIdentityCard = "http://f.icgyun.com/s/52510/g/155902-68869-383x685.jpg",
+                   BackOfIdCard = "http://f.icgyun.com/s/52510/g/32821-68870-670x376.jpg",
+                   IdCardHandheld = "http://f.icgyun.com/s/52510/g/127457-68871-331x468.jpg"
                 },loginReq);
             Assert.IsTrue(req != null);
         }
