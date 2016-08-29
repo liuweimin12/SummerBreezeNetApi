@@ -68,6 +68,17 @@ namespace Yun.User.Request
         /// </summary>
         public string Phone { get; set; }
 
+        /// <summary>
+        /// 0为PC，1为APP登录
+        /// </summary>
+        public int LoginType { get; set; }
+
+
+        /// <summary>
+        /// 客户端信息
+        /// </summary>
+        public string ClientInfo { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.oauth2.login";
@@ -85,7 +96,9 @@ namespace Yun.User.Request
                 {"avatar",Avatar},
                 {"realname",RealName},
                 {"usermeta",UserMeta},
-                {"shopid",ShopId}
+                {"shopid",ShopId},
+                {"logintype", LoginType},
+                {"clientinfo", ClientInfo}
             };
             return parameters;
         }

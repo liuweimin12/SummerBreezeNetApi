@@ -104,6 +104,17 @@ namespace Yun.User.Request
         /// </summary>
         public int UserType { get; set; }
 
+        /// <summary>
+        /// 0为PC，1为APP登录
+        /// </summary>
+        public int LoginType { get; set; }
+
+
+        /// <summary>
+        /// 客户端信息
+        /// </summary>
+        public string ClientInfo { get; set; }
+
 
 
         public string GetApiName()
@@ -136,7 +147,9 @@ namespace Yun.User.Request
                 {"area", Area},
                 {"address", Address},
                 {"realname", RealName},
-                {"usertype",UserType }
+                {"usertype",UserType },
+                {"logintype", LoginType},
+                {"clientinfo", ClientInfo}
             };
 
             return parameters;

@@ -5,7 +5,7 @@ using Yun.Util;
 
 namespace Yun.Pay.Request
 {
-    public class SetSitePaymentrateRequest : ITopRequest<BoolResultResponse>
+    public class SetSitePaymenTrateRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>
         /// 开发者ID
