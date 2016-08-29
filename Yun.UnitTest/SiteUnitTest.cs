@@ -180,6 +180,21 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req != null);
         }
+        [TestMethod]
+        public void GetCustomSiteElementRequest()
+        {
+            YunClient.Format = "json";
+
+            var req =
+                YunClient.Instance.Execute(new GetCustomSiteElementRequest
+                {
+                    Id = 1,
+
+                });
+
+            Assert.IsTrue(req != null);
+        }
         
+
     }
 }
