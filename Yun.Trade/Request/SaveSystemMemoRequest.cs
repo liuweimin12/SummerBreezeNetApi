@@ -21,7 +21,9 @@ namespace Yun.Trade.Request
             var parameters = new YunDictionary
             {
                 {"tradeid",TradeId},
-                {"memo",Memo}
+                {"memo",Memo},
+                {"ext",Ext},
+                {"ext2",Ext2}
             };
 
             return parameters;
@@ -36,6 +38,17 @@ namespace Yun.Trade.Request
         /// 备注
         /// </summary>
         public string Memo { get; set; }
+
+
+        /// <summary>
+        /// 扩展字段1
+        /// </summary>
+        public string Ext { get; set; }
+
+        /// <summary>
+        /// 扩展字段2
+        /// </summary>
+        public string Ext2 { get; set; }
 
         public void Validate()
         {
