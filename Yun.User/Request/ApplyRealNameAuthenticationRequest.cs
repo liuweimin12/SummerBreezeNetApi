@@ -37,7 +37,7 @@ namespace Yun.User.Request
         /// <summary>
         /// 身份证手持
         /// </summary>
-        public string IdCardHandheId { get; set; }
+        public string IdCardHandheld { get; set; }
 
         public string GetApiName()
         {
@@ -52,7 +52,7 @@ namespace Yun.User.Request
                 {"idcard",IdCard},
                 {"positiveidentitycard",PositiveIdentityCard},
                 {"backofidcard",BackOfIdCard},
-                {"idcardhandheid",IdCardHandheId}
+                {"idcardhandheld",IdCardHandheld}
             };
             return parameters;
         }
