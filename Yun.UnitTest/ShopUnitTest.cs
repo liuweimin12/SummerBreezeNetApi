@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Yun.Shop.Request;
 using Yun.Item.Request;
 using Yun.User.Request;
+using Yun.Util;
 
 namespace Yun.UnitTest
 {
@@ -41,20 +42,20 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new UpdateShopRequest
                 {
-                    Title = "aa",
+                    Title = "2016/9/6",
+                    ShopId = 11698,
+                    Contacts = "艾米点甜",
                     Phone = "18606683125",
-                    Address = "zhejiang",
-                    Hours = "12",
-                    Coordinate = "120",
-                    Summary = "jianjie",
-                    Bulletin = "gonggao",
-                    HomeUrl = "http://wwww.baidu.com",
-                    Image = "00",
-                    Description = "miaoshu",
-                    Location = "weizhi",
+                    Address = "浙江",
+                    Summary = "简介",
+                    Bulletin = "公告",
+                    Banner = "我的横幅",
+                    Image = "http://f.icgyun.com/s/52510/g/155902-69456-383x685.jpg",
+                    
 
 
-                });
+
+                }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
         [TestMethod]
@@ -79,8 +80,8 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new SearchShopsRequest
                 {
-                    ShopIds = "11617"
-                    
+                    ShopIds = "11698"
+
 
                 });
             Assert.IsTrue(req != null);
@@ -130,14 +131,15 @@ namespace Yun.UnitTest
         [TestMethod]
         public void GetShopRequest()
         {
-            //YunClient.Format = "json";
+            YunClient.Format = "json";
             var req =
                 YunClient.Instance.Execute(new GetShopRequest
                 {
-                    ShopId = 10940,
+                    ShopId = 11618,
 
 
                 });
+
             Assert.IsTrue(req != null);
         }
         [TestMethod]
@@ -482,7 +484,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new UpdateShopAuditStatusRequest
                 {
-                   ShopId = 11609,
+                   ShopId = 177189,
                    Status = 1,
 
                 }, reqLogin);
@@ -541,25 +543,25 @@ namespace Yun.UnitTest
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
-        [TestMethod]
-        public void GetShopFavoritesRequest()
-        {
-            YunClient.Format = "xml";
-            var reqLogin =
-YunClient.Instance.Execute(new LoginRequest
-{
-  UserName = "18606683125",
-  Password = "111111",
-  AppSecret = YunClient.AppSecret
-}).Token;
-            var req =
-                YunClient.Instance.Execute(new GetShopFavoritesRequest
-                {
+//        [TestMethod]
+//        public void GetShopFavoritesRequest()
+//        {
+//            YunClient.Format = "xml";
+//            var reqLogin =
+//YunClient.Instance.Execute(new LoginRequest
+//{
+//  UserName = "18606683125",
+//  Password = "111111",
+//  AppSecret = YunClient.AppSecret
+//}).Token; UpdateShopAuditStatusRequest
+//             var req =
+//                YunClient.Instance.Execute(new GetShopFavoritesRequest
+//                {
                     
 
-                }, reqLogin);
-            Assert.IsTrue(req != null);
-        }
+//                }, reqLogin);
+//            Assert.IsTrue(req != null);
+//        }
         [TestMethod]
         public void GetShopsRequest()
         {
@@ -579,7 +581,8 @@ YunClient.Instance.Execute(new LoginRequest
                 }, reqLogin);
             Assert.IsTrue(req != null);
         }
-        
+       
+
 
 
 
