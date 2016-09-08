@@ -933,6 +933,18 @@ namespace Yun.UnitTest
             });
             Assert.IsTrue(req != null);
         }
+        [TestMethod]
+        public void GetGroupingShopItemRequest()
+        {
+            YunClient.Format = "json";
+
+            var req = YunClient.Instance.Execute(new GetGroupingShopItemRequest()
+            {
+               
+                ShopIds ="11608",
+            });
+            Assert.IsTrue(req != null);
+        }
         
 
 
