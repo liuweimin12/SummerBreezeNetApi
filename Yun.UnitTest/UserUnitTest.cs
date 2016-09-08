@@ -79,8 +79,7 @@ namespace Yun.UnitTest
                 Images = new List<FileItem>
                 {
                     new FileItem(@"F:\1.jpg"),
-                    new FileItem(@"F:\2.jpg"),
-                    new FileItem(@"F:\3.jpg")
+                    
                 }
             });
 

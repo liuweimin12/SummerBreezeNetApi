@@ -405,14 +405,12 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new GetMyRefundsRequest
                 {
-                    MaxCreateTime = DateTime.Now,
-                    MinCreateTime = DateTime.Now,
-                    OrderId = 1,
-                    LoadHistory = 1,
-                    OrderRefundId = 1,
-                    PageSize = 1,
+                   
+                    
+                    PageSize = 10,
                     PageNum = 1,
-                    Status = null,
+                    OrderId =146062,
+                    OrderRefundId =146062
 
 
                 });
