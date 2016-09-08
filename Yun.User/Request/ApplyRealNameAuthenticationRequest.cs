@@ -52,7 +52,7 @@ namespace Yun.User.Request
                 {"idcard",IdCard},
                 {"positiveidentitycard",PositiveIdentityCard},
                 {"backofidcard",BackOfIdCard},
-                {"idcardhandheid",IdCardHandheld}
+                {"idcardhandheld",IdCardHandheld}
             };
             return parameters;
         }
