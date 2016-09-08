@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Yun.Shop.Request;
 using Yun.User.Request;
 using Yun.Util;
 
@@ -612,7 +613,7 @@ namespace Yun.UnitTest
                    IdCard = "37082719920101",
                    PositiveIdentityCard = "http://f.icgyun.com/s/52510/g/155902-68869-383x685.jpg",
                    BackOfIdCard = "http://f.icgyun.com/s/52510/g/32821-68870-670x376.jpg",
-                   IdCardHandheId = "http://f.icgyun.com/s/52510/g/127457-68871-331x468.jpg"
+                   IdCardHandheld = "http://f.icgyun.com/s/52510/g/127457-68871-331x468.jpg"
                 },loginReq);
             Assert.IsTrue(req != null);
         }
@@ -674,7 +675,60 @@ namespace Yun.UnitTest
                 });
             Assert.IsTrue(req != null);
         }
-        
 
+        /// <summary>
+        /// 创建公司和店铺
+        /// </summary>
+        [TestMethod]
+        public void CreateCompanyAndShop()
+        {
+            //注册用户
+            var regReq = YunClient.Instance.Execute(new RegisterRequest
+            {
+                UserName = "temp_user_" + new Random().Next(1, 99999),
+                Ip = "192.168.1.1",
+                Mobile = "159588023" + new Random().Next(1, 99),
+                Password = "888999",
+                Address = "宁波市高新区杨帆路999号",
+                Email = "1805768" + new Random().Next(1, 99) + "@qq.com",
+                AppSecret = YunClient.AppSecret,
+            });
+
+            if (regReq.UserId > 0)
+            {
+                //注册公司
+                var comReq = YunClient.Instance.Execute(new AddCompanyRequest
+                {
+                    Name = "测试公司"+ new Random().Next(1, 9999),
+                    BindUserId = (int)regReq.UserId
+                }, regReq.Token);
+
+                if (comReq.Result > 0)
+                {
+                    //注册主店铺-虚拟店铺
+                    var shopReq = YunClient.Instance.Execute(new AddShopRequest
+                    {
+                        Name = "测试店铺"+ new Random().Next(1, 9999),
+                        CompanyId = (int)comReq.Result
+                    }, regReq.Token);
+
+                    //新增子店铺
+                    if (shopReq.Result > 0)
+                    {
+                        var childShopReq = YunClient.Instance.Execute(new AddShopRequest
+                        {
+                            Name = "测试子店铺" + new Random().Next(1, 9999),
+                            ShopType = 1,
+                            ParentId = (int)shopReq.Result
+                        }, regReq.Token);
+
+                        Assert.IsTrue(childShopReq.Result > 0);
+                        return;
+                    }
+                }
+            }
+
+            Assert.Fail();
+        }
     }
 }
