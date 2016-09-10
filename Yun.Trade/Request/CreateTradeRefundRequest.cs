@@ -17,25 +17,6 @@ namespace Yun.Trade.Request
         /// </summary>
         public int TradeId { get; set; }
 
-
-        /// <summary>
-        /// 充值卡退还的金额
-        /// </summary>
-        public double PrepaidCardMoney { get; set; }
-
-
-        /// <summary>
-        /// 余额退款的金额
-        /// </summary>
-        public double Balance { get; set; }
-
-
-        /// <summary>
-        /// 在线付款的金额
-        /// </summary>
-        public double OnlineMoney { get; set; }
-
-
         /// <summary>
         /// 退款理由
         /// </summary>
@@ -63,11 +44,8 @@ namespace Yun.Trade.Request
             var parameters = new YunDictionary
             {
                 {"tradeid",TradeId},
-                {"balance",Balance},
-                {"onlinemoney",OnlineMoney},
                 {"reason",Reason},
                 {"remark",Remark},
-                {"prepaidcardmoney",PrepaidCardMoney},
                 {"images",Images }
             };
             return parameters;
