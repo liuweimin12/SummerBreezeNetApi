@@ -6,6 +6,12 @@ namespace Yun.Trade
     public class RefundDetail
     {
         /// <summary>
+        /// 汇率
+        /// </summary>
+        [XmlElement("exchange_rate")]
+        public ExchangeRate ExchangeRate { get; set; }
+
+        /// <summary>
         /// 退款批号
         /// </summary>
         [XmlElement("refund_batch_no")]
