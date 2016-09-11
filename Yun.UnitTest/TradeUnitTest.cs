@@ -598,9 +598,6 @@ namespace Yun.UnitTest
                 YunClient.Instance.Execute(new ModifyRefundRequest
                 {
                    OrderRefundId = 1,
-                   Balance = 10,
-                   OnlineMoney = 10,
-                   PrepaidCard = 10,
                    Remark = null,
                    Reason =null,
 
