@@ -106,5 +106,11 @@ namespace Yun.Trade
         [XmlArrayItem("refund_history")]
         public List<RefundHistory> RefundHistories { get; set; }
 
+        /// <summary>
+        /// 现金的退款金额
+        /// </summary>
+        [XmlElement("cash")]
+        public double Cash { get; set; }
+
     }
 }
