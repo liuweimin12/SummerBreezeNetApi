@@ -611,7 +611,7 @@ namespace Yun.UnitTest
                    IdCard = "37082719920101",
                    PositiveIdentityCard = "http://f.icgyun.com/s/52510/g/155902-68869-383x685.jpg",
                    BackOfIdCard = "http://f.icgyun.com/s/52510/g/32821-68870-670x376.jpg",
-                   IdCardHandheId = "http://f.icgyun.com/s/52510/g/127457-68871-331x468.jpg"
+                   //IdCardHandheId = "http://f.icgyun.com/s/52510/g/127457-68871-331x468.jpg"
                 },loginReq);
             Assert.IsTrue(req != null);
         }
