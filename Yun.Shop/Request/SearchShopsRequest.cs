@@ -77,6 +77,11 @@ namespace Yun.Shop.Request
         /// </summary>
         public string ShopIds { get; set; }
 
+        /// <summary>
+        /// 店铺类型
+        /// </summary>
+        public int? ShopType { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.shops.search";
@@ -98,7 +103,8 @@ namespace Yun.Shop.Request
                 {"isenabled", IsEnabled},
                 {"isopen",IsOpen },
                 {"certificationstatus", CertificationStatus},
-                { "shopids",ShopIds}
+                { "shopids",ShopIds},
+                {"shoptype",ShopType }
             };
             return parameters;
         }
