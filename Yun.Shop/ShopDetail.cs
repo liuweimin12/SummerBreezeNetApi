@@ -69,7 +69,7 @@ namespace Yun.Shop
         public int CatId { get; set; }
 
         /// <summary>
-        /// 认证的相关照片，一般包括门店照片，店内照片，店内悬挂营业执照照片
+        /// 认证的相关照片，一般包括门店照片，店内照片，店内悬挂营业执照照片 
         /// </summary>
         [XmlElement("certified_photos")]
         public string CertifiedPhotos { get; set; }
@@ -271,7 +271,7 @@ namespace Yun.Shop
         public int ArticleCount { get; set; }
 
         /// <summary>
-        /// 店铺类型
+        /// 店铺类型  0 虚拟 1 实体
         /// </summary>
         [XmlElement("shop_type")]
         public int ShopType { get; set; }

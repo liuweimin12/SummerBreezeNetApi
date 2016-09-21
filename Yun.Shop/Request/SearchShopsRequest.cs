@@ -82,6 +82,11 @@ namespace Yun.Shop.Request
         /// </summary>
         public int? ShopType { get; set; }
 
+        /// <summary>
+        /// 排序 排序方式：id id_desc create_time create_time_desc
+        /// </summary>
+        public string Sort { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.shops.search";
@@ -104,7 +109,8 @@ namespace Yun.Shop.Request
                 {"isopen",IsOpen },
                 {"certificationstatus", CertificationStatus},
                 { "shopids",ShopIds},
-                {"shoptype",ShopType }
+                {"shoptype",ShopType },
+                {"sort", Sort}
             };
             return parameters;
         }
