@@ -50,7 +50,7 @@ namespace Yun.Archive.Request
         public int AuthorId { get; set; }
 
         /// <summary>
-        /// 排序
+        /// 排序 idasc--id升序   viewdesc--浏览量降序  sort--sort排序  timedesc --发布时间降序   time --发布时间升序
         /// </summary>
         public string Sort { get; set; }
 
