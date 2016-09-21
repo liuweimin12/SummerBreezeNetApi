@@ -161,6 +161,12 @@ namespace Yun.Shop.Request
 
 
         /// <summary>
+        /// 绑定的用户ID
+        /// </summary>
+        public int BindUserId { get; set; }
+
+
+        /// <summary>
         /// 新创建的用户类型
         /// </summary>
         public int UserType { get; set; }
@@ -209,7 +215,8 @@ namespace Yun.Shop.Request
                 {"contacts",Contacts },
                 {"shoptype",ShopType },
                 {"parentid",ParentId },
-                {"usertype",UserType }
+                {"usertype",UserType },
+                {"binduserid",BindUserId }
             };
             return parameters;
         }
