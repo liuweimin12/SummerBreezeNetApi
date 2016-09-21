@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using Yun.Interface;
 using Yun.Response;
 using Yun.Util;
@@ -15,6 +18,16 @@ namespace Yun.Trade.Request
         /// </summary>
         public long OrderRefundId { get; set; }
 
+        /// <summary>
+        /// 余额退款的金额
+        /// </summary>
+        public double Balance { get; set; }
+
+
+        /// <summary>
+        /// 在线付款的金额
+        /// </summary>
+        public double OnlineMoney { get; set; }
 
         /// <summary>
         /// 退款理由
@@ -27,9 +40,9 @@ namespace Yun.Trade.Request
         public string Remark { get; set; }
 
         /// <summary>
-        /// 余额退款的金额
+        /// 充值卡金额
         /// </summary>
-        public double Money { get; set; }
+        public double PrepaidCard { get; set; }
 
         public string GetApiName()
         {
@@ -41,9 +54,11 @@ namespace Yun.Trade.Request
             var parameters = new YunDictionary
             {
                 {"orderrefundid", OrderRefundId},
-                {"money", Money},
+                {"balance", Balance},
+                {"onlinemoney", OnlineMoney},
                 {"reason", Reason},
-                {"remark", Remark}
+                {"remark", Remark},
+                {"prepaidcard", PrepaidCard}
             };
             return parameters;
         }

@@ -36,20 +36,14 @@ namespace Yun.Archive.Request
         /// </summary>
         public int? CompanyId { get; set; }
 
-        /// <summary>
-        /// 分类名称
-        /// </summary>
-        public string CategoryName { get; set; }
-
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
             {
                 {"display", Display},
-                {"shopid", ShopId},
-                {"parentid", ParentId},
-                {"companyid", CompanyId},
-                {"categoryname", CategoryName}
+                {"shopid",ShopId},
+                {"parentid",ParentId},
+                {"companyid",CompanyId}
             };
 
             return parameters;
@@ -57,6 +51,7 @@ namespace Yun.Archive.Request
 
         public void Validate()
         {
+
         }
     }
 }

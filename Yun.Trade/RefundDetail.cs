@@ -6,18 +6,6 @@ namespace Yun.Trade
     public class RefundDetail
     {
         /// <summary>
-        /// 用户ID
-        /// </summary>
-        [XmlElement("user_id")]
-        public int UserId { get; set; }
-
-        /// <summary>
-        /// 汇率
-        /// </summary>
-        [XmlElement("exchange_rate")]
-        public ExchangeRate ExchangeRate { get; set; }
-
-        /// <summary>
         /// 退款批号
         /// </summary>
         [XmlElement("refund_batch_no")]
@@ -117,12 +105,6 @@ namespace Yun.Trade
         [XmlArray("refund_histories")]
         [XmlArrayItem("refund_history")]
         public List<RefundHistory> RefundHistories { get; set; }
-
-        /// <summary>
-        /// 现金的退款金额
-        /// </summary>
-        [XmlElement("cash")]
-        public double Cash { get; set; }
 
     }
 }
