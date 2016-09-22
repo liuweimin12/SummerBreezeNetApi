@@ -755,15 +755,15 @@ namespace Yun.UnitTest
         }
 
 
-        [TestMethod]
-        public void GetRefundAmountRequest()
-        {
-            var req =
-                YunClient.Instance.Execute(new GetRefundAmountRequest {OutTradeNum = "go-307737-23-mlnjiev" })
-                    .RefundMoney;
-
-            Assert.IsTrue(req.OnlineMoney==0.01);
-        }
+        //[TestMethod]
+        //public void GetRefundAmountRequest()
+        //{
+        //    var req =
+        //        YunClient.Instance.Execute(new GetRefundAmountRequest {OutTradeNum = "go-307737-23-mlnjiev" })
+        //            .RefundMoney;
+        //
+        //    Assert.IsTrue(req.OnlineMoney==0.01);
+        //}
 
 
 

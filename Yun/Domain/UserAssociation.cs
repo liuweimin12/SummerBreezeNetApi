@@ -1,7 +1,7 @@
 ﻿
 using System.Xml.Serialization;
 
-namespace Yun.Shop
+namespace Yun.Domain
 {
     public class UserAssociation
     {

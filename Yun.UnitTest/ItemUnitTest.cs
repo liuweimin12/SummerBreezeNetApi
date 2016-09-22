@@ -135,13 +135,12 @@ namespace Yun.UnitTest
         [TestMethod]
         public void GetItemRequest()
         {
-            YunClient.Format = "xml";
+            YunClient.Format = "json";
 
             var req = YunClient.Instance.Execute(new GetItemRequest()
             {
-                Id = 16666,
-               
-            });
+                Id = 17625,
+            }, YunClient.GetAdminToken());
 
             Assert.IsTrue(req != null);
         }
@@ -896,6 +895,7 @@ namespace Yun.UnitTest
             }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void AddFavoritesItemRequest()
         {
@@ -903,10 +903,12 @@ namespace Yun.UnitTest
 
             var req = YunClient.Instance.Execute(new AddFavoritesItemRequest()
             {
-                ItemIds = "001",
+                ItemIds = "17739,17625,17614,16668,16666",
             }, YunClient.GetAdminToken());
+
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void DeleteFavoritesItemRequest()
         {
@@ -914,11 +916,13 @@ namespace Yun.UnitTest
 
             var req = YunClient.Instance.Execute(new DeleteFavoritesItemRequest()
             {
-                FavoriteIds = "151113"
-            
+                FavoriteIds = "37,38"
+
             }, YunClient.GetAdminToken());
+
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void GetFavoritesItemRequest()
         {
@@ -926,13 +930,13 @@ namespace Yun.UnitTest
 
             var req = YunClient.Instance.Execute(new GetFavoritesItemRequest()
             {
-               PageSize = 1,
-               PageNum = 1,
-               
+               PageSize = 20,
+               PageNum = 1
+            }, YunClient.GetAdminToken());
 
-            });
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void GetGroupingShopItemRequest()
         {

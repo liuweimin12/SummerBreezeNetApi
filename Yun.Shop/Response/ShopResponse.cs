@@ -1,4 +1,5 @@
 ﻿using System.Xml.Serialization;
+using Yun.Domain;
 using Yun.Response;
 
 namespace Yun.Shop.Response

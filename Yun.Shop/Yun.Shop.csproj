@@ -113,7 +113,6 @@
     <Compile Include="ShopAsk.cs" />
     <Compile Include="ShopDetail.cs" />
     <Compile Include="ShopFavorite.cs" />
-    <Compile Include="UserAssociation.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Yun\Yun.csproj">
