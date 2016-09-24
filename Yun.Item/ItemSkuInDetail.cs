@@ -17,7 +17,7 @@ namespace Yun.Item
         /// </summary>
         [XmlArray("spec_ids")]
         [XmlArrayItem("spec_id")]
-        public List<string> SpecIds { get; set; }
+        public List<long> SpecIds { get; set; }
 
         [XmlArray("spec_names")]
         [XmlArrayItem("spec_name")]

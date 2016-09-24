@@ -135,12 +135,12 @@ namespace Yun.UnitTest
         [TestMethod]
         public void GetItemRequest()
         {
-            YunClient.Format = "json";
+            YunClient.Format = "json2";
 
             var req = YunClient.Instance.Execute(new GetItemRequest()
             {
                 Id = 17625,
-            }, YunClient.GetAdminToken());
+            });
 
             Assert.IsTrue(req != null);
         }
