@@ -13,6 +13,12 @@ namespace Yun.Item
         public int PerLimitBuyHour { get; set; }
 
         /// <summary>
+        /// 店铺名称
+        /// </summary>
+        [XmlElement("shop_name")]
+        public string ShopName { get; set; }
+
+        /// <summary>
         /// 分销模板ID
         /// </summary>
         [XmlElement("distribution_template_id")]
