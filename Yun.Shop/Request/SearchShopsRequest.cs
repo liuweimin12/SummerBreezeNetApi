@@ -92,6 +92,11 @@ namespace Yun.Shop.Request
         /// </summary>
         public int? ParentId { get; set; }
 
+        /// <summary>
+        /// 商品主营类目
+        /// </summary>
+        public int? ItemCatId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.shops.search";
@@ -116,7 +121,8 @@ namespace Yun.Shop.Request
                 { "shopids",ShopIds},
                 {"shoptype",ShopType },
                 {"sort", Sort},
-                {"parentid",ParentId }
+                {"parentid",ParentId },
+                {"itemcatid",ItemCatId }
             };
             return parameters;
         }

@@ -6,6 +6,14 @@ namespace Yun.Shop
 {
     public class ShopDetail
     {
+
+        /// <summary>
+        /// 主营类目链表
+        /// </summary>
+        [XmlArray("main_item_cats")]
+        [XmlArrayItem("main_item_cat")]
+        public List<ItemCat> MainItemCats { get; set; }
+
         /// <summary>
         /// 子店铺
         /// </summary>
