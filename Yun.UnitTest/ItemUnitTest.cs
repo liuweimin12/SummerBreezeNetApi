@@ -135,7 +135,7 @@ namespace Yun.UnitTest
         [TestMethod]
         public void GetItemRequest()
         {
-            YunClient.Format = "json2";
+            YunClient.Format = "json";
 
             var req = YunClient.Instance.Execute(new GetItemRequest()
             {
