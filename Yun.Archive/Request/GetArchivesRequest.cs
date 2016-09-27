@@ -72,9 +72,9 @@ namespace Yun.Archive.Request
         public long EndPostTime { get; set; }
 
         /// <summary>
-        /// 分类id
+        /// 分类id。多个分类id用英文逗号隔开
         /// </summary>
-        public int TaxonomyId { get; set; }
+        public string TaxonomyId { get; set; }
 
         /// <summary>
         /// 需要返回的字段
@@ -118,6 +118,12 @@ namespace Yun.Archive.Request
         public int? CustomType { get; set; }
 
 
+        /// <summary>
+        /// 文章分类ids，多个文章分类用英文的逗号分隔
+        /// </summary>
+        public string ArticleIds { get; set; }
+
+
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
@@ -137,7 +143,7 @@ namespace Yun.Archive.Request
                 {"tags", Tags},
                 {"categoryname", CategoryName},
                 {"companyid", CompanyId},
-                {"customtype",CustomType }
+                {"customtype",CustomType } 
             };
             return parameters;
         }
