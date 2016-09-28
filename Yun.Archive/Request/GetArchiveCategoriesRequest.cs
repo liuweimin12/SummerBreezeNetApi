@@ -41,6 +41,11 @@ namespace Yun.Archive.Request
         /// </summary>
         public string CategoryName { get; set; }
 
+        /// <summary>
+        /// 分类ID，多个用英文逗号分隔
+        /// </summary>
+        public string Ids { get; set; }
+
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
@@ -49,7 +54,9 @@ namespace Yun.Archive.Request
                 {"shopid",ShopId},
                 {"parentid",ParentId},
                 {"companyid",CompanyId},
-                {"categoryname",CategoryName}
+                {"categoryname",CategoryName},
+                {"ids", Ids}
+                
             };
 
             return parameters;
