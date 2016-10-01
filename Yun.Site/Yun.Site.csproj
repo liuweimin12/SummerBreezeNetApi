@@ -52,6 +52,7 @@
     <Compile Include="Request\AddSubscriptionRequest.cs" />
     <Compile Include="Request\BatchUpdateCitySortRequest.cs" />
     <Compile Include="Request\BatchUpdateElementSortRequest.cs" />
+    <Compile Include="Request\ClearCityRequest.cs" />
     <Compile Include="Request\DeleteCityRequest.cs" />
     <Compile Include="Request\DeleteSubscriptionRequest.cs" />
     <Compile Include="Request\GetAppInfoRequest.cs" />
