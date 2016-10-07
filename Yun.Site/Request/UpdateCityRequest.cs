@@ -42,6 +42,11 @@ namespace Yun.Site.Request
         /// </summary>
         public string Ext { get; set; }
 
+        /// <summary>
+        /// 外部ID
+        /// </summary>
+        public int OuterId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.city.update";
@@ -55,7 +60,8 @@ namespace Yun.Site.Request
                 {"sort",Sort},
                 {"id",Id},
                 {"state",State},
-                {"ext",Ext}
+                {"ext",Ext},
+                {"outerid",OuterId }
             };
             return parameters;
         }

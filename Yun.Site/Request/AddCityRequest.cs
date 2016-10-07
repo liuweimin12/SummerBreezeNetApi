@@ -41,6 +41,10 @@ namespace Yun.Site.Request
         /// </summary>
         public string Ext { get; set; }
 
+        /// <summary>
+        /// 外部ID
+        /// </summary>
+        public int OuterId { get; set; }
 
         public string GetApiName()
         {
@@ -55,8 +59,8 @@ namespace Yun.Site.Request
                 {"sort",Sort},
                 {"parentid",ParentId},
                 {"state",State},
-                {"ext",Ext}
-
+                {"ext",Ext},
+                {"outerid",OuterId }
             };
             return parameters;
         }

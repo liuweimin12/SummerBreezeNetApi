@@ -29,6 +29,7 @@ namespace Yun.Site
         [XmlElement("parent_id")]
         public int ParentId { get; set; }
 
+
         /// <summary>
         /// 状态码
         /// </summary>
@@ -38,5 +39,18 @@ namespace Yun.Site
 
         [XmlElement("ext")]
         public string Ext { get; set; }
+
+        /// <summary>
+        /// 下级数量
+        /// </summary>
+        [XmlElement("next_level_count")]
+        public int NextLevelCount { get; set; }
+
+
+        /// <summary>
+        /// 外部ID
+        /// </summary>
+        [XmlElement("outer_id")]
+        public int OuterId { get; set; }
     }
 }
