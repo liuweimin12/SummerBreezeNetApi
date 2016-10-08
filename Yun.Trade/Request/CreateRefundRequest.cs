@@ -57,7 +57,8 @@ namespace Yun.Trade.Request
                 {"reason", Reason},
                 {"remark", Remark},
                 {"refundquantity", RefundQuantity},
-                {"images",Images }
+                {"images",Images },
+                {"money", Money}
             };
             return parameters;
         }
