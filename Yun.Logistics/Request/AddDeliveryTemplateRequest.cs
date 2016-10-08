@@ -36,6 +36,11 @@ namespace Yun.Logistics.Request
         /// </summary>
         public int PriceType { get; set; }
 
+        /// <summary>
+        /// 回调地址
+        /// </summary>
+        public string CallbackUrl { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.delivery.template.add";
@@ -49,7 +54,8 @@ namespace Yun.Logistics.Request
                 {"farefree", Farefree},
                 {"logisticsprice",LogisticsPrice},
                 {"farefreestrategy",FareFreeStrategy},
-                {"pricetype",PriceType}
+                {"pricetype",PriceType},
+                {"callbackurl",CallbackUrl}
             };
             return parameters;
         }

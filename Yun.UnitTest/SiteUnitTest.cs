@@ -168,6 +168,15 @@ namespace Yun.UnitTest
         }
 
         [TestMethod]
+        public void ClearCityRequest()
+        {
+            var req =
+                YunClient.Instance.Execute(new ClearCityRequest (), YunClient.GetAdminToken());
+
+            Assert.IsTrue(req != null);
+        }
+
+        [TestMethod]
         public void GetCitiesRequest()
         {
             YunClient.Format = "json";

@@ -127,6 +127,26 @@ namespace Yun.Trade.Request
         /// </summary>
         public string InvoiceContent { get; set; }
 
+        /// <summary>
+        /// 省ID
+        /// </summary>
+        public int? ProvinceId { get; set; }
+
+        /// <summary>
+        /// 市ID
+        /// </summary>
+        public int? CityId { get; set; }
+
+        /// <summary>
+        /// 区ID
+        /// </summary>
+        public int? AreaId { get; set; }
+
+        /// <summary>
+        /// 镇ID
+        /// </summary>
+        public int? TownId { get; set; }
+
 
         public string GetApiName()
         {
@@ -158,7 +178,11 @@ namespace Yun.Trade.Request
                 {"createtime",CreateTime},
                 {"ext2", Ext2},
                 {"invoicetitle", InvoiceTitle},
-                {"invoicecontent", InvoiceContent}
+                {"invoicecontent", InvoiceContent},
+                {"provinceid",ProvinceId},
+                {"cityid", CityId},
+                {"areaid", AreaId},
+                {"townid", TownId}
             };
             return parameters;
         }

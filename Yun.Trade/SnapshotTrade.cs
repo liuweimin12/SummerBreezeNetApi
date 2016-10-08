@@ -7,6 +7,13 @@ namespace Yun.Trade
     public class SnapshotTrade
     {
         /// <summary>
+        /// 区域ID
+        /// </summary>
+        [XmlElement("location_ids")]
+        public string LocationIds { get; set; }
+
+
+        /// <summary>
         /// 关闭订单/退款理由
         /// </summary>
         [XmlElement("close_reason")]
