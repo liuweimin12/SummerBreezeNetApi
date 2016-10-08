@@ -7,6 +7,12 @@ namespace Yun.Logistics
     public class DeliveryTemplate
     {
         /// <summary>
+        /// 回调地址，配合运费计算方式
+        /// </summary>
+        [XmlElement("callback_url")]
+        public string CallbackUrl { get; set; }
+
+        /// <summary>
         /// 模板id
         /// </summary>
         [XmlElement("id")]

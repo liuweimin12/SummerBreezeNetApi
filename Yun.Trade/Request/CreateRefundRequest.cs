@@ -10,49 +10,38 @@ namespace Yun.Trade.Request
     /// </summary>
     public class CreateRefundRequest : ITopRequest<CreateRefundResponse>
    {
-       /// <summary>
-       /// 订单ID
-       /// </summary>
-       public int OrderId { get; set; }
+        /// <summary>
+        /// 订单ID
+        /// </summary>
+        public int OrderId { get; set; }
 
-       /// <summary>
-       /// 余额退款的金额
-       /// </summary>
-       public double Balance { get; set; }
-
-
-       /// <summary>
-       /// 在线付款的金额
-       /// </summary>
-       public double OnlineMoney { get; set; }
-
-
-       /// <summary>
-       /// 退款理由
-       /// </summary>
-       public string Reason { get; set; }
-
-       /// <summary>
-       /// 备注留言
-       /// </summary>
-       public string Remark { get; set; }
-
-       /// <summary>
-       /// 充值卡退还的金额
-       /// </summary>
-       public double PrepaidCardMoney { get; set; }
+        /// <summary>
+        /// 余额退款的金额
+        /// </summary>
+        public double Money { get; set; }
 
 
         /// <summary>
-        /// 退款件数
+        /// 退款理由
         /// </summary>
-        public int? RefundQuantity { get; set; }
+        public string Reason { get; set; }
+
+        /// <summary>
+        /// 备注留言
+        /// </summary>
+        public string Remark { get; set; }
 
 
         /// <summary>
         /// 凭证照片,多个用英文逗号隔开
         /// </summary>
         public string Images { get; set; }
+
+
+        /// <summary>
+        /// 退款件数
+        /// </summary>
+        public int? RefundQuantity { get; set; }
 
 
         public string GetApiName()
@@ -65,11 +54,8 @@ namespace Yun.Trade.Request
             var parameters = new YunDictionary
             {
                 {"orderid", OrderId},
-                {"balance", Balance},
-                {"onlinemoney", OnlineMoney},
                 {"reason", Reason},
                 {"remark", Remark},
-                {"prepaidcardmoney", PrepaidCardMoney},
                 {"refundquantity", RefundQuantity},
                 {"images",Images }
             };
