@@ -124,6 +124,7 @@ namespace Yun.UnitTest
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void GetShopRequest()
         {
@@ -131,13 +132,12 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new GetShopRequest
                 {
-                    ShopId = 11618,
-
-
+                    ShopId = 12024
                 });
 
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void AddShopCustomerserviceRequest()
         {
