@@ -65,12 +65,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new AddCompanyRequest
                 {
-                    Name = "消费搜店铺004",
-                    
-                   
-
-                    //AppSecret = YunClient.AppSecret,
-
+                    Name = "北京多鼠网络科技有限公司",
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
