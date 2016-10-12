@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Yun.Trade;
 using Yun.Trade.Request;
 using Yun.User.Request;
 using Yun.Util;
@@ -15,6 +16,41 @@ namespace Yun.UnitTest
     [TestClass]
     public class TradeUnitTest
     {
+        [TestMethod]
+        public void GetExpressFeePriceRequest()
+        {
+            YunClient.Format = "json2";
+
+            var req = YunClient.Instance.Execute(new GetExpressFeePriceRequest
+            {
+                Address = "浙江省 宁波市 高新区研发园B5",
+                AreaId = 12,
+                CityId = 7,
+                ProvinceId = 1,
+                TownId = 24,
+                BoughtGoods = new ExpressFeePriceArgs
+                {
+                    delivery = "EXPRESS",
+                    promotions_activity_id_in_shop = 0,
+                    gifts = null,
+                    goods_info = new List<BuyGoods>()
+                    {
+                        new BuyGoods
+                        {
+                            item_id = 19872,
+                            is_coupon = false,
+                            is_gift = false,
+                            promotions_activity_id_in_item = 0,
+                            quantity = 1,
+                            sku_id = 0
+                        }
+                    }
+                }
+            });
+
+            Assert.IsTrue(req.Price>0);
+        }
+
         [TestMethod]
         public void ExecuteTradeStatisticsRequest()
         {

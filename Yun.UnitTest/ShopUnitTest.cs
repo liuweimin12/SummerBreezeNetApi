@@ -129,11 +129,17 @@ namespace Yun.UnitTest
         public void GetShopRequest()
         {
             YunClient.Format = "json";
+            var token = YunClient.Instance.Execute(new LoginRequest
+            {
+                UserName = "18606683125",
+                Password = "111111",
+                AppSecret = YunClient.AppSecret
+            }).Token;
             var req =
                 YunClient.Instance.Execute(new GetShopRequest
                 {
-                    ShopId = 12024
-                });
+                    ShopId = 11609
+                }, token);
 
             Assert.IsTrue(req != null);
         }
