@@ -95,6 +95,22 @@ namespace Yun.User.Request
         public string IdCard { get; set; }
 
 
+        /// <summary>
+        /// 年龄
+        /// </summary>
+        public int? Age { get; set; }
+
+        /// <summary>
+        /// 身高
+        /// </summary>
+        public double? Height { get; set; }
+
+        /// <summary>
+        /// 体重
+        /// </summary>
+        public double? Weight { get; set; }
+
+
         public string GetApiName()
         {
             return "chenggou.user.modify";
@@ -117,7 +133,10 @@ namespace Yun.User.Request
                 {"address",Address},
                 {"remark",Remark},
                 {"phone",Phone},
-                {"idcard",IdCard }
+                {"idcard",IdCard },
+                {"age",Age},
+                {"height",Height},
+                {"weight",Weight }
             };
             return parameters;
         }
