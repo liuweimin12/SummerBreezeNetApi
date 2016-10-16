@@ -23,7 +23,8 @@ namespace Yun.Item.Request
         {
             var parameters = new YunDictionary
             {
-                {"id",Id}
+                {"id",Id},
+                {"shopid",ShopId }
             };
             return parameters;
         }
