@@ -65,12 +65,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new AddCompanyRequest
                 {
-                    Name = "消费搜店铺004",
-                    
-                   
-
-                    //AppSecret = YunClient.AppSecret,
-
+                    Name = "北京多鼠网络科技有限公司",
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
@@ -129,20 +124,26 @@ namespace Yun.UnitTest
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void GetShopRequest()
         {
             YunClient.Format = "json";
+            var token = YunClient.Instance.Execute(new LoginRequest
+            {
+                UserName = "18606683125",
+                Password = "111111",
+                AppSecret = YunClient.AppSecret
+            }).Token;
             var req =
                 YunClient.Instance.Execute(new GetShopRequest
                 {
-                    ShopId = 11618,
-
-
-                });
+                    ShopId = 11609
+                }, token);
 
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void AddShopCustomerserviceRequest()
         {

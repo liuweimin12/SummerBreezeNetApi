@@ -81,6 +81,11 @@ namespace Yun.Trade.Request
         public int CompanyId { get; set; }
 
 
+        /// <summary>
+        /// 店铺ID
+        /// </summary>
+        public int ShopId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.trade.sellerrefunds.get";
@@ -99,7 +104,8 @@ namespace Yun.Trade.Request
                 {"status", Status},
                 {"loadhistory", LoadHistory},
                 {"nick", Nick},
-                {"companyid", CompanyId}
+                {"companyid", CompanyId},
+                {"shopid",ShopId }
             };
             return parameters;
         }

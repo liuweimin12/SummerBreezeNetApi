@@ -35,6 +35,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuyGoods.cs" />
     <Compile Include="BuyItemBatch.cs" />
     <Compile Include="CartDetail.cs" />
     <Compile Include="CartItemDetail.cs" />
@@ -42,6 +43,7 @@
     <Compile Include="CreateRefundResult.cs" />
     <Compile Include="DynamicRatingJson.cs" />
     <Compile Include="ExchangeRate.cs" />
+    <Compile Include="ExpressFeePriceArgs.cs" />
     <Compile Include="ItemPromotionInShoppingCart.cs" />
     <Compile Include="ItemTradeStatistics.cs" />
     <Compile Include="MemoModel.cs" />
@@ -62,9 +64,11 @@
     <Compile Include="Request\DropTradeRequest.cs" />
     <Compile Include="Request\ExecuteTradeStatisticsRequest.cs" />
     <Compile Include="Request\GetCartCountRequest.cs" />
+    <Compile Include="Request\GetExpressFeePriceRequest.cs" />
     <Compile Include="Request\GetItemEvaluateRequest.cs" />
     <Compile Include="Request\GetItemTradeStatisticsReportRequest.cs" />
     <Compile Include="Response\CreateTradeRefundResponse.cs" />
+    <Compile Include="Response\GetExpressFeePriceResponse.cs" />
     <Compile Include="Response\GetItemEvaluateResponse.cs" />
     <Compile Include="Response\GetItemTradeStatisticsReportResponse.cs" />
     <Compile Include="Request\GetMonthTradeStatisticsRequest.cs" />

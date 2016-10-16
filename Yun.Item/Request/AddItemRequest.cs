@@ -253,11 +253,17 @@ namespace Yun.Item.Request
         /// </summary>
         public long CloseTimeDelay { get; set; }
 
+        /// <summary>
+        /// 店铺ID
+        /// </summary>
+        public int ShopId { get; set; }
+
 
         public string GetApiName()
         {
             return "chenggou.item.add";
-        }
+        } 
+
 
         public IDictionary<string, string> GetParameters()
         {
@@ -305,7 +311,8 @@ namespace Yun.Item.Request
                 {"distributiontemplateid",DistributionTemplateId},
                 {"sortorder",SortOrder },
                 {"closetimedelay",CloseTimeDelay },
-                {"perlimitbuyhour",PerLimitBuyHour }
+                {"perlimitbuyhour",PerLimitBuyHour },
+                {"shopid", ShopId}
             };
             return parameters;
         }

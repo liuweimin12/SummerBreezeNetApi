@@ -102,7 +102,7 @@ namespace Yun.UnitTest
                 YunClient.Instance.Execute(new LoginRequest
                 {
                     UserName = "18606683125",
-                    Password = "111111",
+                    Password = "128128",
                     
                     AppSecret = YunClient.AppSecret
                 });
@@ -117,10 +117,10 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new ResetPasswordRequest
                 {
-                    Password = "111111",
+                    Password = "128128",
                     AppSecret = YunClient.AppSecret,
                     Phone = "18606683125",
-                    Code = "899958",
+                    Code = "040541",
 
                 });
 
@@ -152,7 +152,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new LoginMobilePhoneRequest
                 {
-                    Code = "261519",
+                    Code = "040541",
                     IsDestroy = false,
                     UserFlag = "18606683125"
                 });
@@ -232,7 +232,7 @@ namespace Yun.UnitTest
                 {
                     Ip = "192.168.1.2",
                     Phone = "18606683125",
-                    Code = "261519",
+                    Code = "040541",
                    
                 });
 
