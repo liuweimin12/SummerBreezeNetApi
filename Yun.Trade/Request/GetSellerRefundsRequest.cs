@@ -52,12 +52,12 @@ namespace Yun.Trade.Request
         /// <summary>
         /// 订单ID
         /// </summary>
-        public int OrderId { get; set; }
+        public int? OrderId { get; set; }
 
         /// <summary>
         /// 退款号
         /// </summary>
-        public int OrderRefundId { get; set; }
+        public int? OrderRefundId { get; set; }
 
         /// <summary>
         /// 退款状态
@@ -78,13 +78,13 @@ namespace Yun.Trade.Request
         /// <summary>
         /// 公司ID
         /// </summary>
-        public int CompanyId { get; set; }
+        public int? CompanyId { get; set; }
 
 
         /// <summary>
         /// 店铺ID
         /// </summary>
-        public int ShopId { get; set; }
+        public int? ShopId { get; set; }
 
         public string GetApiName()
         {
