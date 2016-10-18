@@ -5,8 +5,14 @@ using Yun.Util;
 
 namespace Yun.User.Request
 {
+    /// <summary>
+    /// 判断用户是否存在
+    /// </summary>
     public class ExistUserRequest : ITopRequest<BoolResultResponse>
     {
+        /// <summary>
+        /// 对应Type值
+        /// </summary>
         public string Content { get; set; }
 
         /// <summary>
