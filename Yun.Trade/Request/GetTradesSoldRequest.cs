@@ -25,12 +25,12 @@ namespace Yun.Trade.Request
         /// <summary>
         /// 起始下单时间
         /// </summary>
-        public long MinCreateTime { get; set; }
+        public long? MinCreateTime { get; set; }
 
         /// <summary>
         /// 下单时间结束
         /// </summary>
-        public long MaxCreateTime { get; set; }
+        public long? MaxCreateTime { get; set; }
 
         /// <summary>
         /// 买家昵称或者店铺ID
@@ -40,7 +40,7 @@ namespace Yun.Trade.Request
         /// <summary>
         /// 订单iD 
         /// </summary>
-        public long OrderId { get; set; }
+        public long? OrderId { get; set; }
 
         /// <summary>
         /// 订单收货信息中的手机号码
@@ -88,13 +88,13 @@ namespace Yun.Trade.Request
         /// <summary>
         /// 店铺ID
         /// </summary>
-        public int ShopId { get; set; }
+        public int? ShopId { get; set; }
 
 
         /// <summary>
         /// 公司ID
         /// </summary>
-        public int CompanyId { get; set; }
+        public int? CompanyId { get; set; }
 
         /// <summary>
         /// 收件人名字
@@ -115,12 +115,12 @@ namespace Yun.Trade.Request
         /// <summary>
         /// 付款时间起始
         /// </summary>
-        public long MinPayTime { get; set; }
+        public long? MinPayTime { get; set; }
 
         /// <summary>
         /// 付款时间最大
         /// </summary>
-        public long MaxPayTime { get; set; }
+        public long? MaxPayTime { get; set; }
 
         /// <summary>
         /// 订单类型，多个用英文逗号分隔

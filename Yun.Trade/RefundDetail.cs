@@ -12,6 +12,12 @@ namespace Yun.Trade
         public int UserId { get; set; }
 
         /// <summary>
+        /// 用户名
+        /// </summary>
+        [XmlElement("username")]
+        public string UserName { get; set; } 
+
+        /// <summary>
         /// 汇率
         /// </summary>
         [XmlElement("exchange_rate")]
