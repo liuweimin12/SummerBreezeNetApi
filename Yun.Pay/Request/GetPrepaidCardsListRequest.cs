@@ -15,7 +15,7 @@ namespace Yun.Pay.Request
         /// <summary>
         /// 充值卡类型ID
         /// </summary>
-        public int PrepaidCardTypeId { get; set; }
+        public int? PrepaidCardTypeId { get; set; }
 
 
         /// <summary>
@@ -60,13 +60,13 @@ namespace Yun.Pay.Request
         /// <summary>
         /// 需要查询某店铺下的所有充值卡
         /// </summary>
-        public int ShopId { get; set; }
+        public int? ShopId { get; set; }
 
 
         /// <summary>
         /// 需要查询某公司下的所有充值卡
         /// </summary>
-        public int CompanyId { get; set; }
+        public int? CompanyId { get; set; }
 
 
         /// <summary>
@@ -131,7 +131,6 @@ namespace Yun.Pay.Request
 
         public void Validate()
         {
-            RequestValidator.ValidateMaxValue("pagesize", PageSize, 100);
         }
     }
 }
