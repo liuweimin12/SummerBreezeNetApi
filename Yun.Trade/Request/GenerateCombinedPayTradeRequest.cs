@@ -1,11 +1,14 @@
 ﻿using System.Collections.Generic;
-using System.Xml.Serialization;
 using Yun.Interface;
 using Yun.Response;
 using Yun.Util;
 
 namespace Yun.Trade.Request
 {
+    /// <summary>
+    /// 生成合并付款的支付单
+    /// 返回统一付款的付款单ID
+    /// </summary>
     public class GenerateCombinedPayTradeRequest : ITopRequest<IntResultResponse>
     {
         public string GetApiName()
@@ -19,17 +22,17 @@ namespace Yun.Trade.Request
         public string BankCode { get; set; }
 
         /// <summary>
-        /// 订单号
+        /// 支付单的订单号，多个用英文逗号隔开
         /// </summary>
         public string Ids { get; set; }
 
         /// <summary>
-        /// 余额
+        /// 需要使用余额支付的金额
         /// </summary>
         public double OverMoney { get; set; }
 
         /// <summary>
-        /// 在线金额
+        /// 需要使用在线支付的金额
         /// </summary>
         public double OnlineMoney { get; set; }
 
@@ -47,12 +50,12 @@ namespace Yun.Trade.Request
         public string PaymentIns { get; set; }
 
         /// <summary>
-        /// 线下现金支付
+        /// 需要使用线下现金支付
         /// </summary>
         public double Cash { get; set; }
 
         /// <summary>
-        /// 充值卡金额
+        /// 需要使用充值卡金额
         /// </summary>
         public double PrepaidCard { get; set; }
 
