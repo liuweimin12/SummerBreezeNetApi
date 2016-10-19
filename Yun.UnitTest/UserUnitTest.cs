@@ -68,6 +68,7 @@ namespace Yun.UnitTest
                     YunClient.GetAdminToken()).Result;
             Assert.IsTrue(req);
         }
+
         /// <summary>
         /// 上传图片
         /// </summary>
@@ -79,17 +80,17 @@ namespace Yun.UnitTest
                 Images = new List<FileItem>
                 {
                     new FileItem(@"F:\1.jpg"),
-                    
+
                 }
             });
 
-            Assert.IsTrue(req.Files!=null);
+            Assert.IsTrue(req.Files != null);
         }
 
         [TestMethod]
         public void GerPermissionUserRequest()
         {
-            var req = YunClient.Instance.Execute(new GerPermissionUserRequest { Id = 172586 }, YunClient.GetAdminToken());
+            var req = YunClient.Instance.Execute(new GerPermissionUserRequest {Id = 172586}, YunClient.GetAdminToken());
             Assert.IsTrue(req.User != null);
         }
 
@@ -103,12 +104,13 @@ namespace Yun.UnitTest
                 {
                     UserName = "18606683125",
                     Password = "128128",
-                    
+
                     AppSecret = YunClient.AppSecret
                 });
 
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void ResetPasswordRequest()
         {
@@ -126,6 +128,7 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void SendVerificationCodeRequest()
         {
@@ -134,16 +137,16 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new SendVerificationCodeRequest
                 {
-                   UserFlag = "18606683125",
-                   ActionName = "用户注册",
-                   SendType = "SMS",
-                   Target = "18606683125",
-                  
+                    UserFlag = "18606683125",
+                    ActionName = "用户注册",
+                    SendType = "SMS",
+                    Target = "18606683125",
+
                 });
 
             Assert.IsTrue(req != null);
         }
-        
+
         [TestMethod]
         public void LoginMobilePhoneRequest()
         {
@@ -172,14 +175,15 @@ namespace Yun.UnitTest
                     UserName = "AA",
                     AppSecret = YunClient.AppSecret,
                     Password = "888999",
-                 
+
                 });
 
-           Assert.IsTrue(req != null);
+            Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void AddRoleRequest
-()
+            ()
         {
             YunClient.Format = "json";
 
@@ -197,6 +201,7 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req.Result > 0);
         }
+
         [TestMethod]
         public void InquiryVerificationCodeRequest()
         {
@@ -212,7 +217,7 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req != null);
         }
-        
+
         /// <summary>
         /// /手机验证码登陆
         /// </summary>
@@ -233,11 +238,12 @@ namespace Yun.UnitTest
                     Ip = "192.168.1.2",
                     Phone = "18606683125",
                     Code = "040541",
-                   
+
                 });
 
-            Assert.IsTrue(req.UserId>0);
+            Assert.IsTrue(req.UserId > 0);
         }
+
         /// <summary>
         /// 发送验证码
         /// </summary>
@@ -253,6 +259,7 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req != null);
         }
+
         /// <summary>
         /// 修改用户个人资料
         /// </summary>
@@ -262,7 +269,7 @@ namespace Yun.UnitTest
             YunClient.Format = "xml";
 
             var loginReq = YunClient.Instance.Execute(new LoginRequest
-                {
+            {
                 UserName = "15662414748",
                 IgnorePassword = true,
                 Ip = "192.168.1.1",
@@ -323,6 +330,7 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void ModifyPasswordUserRequest()
         {
@@ -333,12 +341,12 @@ namespace Yun.UnitTest
                 {
                     Id = 172586,
                     Password = "12345678996",
-                    
+
                 });
 
             Assert.IsTrue(req != null);
         }
-        
+
         [TestMethod]
         public void ModifyUserCreditRequest()
         {
@@ -355,6 +363,7 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req != null);
         }
+
         /// <summary>
         /// 修改用户金额
         /// </summary>
@@ -373,13 +382,13 @@ namespace Yun.UnitTest
                 YunClient.Instance.Execute(new ModifyUserMoneyRequest()
 
                 {
-                    UserNick = "18606683125",                 
+                    UserNick = "18606683125",
                     Money = 10000,
                 }, loginReq);
 
             Assert.IsTrue(req != null);
         }
-        
+
         [TestMethod]
         public void PhoneRegisterRequest()
         {
@@ -409,6 +418,7 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req != null);
         }
+
         /// <summary>
         /// 获取用户信息
         /// </summary>
@@ -420,20 +430,21 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new GetUserRequest()
                 {
-                    
+
                     UserId = 176848
-                    
+
                 });
 
             Assert.IsTrue(string.IsNullOrEmpty(req.User.Mobile));
         }
+
         [TestMethod]
         public void LoginOauth2Request()
         {
             YunClient.Format = "json";
             var req =
                 YunClient.Instance.Execute(new LoginOauth2Request()
-                 {
+                {
                     NickName = null,
                     OAuthId = "1",
                     Avatar = null,
@@ -445,9 +456,10 @@ namespace Yun.UnitTest
                     ShopId = 1,
                     UserMeta = null,
                 });
-          Assert.IsTrue(req != null);
+            Assert.IsTrue(req != null);
 
         }
+
         [TestMethod]
         public void RegisterRequest()
         {
@@ -455,19 +467,20 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new RegisterRequest()
                 {
-                    ShopId= 11618,
-                    CompanyId= 115,
-                    UserName="tt",
+                    ShopId = 11618,
+                    CompanyId = 115,
+                    UserName = "tt",
                     UserType = 1,
-                    Ip="192.168.1.1",
+                    Ip = "192.168.1.1",
                     Mobile = "15662414749",
                     Password = "111111",
                     Address = "宁波市高新区杨帆路999号",
                     Email = "1805768571@qq.com",
-                    AppSecret=YunClient.AppSecret,
+                    AppSecret = YunClient.AppSecret,
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void BindOauth2AccountRequest()
         {
@@ -484,11 +497,12 @@ namespace Yun.UnitTest
                 });
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void BindEmailRequest()
         {
             YunClient.Format = "json";
-          
+
             var req =
                 YunClient.Instance.Execute(new BindEmailRequest()
 
@@ -512,7 +526,7 @@ namespace Yun.UnitTest
             }).Token;
             var req =
                 YunClient.Instance.Execute(new BindPhoneRequest()
-               {
+                {
                     Phone = "18606683125",
                     Code = "422647"
                 }, loginReq);
@@ -563,7 +577,7 @@ namespace Yun.UnitTest
                 AppSecret = YunClient.AppSecret
             }).Token;
 
-            
+
             var req =
                 YunClient.Instance.Execute(new UnbindPhoneRequest()
                 {
@@ -585,9 +599,11 @@ namespace Yun.UnitTest
                 AppSecret = YunClient.AppSecret
             }).Token;
 
-            var req = YunClient.Instance.Execute(new UploadAvatarUserRequest {Image = new FileItem(@"C:\finally.png") }, loginReq);
+            var req = YunClient.Instance.Execute(new UploadAvatarUserRequest {Image = new FileItem(@"C:\finally.png")},
+                loginReq);
             Assert.IsTrue(req.Result);
         }
+
         /// <summary>
         /// 实名认证
         /// </summary>
@@ -603,19 +619,20 @@ namespace Yun.UnitTest
 
                     AppSecret = YunClient.AppSecret
                 }).Token;
-           
+
             var req =
                 YunClient.Instance.Execute(new ApplyRealNameAuthenticationRequest()
 
                 {
-                   AuthenticationName = "kity",
-                   IdCard = "37082719920101",
-                   PositiveIdentityCard = "http://f.icgyun.com/s/52510/g/155902-68869-383x685.jpg",
-                   BackOfIdCard = "http://f.icgyun.com/s/52510/g/32821-68870-670x376.jpg",
-                   IdCardHandheld = "http://f.icgyun.com/s/52510/g/127457-68871-331x468.jpg"
-                },loginReq);
+                    AuthenticationName = "kity",
+                    IdCard = "37082719920101",
+                    PositiveIdentityCard = "http://f.icgyun.com/s/52510/g/155902-68869-383x685.jpg",
+                    BackOfIdCard = "http://f.icgyun.com/s/52510/g/32821-68870-670x376.jpg",
+                    IdCardHandheld = "http://f.icgyun.com/s/52510/g/127457-68871-331x468.jpg"
+                }, loginReq);
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void RefuseRealNameAuthenticationRequest()
         {
@@ -626,10 +643,11 @@ namespace Yun.UnitTest
                 {
                     UserId = 1,
                     Reason = "不符和规章"
-                    
+
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void PassRealNameAuthenticationRequest()
         {
@@ -639,11 +657,12 @@ namespace Yun.UnitTest
 
                 {
                     UserId = 1,
-                    
+
 
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void FindUsersRequest()
         {
@@ -659,6 +678,7 @@ namespace Yun.UnitTest
                 });
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void UserAuthRequest()
         {
@@ -667,8 +687,8 @@ namespace Yun.UnitTest
                 YunClient.Instance.Execute(new UserAuthRequest()
 
                 {
-                   Password = "111111",
-                   AppSecret = YunClient.AppSecret,
+                    Password = "111111",
+                    AppSecret = YunClient.AppSecret,
 
 
                 });
@@ -698,8 +718,8 @@ namespace Yun.UnitTest
                 //注册公司
                 var comReq = YunClient.Instance.Execute(new AddCompanyRequest
                 {
-                    Name = "测试公司"+ new Random().Next(1, 9999),
-                    BindUserId = (int)regReq.UserId
+                    Name = "测试公司" + new Random().Next(1, 9999),
+                    BindUserId = (int) regReq.UserId
                 }, regReq.Token);
 
                 if (comReq.Result > 0)
@@ -707,8 +727,8 @@ namespace Yun.UnitTest
                     //注册主店铺-虚拟店铺
                     var shopReq = YunClient.Instance.Execute(new AddShopRequest
                     {
-                        Name = "测试店铺"+ new Random().Next(1, 9999),
-                        CompanyId = (int)comReq.Result
+                        Name = "测试店铺" + new Random().Next(1, 9999),
+                        CompanyId = (int) comReq.Result
                     }, regReq.Token);
 
                     //新增子店铺
@@ -718,7 +738,7 @@ namespace Yun.UnitTest
                         {
                             Name = "测试子店铺" + new Random().Next(1, 9999),
                             ShopType = 1,
-                            ParentId = (int)shopReq.Result
+                            ParentId = (int) shopReq.Result
                         }, regReq.Token);
 
                         Assert.IsTrue(childShopReq.Result > 0);
@@ -728,6 +748,26 @@ namespace Yun.UnitTest
             }
 
             Assert.Fail();
+        }
+
+        /// <summary>
+        /// 判断用户是否存在
+        /// </summary>
+        [TestMethod]
+        public void ExistUserRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new ExistUserRequest()
+
+                {
+                    Content = "18606683125",
+                    Type = 1
+
+
+                });
+            Assert.IsTrue(req != null);
+
         }
     }
 }
