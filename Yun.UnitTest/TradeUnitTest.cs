@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Yun.Domain;
 using Yun.Trade;
 using Yun.Trade.Request;
 using Yun.User.Request;
@@ -32,7 +33,10 @@ namespace Yun.UnitTest
                 {
                     delivery = "EXPRESS",
                     promotions_activity_id_in_shop = 0,
-                    gifts = null,
+                    gifts = new List<TradeGiftJson>
+                    {
+                        new TradeGiftJson {gift_id = 1, is_coupon = false, sku_id = 0}
+                    },
                     goods_info = new List<BuyGoods>()
                     {
                         new BuyGoods
