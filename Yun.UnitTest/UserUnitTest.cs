@@ -122,7 +122,7 @@ namespace Yun.UnitTest
                     Password = "128128",
                     AppSecret = YunClient.AppSecret,
                     Phone = "18606683125",
-                    Code = "040541",
+                    Code = "205407",
 
                 });
 
