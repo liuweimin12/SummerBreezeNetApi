@@ -279,13 +279,14 @@ namespace Yun.UnitTest
                  YunClient.Instance.Execute(new LoginRequest
                  {
                      UserName = "18606683125",
-                     Password = "111111",
+                     Password = "128128",
                      AppSecret = YunClient.AppSecret
                  }).Token;
             var req =
                 YunClient.Instance.Execute(new CreateRefundRequest
                 {
-                    OrderId = 146062,
+                    OrderId =147878,
+                    Money =98,
                 }, reqLogin);
             Assert.IsTrue(req != null);
         }
