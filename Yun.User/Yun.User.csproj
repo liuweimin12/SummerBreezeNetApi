@@ -38,6 +38,7 @@
   <ItemGroup>
     <Compile Include="AuthorizeUrl.cs" />
     <Compile Include="CreditDomain.cs" />
+    <Compile Include="Friend.cs" />
     <Compile Include="Function.cs" />
     <Compile Include="OAth2SettingJson.cs" />
     <Compile Include="Oauth2Login.cs" />
@@ -57,6 +58,9 @@
     <Compile Include="Request\AnalogShopLoginRequest.cs" />
     <Compile Include="Request\ApplyRealNameAuthenticationRequest.cs" />
     <Compile Include="Request\AssociatedUserTagsRequest.cs" />
+    <Compile Include="Request\BuildFriendRelationshipsRequest.cs" />
+    <Compile Include="Request\GetUserFriendsRequest.cs" />
+    <Compile Include="Request\RemoveFriendRelationshipsRequest.cs" />
     <Compile Include="Request\UserAuthRequest.cs" />
     <Compile Include="Request\BatchAssociatedUserTagsRequest.cs" />
     <Compile Include="Request\BatchUpdateOrganizationRequest.cs" />
@@ -143,6 +147,7 @@
     <Compile Include="Response\GetAuthorizeUrlResponse.cs" />
     <Compile Include="Response\GetOAuth2ConfigResponse.cs" />
     <Compile Include="Response\GetOAuth2LoginInfoResponse.cs" />
+    <Compile Include="Response\GetUserFriendsResponse.cs" />
     <Compile Include="Response\GetUserScoreListResponse.cs" />
     <Compile Include="Response\GetUsersResponse.cs" />
     <Compile Include="Response\GetUserTagResponse.cs" />

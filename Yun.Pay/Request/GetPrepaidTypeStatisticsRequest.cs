@@ -12,18 +12,18 @@ namespace Yun.Pay.Request
         /// <summary>
         /// 绑定的店铺ID
         /// </summary>
-        public int BindShopId { get; set; }
+        public int? BindShopId { get; set; }
 
         /// <summary>
         /// 绑定的公司ID
         /// </summary>
-        public int BindCompanyId { get; set; }
+        public int? BindCompanyId { get; set; }
 
 
         /// <summary>
         /// 充值卡类型ID
         /// </summary>
-        public int PrepaidCardTypeId { get; set; }
+        public int? PrepaidCardTypeId { get; set; }
 
 
         /// <summary>

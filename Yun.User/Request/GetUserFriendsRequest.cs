@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Yun.Interface;
-using Yun.Pay.Response;
-using Yun.Util;
+using Yun.User.Response;
 
-namespace Yun.Pay.Request
+namespace Yun.User.Request
 {
     /// <summary>
-    /// 获取充值卡分类的列表
-    /// chenggou.prepaidcard.category.list.get
+    /// 获取我的朋友列表
+    /// yun.user.friend.list.get
     /// </summary>
-    public class GetPrepaidCardTypeListRequest : ITopRequest<GetPrepaidCardTypeListResponse>
+    public class GetUserFriendsRequest : ITopRequest<GetUserFriendsResponse>
     {
         /// <summary>
         /// 页码
@@ -44,36 +40,28 @@ namespace Yun.Pay.Request
 
 
         /// <summary>
-        /// 需要查询某店铺下的所有充值卡
+        /// 用户ID
         /// </summary>
-        public int? ShopId { get; set; }
-
-
-        /// <summary>
-        /// 需要查询某公司下的所有充值卡
-        /// </summary>
-        public int? CompanyId { get; set; }
+        public int UserId { get; set; }
 
         public string GetApiName()
         {
-            return "chenggou.prepaidcard.category.list.get";
+            return "yun.user.friend.list.get";
         }
 
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
             {
-                {"pagenum",PageNum},
-                {"pagesize",PageSize},
-                {"shopid",ShopId},
-                {"companyid",CompanyId}
+                {"pagenum", PageNum},
+                {"pagesize", PageSize},
+                {"userid", UserId},
             };
             return parameters;
         }
 
         public void Validate()
         {
-            RequestValidator.ValidateMaxValue("pagesize", PageSize, 100);
         }
     }
 }
