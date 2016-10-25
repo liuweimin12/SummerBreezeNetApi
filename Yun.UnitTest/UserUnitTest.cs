@@ -769,5 +769,63 @@ namespace Yun.UnitTest
             Assert.IsTrue(req != null);
 
         }
+        /// <summary>
+        /// 移除好友关系
+        /// </summary>
+        [TestMethod]
+        public void RemoveFriendRelationshipsRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new RemoveFriendRelationshipsRequest()
+                {
+                TargetUserId =12352,
+
+
+                });
+            Assert.IsTrue(req != null);
+
+        }
+        /// <summary>
+        /// 建立朋友的关系，对方必须已经注册
+        /// </summary>
+        [TestMethod]
+        public void BuildFriendRelationshipsRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new BuildFriendRelationshipsRequest()
+                {
+                   TargetUserIds = "",
+                   TargetUserName = "手机号",
+                   TargetUserType = 2,
+                   UserId = 12345,
+
+
+                });
+            Assert.IsTrue(req != null);
+
+        }
+        /// <summary>
+        /// 建立朋友的关系，对方必须已经注册
+        /// </summary>
+        [TestMethod]
+        public void GetUserFriendsRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new GetUserFriendsRequest()
+                {
+                   PageNum = 10,
+                   PageSize = 10,
+
+
+                });
+            Assert.IsTrue(req != null);
+
+        }
+        
+
+
     }
 }
