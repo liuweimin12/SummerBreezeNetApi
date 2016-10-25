@@ -60,6 +60,8 @@
     <Compile Include="Request\AssociatedUserTagsRequest.cs" />
     <Compile Include="Request\BuildFriendRelationshipsRequest.cs" />
     <Compile Include="Request\GetUserFriendsRequest.cs" />
+    <Compile Include="Request\GetUserSignInRecordListRequest.cs" />
+    <Compile Include="Request\GetUserSignInStatisticsRequest.cs" />
     <Compile Include="Request\RemoveFriendRelationshipsRequest.cs" />
     <Compile Include="Request\UserAuthRequest.cs" />
     <Compile Include="Request\BatchAssociatedUserTagsRequest.cs" />
@@ -150,6 +152,8 @@
     <Compile Include="Response\GetOAuth2LoginInfoResponse.cs" />
     <Compile Include="Response\GetUserFriendsResponse.cs" />
     <Compile Include="Response\GetUserScoreListResponse.cs" />
+    <Compile Include="Response\GetUserSignInRecordListResponse.cs" />
+    <Compile Include="Response\GetUserSignInStatisticsResponse.cs" />
     <Compile Include="Response\GetUsersResponse.cs" />
     <Compile Include="Response\GetUserTagResponse.cs" />
     <Compile Include="Response\GetUserTagsListResponse.cs" />
@@ -166,6 +170,8 @@
     <Compile Include="Response\UserResponse.cs" />
     <Compile Include="Response\UsersResponse.cs" />
     <Compile Include="Roles.cs" />
+    <Compile Include="SignInHistory.cs" />
+    <Compile Include="SignInStatistics.cs" />
     <Compile Include="TotalPoints.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="UserTagDomain.cs" />
