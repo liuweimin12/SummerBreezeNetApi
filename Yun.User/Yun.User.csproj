@@ -138,6 +138,7 @@
     <Compile Include="Request\UploadAvatarUserRequest.cs" />
     <Compile Include="Request\UsePrepaidCardRegisterRequest.cs" />
     <Compile Include="Request\UserBindShopRequest.cs" />
+    <Compile Include="Request\UserSignInRequest.cs" />
     <Compile Include="Request\UserTagRemovesAssociationRequest.cs" />
     <Compile Include="Request\VerifyPayPasswordRequest.cs" />
     <Compile Include="Response\AuthSessionResponse.cs" />
