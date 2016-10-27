@@ -62,6 +62,7 @@
     <Compile Include="Request\GetUserFriendsRequest.cs" />
     <Compile Include="Request\GetUserSignInRecordListRequest.cs" />
     <Compile Include="Request\GetUserSignInStatisticsRequest.cs" />
+    <Compile Include="Request\IntegralTransferRequest.cs" />
     <Compile Include="Request\RemoveFriendRelationshipsRequest.cs" />
     <Compile Include="Request\UserAuthRequest.cs" />
     <Compile Include="Request\BatchAssociatedUserTagsRequest.cs" />
@@ -94,7 +95,7 @@
     <Compile Include="Request\GetOrganizationsRequest.cs" />
     <Compile Include="Request\GetRoleFunctionsRequest.cs" />
     <Compile Include="Request\GetRoleRequest.cs" />
-    <Compile Include="Request\GetrolesOrganizationRequest.cs" />
+    <Compile Include="Request\GetRolesOrganizationRequest.cs" />
     <Compile Include="Request\GetRolesRequest.cs" />
     <Compile Include="Request\GetUserRequest.cs" />
     <Compile Include="Request\GetUserScoreListRequest.cs" />

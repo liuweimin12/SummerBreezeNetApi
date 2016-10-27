@@ -5,6 +5,12 @@ namespace Yun.User
     public class SignInStatistics
     {
         /// <summary>
+        /// 下次签到所得积分
+        /// </summary>
+        [XmlElement("next_sign_in")]
+        public int NextSignIn { get; set; }
+
+        /// <summary>
         ///用户ID 
         /// </summary>
         [XmlElement("user_id")]

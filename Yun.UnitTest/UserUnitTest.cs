@@ -50,6 +50,22 @@ namespace Yun.UnitTest
         //}
 
         [TestMethod]
+        public void GetUserSignInStatisticsRequest()
+        {
+            YunClient.Format = "json";
+
+            var req =
+                YunClient.Instance.Execute(new LoginRequest
+                {
+                    UserName = "屁颠屁颠",
+                    IgnorePassword = true
+                });
+
+            var result = YunClient.Instance.Execute(new GetUserSignInStatisticsRequest(), req.Token);
+            Assert.IsTrue(result.SignInStatistics != null);
+        }
+
+        [TestMethod]
         public void GetFunctionsRequest()
         {
             var req =
