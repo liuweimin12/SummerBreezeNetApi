@@ -764,6 +764,19 @@ namespace Yun.UnitTest
         //
         //    Assert.IsTrue(req.OnlineMoney==0.01);
         //}
+        [TestMethod]
+        public void GetCashFlowRecordRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new GetCashFlowRecordRequest
+                {
+                   CashFlowRecordId = 1,
+
+                }, YunClient.GetAdminToken());
+            Assert.IsTrue(req != null);
+        }
+        
 
 
 
