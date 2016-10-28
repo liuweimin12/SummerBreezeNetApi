@@ -824,7 +824,23 @@ namespace Yun.UnitTest
             Assert.IsTrue(req != null);
 
         }
+        /// <summary>
+        /// 签到领积分
+        /// </summary>
+        [TestMethod]
+        public void UserSignInRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new UserSignInRequest()
+                {
+                  
+                });
+            Assert.IsTrue(req != null);
+
+        }
         
+
 
 
     }
