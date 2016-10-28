@@ -5,7 +5,7 @@ using Yun.Util;
 
 namespace Yun.User.Request
 {
-    public class GetrolesOrganizationRequest : ITopRequest<RolesResponse>     
+    public class GetRolesOrganizationRequest : ITopRequest<RolesResponse>     
     {
         /// <summary>
         /// 组织机构ID
