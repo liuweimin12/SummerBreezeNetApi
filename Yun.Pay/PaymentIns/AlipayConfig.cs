@@ -6,10 +6,16 @@ namespace Yun.Pay.PaymentIns
     public class AlipayConfig
     {
         /// <summary>
-        /// 
+        /// 公钥
         /// </summary>
         [XmlElement("public_key")]
         public string PublicKey { get; set; }
+
+        /// <summary>
+        /// 秘密密钥
+        /// </summary>
+        [XmlElement("secret_key")]
+        public string SecretKey { get; set; }
 
 
         /// <summary>

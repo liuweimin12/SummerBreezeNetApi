@@ -113,13 +113,13 @@ namespace Yun.UnitTest
         [TestMethod]
         public void LoginRequest()
         {
-            YunClient.Format = "json";
+            YunClient.Format = "json2";
 
             var req =
                 YunClient.Instance.Execute(new LoginRequest
                 {
-                    UserName = "18606683125",
-                    Password = "128128",
+                    UserName = "15801598320",
+                    Password = "123456",
 
                     AppSecret = YunClient.AppSecret
                 });
