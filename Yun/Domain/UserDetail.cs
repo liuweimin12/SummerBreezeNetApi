@@ -256,7 +256,7 @@ namespace Yun.Domain
         /// </summary>
         [XmlArray("oauth_ids")]
         [XmlArrayItem("oauth_id")]
-        public List<string> OauthId { get; set; }
+        public List<OauthLoginData> OauthId { get; set; }
 
         /// <summary>
         /// 是否是职员
