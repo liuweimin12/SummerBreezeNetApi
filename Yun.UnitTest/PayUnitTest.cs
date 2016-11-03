@@ -16,6 +16,14 @@ namespace Yun.UnitTest
     public class PayUnitTest
     {
         [TestMethod]
+        public void GetAlipayAppPayParameterRequest()
+        {
+            var req = YunClient.Instance.Execute(new GetAlipayAppPayParameterRequest {Id = 276 });
+
+            Assert.IsTrue(req.AlipayAppPayParameter!=null);
+        }
+
+        [TestMethod]
         public void AddPrepaidCardRequest()
         {
             YunClient.Format = "xml";

@@ -48,5 +48,11 @@ namespace Yun.Pay.PaymentIns
         [XmlElement("client_refund_notify_url")]
         public string ClientRefundNotifyUrl { get; set; }
 
+        /// <summary>
+        /// 应用ID
+        /// </summary>
+        [XmlElement("app_id")]
+        public string AppId { get; set; }
+
     }
 }
