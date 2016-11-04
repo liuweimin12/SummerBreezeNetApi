@@ -848,10 +848,10 @@ namespace Yun.UnitTest
         {
             YunClient.Format = "xml";
             var req =
-                YunClient.Instance.Execute(new UserSignInRequest()
+                YunClient.Instance.Execute(new UserSignInRequest
                 {
                   
-                });
+                }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
 
         }
