@@ -254,8 +254,8 @@ namespace Yun.Domain
         /// <summary>
         /// 快捷登陆的ID
         /// </summary>
-        [XmlArray("oauth_ids")]
-        [XmlArrayItem("oauth_id")]
+        [XmlArray("oauth_info_list")]
+        [XmlArrayItem("oauth_info")]
         public List<OauthLoginData> OauthId { get; set; }
 
         /// <summary>
