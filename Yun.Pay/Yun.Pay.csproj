@@ -115,6 +115,7 @@
     <Compile Include="Request\UnBindPrepaidCardRequest.cs" />
     <Compile Include="Request\UpdatePrepaidCardTypeRequest.cs" />
     <Compile Include="Request\VerificationPrepaidCardRequest.cs" />
+    <Compile Include="Request\VerifyAlipayAppPaySignatureRequest.cs" />
     <Compile Include="Request\WeixinUnifiedorderRequest.cs" />
     <Compile Include="Response\GetAccountReportResponse.cs" />
     <Compile Include="Response\GenerateJsApiPayParmResponse.cs" />
