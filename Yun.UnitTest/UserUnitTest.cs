@@ -480,21 +480,28 @@ namespace Yun.UnitTest
         public void RegisterRequest()
         {
             YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new RegisterRequest()
-                {
-                    ShopId = 11618,
-                    CompanyId = 115,
-                    UserName = "tt",
-                    UserType = 1,
-                    Ip = "192.168.1.1",
-                    Mobile = "15662414749",
-                    Password = "111111",
-                    Address = "宁波市高新区杨帆路999号",
-                    Email = "1805768571@qq.com",
-                    AppSecret = YunClient.AppSecret,
-                }, YunClient.GetAdminToken());
-            Assert.IsTrue(req != null);
+            var shops = new string[]
+            {
+                "爱尚家家纺", "爱车屋汽车用品", "特美刻日用品", "酷龙达户外", "康佳电器", "豌豆客服饰", "博尔奇箱包", "蛋糕卡券", "M6生鲜", "美康商务体检", "城购汇", "管家婆家政服务",
+                "贝思客蛋糕", "厦门中石化加油IC卡"
+            };
+
+            for (var i = 0; i < shops.Length; i++)
+            {
+                var req =
+                    YunClient.Instance.Execute(new RegisterRequest()
+                    {
+                        ShopId = 12879+i,
+                        CompanyId = 100,
+                        UserName = shops[i] + "管理员",
+                        Ip = "192.168.1.1",
+                        Password = "888999",
+                        AppSecret = YunClient.AppSecret,
+                    });
+            }
+
+
+            Assert.Inconclusive();
         }
 
         [TestMethod]
