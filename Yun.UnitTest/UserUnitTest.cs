@@ -855,8 +855,25 @@ namespace Yun.UnitTest
             Assert.IsTrue(req != null);
 
         }
-        
+        /// <summary>
+        /// 用户的积分转让
+        /// </summary>
+        [TestMethod]
+        public void IntegralTransferRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new IntegralTransferRequest()
+                {
 
+                    、
+                    TargetUserId = 1,
+                    Integral = 1,
+                });
+            Assert.IsTrue(req != null);
+
+        }
+       
 
 
     }
