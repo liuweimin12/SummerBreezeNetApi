@@ -14,6 +14,10 @@ namespace Yun.Item.Request
         /// 上级分类ID,0表示顶级
         /// </summary>
         public int? ParentId { get; set; }
+        /// <summary>
+        /// 类目ID，多个用英文逗号分隔
+        /// </summary>
+        public string Ids { get; set; }
 
         public string GetApiName()
         {
@@ -24,7 +28,8 @@ namespace Yun.Item.Request
         {
             var parameters = new YunDictionary
             {
-                {"parentid", ParentId}
+                {"parentid", ParentId},
+                {"ids", Ids}
             };
             return parameters;
         }

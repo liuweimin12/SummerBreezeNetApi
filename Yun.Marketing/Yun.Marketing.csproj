@@ -131,6 +131,7 @@
     <Compile Include="Request\RewardGiftActivityRangeAddRequest.cs" />
     <Compile Include="Request\RewardGiftActivityRangeAllRemoveRequest.cs" />
     <Compile Include="Request\RewardGiftActivityRangeRemoveRequest.cs" />
+    <Compile Include="Request\SetSignInSettingRequest.cs" />
     <Compile Include="Request\UpdateCashCouponCategoryRequest.cs" />
     <Compile Include="Request\UpdateCashCouponRequest.cs" />
     <Compile Include="Request\UpdateCombinationBuyRequest.cs" />

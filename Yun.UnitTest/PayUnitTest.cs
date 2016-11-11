@@ -16,6 +16,37 @@ namespace Yun.UnitTest
     public class PayUnitTest
     {
         [TestMethod]
+        public void VerifyAlipayAppPaySignatureRequest()
+        {
+            var req = YunClient.Instance.Execute(new VerifyAlipayAppPaySignatureRequest
+            {
+                AlipayAppId = "2016090501849581",
+                AlipayCharset = "utf-8",
+                AlipayCode = "10000",
+                AlipayIsSuccess = "T",
+                AlipayMsg = "Success",
+                AlipayOutTradeNo = "201611081358578848979",
+                AlipaySellerId = "2088411342338821",
+                AlipaySign = "ZPT+sVGM6OPQkKss++2UAmmKCqNVts9w0F4A7t+20eQVz0WiR1XvdXCJLk47nh1CPub1mnD9vLROiwzyRRFBwevwFNMytA93n6LifX+YeROI7+odnXZIkv0ZQjEgR/cYAxVw3KS/bubDFnVI96hzqXI086E70/PzciKlsS8chbc=",
+                AlipaySignType = "RSA",
+                AlipayTimestamp = "2016-11-08 13:59:03",
+                AlipayTotalAmount = "0.01",
+                AlipayTradeNo = "2016110821001004880282556276",
+                AuthAppId = "2016090501849581"
+            });
+
+            Assert.IsTrue(req.Result>0);
+        }
+
+        [TestMethod]
+        public void GetAlipayAppPayParameterRequest()
+        {
+            var req = YunClient.Instance.Execute(new GetAlipayAppPayParameterRequest {Id = 276 });
+
+            Assert.IsTrue(req.AlipayAppPayParameter!=null);
+        }
+
+        [TestMethod]
         public void AddPrepaidCardRequest()
         {
             YunClient.Format = "xml";

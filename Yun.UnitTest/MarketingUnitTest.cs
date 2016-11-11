@@ -37,7 +37,14 @@ namespace Yun.UnitTest
         //    //
         //    //Assert.IsTrue(!string.IsNullOrEmpty(req));
         //}
-        
+        [TestMethod]
+        public void SetSignInSettingRequest()
+        {
+            var req = YunClient.Instance.Execute(new SetSignInSettingRequest {Enabled = true, Rule = "1,2,3,4,5,6,7"},
+                YunClient.GetAdminToken());
+
+            Assert.IsTrue(req.Result>0);
+        }
 
         [TestMethod]
         public void FindCashCouponRequest()

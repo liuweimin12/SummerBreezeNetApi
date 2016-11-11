@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlipayAppPayParameter.cs" />
     <Compile Include="Bank.cs" />
     <Compile Include="BatchAddCardJson.cs" />
     <Compile Include="ExchangeRate.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Request\GenerateJsApiPayParmRequest.cs" />
     <Compile Include="Request\GeneratePayHtmlRequest.cs" />
     <Compile Include="Request\GetAccountReportRequest.cs" />
+    <Compile Include="Request\GetAlipayAppPayParameterRequest.cs" />
     <Compile Include="Request\GetBandBankRequest.cs" />
     <Compile Include="Request\GetBandBanksRequest.cs" />
     <Compile Include="Request\GetCashFlowRecordRequest.cs" />
@@ -113,10 +115,12 @@
     <Compile Include="Request\UnBindPrepaidCardRequest.cs" />
     <Compile Include="Request\UpdatePrepaidCardTypeRequest.cs" />
     <Compile Include="Request\VerificationPrepaidCardRequest.cs" />
+    <Compile Include="Request\VerifyAlipayAppPaySignatureRequest.cs" />
     <Compile Include="Request\WeixinUnifiedorderRequest.cs" />
     <Compile Include="Response\GetAccountReportResponse.cs" />
     <Compile Include="Response\GenerateJsApiPayParmResponse.cs" />
     <Compile Include="Response\GeneratePayHtmlResponse.cs" />
+    <Compile Include="Response\GetAlipayAppPayParameterResponse.cs" />
     <Compile Include="Response\GetBandBankResponse.cs" />
     <Compile Include="Response\GetBandBanksResponse.cs" />
     <Compile Include="Response\GetCashFlowRecordResponse.cs" />

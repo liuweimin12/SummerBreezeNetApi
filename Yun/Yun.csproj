@@ -51,6 +51,7 @@
     <Compile Include="Domain\DynamicRatings.cs" />
     <Compile Include="Domain\GiftJson.cs" />
     <Compile Include="Domain\MultiState.cs" />
+    <Compile Include="Domain\OauthLoginData.cs" />
     <Compile Include="Domain\SeoInfo.cs" />
     <Compile Include="Domain\StringKeyValuePair.cs" />
     <Compile Include="Domain\TradeGiftJson.cs" />
