@@ -125,6 +125,10 @@ namespace Yun.Item.Request
         /// </summary>
         public string ShopCatIds { get; set; }
 
+        /// <summary>
+        /// 店铺ID
+        /// </summary>
+        public int? ShopId { get; set; }
 
         /// <summary>
         /// 商品分类
@@ -323,7 +327,8 @@ namespace Yun.Item.Request
                 {"distributiontemplateid",DistributionTemplateId},
                 {"sortorder",SortOrder },
                 {"closetimedelay",CloseTimeDelay },
-                {"perlimitbuyhour",PerLimitBuyHour }
+                {"perlimitbuyhour",PerLimitBuyHour },
+                {"shopid", ShopId}
             };
 
             return parameters;

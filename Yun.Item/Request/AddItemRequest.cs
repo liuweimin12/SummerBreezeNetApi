@@ -256,7 +256,7 @@ namespace Yun.Item.Request
         /// <summary>
         /// 店铺ID
         /// </summary>
-        public int ShopId { get; set; }
+        public int? ShopId { get; set; }
 
 
         public string GetApiName()
