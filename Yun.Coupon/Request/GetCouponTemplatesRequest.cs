@@ -6,6 +6,11 @@ namespace Yun.Coupon.Request
 {
     public class GetCouponTemplatesRequest : ITopRequest<CouponTemplateResponse>
     {
+        /// <summary>
+        /// 店铺ID
+        /// </summary>
+        public int? ShopId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.coupon.templates.get";
@@ -13,7 +18,11 @@ namespace Yun.Coupon.Request
 
         public IDictionary<string, string> GetParameters()
         {
-            return new Dictionary<string, string>();
+            var parameters = new YunDictionary
+            {
+                {"shopid",ShopId }
+            };
+            return parameters;
         }
 
         public void Validate()

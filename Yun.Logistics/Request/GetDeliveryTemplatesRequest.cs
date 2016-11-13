@@ -24,7 +24,7 @@ namespace Yun.Logistics.Request
         {
             var parameters = new YunDictionary
             {
-                
+                {"shopid",ShopId }   
             };
             return parameters; 
         }
