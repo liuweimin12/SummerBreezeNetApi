@@ -20,6 +20,12 @@ namespace Yun.User.Request
         /// </summary>
         public int UserId { get; set; }
 
+        
+        /// <summary>
+        /// 昵称类型
+        /// </summary>
+        public int NickType { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.user.get";
@@ -30,7 +36,8 @@ namespace Yun.User.Request
             var parameters = new YunDictionary
             {
                 {"nick", Nick},
-                {"userid",UserId}
+                {"userid", UserId},
+                {"nicktype", NickType}
             };
             return parameters;
         }
