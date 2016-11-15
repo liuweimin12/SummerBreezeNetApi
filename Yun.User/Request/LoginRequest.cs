@@ -45,9 +45,14 @@ namespace Yun.User.Request
 
 
         /// <summary>
-        /// 客户端信息
+        /// 客户端信息，传入设备的型号
         /// </summary>
         public string ClientInfo { get; set; }
+
+        /// <summary>
+        /// 登录设备ID
+        /// </summary>
+        public string DeviceId { get; set; }
 
         public string GetApiName()
         {
@@ -69,7 +74,8 @@ namespace Yun.User.Request
                 {"ip", this.Ip},
                 {"ignorepassword", IgnorePassword},
                 {"logintype", LoginType},
-                {"clientinfo", ClientInfo}
+                {"clientinfo", ClientInfo},
+                {"deviceid",DeviceId }
             };
             return parameters;
         }

@@ -100,6 +100,11 @@ namespace Yun.User.Request
         public string ClientInfo { get; set; }
 
 
+        /// <summary>
+        /// 登录设备ID
+        /// </summary>
+        public string DeviceId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.user.mobilephone.register";
@@ -123,7 +128,8 @@ namespace Yun.User.Request
                 {"address", Address},
                 {"usertype",UserType },
                 {"logintype", LoginType},
-                {"clientinfo", ClientInfo}
+                {"clientinfo", ClientInfo},
+                {"deviceid",DeviceId }
             };
             return parameters;
         }
