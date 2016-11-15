@@ -112,5 +112,12 @@ namespace Yun.Marketing
         /// </summary>
         [XmlElement("description")]
         public string Description { get; set; }
+
+
+        /// <summary>
+        /// 显示位置
+        /// </summary>
+        [XmlElement("display_position")]
+        public int DisplayPosition { get; set; }
     }
 }
