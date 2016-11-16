@@ -70,6 +70,10 @@ namespace Yun.Marketing.Request
         /// </summary>
         public int CategoryId { get; set; }
 
+        /// <summary>
+        /// 显示位置
+        /// </summary>
+        public int? DisplayPosition { get; set; }
 
         public string GetApiName()
         {
@@ -88,7 +92,8 @@ namespace Yun.Marketing.Request
                 {"code", Code},
                 {"coupontype",CouponType },
                 {"minprice", MinPrice},
-                {"categoryid",CategoryId }
+                {"categoryid",CategoryId },
+                {"displayposition",DisplayPosition }
             };
 
             return parameters;

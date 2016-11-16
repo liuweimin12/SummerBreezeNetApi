@@ -71,6 +71,10 @@ namespace Yun.Marketing.Request
         /// </summary>
         public int? Status { get; set; }
 
+        /// <summary>
+        /// 显示位置
+        /// </summary>
+        public int? DisplayPosition { get; set; }
 
         public string GetApiName()
         {
@@ -89,6 +93,7 @@ namespace Yun.Marketing.Request
                 {"name",Name},
                 {"validityperiod",ValidityPeriod},
                 {"status",Status},
+                {"displayposition",DisplayPosition }
             };
             return parameters;
         }
