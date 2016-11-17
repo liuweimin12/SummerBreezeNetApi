@@ -782,8 +782,26 @@ namespace Yun.UnitTest
               });
             Assert.IsTrue(req != null);
         }
-       
+        /// <summary>
+        /// 新增退款的历史记录
+        /// </summary>
+        [TestMethod]
+        public void AddRefundRemarkRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+              YunClient.Instance.Execute(new AddRefundRemarkRequest
+              {
+                  OrderRefundId = 12704,
+                  Remark = "tuikuan"
+
+               
+
+              });
+            Assert.IsTrue(req != null);
+        }
         
+
 
 
 
