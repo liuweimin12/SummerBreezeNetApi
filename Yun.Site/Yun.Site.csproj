@@ -49,12 +49,15 @@
     <Compile Include="Request\AddBrowsingDataRequest.cs" />
     <Compile Include="Request\AddCityRequest.cs" />
     <Compile Include="Request\AddSiteRequest.cs" />
+    <Compile Include="Request\AddSiteVersionRequest.cs" />
     <Compile Include="Request\AddSubscriptionRequest.cs" />
     <Compile Include="Request\BatchUpdateCitySortRequest.cs" />
     <Compile Include="Request\BatchUpdateElementSortRequest.cs" />
     <Compile Include="Request\ClearCityRequest.cs" />
     <Compile Include="Request\DeleteCityRequest.cs" />
+    <Compile Include="Request\DeleteSiteVersionRequest.cs" />
     <Compile Include="Request\DeleteSubscriptionRequest.cs" />
+    <Compile Include="Request\FindSiteVersionsRequest.cs" />
     <Compile Include="Request\GetAppInfoRequest.cs" />
     <Compile Include="Request\GetChildAppInfoRequest.cs" />
     <Compile Include="Request\GetCitiesRequest.cs" />
@@ -65,6 +68,7 @@
     <Compile Include="Request\GetPageModuleRequest.cs" />
     <Compile Include="Request\GetSubscriptionListRequest.cs" />
     <Compile Include="Request\GetTextsSiteElementRequest.cs" />
+    <Compile Include="Request\GetTheLatestVersionRequest.cs" />
     <Compile Include="Request\GetWebSettingRequest.cs" />
     <Compile Include="Request\IsExistSubscriptionRequest.cs" />
     <Compile Include="Request\ResetAllDataRequest.cs" />
@@ -73,7 +77,9 @@
     <Compile Include="Request\SetEmailSettingRequest.cs" />
     <Compile Include="Request\SetWebSettingRequest.cs" />
     <Compile Include="Request\UpdateCityRequest.cs" />
+    <Compile Include="Request\UpdateSiteVersionRequest.cs" />
     <Compile Include="Response\AddSiteResponse.cs" />
+    <Compile Include="Response\FindSiteVersionsResponse.cs" />
     <Compile Include="Response\GetAppInfoResponse.cs" />
     <Compile Include="Response\GetChildAppInfoResponse.cs" />
     <Compile Include="Response\GetCitiesResponse.cs" />
@@ -83,6 +89,7 @@
     <Compile Include="Response\GetPageModuleResponse.cs" />
     <Compile Include="Response\GetOperationRecordsResponse.cs" />
     <Compile Include="Response\GetSubscriptionListResponse.cs" />
+    <Compile Include="Response\GetTheLatestVersionResponse.cs" />
     <Compile Include="Response\GetWebSettingResponse.cs" />
     <Compile Include="Response\ModuleTypesResponse.cs" />
     <Compile Include="SiteModule.cs" />
@@ -130,6 +137,7 @@
     <Compile Include="Response\TextsResponse.cs" />
     <Compile Include="OnlyText.cs" />
     <Compile Include="SitePage.cs" />
+    <Compile Include="SiteVersion.cs" />
     <Compile Include="SubscriptionModel.cs" />
   </ItemGroup>
   <ItemGroup>
