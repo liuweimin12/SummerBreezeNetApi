@@ -163,21 +163,21 @@ namespace Yun.UnitTest
             Assert.IsTrue(req != null);
         }
 
-        [TestMethod]
-        public void LoginMobilePhoneRequest()
-        {
-            YunClient.Format = "json";
+        //[TestMethod]
+        //public void LoginMobilePhoneRequest()
+        //{
+        //    YunClient.Format = "json";
 
-            var req =
-                YunClient.Instance.Execute(new LoginMobilePhoneRequest
-                {
-                    Code = "040541",
-                    IsDestroy = false,
-                    UserFlag = "18606683125"
-                });
+        //    var req =
+        //        YunClient.Instance.Execute(new LoginMobilePhoneRequest
+        //        {
+        //            Code = "040541",
+        //            IsDestroy = false,
+        //            UserFlag = "18606683125"
+        //        });
 
-            Assert.IsTrue(req != null);
-        }
+        //    Assert.IsTrue(req != null);
+        //}
 
 
         [TestMethod]
@@ -873,14 +873,29 @@ namespace Yun.UnitTest
                 YunClient.Instance.Execute(new IntegralTransferRequest()
                 {
 
-                    、
+                   
                     TargetUserId = 1,
                     Integral = 1,
                 });
             Assert.IsTrue(req != null);
 
         }
-       
+        /// <summary>
+        /// 根据设备号获取用户最近一次的登录token
+        /// </summary>
+        [TestMethod]
+        public void GetUserLeastTokenRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new GetUserLeastTokenRequest()
+                {
+                    DeviceId = "",
+                });
+            Assert.IsTrue(req != null);
+
+        }
+        
 
 
     }
