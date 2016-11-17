@@ -41,6 +41,7 @@
     <Compile Include="CreditDomain.cs" />
     <Compile Include="Friend.cs" />
     <Compile Include="Function.cs" />
+    <Compile Include="LoginRecord.cs" />
     <Compile Include="OAth2SettingJson.cs" />
     <Compile Include="Oauth2Login.cs" />
     <Compile Include="OAuth2Setting.cs" />
