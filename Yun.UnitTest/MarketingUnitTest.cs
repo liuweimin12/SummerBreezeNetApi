@@ -128,6 +128,38 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req != null);
         }
+        /// <summary>
+        /// 获取代金券类别
+        /// </summary>
+        [TestMethod]
+        public void FindCashCouponCategoriesRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new FindCashCouponCategoriesRequest
+                {
+                    PageNum = 1,
+                    PageSize = 10,
+
+                }, YunClient.GetAdminToken());
+
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void UpdateCashCouponCategoryRequest()
+        {
+            YunClient.Format = "xml";
+            var req =
+                YunClient.Instance.Execute(new UpdateCashCouponCategoryRequest
+                {
+                   Name = "11",
+                   CategoryId = 1,
+                   Credit = 10,
+
+                }, YunClient.GetAdminToken());
+
+            Assert.IsTrue(req != null);
+        }
         
 
     }
