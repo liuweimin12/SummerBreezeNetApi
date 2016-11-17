@@ -20,7 +20,7 @@ namespace Yun.Site
         /// <summary>
         /// 创建时间
         /// </summary>
-        [XmlElement("create_times")]
+        [XmlElement("create_time")]
         public string CreateTime { get; set; }
 
         /// <summary>
