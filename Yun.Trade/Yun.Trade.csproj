@@ -53,6 +53,7 @@
     <Compile Include="PromotionsInOrder.cs" />
     <Compile Include="RefundDetail.cs" />
     <Compile Include="RefundHistory.cs" />
+    <Compile Include="Request\AddRefundRemarkRequest.cs" />
     <Compile Include="Request\BatchConfirmTradeRequest.cs" />
     <Compile Include="Request\BatchSaveMemoTradeRequest.cs" />
     <Compile Include="Request\ChangeRefundStatusRequest.cs" />
