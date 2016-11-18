@@ -68,6 +68,7 @@
     <Compile Include="Request\GetExpressFeePriceRequest.cs" />
     <Compile Include="Request\GetItemEvaluateRequest.cs" />
     <Compile Include="Request\GetItemTradeStatisticsReportRequest.cs" />
+    <Compile Include="Request\GetPurchaseQuantityRequest.cs" />
     <Compile Include="Response\CreateTradeRefundResponse.cs" />
     <Compile Include="Response\GetExpressFeePriceResponse.cs" />
     <Compile Include="Response\GetItemEvaluateResponse.cs" />
