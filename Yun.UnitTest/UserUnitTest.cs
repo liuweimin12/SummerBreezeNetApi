@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Yun.Shop.Request;
+using Yun.Site;
+using Yun.Site.Request;
 using Yun.User.Request;
 using Yun.Util;
 
@@ -48,6 +50,24 @@ namespace Yun.UnitTest
 
         //    Assert.IsTrue(loginReq.UserId > 0);
         //}
+
+        [TestMethod]
+        public void CreateDeviceInitializationRequest()
+        {
+            YunClient.Format = "json";
+            var req =
+                YunClient.Instance.Execute(new CreateDeviceInitializationRequest
+                {
+                    DeviceId = Guid.NewGuid().ToString(),
+                    OuterData = new List<OuterAccount>
+                    {
+                        new OuterAccount {name = "umeng", token = "fsfsdafasfa"},
+                        new OuterAccount {name = "jiguang", token = "ssssfdadafdsafsaf"}
+                    }
+                });
+
+            Assert.IsTrue(req.Result>0);
+        }
 
         [TestMethod]
         public void GetUserSignInStatisticsRequest()
