@@ -45,7 +45,7 @@ namespace Yun.User.Request
                 {"targetuserids", TargetUserIds},
                 {"userid", UserId},
                 {"targetusertype", TargetUserType},
-                {"targetuseruame", TargetUserName},
+                {"targetusername", TargetUserName},
             };
 
             return parameters;
