@@ -40,10 +40,12 @@
     <Compile Include="CartDetail.cs" />
     <Compile Include="CartItemDetail.cs" />
     <Compile Include="Comment.cs" />
+    <Compile Include="CreateOrderVerificationJson.cs" />
     <Compile Include="CreateRefundResult.cs" />
     <Compile Include="DynamicRatingJson.cs" />
     <Compile Include="ExchangeRate.cs" />
     <Compile Include="ExpressFeePriceArgs.cs" />
+    <Compile Include="ItemBuyVerificationResult.cs" />
     <Compile Include="ItemPromotionInShoppingCart.cs" />
     <Compile Include="ItemTradeStatistics.cs" />
     <Compile Include="MemoModel.cs" />
@@ -59,6 +61,7 @@
     <Compile Include="Request\ChangeRefundStatusRequest.cs" />
     <Compile Include="Request\CompleteNoPaidTradeRequest.cs" />
     <Compile Include="Request\ConfirmTradeRequest.cs" />
+    <Compile Include="Request\CreateOrderVerificationRequest.cs" />
     <Compile Include="Request\CreateRefundRequest.cs" />
     <Compile Include="Request\CreateTradeRefundRequest.cs" />
     <Compile Include="Request\DeliveryTradeRequest.cs" />
@@ -68,6 +71,8 @@
     <Compile Include="Request\GetExpressFeePriceRequest.cs" />
     <Compile Include="Request\GetItemEvaluateRequest.cs" />
     <Compile Include="Request\GetItemTradeStatisticsReportRequest.cs" />
+    <Compile Include="Request\GetPurchaseQuantityRequest.cs" />
+    <Compile Include="Response\CreateOrderVerificationResponse.cs" />
     <Compile Include="Response\CreateTradeRefundResponse.cs" />
     <Compile Include="Response\GetExpressFeePriceResponse.cs" />
     <Compile Include="Response\GetItemEvaluateResponse.cs" />

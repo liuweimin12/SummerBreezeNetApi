@@ -46,6 +46,7 @@
     <Compile Include="NotifySetting.cs" />
     <Compile Include="NotifySettingJson.cs" />
     <Compile Include="OperationRecord.cs" />
+    <Compile Include="OuterAccount.cs" />
     <Compile Include="Request\AddBrowsingDataRequest.cs" />
     <Compile Include="Request\AddCityRequest.cs" />
     <Compile Include="Request\AddSiteRequest.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Request\BatchUpdateCitySortRequest.cs" />
     <Compile Include="Request\BatchUpdateElementSortRequest.cs" />
     <Compile Include="Request\ClearCityRequest.cs" />
+    <Compile Include="Request\CreateDeviceInitializationRequest.cs" />
     <Compile Include="Request\DeleteCityRequest.cs" />
     <Compile Include="Request\DeleteSiteVersionRequest.cs" />
     <Compile Include="Request\DeleteSubscriptionRequest.cs" />

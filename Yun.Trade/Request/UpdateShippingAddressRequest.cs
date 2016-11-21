@@ -42,6 +42,26 @@ namespace Yun.Trade.Request
         /// </summary>
         public string DeliveryNote { get; set; }
 
+        /// <summary>
+        /// 省ID
+        /// </summary>
+        public int ProvinceId { get; set; }
+
+        /// <summary>
+        /// 市ID
+        /// </summary>
+        public int CityId { get; set; }
+
+        /// <summary>
+        /// 区ID
+        /// </summary>
+        public int AreaId { get; set; }
+
+        /// <summary>
+        /// 镇ID
+        /// </summary>
+        public int TownId { get; set; }
+
 
         public string GetApiName()
         {
@@ -57,7 +77,11 @@ namespace Yun.Trade.Request
                 {"mobile", Mobile},
                 {"address", Address},
                 {"zipcode", Zipcode},
-                {"deliverynote",DeliveryNote }
+                {"deliverynote",DeliveryNote },
+                {"provinceid",ProvinceId},
+                {"cityid", CityId},
+                {"areaid", AreaId},
+                {"townid", TownId}
             };
             return parameters;
         }

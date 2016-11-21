@@ -7,6 +7,12 @@ namespace Yun.Item
     public class GoodsDetail
     {
         /// <summary>
+        /// 移动端的商品详情
+        /// </summary>
+        [XmlElement("mobile_detail")]
+        public string MobileDetail { get; set; }
+
+        /// <summary>
         /// 每账号限购，控制时间间隔
         /// </summary>
         [XmlElement("per_limit_buy_hour")]
