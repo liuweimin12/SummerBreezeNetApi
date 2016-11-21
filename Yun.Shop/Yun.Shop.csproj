@@ -42,6 +42,8 @@
     <Compile Include="Company.cs" />
     <Compile Include="CompanyDomain.cs" />
     <Compile Include="CustomerServiceDetail.cs" />
+    <Compile Include="FinancialType.cs" />
+    <Compile Include="FinancialTypeDetail.cs" />
     <Compile Include="ItemCat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Request\AddCompanyRequest.cs" />
@@ -74,6 +76,7 @@
     <Compile Include="Request\GetShopCategoryRequest.cs" />
     <Compile Include="Request\GetShopCustomerserviceDetailRequest.cs" />
     <Compile Include="Request\GetShopFavoritesRequest.cs" />
+    <Compile Include="Request\GetShopFinancialSummaryRequest.cs" />
     <Compile Include="Request\GetShopHomeSeoRequest.cs" />
     <Compile Include="Request\GetShopQuestionRequest.cs" />
     <Compile Include="Request\GetShopQuestionsRequest.cs" />
@@ -104,6 +107,7 @@
     <Compile Include="Response\GetShopCategoriesResponse.cs" />
     <Compile Include="Response\GetShopCategoryResponse.cs" />
     <Compile Include="Response\GetShopFavoritesResponse.cs" />
+    <Compile Include="Response\GetShopFinancialSummaryResponse.cs" />
     <Compile Include="Response\GetShopsResponse.cs" />
     <Compile Include="Response\LongResponse.cs" />
     <Compile Include="Response\QuestionResponse.cs" />
@@ -114,6 +118,7 @@
     <Compile Include="ShopAsk.cs" />
     <Compile Include="ShopDetail.cs" />
     <Compile Include="ShopFavorite.cs" />
+    <Compile Include="ShopFinancialSummary.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Yun\Yun.csproj">
