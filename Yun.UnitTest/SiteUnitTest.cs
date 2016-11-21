@@ -222,7 +222,54 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req != null);
         }
+        /// <summary>
+        /// 新增站点的版本号
+        /// </summary>
+        [TestMethod]
+        public void AddSiteVersionRequest()
+        {
+            YunClient.Format = "json";
+
+            var req =
+                YunClient.Instance.Execute(new AddSiteVersionRequest
+                {
+                 Title = "测试001",
+                 Version = "001"
+
+                });
+
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void FindSiteVersionsRequest()
+        {
+            YunClient.Format = "json";
+
+            var req =
+                YunClient.Instance.Execute(new FindSiteVersionsRequest
+                {
+                    
+
+                });
+
+            Assert.IsTrue(req != null);
+        }
+        [TestMethod]
+        public void GetTheLatestVersionRequest()
+        {
+            YunClient.Format = "json";
+
+            var req =
+                YunClient.Instance.Execute(new GetTheLatestVersionRequest
+                {
+
+
+                });
+
+            Assert.IsTrue(req != null);
+        }
         
+
 
     }
 }
