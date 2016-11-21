@@ -11,6 +11,11 @@ namespace Yun.Item.Request
     public class AddItemRequest : ITopRequest<IntResultResponse>
     {
         /// <summary>
+        /// 移动端的额商品详情
+        /// </summary>
+        public string MobileDetail { get; set; }
+
+        /// <summary>
         /// 每账号限购，控制时间间隔
         /// </summary>
         public int PerLimitBuyHour { get; set; }
@@ -312,7 +317,8 @@ namespace Yun.Item.Request
                 {"sortorder",SortOrder },
                 {"closetimedelay",CloseTimeDelay },
                 {"perlimitbuyhour",PerLimitBuyHour },
-                {"shopid", ShopId}
+                {"shopid", ShopId},
+                {"mobiledetail", MobileDetail}
             };
             return parameters;
         }
