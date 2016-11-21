@@ -268,6 +268,20 @@ namespace Yun.UnitTest
 
             Assert.IsTrue(req != null);
         }
+        [TestMethod]
+        public void CreateDeviceInitializationRequest()
+        {
+            YunClient.Format = "json";
+
+            var req =
+                YunClient.Instance.Execute(new CreateDeviceInitializationRequest
+                {
+                    DeviceId = "12504",
+
+                });
+
+            Assert.IsTrue(req != null);
+        }
         
 
 
