@@ -17,15 +17,14 @@ namespace Yun.User.Request
         public string UserNick { get; set; }
 
         /// <summary>
-        /// 变化的积分量
-        /// </summary>
-        public int Credit { get; set; }
-
-
-        /// <summary>
         /// 用户ID
         /// </summary>
         public int TargetUserId { get; set; }
+
+        /// <summary>
+        /// 变化的积分量，大于0增加，小于0减少
+        /// </summary>
+        public int Credit { get; set; }
 
 
         /// <summary>
@@ -39,14 +38,25 @@ namespace Yun.User.Request
         public int ExpiredDay { get; set; }
 
         /// <summary>
-        /// 变更详情，不能超过20个字
+        /// 变更详情，最长限制50个中文，100个英文
         /// </summary>
         public string Detail { get; set; }
 
         /// <summary>
-        /// 对应的关系ID，只允许传入英文，数字
+        /// 对应的关系ID
         /// </summary>
         public string DetailId { get; set; }
+
+
+        /// <summary>
+        /// 积分类型，自定义
+        /// </summary>
+        public string IntegralType { get; set; }
+
+        /// <summary>
+        /// 流水号,保证全局唯一
+        /// </summary>
+        public string SerialNumber { get; set; }
 
 
         public string GetApiName()
@@ -64,6 +74,8 @@ namespace Yun.User.Request
                 {"remark", Remark},
                 {"detail", Detail},
                 {"detailid", DetailId},
+                {"integraltype",IntegralType },
+                {"serialnumber",SerialNumber },
                 {"targetuserid",TargetUserId }
             };
             return parameters;
@@ -71,8 +83,11 @@ namespace Yun.User.Request
 
         public void Validate()
         {
+            RequestValidator.ValidateRequired("integraltype", IntegralType);
             RequestValidator.ValidateRequired("detail", Detail);
+            RequestValidator.ValidateMaxLength("detail", Detail, 100);
             RequestValidator.ValidateRequired("credit", Credit);
+            RequestValidator.ValidateRequired("serialnumber", SerialNumber);
         }
     }
 }

@@ -22,6 +22,28 @@ namespace Yun.User.Request
         public int Integral { get; set; }
 
 
+        /// <summary>
+        /// 备注
+        /// </summary>
+        public string Remark { get; set; }
+
+        /// <summary>
+        /// 变更详情，最长限制50个中文，100个英文
+        /// </summary>
+        public string Detail { get; set; }
+
+
+        /// <summary>
+        /// 积分类型，不能和系统自有字段冲突
+        /// </summary>
+        public string IntegralType { get; set; }
+
+        /// <summary>
+        /// 流水号,保证全局唯一
+        /// </summary>
+        public string SerialNumber { get; set; }
+
+
         public string GetApiName()
         {
             return "yun.user.integral.transfer";
@@ -31,8 +53,12 @@ namespace Yun.User.Request
         {
             var parameters = new YunDictionary
             {
-                {"targetuserid", TargetUserId},
-                {"integral", Integral}
+                {"integral", Integral},
+                {"remark", Remark},
+                {"detail", Detail},
+                {"integraltype",IntegralType },
+                {"serialnumber",SerialNumber },
+                {"targetuserid",TargetUserId }
             };
 
             return parameters;
@@ -40,6 +66,10 @@ namespace Yun.User.Request
 
         public void Validate()
         {
+            RequestValidator.ValidateRequired("integraltype", IntegralType);
+            RequestValidator.ValidateRequired("detail", Detail);
+            RequestValidator.ValidateMaxLength("detail", Detail, 100);
+            RequestValidator.ValidateRequired("serialnumber", SerialNumber);
             RequestValidator.ValidateRequired("targetuserid", TargetUserId);
             RequestValidator.ValidateRequired("integral", Integral);
             RequestValidator.ValidateMinValue("integral", Integral, 1);
