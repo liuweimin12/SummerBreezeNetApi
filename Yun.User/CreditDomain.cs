@@ -14,6 +14,12 @@ namespace Yun.User
         public int UserId { get; set; }
 
         /// <summary>
+        /// 关联用户
+        /// </summary>
+        [XmlElement("related_user_id")]
+        public int RelatedUserId { get; set; }
+
+        /// <summary>
         /// 详情
         /// </summary>
         [XmlElement("detail")]
