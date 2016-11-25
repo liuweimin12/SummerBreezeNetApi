@@ -337,7 +337,7 @@ namespace Yun.Item
         /// 积分限制
         /// </summary>
         [XmlElement("integral_limit")]
-        public int Integrallimit { get; set; }
+        public double Integrallimit { get; set; }
 
 
         /// <summary>

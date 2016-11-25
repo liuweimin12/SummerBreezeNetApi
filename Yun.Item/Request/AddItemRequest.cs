@@ -29,7 +29,7 @@ namespace Yun.Item.Request
         /// <summary>
         /// 积分限制
         /// </summary>
-        public int Integrallimit { get; set; }
+        public double Integrallimit { get; set; }
 
         /// <summary>
         /// 库存计数方式，0：付款减库存，1：拍下减库存
@@ -108,8 +108,6 @@ namespace Yun.Item.Request
         /// 上架时间
         /// </summary>
         public long OnShelfTime { get; set; }
-
-
 
         /// <summary>
         /// 运费模板Id

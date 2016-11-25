@@ -20,7 +20,7 @@ namespace Yun.Item.Request
         /// <summary>
         /// 商品积分限制
         /// </summary>
-        public int Integrallimit { get; set; }
+        public double Integrallimit { get; set; }
 
         /// <summary>
         /// 库存计数方式，0：付款减库存，1：拍下减库存
@@ -42,18 +42,21 @@ namespace Yun.Item.Request
         /// </summary>
         public double Volume { get; set; }
 
+        /// <summary>
+        /// 商品ID
+        /// </summary>
         public int ItemId { get; set; }
-
-
 
         /// <summary>
         /// 团购标题
         /// </summary>
         public string TuanTitle { get; set; }
+
         /// <summary>
         /// 商品标题
         /// </summary>
         public string ItemTitle { get; set; }
+
         /// <summary>
         /// 副标题
         /// </summary>
