@@ -101,7 +101,14 @@ namespace Yun.Coupon.Request
         /// <summary>
         /// 公司ID
         /// </summary>
-        public int CompanyId { get; set; }
+        public int? CompanyId { get; set; }
+
+
+        /// <summary>
+        /// 店铺ID
+        /// </summary>
+        public int? ShopId { get; set; }
+
 
         public string GetApiName()
         {
@@ -125,7 +132,8 @@ namespace Yun.Coupon.Request
                 {"verifynick", VerifyNick},
                 {"buyernick", BuyerNick},
                 {"sort", Sort},
-                {"companyid", CompanyId}
+                {"companyid", CompanyId},
+                {"shopid", ShopId}
             };
             return parameters;
         }

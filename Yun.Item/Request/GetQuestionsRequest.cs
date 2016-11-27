@@ -10,7 +10,7 @@ namespace Yun.Item.Request
         /// <summary>
         /// 店铺Id
         /// </summary>
-        public int ShopId { get; set; }
+        public int? ShopId { get; set; }
 
         /// <summary>
         /// 商品ID
@@ -58,7 +58,6 @@ namespace Yun.Item.Request
 
         public void Validate()
         {
-            RequestValidator.ValidateRequired("itemid", ItemId);
             RequestValidator.ValidateRequired("pagenum", PageNum);
             RequestValidator.ValidateRequired("pagesize", PageSize);
         }

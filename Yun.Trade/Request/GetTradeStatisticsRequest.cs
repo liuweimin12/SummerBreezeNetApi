@@ -46,13 +46,13 @@ namespace Yun.Trade.Request
         /// <summary>
         /// 店铺ID
         /// </summary>
-        public int ShopId { get; set; }
+        public int? ShopId { get; set; }
 
 
         /// <summary>
         /// 公司ID
         /// </summary>
-        public int CompanyId { get; set; }
+        public int? CompanyId { get; set; }
 
 
 

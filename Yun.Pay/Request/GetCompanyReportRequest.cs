@@ -73,12 +73,12 @@ namespace Yun.Pay.Request
         /// <summary>
         /// 店铺ID
         /// </summary>
-        public int ShopId { get; set; }
+        public int? ShopId { get; set; }
 
 
         public int OwnerId { get; set; }
 
-        public int CompanyId { get; set; }
+        public int? CompanyId { get; set; }
 
         public string GetApiName()
         {
