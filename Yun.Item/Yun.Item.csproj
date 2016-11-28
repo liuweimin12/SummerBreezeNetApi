@@ -63,6 +63,7 @@
     <Compile Include="Request\UpdateItemCatRequest.cs" />
     <Compile Include="Request\UpdateItemPriceRequest.cs" />
     <Compile Include="Request\UpdateItemStateRequest.cs" />
+    <Compile Include="Request\IncreaseItemViewsRequest.cs" />
     <Compile Include="Request\UpdateShopItemCategoryDisplayRequest.cs" />
     <Compile Include="Request\UpdateSortItemCategoryRequest.cs" />
     <Compile Include="Request\UpdateItemStockRequest.cs" />
