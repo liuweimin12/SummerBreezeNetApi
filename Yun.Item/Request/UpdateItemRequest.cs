@@ -23,6 +23,11 @@ namespace Yun.Item.Request
         public double Integrallimit { get; set; }
 
         /// <summary>
+        /// JSON格式的SKU
+        /// </summary>
+        public List<JsonCustomSkus> JsonCustomSkus { get; set; }
+
+        /// <summary>
         /// 库存计数方式，0：付款减库存，1：拍下减库存
         /// </summary>
         public int InventoryCount { get; set; }
@@ -337,7 +342,8 @@ namespace Yun.Item.Request
                 {"closetimedelay",CloseTimeDelay },
                 {"perlimitbuyhour",PerLimitBuyHour },
                 {"shopid", ShopId},
-                {"mobiledetail", MobileDetail}
+                {"mobiledetail", MobileDetail},
+                {"jsoncustomskus",JsonCustomSkus }
             };
 
             return parameters;

@@ -40,6 +40,7 @@
     <Compile Include="GroupingShopItem.cs" />
     <Compile Include="ItemBookDomain.cs" />
     <Compile Include="GoodsDetailPromotions.cs" />
+    <Compile Include="JsonCustomSkus.cs" />
     <Compile Include="Request\AddFavoritesItemRequest.cs" />
     <Compile Include="Request\AddItemBookRequest.cs" />
     <Compile Include="Request\BatchUpdateItemCatSortRequest.cs" />

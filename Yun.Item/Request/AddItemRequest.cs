@@ -261,6 +261,10 @@ namespace Yun.Item.Request
         /// </summary>
         public int? ShopId { get; set; }
 
+        /// <summary>
+        /// JSON格式的SKU
+        /// </summary>
+        public List<JsonCustomSkus> JsonCustomSkus { get; set; }
 
         public string GetApiName()
         {
@@ -316,7 +320,8 @@ namespace Yun.Item.Request
                 {"closetimedelay",CloseTimeDelay },
                 {"perlimitbuyhour",PerLimitBuyHour },
                 {"shopid", ShopId},
-                {"mobiledetail", MobileDetail}
+                {"mobiledetail", MobileDetail},
+                {"jsoncustomskus",JsonCustomSkus }
             };
             return parameters;
         }
