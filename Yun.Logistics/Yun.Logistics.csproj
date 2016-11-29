@@ -55,7 +55,6 @@
     <Compile Include="Request\AddDeliveryTemplateRequest.cs" />
     <Compile Include="Request\DeleteAddressRequest.cs" />
     <Compile Include="Request\DeleteDeliveryTemplateRequest.cs" />
-    <Compile Include="Request\DeleteExpressTemplateRequest.cs" />
     <Compile Include="Request\GetAddressesRequest.cs" />
     <Compile Include="Request\GetAddressRequest.cs" />
     <Compile Include="Request\GetDefaultAddressRequest.cs" />

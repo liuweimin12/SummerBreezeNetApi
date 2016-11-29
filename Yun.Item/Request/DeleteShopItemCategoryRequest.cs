@@ -15,6 +15,11 @@ namespace Yun.Item.Request
         /// </summary>
         public int Id { get; set; }
 
+        /// <summary>
+        /// 店铺ID
+        /// </summary>
+        public int ShopId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.shop.item.category.delete";
@@ -24,8 +29,10 @@ namespace Yun.Item.Request
         {
             var parameters = new YunDictionary
             {
-                {"id",Id}
+                {"id", Id},
+                {"shopid", ShopId}
             };
+
             return parameters;
         }
 

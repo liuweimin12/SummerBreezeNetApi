@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Yun.Interface;
 using Yun.Response;
 using Yun.Util;
@@ -15,6 +12,11 @@ namespace Yun.Logistics.Request
         /// </summary>
         public int Id { get; set; }
 
+        /// <summary>
+        /// 店铺ID
+        /// </summary>
+        public int? ShopId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.delivery.template.delete";
@@ -24,7 +26,8 @@ namespace Yun.Logistics.Request
         {
             var parameters = new YunDictionary
             {
-                {"id",Id}
+                {"id",Id},
+                {"shopid",ShopId }
             };
             return parameters; 
         }

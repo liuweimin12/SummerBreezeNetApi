@@ -44,5 +44,11 @@ namespace Yun.Item
          /// </summary>
          [XmlElement("description")]
          public string Description { get; set; }
+
+        /// <summary>
+        /// 店铺ID
+        /// </summary>
+        [XmlElement("shop_id")]
+        public int ShopId { get; set; }
     }
 }
