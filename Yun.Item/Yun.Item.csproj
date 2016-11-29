@@ -61,6 +61,7 @@
     <Compile Include="Request\RealDelItemRequest.cs" />
     <Compile Include="Request\RestoreItemRequest.cs" />
     <Compile Include="Request\SearchLimitDiscountItemRequest.cs" />
+    <Compile Include="Request\UpdateAuditStateRequest.cs" />
     <Compile Include="Request\UpdateItemCatRequest.cs" />
     <Compile Include="Request\UpdateItemPriceRequest.cs" />
     <Compile Include="Request\UpdateItemStateRequest.cs" />

@@ -11,6 +11,11 @@ namespace Yun.Item.Request
     public class AddItemRequest : ITopRequest<IntResultResponse>
     {
         /// <summary>
+        /// 审核状态，1为需要审核，0不需要审核
+        /// </summary>
+        public int AuditState { get; set; }
+
+        /// <summary>
         /// 移动端的额商品详情
         /// </summary>
         public string MobileDetail { get; set; }
@@ -321,7 +326,8 @@ namespace Yun.Item.Request
                 {"perlimitbuyhour",PerLimitBuyHour },
                 {"shopid", ShopId},
                 {"mobiledetail", MobileDetail},
-                {"jsoncustomskus",JsonCustomSkus }
+                {"jsoncustomskus",JsonCustomSkus },
+                {"auditstate",AuditState }
             };
             return parameters;
         }
