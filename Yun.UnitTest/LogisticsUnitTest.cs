@@ -45,20 +45,6 @@ namespace Yun.UnitTest
         }
 
         [TestMethod]
-        public void DeleteExpressTemplateRequest()
-        {
-            YunClient.Format = "xml";
-            var req =
-                YunClient.Instance.Execute(new DeleteExpressTemplateRequest
-                {
-                    Id = 1
-                }, YunClient.GetAdminToken());
-
-            Assert.IsTrue(req != null);
-
-        }
-
-        [TestMethod]
         public void GetAddressesRequest()
         {
             YunClient.Format = "json";

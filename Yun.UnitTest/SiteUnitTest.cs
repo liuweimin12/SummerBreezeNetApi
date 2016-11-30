@@ -125,8 +125,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new GetImageTextsSiteElementRequest
                 {
-                    ModuleId = 1,
-                    ModuleFlag = "flag",
+                    ModuleId = 18,
                     Num = 7
 
                 });

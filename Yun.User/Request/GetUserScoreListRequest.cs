@@ -66,6 +66,28 @@ namespace Yun.User.Request
         /// </summary>
         public int? CompanyId { get; set; }
 
+        /// <summary>
+        /// 用户ID
+        /// </summary>
+        public int? UserId { get; set; }
+
+
+        /// <summary>
+        /// 开始时间
+        /// </summary>
+        public DateTime? StartTime { get; set; }
+
+
+        /// <summary>
+        /// 结束时间
+        /// </summary>
+        public DateTime? EndTime { get; set; }
+
+
+        /// <summary>
+        /// 积分类型，不能和系统自有字段冲突
+        /// </summary>
+        public string IntegralType { get; set; }
 
         public string GetApiName()
         {
@@ -81,7 +103,10 @@ namespace Yun.User.Request
                 {"nick", Nick},
                 {"direction", Direction},
                 {"shopid", ShopId},
-                {"companyid", CompanyId}
+                {"userid", UserId},
+                {"starttime", StartTime},
+                {"endtime", EndTime},
+                {"integraltype", IntegralType}
             };
 
             return parameters;
