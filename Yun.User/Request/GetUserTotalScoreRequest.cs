@@ -12,6 +12,12 @@ namespace Yun.User.Request
     public class GetUserTotalScoreRequest : ITopRequest<GetUserTotalScoreResponse>
     {
         /// <summary>
+        /// 用户ID
+        /// </summary>
+        public int? UserId { get; set; }
+
+
+        /// <summary>
         /// 用户昵称
         /// </summary>
         public string Nick { get; set; }
@@ -38,7 +44,8 @@ namespace Yun.User.Request
             {
                 {"nick", Nick},
                 {"starttime",StartTime},
-                {"endtime",EndTime}
+                {"endtime",EndTime},
+                {"userid",UserId }
             };
             return parameters;
         }

@@ -16,5 +16,11 @@ namespace Yun.User
         /// </summary>
         [XmlElement("expenses")]
         public int Expenses { get; set; }
+
+        /// <summary>
+        /// 剩余量
+        /// </summary>
+        [XmlElement("balance")]
+        public int Balance { get; set; }
     }
 }
