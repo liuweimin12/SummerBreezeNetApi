@@ -11,6 +11,8 @@ namespace Yun.User.Request
         {
             return "chenggou.permission.user.get";
         }
+
+
         public int Id { get; set; }
 
         public string Fields { get; set; }

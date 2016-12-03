@@ -67,5 +67,11 @@ namespace Yun.Logistics
         /// </summary>
         [XmlElement("shop_id")]
         public int ShopId { get; set; }
+
+        /// <summary>
+        /// 是否默认
+        /// </summary>
+        [XmlElement("is_default")]
+        public bool IsDefault { get; set; }
     }
 }

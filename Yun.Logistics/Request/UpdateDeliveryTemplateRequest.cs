@@ -8,6 +8,11 @@ namespace Yun.Logistics.Request
     public class UpdateDeliveryTemplateRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>
+        /// 是否设置为默认
+        /// </summary>
+        public bool IsDefault { get; set; }
+
+        /// <summary>
         /// 模板名称
         /// </summary>
         public string Title { get; set; }
