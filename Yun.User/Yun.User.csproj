@@ -56,7 +56,6 @@
     <Compile Include="Request\AddRelationRoleFunctionRequest.cs" />
     <Compile Include="Request\AddRoleRequest.cs" />
     <Compile Include="Request\AddUserTagRequest.cs" />
-    <Compile Include="Request\AllowFunctionRequest.cs" />
     <Compile Include="Request\AnalogShopLoginRequest.cs" />
     <Compile Include="Request\ApplyRealNameAuthenticationRequest.cs" />
     <Compile Include="Request\AssociatedUserTagsRequest.cs" />
