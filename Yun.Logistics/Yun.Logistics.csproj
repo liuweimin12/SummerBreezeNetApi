@@ -47,6 +47,7 @@
     <Compile Include="Request\GetLogisticsRecordRequest.cs" />
     <Compile Include="Request\GetShippingRecordRequest.cs" />
     <Compile Include="Request\GetTheMostExpensiveTemplateRequest.cs" />
+    <Compile Include="Request\SetDefaultLogisticsTemplateRequest.cs" />
     <Compile Include="Response\GetAddressesResponse.cs" />
     <Compile Include="Response\GetAddressResponse.cs" />
     <Compile Include="Response\GetDefaultAddressResponse.cs" />
