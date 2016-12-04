@@ -1,42 +1,38 @@
 ﻿using System.Collections.Generic;
 using Yun.Interface;
 using Yun.Response;
+using Yun.Util;
 
 namespace Yun.User.Request
 {
     /// <summary>
-    /// 重置后台功能
-    /// chenggou.permission.function.rest
+    /// 用户的授权判断
+    /// yun.permission.authorization.judgment
     /// </summary>
-    public class ResetFunctionsRequest :ITopRequest<BoolResultResponse>
+    public class AuthorizationJudgmentRequest : ITopRequest<IntResultResponse>
     {
         /// <summary>
-        /// 公司ID
+        /// 访问路径
         /// </summary>
-        public int? CompanyId { get; set; }
-
-        /// <summary>
-        /// 类型ID
-        /// </summary>
-        public int TypeId { get; set; }
+        public string AccessPath { get; set; }
 
         public string GetApiName()
         {
-            return "chenggou.permission.function.rest";
+            return "yun.permission.authorization.judgment";
         }
 
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
             {
-                {"companyid", CompanyId},
-                {"typeid", TypeId}
+                {"accesspath",AccessPath}
             };
             return parameters;
         }
 
         public void Validate()
         {
+            RequestValidator.ValidateRequired("accesspath", AccessPath);
         }
     }
 }

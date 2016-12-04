@@ -60,6 +60,7 @@
     <Compile Include="Request\AnalogShopLoginRequest.cs" />
     <Compile Include="Request\ApplyRealNameAuthenticationRequest.cs" />
     <Compile Include="Request\AssociatedUserTagsRequest.cs" />
+    <Compile Include="Request\AuthorizationJudgmentRequest.cs" />
     <Compile Include="Request\BuildFriendRelationshipsRequest.cs" />
     <Compile Include="Request\GetDeviceInitializationRequest.cs" />
     <Compile Include="Request\UserExitRequest.cs" />

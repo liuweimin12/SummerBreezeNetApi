@@ -56,7 +56,7 @@ namespace Yun.User.Request
         /// <summary>
         /// 公司ID
         /// </summary>
-        public int CompanyId { get; set; }
+        public int? CompanyId { get; set; }
 
         public string GetApiName()
         {
