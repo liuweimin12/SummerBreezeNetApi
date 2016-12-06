@@ -96,15 +96,11 @@ namespace Yun.User.Request
         /// 角色ID，多个用英文逗号分隔
         /// </summary>
         public string RoleIds { get; set; }
-
-        public int ShopId { get; set; }
-
+        
         /// <summary>
         /// APP密匙
         /// </summary>
         public string AppSecret { get; set; }
-
-        public int SystemLevel { get; set; }
 
         public string GetApiName()
         {
@@ -132,9 +128,7 @@ namespace Yun.User.Request
                 {"workplace",WorkPlace},
                 {"organizationid",OrganizationId},
                 {"isfemale",IsFemale},
-                {"roleids",RoleIds},
-                {"systemlevel",SystemLevel},
-                {"shopid",ShopId}
+                {"roleids",RoleIds}
             };
             return parameters;
         }
