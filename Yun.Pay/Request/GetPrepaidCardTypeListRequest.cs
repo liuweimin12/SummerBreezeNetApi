@@ -54,6 +54,11 @@ namespace Yun.Pay.Request
         /// </summary>
         public int? CompanyId { get; set; }
 
+        /// <summary>
+        /// 类型名称
+        /// </summary>
+        public string TypeName { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.prepaidcard.category.list.get";
@@ -63,11 +68,13 @@ namespace Yun.Pay.Request
         {
             var parameters = new YunDictionary
             {
-                {"pagenum",PageNum},
-                {"pagesize",PageSize},
-                {"shopid",ShopId},
-                {"companyid",CompanyId}
+                {"pagenum", PageNum},
+                {"pagesize", PageSize},
+                {"shopid", ShopId},
+                {"companyid", CompanyId},
+                {"typename", TypeName}
             };
+
             return parameters;
         }
 
