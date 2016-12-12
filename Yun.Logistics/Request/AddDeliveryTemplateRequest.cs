@@ -66,7 +66,8 @@ namespace Yun.Logistics.Request
                 {"farefreestrategy", FareFreeStrategy},
                 {"pricetype", PriceType},
                 {"callbackurl", CallbackUrl},
-                {"shopid", ShopId}
+                {"shopid", ShopId},
+                {"isdefault", IsDefault}
             };
 
             return parameters;
