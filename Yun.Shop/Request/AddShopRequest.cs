@@ -8,6 +8,12 @@ namespace Yun.Shop.Request
 {
     public class AddShopRequest : ITopUploadRequest<IntResultResponse>
     {
+
+        /// <summary>
+        /// 是否允许开票
+        /// </summary>
+        public int AllowInvoice { get; set; }
+
         /// <summary>
         /// 店铺名称
         /// </summary>
@@ -216,7 +222,8 @@ namespace Yun.Shop.Request
                 {"shoptype",ShopType },
                 {"parentid",ParentId },
                 {"usertype",UserType },
-                {"binduserid",BindUserId }
+                {"binduserid",BindUserId },
+                { "allowinvoice",AllowInvoice}
             };
             return parameters;
         }

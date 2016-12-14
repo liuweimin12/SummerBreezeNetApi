@@ -6,6 +6,11 @@ namespace Yun.Shop
 {
     public class ShopDetail
     {
+        /// <summary>
+        /// 是否允许开票，0是不允许
+        /// </summary>
+        [XmlElement("allow_invoice")]
+        public int AllowInvoice { get; set; }
 
         /// <summary>
         /// 主营类目链表

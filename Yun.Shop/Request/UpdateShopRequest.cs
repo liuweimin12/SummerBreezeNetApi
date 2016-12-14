@@ -142,6 +142,11 @@ namespace Yun.Shop.Request
         /// </summary>
         public int ShopType { get; set; }
 
+        /// <summary>
+        /// 是否允许开票
+        /// </summary>
+        public int AllowInvoice { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.shop.update";
@@ -176,7 +181,8 @@ namespace Yun.Shop.Request
                 {"maincategoryid",MainCategoryId },
                 {"banner",Banner },
                 {"contacts",Contacts },
-                {"shoptype",ShopType }
+                {"shoptype",ShopType },
+                { "allowinvoice",AllowInvoice}
             };
             return parameters;
         }
