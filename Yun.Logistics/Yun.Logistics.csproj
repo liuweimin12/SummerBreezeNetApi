@@ -43,6 +43,8 @@
     <Compile Include="LogisticsInformation.cs" />
     <Compile Include="LogisticsInformationContent.cs" />
     <Compile Include="LogisticsPriceJson.cs" />
+    <Compile Include="Request\AddOrUpdateCommonlyUsedExpressRequest.cs" />
+    <Compile Include="Request\DeleteCommonlyUsedExpressRequest.cs" />
     <Compile Include="Request\GetLogisticsCompanyNameRequest.cs" />
     <Compile Include="Request\GetLogisticsRecordRequest.cs" />
     <Compile Include="Request\GetShippingRecordRequest.cs" />
