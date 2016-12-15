@@ -13,9 +13,32 @@ namespace Yun.User.Request
     public class GetUserScoreGroupByDateRequest: ITopRequest<GetUserScoreGroupByDateResponse>
     {
         /// <summary>
-        /// 开始时间
+        /// 页码
         /// </summary>
-        public DateTime? StartTime { get; set; }
+        public int PageNum
+        {
+            get { return _pageNum; }
+            set
+            {
+                _pageNum = value < 1 ? 1 : value;
+            }
+        }
+
+        private int _pageNum = 1;
+
+        /// <summary>
+        /// 页容量
+        /// </summary>
+        public int PageSize
+        {
+            get { return _pageSize; }
+            set
+            {
+                _pageSize = value < 1 ? 1 : value;
+            }
+        }
+
+        private int _pageSize = 1;
 
         /// <summary>
         /// 结束时间
@@ -31,7 +54,8 @@ namespace Yun.User.Request
         {
             var parameters = new YunDictionary
             {
-                {"starttime",StartTime},
+                {"pagenum",PageNum},
+                {"pagesize",PageSize},
                 {"endtime",EndTime}
             };
             return parameters;
@@ -39,7 +63,6 @@ namespace Yun.User.Request
 
         public void Validate()
         {
-            RequestValidator.ValidateRequired("starttime", StartTime);
             RequestValidator.ValidateRequired("endtime", EndTime);
         }
     }
