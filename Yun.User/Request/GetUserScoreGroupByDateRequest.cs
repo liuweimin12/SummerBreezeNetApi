@@ -63,7 +63,6 @@ namespace Yun.User.Request
 
         public void Validate()
         {
-            RequestValidator.ValidateRequired("endtime", EndTime);
         }
     }
 }
