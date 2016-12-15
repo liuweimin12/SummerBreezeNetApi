@@ -45,6 +45,11 @@ namespace Yun.User.Request
         /// </summary>
         public DateTime? EndTime { get; set; }
 
+        /// <summary>
+        /// 结束时间
+        /// </summary>
+        public DateTime? StartTime { get; set; }
+
         public string GetApiName()
         {
             return "yun.user.score.list.groupbyday.get";
@@ -56,7 +61,8 @@ namespace Yun.User.Request
             {
                 {"pagenum",PageNum},
                 {"pagesize",PageSize},
-                {"endtime",EndTime}
+                {"endtime",EndTime},
+                {"starttime",StartTime }
             };
             return parameters;
         }
