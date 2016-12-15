@@ -292,6 +292,12 @@ namespace Yun.Item.Request
         /// </summary>
         public long CloseTimeDelay { get; set; }
 
+
+        /// <summary>
+        /// LOGO
+        /// </summary>
+        public string Picture { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.item.update";
@@ -349,7 +355,8 @@ namespace Yun.Item.Request
                 {"shopid", ShopId},
                 {"mobiledetail", MobileDetail},
                 {"jsoncustomskus",JsonCustomSkus },
-                {"auditstate",AuditState }
+                {"auditstate",AuditState },
+                {"picture",Picture},
             };
 
             return parameters;
