@@ -91,6 +91,17 @@ namespace Yun.User.Request
         /// </summary>
         public string IdCard { get; set; }
 
+        /// <summary>
+        /// 用户密码
+        /// </summary>
+        public string Password { get; set; }
+
+        /// <summary>
+        /// APP密匙
+        /// </summary>
+        public string AppSecret { get; set; }
+
+
         public string GetApiName()
         {
             return "chenggou.oauth2.login";
@@ -112,7 +123,8 @@ namespace Yun.User.Request
                 {"logintype", LoginType},
                 {"clientinfo", ClientInfo},
                 {"deviceid",DeviceId },
-                {"idcard",IdCard }
+                {"idcard",IdCard },
+                {"password", TopUtils.EncryptAes(Password, AppSecret)},
             };
             return parameters;
         }
