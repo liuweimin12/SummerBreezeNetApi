@@ -51,8 +51,14 @@ namespace Yun.Item
         /// <summary>
         /// 是否失效
         /// </summary>
-        [XmlElement("is_invalid")]
-        public bool IsInvalid { get; set; }
+        //[XmlElement("is_invalid")]
+        //public bool IsInvalid { get; set; }
+
+        /// <summary>
+        /// 商品详情
+        /// </summary>
+        [XmlElement("goods_detail")]
+        public GoodsDetail GoodsDetail { get; set; }
 
 
         /// <summary>

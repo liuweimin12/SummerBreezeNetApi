@@ -49,6 +49,23 @@ namespace Yun.Item.Request
         /// </summary>
         public int UserId { get; set; }
 
+        /// <summary>
+        /// 是否需要促销的信息
+        /// </summary>
+        public bool NeedPromotion { get; set; }
+
+        /// <summary>
+        /// 图像尺寸
+        /// </summary>
+        public int? ImageSize { get; set; }
+
+        /// <summary>
+        /// 商品字段
+        /// </summary>
+        public string Fields { get; set; }
+
+
+
         public string GetApiName()
         {
             return "yun.item.favorites.get";
@@ -60,7 +77,10 @@ namespace Yun.Item.Request
             {
                 {"pagenum", PageNum},
                 {"pagesize", PageSize},
-                {"userid", UserId}
+                {"userid", UserId},
+                {"needpromotion", NeedPromotion},
+                {"imagesize", ImageSize},
+                {"fields", Fields},
             };
             return parameters;
         }
