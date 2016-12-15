@@ -36,6 +36,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonlyUsedExpress.cs" />
     <Compile Include="DeliveryTemplate.cs" />
     <Compile Include="FareFreeCondition.cs" />
     <Compile Include="FareFreeJson.cs" />
@@ -45,6 +46,7 @@
     <Compile Include="LogisticsPriceJson.cs" />
     <Compile Include="Request\AddOrUpdateCommonlyUsedExpressRequest.cs" />
     <Compile Include="Request\DeleteCommonlyUsedExpressRequest.cs" />
+    <Compile Include="Request\GetCommonlyUsedExpressRequest.cs" />
     <Compile Include="Request\GetLogisticsCompanyNameRequest.cs" />
     <Compile Include="Request\GetLogisticsRecordRequest.cs" />
     <Compile Include="Request\GetShippingRecordRequest.cs" />
@@ -52,6 +54,7 @@
     <Compile Include="Request\SetDefaultLogisticsTemplateRequest.cs" />
     <Compile Include="Response\GetAddressesResponse.cs" />
     <Compile Include="Response\GetAddressResponse.cs" />
+    <Compile Include="Response\GetCommonlyUsedExpressResponse.cs" />
     <Compile Include="Response\GetDefaultAddressResponse.cs" />
     <Compile Include="PostfareDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
