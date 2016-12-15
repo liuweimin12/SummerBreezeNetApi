@@ -85,6 +85,12 @@ namespace Yun.User.Request
         /// </summary>
         public string DeviceId { get; set; }
 
+
+        /// <summary>
+        /// 身份证号码
+        /// </summary>
+        public string IdCard { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.oauth2.login";
@@ -105,7 +111,8 @@ namespace Yun.User.Request
                 {"shopid",ShopId},
                 {"logintype", LoginType},
                 {"clientinfo", ClientInfo},
-                {"deviceid",DeviceId }
+                {"deviceid",DeviceId },
+                {"idcard",IdCard }
             };
             return parameters;
         }
