@@ -271,6 +271,12 @@ namespace Yun.Item.Request
         /// </summary>
         public List<JsonCustomSkus> JsonCustomSkus { get; set; }
 
+        /// <summary>
+        /// LOGO
+        /// </summary>
+        public string Picture { get; set; }
+
+
         public string GetApiName()
         {
             return "chenggou.item.add";
@@ -327,7 +333,8 @@ namespace Yun.Item.Request
                 {"shopid", ShopId},
                 {"mobiledetail", MobileDetail},
                 {"jsoncustomskus",JsonCustomSkus },
-                {"auditstate",AuditState }
+                {"auditstate",AuditState },
+                {"picture", Picture }
             };
             return parameters;
         }
