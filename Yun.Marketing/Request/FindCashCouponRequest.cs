@@ -75,6 +75,12 @@ namespace Yun.Marketing.Request
         /// </summary>
         public int? DisplayPosition { get; set; }
 
+        /// <summary>
+        /// 交易号
+        /// 0:未使用，-1已使用，空则为全部，其他正数则对应使用的交易
+        /// </summary>
+        public int? TradeId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.cashcoupon.find";
@@ -93,7 +99,8 @@ namespace Yun.Marketing.Request
                 {"coupontype",CouponType },
                 {"minprice", MinPrice},
                 {"categoryid",CategoryId },
-                {"displayposition",DisplayPosition }
+                {"displayposition",DisplayPosition },
+                {"tradeid",TradeId }
             };
 
             return parameters;
