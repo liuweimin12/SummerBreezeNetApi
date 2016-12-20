@@ -180,6 +180,11 @@ namespace Yun.Shop.Request
 
         public string AppSecret { get; set; }
 
+        /// <summary>
+        /// 副标题
+        /// </summary>
+        public string SubTitle { get; set; }
+
 
         public string GetApiName()
         {
@@ -223,7 +228,8 @@ namespace Yun.Shop.Request
                 {"parentid",ParentId },
                 {"usertype",UserType },
                 {"binduserid",BindUserId },
-                { "allowinvoice",AllowInvoice}
+                { "allowinvoice",AllowInvoice},
+                {"subtitle",SubTitle }
             };
             return parameters;
         }

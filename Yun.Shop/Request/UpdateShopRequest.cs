@@ -147,6 +147,11 @@ namespace Yun.Shop.Request
         /// </summary>
         public int AllowInvoice { get; set; }
 
+        /// <summary>
+        /// 副标题
+        /// </summary>
+        public string SubTitle { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.shop.update";
@@ -182,7 +187,8 @@ namespace Yun.Shop.Request
                 {"banner",Banner },
                 {"contacts",Contacts },
                 {"shoptype",ShopType },
-                { "allowinvoice",AllowInvoice}
+                { "allowinvoice",AllowInvoice},
+                {"subtitle",SubTitle }
             };
             return parameters;
         }

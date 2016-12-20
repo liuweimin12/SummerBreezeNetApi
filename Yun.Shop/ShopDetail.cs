@@ -7,6 +7,12 @@ namespace Yun.Shop
     public class ShopDetail
     {
         /// <summary>
+        /// 副标题名字
+        /// </summary>
+        [XmlElement("sub_title")]
+        public string SubTitle { get; set; }
+
+        /// <summary>
         /// 是否允许开票，0是不允许
         /// </summary>
         [XmlElement("allow_invoice")]
