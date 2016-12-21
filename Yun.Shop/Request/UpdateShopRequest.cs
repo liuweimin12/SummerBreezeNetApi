@@ -87,12 +87,12 @@ namespace Yun.Shop.Request
         /// <summary>
         /// 分类ID
         /// </summary>
-        public int CategoryId { get; set; }
+        public int? CategoryId { get; set; }
 
         /// <summary>
         /// 配送时间
         /// </summary>
-        public int DeliveryTime { get; set; }
+        public int? DeliveryTime { get; set; }
 
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace Yun.Shop.Request
         /// <summary>
         /// 主营类目
         /// </summary>
-        public int MainCategoryId { get; set; }
+        public int? MainCategoryId { get; set; }
 
 
         /// <summary>
@@ -140,12 +140,12 @@ namespace Yun.Shop.Request
         /// <summary>
         /// 店铺类型
         /// </summary>
-        public int ShopType { get; set; }
+        public int? ShopType { get; set; }
 
         /// <summary>
         /// 是否允许开票
         /// </summary>
-        public int AllowInvoice { get; set; }
+        public int? AllowInvoice { get; set; }
 
         /// <summary>
         /// 副标题
@@ -195,7 +195,7 @@ namespace Yun.Shop.Request
 
         public void Validate()
         {
-            RequestValidator.ValidateRequired("title", Title);
+             
             RequestValidator.ValidateMaxLength("phone", this.Phone, 50);
             RequestValidator.ValidateMaxLength("address", this.Address, 100);
             RequestValidator.ValidateMaxLength("hours", this.Hours, 200);
