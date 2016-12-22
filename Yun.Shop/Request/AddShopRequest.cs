@@ -186,6 +186,13 @@ namespace Yun.Shop.Request
         public string SubTitle { get; set; }
 
 
+        /// <summary>
+        ///店铺图标，LOGO
+        /// </summary>         
+        public string Picture { get; set; }
+
+
+
         public string GetApiName()
         {
             return "chenggou.shop.add";
@@ -229,7 +236,8 @@ namespace Yun.Shop.Request
                 {"usertype",UserType },
                 {"binduserid",BindUserId },
                 { "allowinvoice",AllowInvoice},
-                {"subtitle",SubTitle }
+                {"subtitle",SubTitle },
+                {"picture",Picture}
             };
             return parameters;
         }
