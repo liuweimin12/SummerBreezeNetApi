@@ -35,5 +35,19 @@ namespace Yun.Marketing
         /// </summary>
         [XmlElement("level")]
         public int Level { get; set; }
+
+
+        /// <summary>
+        /// 类型
+        /// </summary>
+        [XmlElement("item_type")]
+        public int ItemType { get; set; }
+
+
+        /// <summary>
+        /// 奖品价格
+        /// </summary>
+        [XmlElement("price")]
+        public double Price { get; set; }
     }
 }
