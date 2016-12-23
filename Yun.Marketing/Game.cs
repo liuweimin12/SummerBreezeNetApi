@@ -5,6 +5,12 @@ namespace Yun.Marketing
     public class Game
     {
         /// <summary>
+        /// 状态
+        /// </summary>
+        [XmlElement("state")]
+        public int State { get; set; }
+
+        /// <summary>
         /// 标题图片
         /// </summary>
         [XmlElement("banner")]
