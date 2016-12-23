@@ -57,6 +57,10 @@ namespace Yun.Marketing.Request
         /// </summary>
         public string GameType { get; set; }
 
+        /// <summary>
+        /// 状态
+        /// </summary>
+        public int State { get; set; }
 
 
         public string GetApiName()
@@ -76,7 +80,8 @@ namespace Yun.Marketing.Request
                 {"ext", Ext},
                 {"maxtimes", MaxTimes},
                 {"gametype", GameType},
-                {"banner",Banner }
+                {"banner",Banner },
+                {"state",State }
             };
             return parameters;
         }

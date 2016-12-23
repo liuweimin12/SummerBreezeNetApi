@@ -4,7 +4,14 @@ namespace Yun.Marketing
 {
     public class Game
     {
-                /// <summary>
+        /// <summary>
+        /// 标题图片
+        /// </summary>
+        [XmlElement("banner")]
+        public string Banner { get; set; }
+
+
+        /// <summary>
         /// 游戏ID
         /// </summary>
         [XmlElement("id")]
