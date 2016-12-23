@@ -27,5 +27,16 @@
         /// 奖品等级，可当作排序用
         /// </summary>
         public int level { get; set; }
+
+        /// <summary>
+        /// 类型
+        /// </summary>
+        public int item_type { get; set; }
+
+
+        /// <summary>
+        /// 奖品价格
+        /// </summary>
+        public double price { get; set; }
     }
 }

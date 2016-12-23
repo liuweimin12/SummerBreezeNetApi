@@ -48,6 +48,21 @@ namespace Yun.Marketing.Request
         public List<EditPrizeJson> PrizeContent { get; set; }
 
 
+        /// <summary>
+        /// 游戏开始时间
+        /// </summary>
+        public DateTime? StartTime { get; set; }
+
+
+        /// <summary>
+        /// 游戏结束时间
+        /// </summary>
+        public DateTime? EndTime { get; set; }
+
+        /// <summary>
+        /// 状态
+        /// </summary>
+        public int State { get; set; }
 
         public string GetApiName()
         {
@@ -63,7 +78,10 @@ namespace Yun.Marketing.Request
                 {"maxplaytimes", MaxPlayTimes},
                 {"maxtimesperday", MaxTimesPerDay},
                 {"ext", Ext},
-                {"prizecontent", PrizeContent}
+                {"prizecontent", PrizeContent},
+                {"starttime", StartTime},
+                {"endtime", EndTime},
+                {"state",State }
             };
             return parameters;
         }

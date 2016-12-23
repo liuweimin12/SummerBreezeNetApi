@@ -13,12 +13,15 @@ namespace Yun.Marketing.Request
         /// </summary>
         public string Title { get; set; }
 
+        /// <summary>
+        /// 标题图片
+        /// </summary>
+        public string Banner { get; set; }
 
         /// <summary>
         /// 游戏描述
         /// </summary>
         public string Description { get; set; }
-
 
         /// <summary>
         /// 游戏开始时间
@@ -55,6 +58,7 @@ namespace Yun.Marketing.Request
         public string GameType { get; set; }
 
 
+
         public string GetApiName()
         {
             return "chenggou.game.add";
@@ -71,7 +75,8 @@ namespace Yun.Marketing.Request
                 {"detail", Detail},
                 {"ext", Ext},
                 {"maxtimes", MaxTimes},
-                {"gametype", GameType}
+                {"gametype", GameType},
+                {"banner",Banner }
             };
             return parameters;
         }

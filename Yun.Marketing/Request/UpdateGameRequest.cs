@@ -66,6 +66,12 @@ namespace Yun.Marketing.Request
         public string GameType { get; set; }
 
 
+        /// <summary>
+        /// 标题图片
+        /// </summary>
+        public string Banner { get; set; }
+
+
         public string GetApiName()
         {
             return "chenggou.game.update";
@@ -83,7 +89,8 @@ namespace Yun.Marketing.Request
                 {"ext", Ext},
                 {"maxtimes", MaxTimes},
                 {"gametype", GameType},
-                {"id", Id}
+                {"id", Id},
+                {"banner",Banner }
             };
             return parameters;
         }
