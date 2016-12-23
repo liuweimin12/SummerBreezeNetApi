@@ -5,6 +5,28 @@ namespace Yun.Marketing
 {
     public class Lottery
     {
+        /// <summary>
+        /// 状态
+        /// </summary>
+        [XmlElement("state")]
+        public int State { get; set; }
+
+
+        /// <summary>
+        /// 开始时间
+        /// </summary>
+        [XmlElement("start_time")]
+        public string StartTime { get; set; }
+
+
+        /// <summary>
+        /// 结束时间
+        /// </summary>
+        [XmlElement("end_time")]
+        public string EndTime { get; set; }
+
+
+
         [XmlArray("prizes")]
         [XmlArrayItem("prize")]
         public List<LotteryPrize> Prizes { get; set; }

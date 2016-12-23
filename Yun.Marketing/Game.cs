@@ -5,6 +5,12 @@ namespace Yun.Marketing
     public class Game
     {
         /// <summary>
+        /// 规则ID
+        /// </summary>
+        [XmlElement("rule_ids")]
+        public string RuleIds { get; set; }
+
+        /// <summary>
         /// 状态
         /// </summary>
         [XmlElement("state")]

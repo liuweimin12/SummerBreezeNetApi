@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Yun.Interface;
 using Yun.Marketing.Response;
-using Yun.Util;
 
 namespace Yun.Marketing.Request
 {
@@ -11,11 +10,6 @@ namespace Yun.Marketing.Request
     /// </summary>
     public class GetLotteryRuleRequest : ITopRequest<GetLotteryRuleResponse>
     {
-        /// <summary>
-        /// 游戏ID
-        /// </summary>
-        public int GameId { get; set; }
-
         /// <summary>
         /// 抽奖ID
         /// </summary>
@@ -30,8 +24,7 @@ namespace Yun.Marketing.Request
         {
             var parameters = new YunDictionary
             {
-                {"gameid", GameId},
-                {"lotteryid",LotteryId }
+                {"lotteryid", LotteryId}
             };
             return parameters;
         }
