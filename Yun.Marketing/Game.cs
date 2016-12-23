@@ -1,9 +1,17 @@
-﻿using System.Xml.Serialization;
+﻿using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace Yun.Marketing
 {
     public class Game
     {
+        /// <summary>
+        /// 规则ID
+        /// </summary>
+        [XmlArray("rule_types")]
+        [XmlArrayItem("rule_type__list")]
+        public List<RuleTypeInGame> RuleTypes { get; set; }
+
         /// <summary>
         /// 规则ID
         /// </summary>

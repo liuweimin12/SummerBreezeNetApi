@@ -169,6 +169,7 @@
     <Compile Include="RewardGiftChild.cs" />
     <Compile Include="RewardGiftList.cs" />
     <Compile Include="RewardGiftsDetail.cs" />
+    <Compile Include="RuleTypeInGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Yun\Yun.csproj">
