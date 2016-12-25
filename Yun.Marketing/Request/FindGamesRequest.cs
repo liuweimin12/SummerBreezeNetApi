@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Yun.Interface;
 using Yun.Marketing.Response;
 
@@ -38,6 +39,15 @@ namespace Yun.Marketing.Request
 
         private int _pageSize = 1;
 
+        /// <summary>
+        /// 游戏开始时间
+        /// </summary>
+        public DateTime? StartTime { get; set; }
+
+        /// <summary>
+        /// 游戏结束时间
+        /// </summary>
+        public DateTime? EndTime { get; set; }
 
         public string GetApiName()
         {
@@ -49,7 +59,9 @@ namespace Yun.Marketing.Request
             var parameters = new YunDictionary
             {
                 {"pagenum", PageNum},
-                {"pagesize", PageSize}
+                {"pagesize", PageSize},
+                {"starttime",StartTime },
+                {"endtime",EndTime }
             };
 
             return parameters;

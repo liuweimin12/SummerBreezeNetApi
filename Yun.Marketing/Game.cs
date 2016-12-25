@@ -9,14 +9,9 @@ namespace Yun.Marketing
         /// 规则ID
         /// </summary>
         [XmlArray("rule_types")]
-        [XmlArrayItem("rule_type__list")]
+        [XmlArrayItem("rule_type")]
         public List<RuleTypeInGame> RuleTypes { get; set; }
 
-        /// <summary>
-        /// 规则ID
-        /// </summary>
-        [XmlElement("rule_ids")]
-        public string RuleIds { get; set; }
 
         /// <summary>
         /// 状态
@@ -94,5 +89,11 @@ namespace Yun.Marketing
         /// </summary>
         [XmlElement("ext")]
         public string Ext { get; set; }
+
+        /// <summary>
+        /// 总人数
+        /// </summary>
+        [XmlElement("total_number")]
+        public int TotalNumber { get; set; }
     }
 }

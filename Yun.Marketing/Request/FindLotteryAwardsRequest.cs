@@ -16,6 +16,11 @@ namespace Yun.Marketing.Request
         public int GameId { get; set; }
 
         /// <summary>
+        /// 用户ID
+        /// </summary>
+        public int UserId { get; set; }
+
+        /// <summary>
         /// 页码
         /// </summary>
         public int PageNum
@@ -55,7 +60,7 @@ namespace Yun.Marketing.Request
         public int PrizeId { get; set; }
 
         /// <summary>
-        /// 状态
+        /// 状态,0：未抽奖，1：已抽奖，2：已领奖
         /// </summary>
         public string Status { get; set; }
 
@@ -75,7 +80,8 @@ namespace Yun.Marketing.Request
                 {"lotteryid", LotteryId},
                 {"prizeid", PrizeId},
                 {"status", Status},
-                {"gameid", GameId}
+                {"gameid", GameId},
+                {"userid", UserId}
             };
 
             return parameters;

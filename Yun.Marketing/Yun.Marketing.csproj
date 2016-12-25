@@ -86,6 +86,7 @@
     <Compile Include="Request\DeleteGroupBuyRquest.cs" />
     <Compile Include="Request\DeleteIntegralGameRuleRequest.cs" />
     <Compile Include="Request\DeleteLimitDiscountRquest.cs" />
+    <Compile Include="Request\DeleteLotteryAwardRequest.cs" />
     <Compile Include="Request\DeleteLotteryGameRuleRequest.cs" />
     <Compile Include="Request\DeleteRewardGiftRequest.cs" />
     <Compile Include="Request\EditIntegralGameRuleRequest.cs" />
