@@ -40,14 +40,9 @@ namespace Yun.Marketing.Request
         private int _pageSize = 1;
 
         /// <summary>
-        /// 游戏开始时间
+        /// 状态，0:未开始，1：进行中，2：已结束
         /// </summary>
-        public DateTime? StartTime { get; set; }
-
-        /// <summary>
-        /// 游戏结束时间
-        /// </summary>
-        public DateTime? EndTime { get; set; }
+        public int State { get; set; }
 
         public string GetApiName()
         {
@@ -60,8 +55,7 @@ namespace Yun.Marketing.Request
             {
                 {"pagenum", PageNum},
                 {"pagesize", PageSize},
-                {"starttime",StartTime },
-                {"endtime",EndTime }
+                {"state",State }
             };
 
             return parameters;
