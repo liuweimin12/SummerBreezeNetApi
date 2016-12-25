@@ -42,7 +42,7 @@ namespace Yun.Marketing.Request
         /// <summary>
         /// 状态，0:未开始，1：进行中，2：已结束
         /// </summary>
-        public int State { get; set; }
+        public int? State { get; set; }
 
         public string GetApiName()
         {
