@@ -7,6 +7,12 @@ namespace Yun.Trade
     public class SnapshotTrade
     {
         /// <summary>
+        /// 店铺基本信息
+        /// </summary>
+        [XmlElement("shop_basic_info")]
+        public ShopBasicInfo ShopBasicInfo { get; set; }
+
+        /// <summary>
         /// 区域ID
         /// </summary>
         [XmlElement("location_ids")]
@@ -63,7 +69,7 @@ namespace Yun.Trade
         /// <summary>
         /// 店铺ID
         /// </summary>
-        [XmlElement("parrner_id")]
+        [XmlElement("partner_id")]
         public int PartnerId { get; set; }
 
         /// <summary>

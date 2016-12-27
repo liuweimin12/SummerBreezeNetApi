@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Serialization;
-using Yun.Domain;
 
 namespace Yun.Trade
 {
@@ -37,11 +36,10 @@ namespace Yun.Trade
         public string ShopName { get; set; }
 
         /// <summary>
-        /// 客服
+        /// 关联店铺
         /// </summary>
-        [XmlArray("customer_services")]
-        [XmlArrayItem("customer_service")]
-        public List<CustomerService> CustomerServices { get; set; }
+        [XmlElement("associated_shop_info")]
+        public AssociatedShopInfo AssociatedShopInfo { get; set; }
 
         /// <summary>
         /// 是否被删除
