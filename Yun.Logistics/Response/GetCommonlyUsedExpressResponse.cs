@@ -14,7 +14,7 @@ namespace Yun.Logistics.Response
     public class GetCommonlyUsedExpressResponse : YunResponse
     {
         [XmlArray("commonly_used_expresses")]
-        [XmlArrayItem("commonly_used_express__list")]
+        [XmlArrayItem("commonly_used_express")]
         public List<CommonlyUsedExpress> CommonlyUsedExpress { get; set; }
     }
 }
