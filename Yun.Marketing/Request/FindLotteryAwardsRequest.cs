@@ -64,6 +64,10 @@ namespace Yun.Marketing.Request
         /// </summary>
         public string Status { get; set; }
 
+        /// <summary>
+        /// 是否中奖
+        /// </summary>
+        public bool? IsWinning { get; set; }
 
 
         public string GetApiName()
@@ -81,7 +85,8 @@ namespace Yun.Marketing.Request
                 {"prizeid", PrizeId},
                 {"status", Status},
                 {"gameid", GameId},
-                {"userid", UserId}
+                {"userid", UserId},
+                {"iswinning", IsWinning},
             };
 
             return parameters;
