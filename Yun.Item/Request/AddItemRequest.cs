@@ -11,6 +11,11 @@ namespace Yun.Item.Request
     public class AddItemRequest : ITopRequest<IntResultResponse>
     {
         /// <summary>
+        /// 积分数量
+        /// </summary>
+        public int IntegralQuantity { get; set; }
+
+        /// <summary>
         /// 审核状态，1为需要审核，0不需要审核
         /// </summary>
         public int AuditState { get; set; }
@@ -334,7 +339,8 @@ namespace Yun.Item.Request
                 {"mobiledetail", MobileDetail},
                 {"jsoncustomskus",JsonCustomSkus },
                 {"auditstate",AuditState },
-                {"picture", Picture }
+                {"picture", Picture },
+                {"integralquantity",IntegralQuantity }
             };
             return parameters;
         }

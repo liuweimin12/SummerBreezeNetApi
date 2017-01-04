@@ -105,6 +105,12 @@ namespace Yun.Trade
         public int Integrallimit { get; set; }
 
         /// <summary>
+        /// 积分数量
+        /// </summary>
+        [XmlElement("integral_quantity")]
+        public int IntegralQuantity { get; set; }
+
+        /// <summary>
         /// 商品的扩展信息字段
         /// </summary>
         [XmlElement("ext")]
