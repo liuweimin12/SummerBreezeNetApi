@@ -272,6 +272,11 @@ namespace Yun.Item.Request
         public List<JsonCustomSkus> JsonCustomSkus { get; set; }
 
         /// <summary>
+        /// 积分数量
+        /// </summary>
+        public int IntegralQuantity { get; set; }
+
+        /// <summary>
         /// LOGO
         /// </summary>
         public string Picture { get; set; }
@@ -334,7 +339,8 @@ namespace Yun.Item.Request
                 {"mobiledetail", MobileDetail},
                 {"jsoncustomskus",JsonCustomSkus },
                 {"auditstate",AuditState },
-                {"picture", Picture }
+                {"picture", Picture },
+                {"integralquantity", IntegralQuantity }
             };
             return parameters;
         }
