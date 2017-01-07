@@ -386,16 +386,16 @@ namespace Yun.UnitTest
         [TestMethod]
         public void ModifyUserCreditRequest()
         {
-            YunClient.Format = "json";
+            YunClient.Format = "json2";
             var req =
                 YunClient.Instance.Execute(new ModifyUserCreditRequest()
-
                 {
-                    UserNick = null,
-                    Credit = 1,
-                    ExpiredDay = 1,
-                    Remark = null,
-                });
+                    UserNick = "15958805628_2510477",
+                    Credit = 10000,
+                    Detail = "测试",
+                    SerialNumber = Guid.NewGuid().ToString(),
+                    IntegralType = "GameIncome"
+                }, YunClient.GetAdminToken());
 
             Assert.IsTrue(req != null);
         }
