@@ -14,7 +14,7 @@ namespace Yun.Item.Response
         /// 商品收藏夹列表
         /// </summary>
         [XmlArray("commodity_favorites")]
-        [XmlArrayItem("commodity_favorite__list")]
+        [XmlArrayItem("commodity_favorite")]
         public List<CommodityFavorites> CommodityFavorites { get; set; }
 
         /// <summary>

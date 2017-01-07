@@ -90,7 +90,7 @@ namespace Yun.Shop
         /// 店铺所属全局类目
         /// </summary>
         [XmlArray("shop_categories")]
-        [XmlArrayItem("shop_category__list")]
+        [XmlArrayItem("shop_category")]
         public List<YunKeyValuePair<int, string>> CategoryId { get; set; }
 
         /// <summary>
@@ -195,7 +195,7 @@ namespace Yun.Shop
         /// 客服
         /// </summary>
         [XmlArray("customer_services")]
-        [XmlArrayItem("customer_service__list")]
+        [XmlArrayItem("customer_service")]
         public List<CustomerService> CustomerServices { get; set; }
 
 
@@ -209,7 +209,7 @@ namespace Yun.Shop
         /// 店铺所在区域
         /// </summary>
         [XmlArray("areas")]
-        [XmlArrayItem("area__list")]
+        [XmlArrayItem("area")]
         public List<YunKeyValuePair<int, string>> Areas { get; set; }
 
         /// <summary>

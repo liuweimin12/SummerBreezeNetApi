@@ -13,7 +13,7 @@ namespace Yun.Trade.Response
         /// 退款结果
         /// </summary>
         [XmlArray("create_refund_results")]
-        [XmlArrayItem("create_refund_result__list")]
+        [XmlArrayItem("create_refund_result")]
         public List<CreateRefundResult> CreateRefundResults { get; set; }
     }
 }
