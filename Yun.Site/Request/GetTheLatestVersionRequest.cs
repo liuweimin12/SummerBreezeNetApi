@@ -11,7 +11,7 @@ namespace Yun.Site.Request
     public class GetTheLatestVersionRequest : ITopRequest<GetTheLatestVersionResponse>
     {
         /// <summary>
-        /// 类型
+        /// 类型 买家-0，卖家-1
         /// </summary>
         public int? Type { get; set; }
 

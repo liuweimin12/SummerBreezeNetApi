@@ -51,6 +51,12 @@ namespace Yun.Trade
         public long SkuId { get; set; }
 
         /// <summary>
+        /// 积分数量
+        /// </summary>
+        [XmlElement("integral_quantity")]
+        public int IntegralQuantity { get; set; }
+
+        /// <summary>
         /// 库存
         /// </summary>
         [XmlElement("max_store")]

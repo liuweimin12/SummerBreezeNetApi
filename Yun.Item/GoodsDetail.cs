@@ -19,6 +19,12 @@ namespace Yun.Item
         public string MobileDetail { get; set; }
 
         /// <summary>
+        /// 积分数量
+        /// </summary>
+        [XmlElement("integral_quantity")]
+        public int IntegralQuantity { get; set; }
+
+        /// <summary>
         /// 每账号限购，控制时间间隔
         /// </summary>
         [XmlElement("per_limit_buy_hour")]

@@ -625,7 +625,7 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new ModifyPriceRequest
                 {
-                    Price = "1",
+                     
                     Postfee = 100,
 
                 });

@@ -12,6 +12,12 @@ namespace Yun.Shop
         public double TotalBalance { get; set; }
 
         /// <summary>
+        /// 待结算金额
+        /// </summary>
+        [XmlElement("trading_amount")]
+        public double TradingAmount { get; set; }
+
+        /// <summary>
         /// 资金类型
         /// </summary>
         [XmlArray("financial_types")]
