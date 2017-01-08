@@ -11,6 +11,12 @@ namespace Yun.Trade.Request
     /// </summary>
     public class GetSellerRefundsRequest : ITopRequest<GetRefundsResponse>
     {
+
+        /// <summary>
+        /// 交易ID
+        /// </summary>
+        public int TradeId { get; set; }
+
         /// <summary>
         /// 页码
         /// </summary>
