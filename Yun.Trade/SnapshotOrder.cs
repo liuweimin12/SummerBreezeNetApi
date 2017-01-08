@@ -7,6 +7,14 @@ namespace Yun.Trade
 {
     public class SnapshotOrder 
     {
+
+        /// <summary>
+        /// 积分抵扣价格
+        /// </summary>
+        [XmlElement("integral_deduction_price")]
+        public double IntegralDeductionPrice { get; set; }
+
+
         /// <summary>
         /// 促销信息
         /// </summary>
