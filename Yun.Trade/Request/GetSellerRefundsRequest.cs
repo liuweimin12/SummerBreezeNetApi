@@ -101,6 +101,7 @@ namespace Yun.Trade.Request
         {
             var parameters = new YunDictionary
             {
+                {"tradeid", TradeId },
                 {"pagenum", PageNum},
                 {"pagesize", PageSize},
                 {"mincreatetime", MinCreateTime},
