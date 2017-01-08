@@ -87,9 +87,8 @@ namespace Yun.UnitTest
                 {
                     Mobile="18606683125",
                     TradeNum= Guid.NewGuid().ToString().Replace("-",""),
-                    Quantity=1,
-                    ItemId= 1083,
-                    Integral = 20
+                    Quantity=10,
+                    ItemId= 864
                 }, token);
             Assert.IsTrue(req != null);
         }
@@ -138,22 +137,14 @@ namespace Yun.UnitTest
         [TestMethod]
         public void ConfirmTradeRequest()
         {
-            YunClient.Format = "xml";
-
-            var reqLogin =
-       YunClient.Instance.Execute(new LoginRequest
-       {
-           UserName = "18606683125",
-           Password = "111111",
-
-           AppSecret = YunClient.AppSecret
-       }).Token;
+            var token =
+                YunClient.Instance.Execute(new LoginRequest {UserName = "15958805628", IgnorePassword = true}).Token;
 
             var req =
                 YunClient.Instance.Execute(new ConfirmTradeRequest
                 {
-                    TradeId = 146121,
-                }, reqLogin);
+                    TradeId = 5637,
+                }, token);
             Assert.IsTrue(req != null);
         }
         /// <summary>
@@ -348,25 +339,26 @@ namespace Yun.UnitTest
                 });
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void GeneratePayTradeRequest()
         {
-            YunClient.Format = "json";
+            var token =
+                YunClient.Instance.Execute(new LoginRequest {UserName = "15958805628", IgnorePassword = true}).Token;
+
+
+            //YunClient.Format = "json";
             var req =
                 YunClient.Instance.Execute(new GeneratePayTradeRequest
                 {
                     Ip = "192.168.1.1",
-                    Id = 1,
-                    BankCode = null,
-                    Cash = 100,
-                    ClientType = null,
-                    OnlineMoney = 100,
-                    OverMoney = 20,
-                    PayChannel = null,
+                    Id = 5637,
+                    OverMoney = 100,
+                }, token);
 
-                });
             Assert.IsTrue(req != null);
         }
+
         [TestMethod]
         public void GetCartCountRequest()
         {

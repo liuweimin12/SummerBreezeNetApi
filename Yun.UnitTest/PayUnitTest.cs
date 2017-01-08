@@ -159,15 +159,16 @@ namespace Yun.UnitTest
         [TestMethod]
         public void CompletePayRequest()
         {
-            YunClient.Format = "json";
+            var token =
+    YunClient.Instance.Execute(new LoginRequest { UserName = "15958805628", IgnorePassword = true }).Token;
+
+
+            //YunClient.Format = "json";
             var req =
                 YunClient.Instance.Execute(new CompletePayRequest
                 {
-                    Id = 2,
-                    PayPassword = "123456",
-                    OutTradeNum = "1112",
-                    AppSecret = YunClient.AppSecret,
-                });
+                    Id = 6166
+                }, token);
             Assert.IsTrue(req != null);
         }
 
