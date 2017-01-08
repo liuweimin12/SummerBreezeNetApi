@@ -5,6 +5,12 @@ namespace Yun.Item
 {
     public class GoodsDetail
     {
+        /// <summary>
+        /// 价格区间
+        /// </summary>
+        [XmlElement("price_range")]
+        public string PriceRange { get; set; }
+
 
         /// <summary>
         /// 积分数量
