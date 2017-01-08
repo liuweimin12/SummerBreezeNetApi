@@ -105,6 +105,7 @@
     <Compile Include="Request\ModifyUserBankCardRequest.cs" />
     <Compile Include="Request\PerfectWithdrawalsInfoRequest.cs" />
     <Compile Include="Request\PrepaidCardBindUserRequest.cs" />
+    <Compile Include="Request\RefuseWithdrawalsRequest.cs" />
     <Compile Include="Request\ReNotifyOuterTradeRequest.cs" />
     <Compile Include="Request\SetCompanyPaymentRateRequest.cs" />
     <Compile Include="Request\SetDefaultPaymentRateRequest.cs" />
