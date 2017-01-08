@@ -147,6 +147,14 @@ namespace Yun.Trade
         [XmlElement("credit")]
         public double Credit { get; set; }
 
+
+        /// <summary>
+        /// 积分抵扣价格
+        /// </summary>
+        [XmlElement("integral_deduction_price")]
+        public double IntegralDeductionPrice { get; set; }
+
+
         /// <summary>
         /// 运费
         /// </summary>

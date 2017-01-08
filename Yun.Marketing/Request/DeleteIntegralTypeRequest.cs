@@ -1,37 +1,38 @@
 ﻿using System.Collections.Generic;
 using Yun.Interface;
-using Yun.Site.Response;
+using Yun.Response;
+using Yun.Util;
 
-namespace Yun.Site.Request
+namespace Yun.Marketing.Request
 {
     /// <summary>
-    /// 获取最新的版本号
-    /// yun.site.version.latest.get
+    /// 删除积分类型
+    /// yun.integral.type.delete
     /// </summary>
-    public class GetTheLatestVersionRequest : ITopRequest<GetTheLatestVersionResponse>
+    public class DeleteIntegralTypeRequest : ITopRequest<IntResultResponse>
     {
         /// <summary>
-        /// 类型 买家-0，卖家-1
+        /// ID
         /// </summary>
-        public int? Type { get; set; }
+        public int Id { get; set; }
 
         public string GetApiName()
         {
-            return "yun.site.version.latest.get";
+            return "yun.integral.type.delete";
         }
 
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
             {
-                {"type",Type}
+                {"id",Id}
             };
             return parameters;
         }
 
         public void Validate()
         {
-
+            RequestValidator.ValidateRequired("id", Id);
         }
     }
 }

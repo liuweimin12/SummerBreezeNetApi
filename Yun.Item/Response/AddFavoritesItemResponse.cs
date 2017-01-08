@@ -12,7 +12,7 @@ namespace Yun.Item.Response
     public class AddFavoritesItemResponse: YunResponse
     {
         [XmlArray("results")]
-        [XmlArrayItem("result__list")]
+        [XmlArrayItem("result")]
         public List<MultiState> Results { get; set; }
     }
 }

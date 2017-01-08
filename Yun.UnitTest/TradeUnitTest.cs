@@ -79,17 +79,18 @@ namespace Yun.UnitTest
         [TestMethod]
         public void AddExpressTradeRequest()
         {
-            YunClient.Format = "json";
+            var token =
+                YunClient.Instance.Execute(new LoginRequest {UserName = "15958805628", IgnorePassword = true}).Token;
+
             var req =
                 YunClient.Instance.Execute(new AddExpressTradeRequest
                 {
                     Mobile="18606683125",
-                    TradeNum="001",
-                    Quantity=2,
-                    ItemId=16670,
-                   
-                    
-                }, YunClient.GetAdminToken());
+                    TradeNum= Guid.NewGuid().ToString().Replace("-",""),
+                    Quantity=1,
+                    ItemId= 1083,
+                    Integral = 20
+                }, token);
             Assert.IsTrue(req != null);
         }
         [TestMethod]
@@ -252,13 +253,17 @@ namespace Yun.UnitTest
         [TestMethod]
         public void CloseTradeRequest()
         {
-            YunClient.Format = "json";
+            YunClient.Format = "json2";
+
+            var token =
+    YunClient.Instance.Execute(new LoginRequest { UserName = "15958805628", IgnorePassword = true }).Token;
+            
             var req =
                 YunClient.Instance.Execute(new CloseTradeRequest
                 {
-                   Id = 1,
-                   CloseReason = null,
-                });
+                   Id = 5518,
+                   CloseReason = "测试关闭订单",
+                }, token);
             Assert.IsTrue(req != null);
         }
         [TestMethod]

@@ -47,6 +47,48 @@ namespace Yun.UnitTest
         }
 
         [TestMethod]
+        public void GetDailyIntegralReportRequest()
+        {
+            YunClient.Format = "json2";
+
+            var req = YunClient.Instance.Execute(new GetDailyIntegralReportRequest {Date = DateTime.Now.AddDays(-3)},
+                YunClient.GetAdminToken());
+
+            Assert.IsTrue(req.Carryover>0);
+        }
+
+        [TestMethod]
+        public void GetWeekIntegralReportRequest()
+        {
+            YunClient.Format = "json2";
+
+            var req = YunClient.Instance.Execute(new GetWeekIntegralReportRequest { Date = DateTime.Now.AddDays(-8) },
+                YunClient.GetAdminToken());
+
+            Assert.IsTrue(req.Carryover > 0);
+        }
+
+        [TestMethod]
+        public void GetMonthIntegralReportRequest()
+        {
+            YunClient.Format = "json2";
+
+            var req = YunClient.Instance.Execute(new GetMonthIntegralReportRequest { Date = DateTime.Now.AddDays(-8) },
+                YunClient.GetAdminToken());
+
+            Assert.IsTrue(req.Carryover > 0);
+        }
+
+        [TestMethod]
+        public void AddIntegralTypeRequest()
+        {
+            var req =
+                YunClient.Instance.Execute(new AddIntegralTypeRequest {Name = "商城抵扣", TypeFlag = "Trade" }, YunClient.GetAdminToken());
+
+            Assert.IsTrue(req.Result > 0);
+        }
+
+        [TestMethod]
         public void FindCashCouponRequest()
         {
             var req =

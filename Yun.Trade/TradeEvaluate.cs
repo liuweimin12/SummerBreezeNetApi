@@ -36,7 +36,7 @@ namespace Yun.Trade
         /// 顾客选择的SKU信息
         /// </summary>
         [XmlArray("sku_names")]
-        [XmlArrayItem("sku_name__list")]
+        [XmlArrayItem("sku_name")]
         public List<YunKeyValuePair<string, string>> SkuNames { get; set; }
 
         /// <summary>

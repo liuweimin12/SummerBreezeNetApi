@@ -50,11 +50,6 @@ namespace Yun.Trade
         [XmlElement("sku_id")]
         public long SkuId { get; set; }
 
-        /// <summary>
-        /// 积分数量
-        /// </summary>
-        [XmlElement("integral_quantity")]
-        public int IntegralQuantity { get; set; }
 
         /// <summary>
         /// 库存
@@ -109,6 +104,12 @@ namespace Yun.Trade
         /// </summary>
         [XmlElement("integral_limit")]
         public int Integrallimit { get; set; }
+
+        /// <summary>
+        /// 积分数量
+        /// </summary>
+        [XmlElement("integral_quantity")]
+        public int IntegralQuantity { get; set; }
 
         /// <summary>
         /// 商品的扩展信息字段
