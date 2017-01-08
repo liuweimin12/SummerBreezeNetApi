@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Yun.Interface;
 using Yun.User.Response;
-using Yun.Util;
 
 namespace Yun.User.Request
 {
@@ -12,6 +11,11 @@ namespace Yun.User.Request
     /// </summary>
     public class GetUserScoreGroupByDateRequest: ITopRequest<GetUserScoreGroupByDateResponse>
     {
+        /// <summary>
+        /// 积分类型，不能和系统自有字段冲突
+        /// </summary>
+        public string IntegralType { get; set; }
+
         /// <summary>
         /// 页码
         /// </summary>
@@ -68,7 +72,8 @@ namespace Yun.User.Request
                 {"pagesize",PageSize},
                 {"endtime",EndTime},
                 {"starttime",StartTime },
-                {"direction",Direction }
+                {"direction",Direction },
+                {"integraltype",IntegralType }
             };
             return parameters;
         }
