@@ -5,6 +5,30 @@ namespace Yun.User
     public class SourcesOfExpenditure
     {
         /// <summary>
+        /// 收入备注
+        /// </summary>
+        [XmlElement("income_remark")]
+        public string IncomeRemark { get; set; }
+
+        /// <summary>
+        /// 支出备注
+        /// </summary>
+        [XmlElement("expenditure_remark")]
+        public string ExpenditureRemark { get; set; }
+
+        /// <summary>
+        /// 收入详情
+        /// </summary>
+        [XmlElement("income_detail")]
+        public string IncomeDetail { get; set; }
+
+        /// <summary>
+        /// 支出详情
+        /// </summary>
+        [XmlElement("expenditure_detail")]
+        public string ExpenditureDetail { get; set; }
+
+        /// <summary>
         /// ID
         /// </summary>
         [XmlElement("id")]
