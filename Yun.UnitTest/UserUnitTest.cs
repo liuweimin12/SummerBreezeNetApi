@@ -52,6 +52,14 @@ namespace Yun.UnitTest
         //}
 
         [TestMethod]
+        public void ReconstructionIntegralDataRequest()
+        {
+            var req = YunClient.Instance.Execute(new ReconstructionIntegralDataRequest(), YunClient.GetAdminToken());
+
+            Assert.IsTrue(req.Result>0);
+        }
+
+        [TestMethod]
         public void CreateDeviceInitializationRequest()
         {
             YunClient.Format = "json";

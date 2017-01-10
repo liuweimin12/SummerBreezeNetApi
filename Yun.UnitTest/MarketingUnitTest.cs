@@ -54,7 +54,7 @@ namespace Yun.UnitTest
             var req = YunClient.Instance.Execute(new GetDailyIntegralReportRequest {Date = DateTime.Now.AddDays(-3)},
                 YunClient.GetAdminToken());
 
-            Assert.IsTrue(req.Carryover>0);
+            Assert.IsTrue(req.Balance>0);
         }
 
         [TestMethod]
@@ -65,7 +65,7 @@ namespace Yun.UnitTest
             var req = YunClient.Instance.Execute(new GetWeekIntegralReportRequest { Date = DateTime.Now.AddDays(-8) },
                 YunClient.GetAdminToken());
 
-            Assert.IsTrue(req.Carryover > 0);
+            Assert.IsTrue(req.Balance > 0);
         }
 
         [TestMethod]
@@ -73,10 +73,10 @@ namespace Yun.UnitTest
         {
             YunClient.Format = "json2";
 
-            var req = YunClient.Instance.Execute(new GetMonthIntegralReportRequest { Date = DateTime.Now.AddDays(-8) },
+            var req = YunClient.Instance.Execute(new GetMonthIntegralReportRequest { Date = DateTime.Now },
                 YunClient.GetAdminToken());
 
-            Assert.IsTrue(req.Carryover > 0);
+            Assert.IsTrue(req.Balance > 0);
         }
 
         [TestMethod]
