@@ -40,7 +40,7 @@ namespace Yun.UnitTest
         [TestMethod]
         public void SetSignInSettingRequest()
         {
-            var req = YunClient.Instance.Execute(new SetSignInSettingRequest {Enabled = true, Rule = "1,2,3,4,5,6,7"},
+            var req = YunClient.Instance.Execute(new SetSignInSettingRequest {Enabled = true, Rule = "1,1,1,1,1,2,3"},
                 YunClient.GetAdminToken());
 
             Assert.IsTrue(req.Result>0);
