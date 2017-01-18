@@ -10,10 +10,10 @@ namespace Yun.Marketing.Response
     public class GetDailyIntegralReportResponse : YunResponse
     {
         /// <summary>
-        /// 上期结转
+        /// 余额
         /// </summary>
-        [XmlElement("carryover")]
-        public double Carryover { get; set; }
+        [XmlElement("balance")]
+        public double Balance { get; set; }
 
         /// <summary>
         /// 日期

@@ -64,6 +64,9 @@
     <Compile Include="Request\BuildFriendRelationshipsRequest.cs" />
     <Compile Include="Request\GetDeviceInitializationRequest.cs" />
     <Compile Include="Request\GetLastTimeInvoiceRequest.cs" />
+    <Compile Include="Request\GetSourcesOfExpenditureRequest.cs" />
+    <Compile Include="Request\ReconstructionIntegralDataRequest.cs" />
+    <Compile Include="Request\UnBindOauth2AccountRequest.cs" />
     <Compile Include="Request\UserExitRequest.cs" />
     <Compile Include="Response\GetDeviceInitializationResponse.cs" />
     <Compile Include="Request\GetUserFriendsRequest.cs" />
@@ -160,6 +163,7 @@
     <Compile Include="Response\GetLastTimeInvoiceResponse.cs" />
     <Compile Include="Response\GetOAuth2ConfigResponse.cs" />
     <Compile Include="Response\GetOAuth2LoginInfoResponse.cs" />
+    <Compile Include="Response\GetSourcesOfExpenditureResponse.cs" />
     <Compile Include="Response\GetUserFriendsResponse.cs" />
     <Compile Include="Response\GetUserLeastTokenResponse.cs" />
     <Compile Include="Response\GetUserScoreGroupByDateResponse.cs" />
@@ -184,6 +188,7 @@
     <Compile Include="Roles.cs" />
     <Compile Include="SignInHistory.cs" />
     <Compile Include="SignInStatistics.cs" />
+    <Compile Include="SourcesOfExpenditure.cs" />
     <Compile Include="TotalPoints.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="UserDevice.cs" />

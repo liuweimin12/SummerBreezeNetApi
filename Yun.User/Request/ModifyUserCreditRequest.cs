@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Yun.Interface;
 using Yun.Response;
 using Yun.Util;
@@ -58,6 +59,11 @@ namespace Yun.User.Request
         /// </summary>
         public string SerialNumber { get; set; }
 
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime? CreateTime { get; set; }
+
 
         public string GetApiName()
         {
@@ -76,7 +82,8 @@ namespace Yun.User.Request
                 {"detailid", DetailId},
                 {"integraltype",IntegralType },
                 {"serialnumber",SerialNumber },
-                {"targetuserid",TargetUserId }
+                {"targetuserid",TargetUserId },
+                {"createtime",CreateTime }
             };
             return parameters;
         }

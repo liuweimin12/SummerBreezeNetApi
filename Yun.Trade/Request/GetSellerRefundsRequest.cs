@@ -112,8 +112,9 @@ namespace Yun.Trade.Request
                 {"loadhistory", LoadHistory},
                 {"nick", Nick},
                 {"companyid", CompanyId},
-                {"shopid",ShopId }
-            };
+                {"shopid",ShopId },
+                {"tradeid",TradeId }
+        };
             return parameters;
         }
 
