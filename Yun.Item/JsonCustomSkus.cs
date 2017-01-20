@@ -5,6 +5,11 @@ namespace Yun.Item
     public class JsonCustomSkus
     {
         /// <summary>
+        /// 缩略图
+        /// </summary>
+        public string images { get; set; }
+
+        /// <summary>
         /// 属性值
         /// </summary>
         public string[] spec_values { get; set; }

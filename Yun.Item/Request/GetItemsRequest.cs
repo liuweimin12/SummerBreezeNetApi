@@ -135,6 +135,18 @@ namespace Yun.Item.Request
         /// </summary>
         public bool? NeedPromotion { get; set; }
 
+        /// <summary>
+        /// 匹配的物流模板ID
+        /// </summary>
+        public int LogisticsTemplateId { get; set; }
+
+        /// <summary>
+        /// 电子券模板ID
+        /// </summary>
+        public int ElectronicCouponsTemplateId { get; set; }
+
+
+
 
         public string GetApiName()
         {
@@ -168,7 +180,10 @@ namespace Yun.Item.Request
                 {"recommend", Recommend},
                 {"isdelete", IsDelete},
                 {"companyid", CompanyId},
-                {"needpromotion", NeedPromotion}
+                {"needpromotion", NeedPromotion},
+                {"logisticstemplateid", LogisticsTemplateId},
+                {"electroniccouponstemplateid", ElectronicCouponsTemplateId}
+
             };
             return parameters;
         }

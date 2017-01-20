@@ -7,6 +7,11 @@ namespace Yun.Item
     public class ItemSkuInDetail
     {
         /// <summary>
+        /// 缩略图
+        /// </summary>
+        public string images { get; set; } 
+
+        /// <summary>
         /// ID
         /// </summary>
         [XmlElement("id")]
