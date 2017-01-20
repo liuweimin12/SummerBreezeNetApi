@@ -58,6 +58,7 @@
     <Compile Include="Request\GetPrevsItemCatsRequest.cs" />
     <Compile Include="Request\GetPrevsShopItemCategoryRequest.cs" />
     <Compile Include="Request\GetShopItemCountRequest.cs" />
+    <Compile Include="Request\MatchingLogisticsTemplatesRequest.cs" />
     <Compile Include="Request\RealDelItemRequest.cs" />
     <Compile Include="Request\RestoreItemRequest.cs" />
     <Compile Include="Request\SearchLimitDiscountItemRequest.cs" />
