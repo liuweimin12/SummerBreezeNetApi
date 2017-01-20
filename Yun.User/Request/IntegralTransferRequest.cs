@@ -21,6 +21,11 @@ namespace Yun.User.Request
         /// </summary>
         public int Integral { get; set; }
 
+        /// <summary>
+        /// 收入方详情说明文字
+        /// </summary>
+        public string IncomeDetail { get; set; }
+
 
         /// <summary>
         /// 备注
