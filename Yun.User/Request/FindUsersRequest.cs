@@ -11,6 +11,25 @@ namespace Yun.User.Request
     /// </summary>
     public class FindUsersRequest : ITopRequest<GetUsersResponse>
     {
+        /// <summary>
+        /// 省
+        /// </summary>
+        public string Province { get; set; }
+
+        /// <summary>
+        /// 市
+        /// </summary>
+        public string City { get; set; }
+
+        /// <summary>
+        /// 区
+        /// </summary>
+        public string Area { get; set; }
+
+        /// <summary>
+        /// 县
+        /// </summary>
+        public string Town { get; set; }
 
         /// <summary>
         /// 店铺ID
@@ -189,14 +208,17 @@ namespace Yun.User.Request
                 {"authenticatedstate",AuthenticatedState },
                 {"authenticatedstarttime",AuthenticatedStartTime },
                 {"authenticatedendtime",AuthenticatedEndTime },
-                {"usertype",UserType }
+                {"usertype",UserType },
+                {"province",Province },
+                {"city",City },
+                {"area",Area },
+                {"town",Town },
             };
             return parameters;
         }
 
         public void Validate()
         {
-            RequestValidator.ValidateMaxValue("pagesize", PageSize, 100);
         }
     }
 }

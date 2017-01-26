@@ -41,6 +41,7 @@
     <Compile Include="CreditDomain.cs" />
     <Compile Include="Friend.cs" />
     <Compile Include="Function.cs" />
+    <Compile Include="InviteFriendHistory.cs" />
     <Compile Include="Invoice.cs" />
     <Compile Include="LoginRecord.cs" />
     <Compile Include="OAth2SettingJson.cs" />
@@ -63,9 +64,12 @@
     <Compile Include="Request\AuthorizationJudgmentRequest.cs" />
     <Compile Include="Request\BuildFriendRelationshipsRequest.cs" />
     <Compile Include="Request\GetDeviceInitializationRequest.cs" />
+    <Compile Include="Request\GetInviteFriendsListRequest.cs" />
     <Compile Include="Request\GetLastTimeInvoiceRequest.cs" />
     <Compile Include="Request\GetSourcesOfExpenditureRequest.cs" />
+    <Compile Include="Request\InviteFriendsRequest.cs" />
     <Compile Include="Request\ReconstructionIntegralDataRequest.cs" />
+    <Compile Include="Request\RefuseInvitationRequest.cs" />
     <Compile Include="Request\UnBindOauth2AccountRequest.cs" />
     <Compile Include="Request\UserExitRequest.cs" />
     <Compile Include="Response\GetDeviceInitializationResponse.cs" />
@@ -160,6 +164,7 @@
     <Compile Include="Response\FunctionsResponse.cs" />
     <Compile Include="Response\GetAlbumResponse.cs" />
     <Compile Include="Response\GetAuthorizeUrlResponse.cs" />
+    <Compile Include="Response\GetInviteFriendsListResponse.cs" />
     <Compile Include="Response\GetLastTimeInvoiceResponse.cs" />
     <Compile Include="Response\GetOAuth2ConfigResponse.cs" />
     <Compile Include="Response\GetOAuth2LoginInfoResponse.cs" />
