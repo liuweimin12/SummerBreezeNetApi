@@ -138,12 +138,12 @@ namespace Yun.Item.Request
         /// <summary>
         /// 匹配的物流模板ID
         /// </summary>
-        public int LogisticsTemplateId { get; set; }
+        public int? LogisticsTemplateId { get; set; }
 
         /// <summary>
         /// 电子券模板ID
         /// </summary>
-        public int ElectronicCouponsTemplateId { get; set; }
+        public int? ElectronicCouponsTemplateId { get; set; }
 
 
 
