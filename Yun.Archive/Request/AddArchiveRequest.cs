@@ -82,6 +82,17 @@ namespace Yun.Archive.Request
         /// </summary>
         public int CustomType { get; set; }
 
+        /// <summary>
+        /// 店铺ID
+        /// </summary>
+        public int? ShopId { get; set; }
+
+        
+        /// <summary>
+        /// 公司ID
+        /// </summary>
+        public int? CompanyId { get; set; }
+
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
@@ -99,7 +110,9 @@ namespace Yun.Archive.Request
                 {"visits",Visits},
                 {"posttime",PostTime},
                 {"thumb",Thumb},
-                {"customtype",CustomType }
+                {"customtype",CustomType },
+                {"shopid",ShopId },
+                {"companyid",CompanyId }
             };
 
             return parameters;

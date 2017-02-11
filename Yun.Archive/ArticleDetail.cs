@@ -7,6 +7,12 @@ namespace Yun.Archive
     public class ArticleDetail
     {
         /// <summary>
+        /// 公司ID
+        /// </summary>
+        [XmlElement("company_id")]
+        public int CompanyId { get; set; }
+
+        /// <summary>
         /// 发布时间
         /// </summary>
         [XmlElement("post_datetime")]

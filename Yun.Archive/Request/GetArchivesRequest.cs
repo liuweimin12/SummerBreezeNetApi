@@ -123,6 +123,10 @@ namespace Yun.Archive.Request
         /// </summary>
         public string ArticleIds { get; set; }
 
+        /// <summary>
+        /// 过滤当前级别的数据
+        /// </summary>
+        public bool FilterCurrentLevelData { get; set; }
 
         public IDictionary<string, string> GetParameters()
         {
@@ -143,7 +147,8 @@ namespace Yun.Archive.Request
                 {"tags", Tags},
                 {"categoryname", CategoryName},
                 {"companyid", CompanyId},
-                {"customtype",CustomType } 
+                {"customtype",CustomType },
+                {"filtercurrentleveldata",FilterCurrentLevelData }
             };
             return parameters;
         }
