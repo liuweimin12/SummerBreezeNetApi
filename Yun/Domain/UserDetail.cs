@@ -301,5 +301,23 @@ namespace Yun.Domain
         [XmlElement("user_type")]
         public int UserType { get; set; }
 
+
+        /// <summary>
+        /// 年龄
+        /// </summary>
+        [XmlElement("age")]
+        public int Age { get; set; }
+
+        /// <summary>
+        /// 身高
+        /// </summary>
+        [XmlElement("height")]
+        public double Height { get; set; }
+
+        /// <summary>
+        /// 体重
+        /// </summary>
+        [XmlElement("weight")]
+        public double Weight { get; set; }
     }
 }
