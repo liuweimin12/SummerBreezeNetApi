@@ -1,4 +1,5 @@
 ﻿using System.Xml.Serialization;
+using Yun.Domain;
 
 namespace Yun.User
 {
@@ -21,6 +22,13 @@ namespace Yun.User
         /// </summary>
         [XmlElement("target_user_id")]
         public int TargetUserId { get; set; }
+
+
+        /// <summary>
+        /// 目标对象信息
+        /// </summary>
+        [XmlElement("target_user_info")]
+        public UserDetail TargetUserInfo { get; set; }
 
         /// <summary>
         /// 创建时间
