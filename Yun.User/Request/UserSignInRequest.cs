@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Yun.Interface;
 using Yun.Response;
+using Yun.User.Response;
 
 namespace Yun.User.Request
 {
@@ -8,7 +9,7 @@ namespace Yun.User.Request
     /// 签到领积分
     /// yun.user.signin
     /// </summary>
-    public class UserSignInRequest : ITopRequest<IntResultResponse>
+    public class UserSignInRequest : ITopRequest<UserSignInResponse>
     {
         public string GetApiName()
         {

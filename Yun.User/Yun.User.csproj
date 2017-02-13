@@ -189,6 +189,7 @@
     <Compile Include="Response\SimpleUserInfo.cs" />
     <Compile Include="Response\UserDetailResponse.cs" />
     <Compile Include="Response\UserResponse.cs" />
+    <Compile Include="Response\UserSignInResponse.cs" />
     <Compile Include="Response\UsersResponse.cs" />
     <Compile Include="Roles.cs" />
     <Compile Include="SignInHistory.cs" />
