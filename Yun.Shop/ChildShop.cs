@@ -6,6 +6,40 @@ namespace Yun.Shop
 {
     public class ChildShop
     {
+
+        /// <summary>
+        /// 省
+        /// </summary>
+        [XmlElement("province")]
+        public string Province { get; set; }
+
+        /// <summary>
+        /// 市
+        /// </summary>
+        [XmlElement("city")]
+        public string City { get; set; }
+
+
+        /// <summary>
+        /// 区
+        /// </summary>
+        [XmlElement("area")]
+        public string Area { get; set; }
+
+
+        /// <summary>
+        /// 县
+        /// </summary>
+        [XmlElement("town")]
+        public string Town { get; set; }
+
+
+        /// <summary>
+        /// 店铺认领时间
+        /// </summary>
+        [XmlElement("claim_time")]
+        public string ClaimTime { get; set; }
+
         /// <summary>
         /// 是否允许开票，0是不允许
         /// </summary>

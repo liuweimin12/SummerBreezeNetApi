@@ -102,6 +102,26 @@ namespace Yun.Shop.Request
         /// </summary>
         public int? BoundUserId { get; set; }
 
+        /// <summary>
+        /// 省
+        /// </summary>
+        public string Province { get; set; }
+
+        /// <summary>
+        /// 市
+        /// </summary>
+        public string City { get; set; }
+
+        /// <summary>
+        /// 区
+        /// </summary>
+        public string Area { get; set; }
+
+        /// <summary>
+        /// 县
+        /// </summary>
+        public string Town { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.shops.search";
@@ -128,7 +148,11 @@ namespace Yun.Shop.Request
                 {"sort", Sort},
                 {"parentid",ParentId },
                 {"itemcatid",ItemCatId },
-                {"bounduserid",BoundUserId }
+                {"bounduserid",BoundUserId },
+                {"province",Province },
+                {"city",City },
+                {"area",Area },
+                {"town",Town },
             };
             return parameters;
         }
