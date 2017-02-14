@@ -53,6 +53,7 @@
     <Compile Include="Request\AddShopCustomerserviceRequest.cs" />
     <Compile Include="Request\AddShopFavouriteRequest.cs" />
     <Compile Include="Request\AddShopRequest.cs" />
+    <Compile Include="Request\AddUnclaimedShopRequest.cs" />
     <Compile Include="Request\AskShopQuestionRequest.cs" />
     <Compile Include="Request\BatchUpdateShopCategoryRequest.cs" />
     <Compile Include="Request\BatchUpdateShopAreaRequest.cs" />

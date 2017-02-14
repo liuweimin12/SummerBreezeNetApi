@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Web;
 using Yun.Interface;
 using Yun.Response;
@@ -6,13 +9,16 @@ using Yun.Util;
 
 namespace Yun.Shop.Request
 {
-    public class AddShopRequest : ITopUploadRequest<IntResultResponse>
+    /// <summary>
+    /// 新增待认领店铺
+    /// yun.shop.unclaimed.add
+    /// </summary>
+    public class AddUnclaimedShopRequest : ITopRequest<IntResultResponse>
     {
-
         /// <summary>
-        /// 是否允许开票
+        /// LOGO
         /// </summary>
-        public int AllowInvoice { get; set; }
+        public string Picture { get; set; }
 
         /// <summary>
         /// 店铺名称
@@ -48,7 +54,28 @@ namespace Yun.Shop.Request
         /// 区域介绍
         /// </summary>
         public string Location { get; set; }
-        
+
+        /// <summary>
+        /// 省
+        /// </summary>
+        public string Province { get; set; }
+
+        /// <summary>
+        /// 市
+        /// </summary>
+        public string City { get; set; }
+
+
+        /// <summary>
+        /// 区
+        /// </summary>
+        public string Area { get; set; }
+
+
+        /// <summary>
+        /// 县
+        /// </summary>
+        public string Town { get; set; }
 
         /// <summary>
         /// 区域ID
@@ -76,55 +103,10 @@ namespace Yun.Shop.Request
         public string Description { get; set; }
 
         /// <summary>
-        /// 需要成为店主的用户名
-        /// </summary>
-        public string UserName { get; set; }
-
-        /// <summary>
-        /// 密码
-        /// </summary>
-        public string Password { get; set; }
-
-        /// <summary>
-        /// 店主电子邮箱
-        /// </summary>
-        public string Email { get; set; }
-
-        /// <summary>
-        /// 店主手机号
-        /// </summary>
-        public string ShopkeeperPhone { get; set; }
-
-
-        /// <summary>
         /// 操作者的IP地址
         /// </summary>
         public string Ip { get; set; }
 
-        /// <summary>
-        /// 公司ID
-        /// </summary>
-        public int CompanyId { get; set; }
-
-        /// <summary>
-        /// 客户下单后至少需要延时的配送时间,秒为单位
-        /// </summary>
-        public int DeliveryTime { get; set; }
-
-        /// <summary>
-        /// 是否开放
-        /// </summary>
-        public bool IsOpen { get; set; }
-
-        /// <summary>
-        /// 是否启用
-        /// </summary>
-        public bool IsEnabled { get; set; }
-
-        /// <summary>
-        /// 是否显示在前台
-        /// </summary>
-        public bool IsDisplay { get; set; }
 
         /// <summary>
         /// 营业执照号码
@@ -156,64 +138,21 @@ namespace Yun.Shop.Request
         /// </summary>
         public int ShopType { get; set; }
 
+
         /// <summary>
-        /// 父ID
+        /// 是否允许开票
         /// </summary>
-        public int ParentId { get; set; }
-
-
-        /// <summary>
-        /// 绑定的用户ID
-        /// </summary>
-        public int BindUserId { get; set; }
-
+        public int AllowInvoice { get; set; }
 
         /// <summary>
-        /// 新创建的用户类型
-        /// </summary>
-        public int UserType { get; set; }
-
-
-        public string AppSecret { get; set; }
-
-        /// <summary>
-        /// 副标题
+        /// 实体店名字
         /// </summary>
         public string SubTitle { get; set; }
 
-
-        /// <summary>
-        ///店铺图标，LOGO
-        /// </summary>         
-        public string Picture { get; set; }
-
-        /// <summary>
-        /// 省
-        /// </summary>
-        public string Province { get; set; }
-
-        /// <summary>
-        /// 市
-        /// </summary>
-        public string City { get; set; }
-
-
-        /// <summary>
-        /// 区
-        /// </summary>
-        public string Area { get; set; }
-
-
-        /// <summary>
-        /// 县
-        /// </summary>
-        public string Town { get; set; }
-
         public string GetApiName()
         {
-            return "chenggou.shop.add";
+            return "yun.shop.unclaimed.add";
         }
-
 
         public IDictionary<string, string> GetParameters()
         {
@@ -230,28 +169,17 @@ namespace Yun.Shop.Request
                 {"areaid", AreaId},
                 {"categoryid", CategoryId},
                 {"description", HttpUtility.HtmlEncode(Description)},
-                {"username", UserName},
-                {"password", string.IsNullOrEmpty(Password) ? null : TopUtils.EncryptAes(Password, AppSecret)},
-                {"email", Email},
-                {"shopkeeperphone", ShopkeeperPhone},
                 {"ip", Ip},
-                {"companyid", CompanyId},
-                {"deliverytime", DeliveryTime},
                 {"homeurl", HomeUrl},
-                {"isopen", IsOpen},
-                {"isenabled", IsEnabled},
-                {"isdisplay", IsDisplay},
                 {"businesslicense", BusinessLicense},
                 {"certifiedphotos", CertifiedPhotos},
                 {"maincategoryid", MainCategoryId},
                 {"banner", Banner},
                 {"contacts", Contacts},
                 {"shoptype", ShopType},
-                {"parentid", ParentId},
-                {"usertype", UserType},
-                {"binduserid", BindUserId},
                 {"allowinvoice", AllowInvoice},
                 {"subtitle", SubTitle},
+                {"picture", Picture},
                 {"province", Province},
                 {"city", City},
                 {"area", Area},
@@ -263,17 +191,6 @@ namespace Yun.Shop.Request
         public void Validate()
         {
             RequestValidator.ValidateRequired("name", Name);
-
-        }
-
-        /// <summary>
-        /// 缩略图
-        /// </summary>
-        public FileItem Image { get; set; }
-
-        public IDictionary<string, FileItem> GetFileParameters()
-        {
-            return new Dictionary<string, FileItem> { { "Image", Image } };
         }
     }
 }
