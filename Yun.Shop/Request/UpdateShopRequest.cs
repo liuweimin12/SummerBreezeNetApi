@@ -157,6 +157,29 @@ namespace Yun.Shop.Request
         /// </summary>         
         public string Picture { get; set; }
 
+
+        /// <summary>
+        /// 省
+        /// </summary>
+        public string Province { get; set; }
+
+        /// <summary>
+        /// 市
+        /// </summary>
+        public string City { get; set; }
+
+
+        /// <summary>
+        /// 区
+        /// </summary>
+        public string Area { get; set; }
+
+
+        /// <summary>
+        /// 县
+        /// </summary>
+        public string Town { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.shop.update";
@@ -194,7 +217,11 @@ namespace Yun.Shop.Request
                 {"shoptype",ShopType },
                 { "allowinvoice",AllowInvoice},
                 {"subtitle",SubTitle },
-                {"picture",Picture}
+                {"picture",Picture},
+                {"province", Province},
+                {"city", City},
+                {"area", Area},
+                {"town", Town}
             };
             return parameters;
         }
