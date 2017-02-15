@@ -217,12 +217,8 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new ClaimShopRequest
                 {
-                    ShopId = 1,
-                    CompanyName = "公司02",
-                    IdcardImg = "123456",
-                    Email = "1805768571@qq.com",
-                    LicenseImg = "123456789",
-                    Mobile = "18606683125",
+                    ShopId = 1
+                    
 
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);

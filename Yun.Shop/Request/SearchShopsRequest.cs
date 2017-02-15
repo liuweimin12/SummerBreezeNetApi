@@ -98,9 +98,14 @@ namespace Yun.Shop.Request
         public int? ItemCatId { get; set; }
 
         /// <summary>
-        /// 已绑定用户ID
+        /// 用户和店铺的绑定人，0：未认领，-1已认领，大于0，是谁认领的
         /// </summary>
         public int? BoundUserId { get; set; }
+
+        /// <summary>
+        /// 创建人ID
+        /// </summary>
+        public int? CreaterId { get; set; } 
 
         /// <summary>
         /// 省
