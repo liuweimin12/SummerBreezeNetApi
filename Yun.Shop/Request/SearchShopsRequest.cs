@@ -25,7 +25,7 @@ namespace Yun.Shop.Request
         /// </summary>
         public int PageSize { get; set; }
 
-        public int CompanyId { get; set; }
+        public int? CompanyId { get; set; }
 
         /// <summary>
         /// 店铺名字，模糊查询
@@ -35,12 +35,12 @@ namespace Yun.Shop.Request
         /// <summary>
         /// 店铺所在分类ID
         /// </summary>
-        public int CategoryId { get; set; }
+        public int? CategoryId { get; set; }
 
         /// <summary>
         /// 店铺所在区域ID
         /// </summary>
-        public int AreaId { get; set; }
+        public int? AreaId { get; set; }
 
         /// <summary>
         /// 认证状态
@@ -158,6 +158,7 @@ namespace Yun.Shop.Request
                 {"city",City },
                 {"area",Area },
                 {"town",Town },
+                {"createrid",CreaterId }
             };
             return parameters;
         }
