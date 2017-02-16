@@ -53,11 +53,10 @@ namespace Yun.Shop
         public List<ItemCat> MainItemCats { get; set; }
 
         /// <summary>
-        /// 子店铺
+        /// 子店铺ID
         /// </summary>
-        [XmlArray("child_shops")]
-        [XmlArrayItem("child_shop")]
-        public List<ChildShop> ChildShops { get; set; }
+        [XmlElement("child_shop_id")]
+        public int ChildShopId { get; set; }
 
         /// <summary>
         /// 是否显示
