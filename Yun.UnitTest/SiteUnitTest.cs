@@ -205,17 +205,16 @@ namespace Yun.UnitTest
         [TestMethod]
         public void AddSiteRequest()
         {
-            YunClient.Format = "json";
+            //YunClient.Format = "json";
 
             var req =
                 YunClient.Instance.Execute(new AddSiteRequest
                 {
-                    Email = "yuanqi@ourxanadu.com",
-                    Password = "nbyc0574",
-                    Code = "0574",
-                    Secret = "nbyc0574",
-                    MobilePhone = "15355126498",
-                    SiteName = "风的记忆",
+                    Email = "laowu@ourxanadu.com",
+                    Password = "888999",
+                    Secret = YunClient.AppSecret,
+                    MobilePhone = "18868963720",
+                    SiteName = "千饴情报局",
 
                 });
 

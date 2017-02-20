@@ -41,6 +41,10 @@ namespace Yun.User.Request
 
         private int _pageSize = 1;
 
+        /// <summary>
+        /// 商品字段
+        /// </summary>
+        public string Fields { get; set; }
 
         public string GetApiName()
         {
@@ -53,7 +57,8 @@ namespace Yun.User.Request
             var parameters = new YunDictionary
             {
                 {"pagenum", PageNum},
-                {"pagesize", PageSize}
+                {"pagesize", PageSize},
+                {"fields",Fields }
             };
             return parameters;
         }
