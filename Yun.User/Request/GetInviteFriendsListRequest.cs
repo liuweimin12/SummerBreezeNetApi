@@ -42,6 +42,12 @@ namespace Yun.User.Request
         private int _pageSize = 1;
 
         /// <summary>
+        /// 状态
+        /// </summary>
+        public int? State { get; set; }
+
+
+        /// <summary>
         /// 商品字段
         /// </summary>
         public string Fields { get; set; }
@@ -58,7 +64,8 @@ namespace Yun.User.Request
             {
                 {"pagenum", PageNum},
                 {"pagesize", PageSize},
-                {"fields",Fields }
+                {"fields",Fields },
+                {"state",State }
             };
             return parameters;
         }
