@@ -414,21 +414,15 @@ namespace Yun.UnitTest
         [TestMethod]
         public void ModifyUserMoneyRequest()
         {
-            YunClient.Format = "json";
-            var loginReq = YunClient.Instance.Execute(new LoginRequest
-            {
-                UserName = "18606683125",
-                IgnorePassword = true,
-                Ip = "192.168.1.1",
-                AppSecret = YunClient.AppSecret
-            }).Token;
+            //YunClient.Format = "json";
             var req =
                 YunClient.Instance.Execute(new ModifyUserMoneyRequest()
 
                 {
-                    UserNick = "18606683125",
-                    Money = 10000,
-                }, loginReq);
+                    UserNick = "15958805628_2510477",
+                    Money = 100000,
+                    Remark = "测试"
+                }, YunClient.GetAdminToken());
 
             Assert.IsTrue(req != null);
         }

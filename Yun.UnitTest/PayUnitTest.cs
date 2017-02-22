@@ -1,12 +1,8 @@
-﻿using System;
-using System.Text;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Yun.Pay;
 using Yun.Pay.Request;
-using Yun.Pay.Response;
-using Yun.Shop.Request;
 using Yun.User.Request;
 
 namespace Yun.UnitTest
@@ -160,15 +156,15 @@ namespace Yun.UnitTest
         public void CompletePayRequest()
         {
             var token =
-    YunClient.Instance.Execute(new LoginRequest { UserName = "15958805628", IgnorePassword = true }).Token;
+                YunClient.Instance.Execute(new LoginRequest { UserName = "15958805628_2510477", IgnorePassword = true }).Token;
 
-
-            //YunClient.Format = "json";
+            
             var req =
                 YunClient.Instance.Execute(new CompletePayRequest
                 {
-                    Id = 6166
+                    Id = 7026
                 }, token);
+
             Assert.IsTrue(req != null);
         }
 

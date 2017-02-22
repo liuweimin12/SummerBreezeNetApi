@@ -80,16 +80,17 @@ namespace Yun.UnitTest
         public void AddExpressTradeRequest()
         {
             var token =
-                YunClient.Instance.Execute(new LoginRequest {UserName = "15958805628", IgnorePassword = true}).Token;
+                YunClient.Instance.Execute(new LoginRequest {UserName = "15958805628_2510477", IgnorePassword = true}).Token;
 
             var req =
                 YunClient.Instance.Execute(new AddExpressTradeRequest
                 {
                     Mobile="18606683125",
                     TradeNum= Guid.NewGuid().ToString().Replace("-",""),
-                    Quantity=10,
-                    ItemId= 864
+                    Quantity=5,
+                    ItemId= 1199
                 }, token);
+
             Assert.IsTrue(req != null);
         }
         [TestMethod]
@@ -344,16 +345,14 @@ namespace Yun.UnitTest
         public void GeneratePayTradeRequest()
         {
             var token =
-                YunClient.Instance.Execute(new LoginRequest {UserName = "15958805628", IgnorePassword = true}).Token;
-
-
-            //YunClient.Format = "json";
+                YunClient.Instance.Execute(new LoginRequest { UserName = "15958805628_2510477", IgnorePassword = true }).Token;
+            
             var req =
                 YunClient.Instance.Execute(new GeneratePayTradeRequest
                 {
                     Ip = "192.168.1.1",
-                    Id = 5637,
-                    OverMoney = 100,
+                    Id = 6277,
+                    OverMoney = 69*3,
                 }, token);
 
             Assert.IsTrue(req != null);
