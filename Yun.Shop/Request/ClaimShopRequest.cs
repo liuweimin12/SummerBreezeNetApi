@@ -32,7 +32,7 @@ namespace Yun.Shop.Request
         public void Validate()
         {
             RequestValidator.ValidateRequired("shopid", ShopId);
-            RequestValidator.ValidateMaxValue("shopid", ShopId, 1);
+            RequestValidator.ValidateMinValue("shopid", ShopId , 1);
         }
     }
 }
