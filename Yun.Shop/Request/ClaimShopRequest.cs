@@ -8,7 +8,7 @@ namespace Yun.Shop.Request
     /// <summary>
     /// 店铺认领
     /// </summary>
-    public class ClaimShopRequest : ITopRequest<BoolResultResponse>
+    public class ClaimShopRequest : ITopRequest<IntResultResponse>
     {
         /// <summary>
         /// 店铺ID
