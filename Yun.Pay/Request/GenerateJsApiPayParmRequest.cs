@@ -21,6 +21,11 @@ namespace Yun.Pay.Request
         /// </summary>
         public int CompanyId { get; set; }
 
+        /// <summary>
+        /// 支付类型
+        /// </summary>
+        public string PayType { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.pay.weixin.jsapipayparm";
@@ -31,7 +36,8 @@ namespace Yun.Pay.Request
             var parameters = new YunDictionary
             {
                 {"companyid", CompanyId},
-                {"prepayid", PrepayId}
+                {"prepayid", PrepayId},
+                {"paytype",PayType }
             };
             return parameters;
         }

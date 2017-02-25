@@ -47,6 +47,11 @@ namespace Yun.Pay.Request
         /// </summary>
         public string TradeNum { get; set; }
 
+        /// <summary>
+        /// 支付类型
+        /// </summary>
+        public string PayType { get; set; }
+
 
         public string GetApiName()
         {
@@ -63,7 +68,8 @@ namespace Yun.Pay.Request
                 {"tradetype",TradeType},
                 {"openid",Openid},
                 {"companyid",CompanyId},
-                {"tradenum",TradeNum }
+                {"tradenum",TradeNum },
+                {"paytype",PayType }
             };
             return parameters;
         }
