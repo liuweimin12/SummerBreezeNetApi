@@ -49,14 +49,11 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new AddPrepaidCardRequest
                 {
-                    PrepaidCardTypeId = 4,
-                    CardNumber = "272306",
-                    CardPassword = "1234561",
-                    BindShopId = 1,
-                    BindCompanyId = 1,
+                    PrepaidCardTypeId = 10,
+                    CardNumber = Guid.NewGuid().ToString(),
+                    CardPassword = "888999",
                     Money = 1000,
-                    AppSecret = YunClient.AppSecret,
-
+                    AppSecret = YunClient.AppSecret
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }
@@ -64,15 +61,14 @@ namespace Yun.UnitTest
         [TestMethod]
         public void AddPrepaidCardTypeRequest()
         {
-            YunClient.Format = "json";
+            //YunClient.Format = "json";
             var req =
                 YunClient.Instance.Execute(new AddPrepaidCardTypeRequest
                 {
                     CardName = "充值卡",
-                    CardType = 2,
+                    CardType = 0,
                     Description = null,
-                    Denomination = 1000,
-
+                    Denomination = 1000
 
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
@@ -140,16 +136,15 @@ namespace Yun.UnitTest
         [TestMethod]
         public void CompleteOnlinePayRequest()
         {
-            YunClient.Format = "xml";
+            //YunClient.Format = "xml";
             var req =
                 YunClient.Instance.Execute(new CompleteOnlinePayRequest
                 {
-                    Id = 1,
-                    PayPassword = "123456",
-                    Money = 10,
-                    TradeNum = "123456",
+                    Id = 7108,
+                    Money = 69*2,
+                    TradeNum = "2017022323570235847"
                 });
-            Assert.IsTrue(req != null);
+            Assert.IsTrue(req.Result);
         }
 
         [TestMethod]
@@ -162,10 +157,10 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new CompletePayRequest
                 {
-                    Id = 7026
+                    Id = 7107
                 }, token);
 
-            Assert.IsTrue(req != null);
+            Assert.IsTrue(req.Result);
         }
 
         [TestMethod]
@@ -616,15 +611,17 @@ namespace Yun.UnitTest
         [TestMethod]
         public void PrepaidCardBindUserRequest()
         {
-            YunClient.Format = "xml";
+            var token =
+                YunClient.Instance.Execute(new LoginRequest { UserName = "15958805628_2510477", IgnorePassword = true }).Token;
+
             var req =
                 YunClient.Instance.Execute(new PrepaidCardBindUserRequest
                 {
-                    BoundNick = "aa",
+                    BoundNick = "15958805628_2510477",
                     AppSecret = YunClient.AppSecret,
-                    CardNumber = "272306",
-
-                });
+                    CardNumber = "c88666a0-360c-4e89-bcd4-1126b7a3f778",
+                    CardPassword = "888999"
+                }, token);
             Assert.IsTrue(req != null);
         }
 

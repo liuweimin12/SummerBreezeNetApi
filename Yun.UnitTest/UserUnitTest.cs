@@ -420,7 +420,7 @@ namespace Yun.UnitTest
 
                 {
                     UserNick = "15958805628_2510477",
-                    Money = 100000,
+                    Money = 207,
                     Remark = "测试"
                 }, YunClient.GetAdminToken());
 

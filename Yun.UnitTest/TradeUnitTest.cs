@@ -87,7 +87,7 @@ namespace Yun.UnitTest
                 {
                     Mobile="18606683125",
                     TradeNum= Guid.NewGuid().ToString().Replace("-",""),
-                    Quantity=5,
+                    Quantity=6,
                     ItemId= 1199
                 }, token);
 
@@ -351,8 +351,9 @@ namespace Yun.UnitTest
                 YunClient.Instance.Execute(new GeneratePayTradeRequest
                 {
                     Ip = "192.168.1.1",
-                    Id = 6277,
-                    OverMoney = 69*3,
+                    Id = 6359,
+                    PrepaidCard = 69*2,
+                    OnlineMoney = 69*3
                 }, token);
 
             Assert.IsTrue(req != null);
