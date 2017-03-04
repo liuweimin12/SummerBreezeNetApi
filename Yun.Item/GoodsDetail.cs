@@ -13,6 +13,13 @@ namespace Yun.Item
 
 
         /// <summary>
+        /// 是否分销
+        /// </summary>
+        [XmlElement("is_distribution")]
+        public bool IsDistribution { get; set; }
+
+
+        /// <summary>
         /// 积分数量
         /// </summary>
         [XmlElement("integral_quantity")]

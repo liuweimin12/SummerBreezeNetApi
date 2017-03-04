@@ -40,6 +40,11 @@ namespace Yun.Coupon.Request
         /// </summary>
         public bool UseCustomCoupon { get; set; }
 
+        /// <summary>
+        /// 店铺ID
+        /// </summary>
+        public int? ShopId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.coupon.template.add";
@@ -52,9 +57,10 @@ namespace Yun.Coupon.Request
                 {"sendtype", SendType},
                 {"consumepaid", ConsumePaid},
                 {"freedomrefund", FreedomRefund},
-                {"expiredrefund",ExpiredRefund},
+                {"expiredrefund", ExpiredRefund},
                 {"title", Title},
-                {"usecustomcoupon",UseCustomCoupon}
+                {"usecustomcoupon", UseCustomCoupon},
+                {"shopid", ShopId}
             };
             return parameters;
         }

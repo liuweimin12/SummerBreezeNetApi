@@ -282,6 +282,11 @@ namespace Yun.Item.Request
         public string Picture { get; set; }
 
 
+        /// <summary>
+        /// 是否是分销
+        /// </summary>
+        public bool IsDistribution { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.item.add";
@@ -340,7 +345,8 @@ namespace Yun.Item.Request
                 {"jsoncustomskus",JsonCustomSkus },
                 {"auditstate",AuditState },
                 {"picture", Picture },
-                {"integralquantity", IntegralQuantity }
+                {"integralquantity", IntegralQuantity },
+                {"isdistribution",IsDistribution }
             };
             return parameters;
         }

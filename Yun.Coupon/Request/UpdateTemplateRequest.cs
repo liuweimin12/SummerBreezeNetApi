@@ -8,6 +8,11 @@ namespace Yun.Coupon.Request
     public class UpdateTemplateRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>
+        /// 店铺ID
+        /// </summary>
+        public int? ShopId { get; set; }
+
+        /// <summary>
         /// 券发送类型
         /// </summary>
         public int SendType { get; set; }
@@ -57,7 +62,8 @@ namespace Yun.Coupon.Request
                 {"expiredrefund", ExpiredRefund},
                 {"title", Title},
                 {"id",Id},
-                {"usecustomcoupon",UseCustomCoupon}
+                {"usecustomcoupon",UseCustomCoupon},
+                {"shopid", ShopId}
             };
             return parameters;
         }

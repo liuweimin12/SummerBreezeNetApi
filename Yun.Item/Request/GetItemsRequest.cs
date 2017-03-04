@@ -33,6 +33,11 @@ namespace Yun.Item.Request
 
 
         /// <summary>
+        /// 是否是分销
+        /// </summary>
+        public bool? IsDistribution { get; set; }
+
+        /// <summary>
         /// 商品状态约束(出售中1库存中2)
         /// </summary>
         public int? ItemState { get; set; }
@@ -182,7 +187,8 @@ namespace Yun.Item.Request
                 {"companyid", CompanyId},
                 {"needpromotion", NeedPromotion},
                 {"logisticstemplateid", LogisticsTemplateId},
-                {"electroniccouponstemplateid", ElectronicCouponsTemplateId}
+                {"electroniccouponstemplateid", ElectronicCouponsTemplateId},
+                {"isdistribution",IsDistribution }
 
             };
             return parameters;

@@ -5,6 +5,12 @@ namespace Yun.Coupon
     public class CouponTemplate
     {
         /// <summary>
+        /// 店铺ID
+        /// </summary>
+        [XmlElement("shop_id")]
+        public int ShopId { get; set; }
+
+        /// <summary>
         /// 电子券模板ID
         /// </summary>
         [XmlElement("id")]

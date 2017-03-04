@@ -303,6 +303,12 @@ namespace Yun.Item.Request
         /// </summary>
         public string Picture { get; set; }
 
+
+        /// <summary>
+        /// 是否是分销
+        /// </summary>
+        public bool IsDistribution { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.item.update";
@@ -363,6 +369,7 @@ namespace Yun.Item.Request
                 {"auditstate", AuditState},
                 {"picture", Picture},
                 {"integralquantity", IntegralQuantity},
+                {"isdistribution",IsDistribution }
             };
 
             return parameters;
