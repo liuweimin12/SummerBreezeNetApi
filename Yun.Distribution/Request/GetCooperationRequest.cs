@@ -35,6 +35,11 @@ namespace Yun.Distribution.Request
         private int _pageSize = 1;
 
 
+        /// <summary>
+        /// 店铺ID
+        /// </summary>
+        public int? ShopId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.distribution.cooperation.get";
@@ -45,7 +50,8 @@ namespace Yun.Distribution.Request
             var parameters = new YunDictionary
             {
                 {"pagenum",PageNum},
-                {"pagesize",PageSize}
+                {"pagesize",PageSize},
+                {"shopid",ShopId }
             };
             return parameters;
         }
