@@ -44,6 +44,7 @@
     <Compile Include="BatchAddCardJson.cs" />
     <Compile Include="ExchangeRate.cs" />
     <Compile Include="JsApiPayResult.cs" />
+    <Compile Include="OuterRefund.cs" />
     <Compile Include="PaymentIns\AlipayConfig.cs" />
     <Compile Include="FlowRecord.cs" />
     <Compile Include="OnlinePaymentSetting.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Request\ApplyWithdrawalsRequest.cs" />
     <Compile Include="Request\BatchAddPrepaidCardRequest.cs" />
     <Compile Include="Request\CompleteOnlinePayRequest.cs" />
+    <Compile Include="Request\CompleteOuterRefundRequest.cs" />
     <Compile Include="Request\CompletePayRequest.cs" />
     <Compile Include="Request\CompleteRefundRequest.cs" />
     <Compile Include="Request\CompleteWithdrawalsRequest.cs" />
@@ -85,6 +87,7 @@
     <Compile Include="Request\GetDefaultPaymentRateRequest.cs" />
     <Compile Include="Request\GetExchangeRateRequest.cs" />
     <Compile Include="Request\GetOnlinePaymentRequest.cs" />
+    <Compile Include="Request\GetOuterRefundRequest.cs" />
     <Compile Include="Request\GetPaymentInstitutionRequest.cs" />
     <Compile Include="Request\GetPrepaidCardBalanceRequest.cs" />
     <Compile Include="Request\GetPrepaidCardDetailRequest.cs" />
@@ -128,6 +131,7 @@
     <Compile Include="Response\GetCompanyPaymentRateResponse.cs" />
     <Compile Include="Response\GetDefaultPayMentRateResponse.cs" />
     <Compile Include="Response\GetExchangeRateResponse.cs" />
+    <Compile Include="Response\GetOuterRefundResponse.cs" />
     <Compile Include="Response\GetPaymentInstitutionResponse.cs" />
     <Compile Include="Response\GetPrepaidCardBalanceResponse.cs" />
     <Compile Include="Response\GetPrepaidCardDetailResponse.cs" />
