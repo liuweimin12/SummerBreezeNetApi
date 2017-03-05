@@ -5,6 +5,12 @@ namespace Yun.Pay
     public class OuterRefund
     {
         /// <summary>
+        /// 退款批次号
+        /// </summary>
+        [XmlElement("refund_batch_no")]
+        public string RefundBatchNo { get; set; }
+
+        /// <summary>
         /// 详情
         /// </summary>
         [XmlElement("detail")]

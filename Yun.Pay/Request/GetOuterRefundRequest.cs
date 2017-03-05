@@ -49,6 +49,11 @@ namespace Yun.Pay.Request
         public int? RefundId { get; set; }
 
 
+        /// <summary>
+        /// 外部退款ID
+        /// </summary>
+        public int? OuterRefundId { get; set; }
+
         public string GetApiName()
         {
             return "yun.pay.outerrefund.list.get";
@@ -61,7 +66,8 @@ namespace Yun.Pay.Request
                 {"pagenum", PageNum},
                 {"pagesize", PageSize},
                 {"state", State},
-                {"refundid", RefundId}
+                {"refundid", RefundId},
+                {"outerrefundid", OuterRefundId}
             };
             return parameters;
         }

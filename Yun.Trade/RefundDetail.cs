@@ -6,6 +6,12 @@ namespace Yun.Trade
     public class RefundDetail
     {
         /// <summary>
+        /// 公司ID
+        /// </summary>
+        [XmlElement("company_id")]
+        public int CompanyId { get; set; }
+
+        /// <summary>
         /// 支付时间
         /// </summary>
         [XmlElement("pay_time")]

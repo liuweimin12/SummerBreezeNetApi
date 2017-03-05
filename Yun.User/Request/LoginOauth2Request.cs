@@ -101,6 +101,10 @@ namespace Yun.User.Request
         /// </summary>
         public string AppSecret { get; set; }
 
+        /// <summary>
+        /// 如果快捷登录失败，则不创建账号
+        /// </summary>
+        public bool DoNotCreateAccount { get; set; }
 
         public string GetApiName()
         {
@@ -125,6 +129,7 @@ namespace Yun.User.Request
                 {"deviceid",DeviceId },
                 {"idcard",IdCard },
                 {"password", TopUtils.EncryptAes(Password, AppSecret)},
+                {"donotcreateaccount",DoNotCreateAccount }
             };
             return parameters;
         }

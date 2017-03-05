@@ -55,8 +55,6 @@ namespace Yun.User.Request
         {
             RequestValidator.ValidateRequired("oauth2type", OAuth2Type);
             RequestValidator.ValidateRequired("oauthid", OAuthId);
-            RequestValidator.ValidateRequired("userid", UserId);
-            RequestValidator.ValidateMinValue("userid", UserId, 1);
         }
     }
 }
