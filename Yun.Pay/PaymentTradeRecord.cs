@@ -3,8 +3,14 @@ using System.Xml.Serialization;
 
 namespace Yun.Pay
 {
-    public class FlowRecord
+    public class PaymentTradeRecord
     {
+        /// <summary>
+        /// 类型
+        /// </summary>
+        [XmlElement("type")]
+        public string Type { get; set; }
+
         /// <summary>
         /// 在线充值的款项
         /// </summary>
@@ -29,45 +35,39 @@ namespace Yun.Pay
         [XmlElement("out_trade_no")]
         public string OutTradeNo { get; set; }
 
-        /// <summary>
-        /// 资金流入流程类型
-        /// </summary>
-        [XmlElement("direction")]
-        public string Direction { get; set; }
-
 
         /// <summary>
-        /// 订单最后修改时间
+        /// 充值卡支付金额
         /// </summary>
-        [XmlElement("modify_time")]
-        public string ModifyTime { get; set; }
+        [XmlElement("prepaid_card")]
+        public double PrepaidCard { get; set; }
 
 
         /// <summary>
         /// 订单创建时间
         /// </summary>
         [XmlElement("create_time")]
-        public string  CreateTime { get; set; }
+        public string CreateTime { get; set; }
 
         /// <summary>
         /// 总金额
         /// </summary>
         [XmlElement("total_amount")]
-        public string  TotalAmount { get; set; }
+        public double TotalAmount { get; set; }
 
 
         /// <summary>
         /// 现金支付金额，包括POS机
         /// </summary>
         [XmlElement("cash")]
-        public string  Cash { get; set; }
+        public double Cash { get; set; }
 
 
         /// <summary>
         /// 余额支付金额
         /// </summary>
         [XmlElement("credit")]
-        public string  Credit { get; set; }
+        public double Credit { get; set; }
 
 
         /// <summary>
@@ -76,31 +76,6 @@ namespace Yun.Pay
         [XmlElement("description")]
         public string Description { get; set; }
 
-        /// <summary>
-        /// 本方用户ID
-        /// </summary>
-        [XmlElement("owner_user_id")]
-        public long OwnerUserId { get; set; }
-
-
-        /// <summary>
-        /// 本方用户名
-        /// </summary>
-        [XmlElement("owner_name")]
-        public string OwnerName { get; set; }
-
-
-        /// <summary>
-        /// 对方用户ID
-        /// </summary>
-        [XmlElement("opposite_user_id")]
-        public string OppositeUserId { get; set; }
-
-        /// <summary>
-        /// 对方用户名
-        /// </summary>
-        [XmlElement("opposite_name")]
-        public string OppositeName { get; set; }
 
         /// <summary>
         /// 交易状态
@@ -113,31 +88,49 @@ namespace Yun.Pay
         /// </summary>
         [XmlElement("trade_type")]
         public string TradeType { get; set; }
-		
-		        /// <summary>
-        /// 余额快照
-        /// </summary>
-        [XmlElement("balance_snapshot")]
-        public double BalanceSnapshot { get; set; }
 
 
         /// <summary>
-        /// 充值卡余额快照
+        /// 支付渠道
         /// </summary>
-        [XmlElement("prepaid_card_snapshot")]
-        public double PrepaidCardSnapshot { get; set; }
-		
-		
-		/// <summary>
-        /// 充值卡支付金额
-        /// </summary>
-        [XmlElement("prepaid_card")]
-        public double PrepaidCard { get; set; }
+        [XmlElement("pay_channel")]
+        public string PayChannel { get; set; }
+
 
         /// <summary>
-        /// 公司ID
+        /// 线上支付方式
         /// </summary>
-        [XmlElement("compamy_id")]
-        public int CompanyId { get; set; }
+        [XmlElement("online_pay_type")]
+        public string OnlinePayType { get; set; }
+
+        /// <summary>
+        /// 服务费
+        /// </summary>
+        [XmlElement("service_fee")]
+        public double ServiceFee { get; set; }
+
+        /// <summary>
+        /// 收入方
+        /// </summary>
+        [XmlElement("income_pay_account_id")]
+        public int IncomePayAccountId { get; set; }
+
+        /// <summary>
+        /// 收入方名称
+        /// </summary>
+        [XmlElement("income_pay_account_name")]
+        public string IncomePayAccountName { get; set; }
+
+        /// <summary>
+        /// 支出方名称
+        /// </summary>
+        [XmlElement("expenditure_pay_account_name")]
+        public string ExpenditurePayAccountName { get; set; }
+
+        /// <summary>
+        /// 支出方
+        /// </summary>
+        [XmlElement("expenditure_pay_account_id")]
+        public int ExpenditurePayAccountId { get; set; }
     }
 }

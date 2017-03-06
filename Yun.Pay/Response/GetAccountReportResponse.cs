@@ -9,7 +9,7 @@ namespace Yun.Pay.Response
     {
         [XmlArray("cash_flow_records")]
         [XmlArrayItem("cash_flow_record")]
-        public List<FlowRecord> CashFlowRecords { get; set; }
+        public List<PaymentTradeRecord> CashFlowRecords { get; set; }
 
         [XmlElement("total_item")]
         public long TotalItem { get; set; }

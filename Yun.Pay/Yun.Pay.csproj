@@ -46,7 +46,7 @@
     <Compile Include="JsApiPayResult.cs" />
     <Compile Include="OuterRefund.cs" />
     <Compile Include="PaymentIns\AlipayConfig.cs" />
-    <Compile Include="FlowRecord.cs" />
+    <Compile Include="PaymentTradeRecord.cs" />
     <Compile Include="OnlinePaymentSetting.cs" />
     <Compile Include="OnlinePayRate.cs" />
     <Compile Include="PaymentIns\BocPayConfig.cs" />
@@ -83,7 +83,6 @@
     <Compile Include="Request\GetBandBanksRequest.cs" />
     <Compile Include="Request\GetCashFlowRecordRequest.cs" />
     <Compile Include="Request\GetCompanyPaymentRateRequest.cs" />
-    <Compile Include="Request\GetCompanyReportRequest.cs" />
     <Compile Include="Request\GetDefaultPaymentRateRequest.cs" />
     <Compile Include="Request\GetExchangeRateRequest.cs" />
     <Compile Include="Request\GetOnlinePaymentRequest.cs" />
@@ -100,7 +99,6 @@
     <Compile Include="Request\GetRefundAmountRequest.cs" />
     <Compile Include="Request\GetShopPrepaidCardStatisticsRequest.cs" />
     <Compile Include="Request\GetSitePaymentrateRequest.cs" />
-    <Compile Include="Request\GetShopReportRequest.cs" />
     <Compile Include="Request\GetWithdrawalsDetailListRequest.cs" />
     <Compile Include="Request\GetWithdrawalsDetailRequest.cs" />
     <Compile Include="Request\ModifyPrepaidCardMoneyRequest.cs" />

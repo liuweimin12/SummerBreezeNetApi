@@ -7,6 +7,6 @@ namespace Yun.Pay.Response
     public class GetCashFlowRecordResponse : YunResponse
     {
         [XmlElement("cash_flow_record")]
-        public FlowRecord CashFlowRecord { get; set; }
+        public PaymentTradeRecord CashFlowRecord { get; set; }
     }
 }
