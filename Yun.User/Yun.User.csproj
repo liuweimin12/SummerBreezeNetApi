@@ -64,6 +64,7 @@
     <Compile Include="Request\AssociatedUserTagsRequest.cs" />
     <Compile Include="Request\AuthorizationJudgmentRequest.cs" />
     <Compile Include="Request\BuildFriendRelationshipsRequest.cs" />
+    <Compile Include="Request\GetFriendsStatusRequest.cs" />
     <Compile Include="Request\GetDeviceInitializationRequest.cs" />
     <Compile Include="Request\GetInviteFriendsListRequest.cs" />
     <Compile Include="Request\GetInviteStatusRequest.cs" />
@@ -166,6 +167,7 @@
     <Compile Include="Response\FunctionsResponse.cs" />
     <Compile Include="Response\GetAlbumResponse.cs" />
     <Compile Include="Response\GetAuthorizeUrlResponse.cs" />
+    <Compile Include="Response\GetFriendsStatusResponse.cs" />
     <Compile Include="Response\GetInviteFriendsListResponse.cs" />
     <Compile Include="Response\GetInviteStatusResponse.cs" />
     <Compile Include="Response\GetLastTimeInvoiceResponse.cs" />
