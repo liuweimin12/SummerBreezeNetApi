@@ -5,9 +5,12 @@ using Yun.Pay.Response;
 
 namespace Yun.Pay.Request
 {
-    public class GetAccountReportRequest : ITopRequest<GetAccountReportResponse>
+    /// <summary>
+    /// 获取支付订单列表
+    /// yun.payment.orders.list.get
+    /// </summary>
+    public class GetPaymentOrdersRequest : ITopRequest<GetPaymentOrdersResponse>
     {
-
         /// <summary>
         /// 开始时间
         /// </summary>
@@ -58,11 +61,6 @@ namespace Yun.Pay.Request
         /// </summary>
         public string Status { get; set; }
 
-        /// <summary>
-        /// 目标用户名
-        /// </summary>
-        public string OppositeName { get; set; }
-
 
         /// <summary>
         /// 商户订单号
@@ -70,25 +68,13 @@ namespace Yun.Pay.Request
         public string MerchantOrderNo { get; set; }
 
         /// <summary>
-        /// 款项的进出 income expense
+        /// 用户ID
         /// </summary>
-        public string Direction { get; set; }
-
-        /// <summary>
-        /// 昵称，哪个用户的交易流水
-        /// </summary>
-        public string Nick { get; set; }
-
+        public int? UserId { get; set; }
 
         public string GetApiName()
         {
-            return "chenggou.pay.accountreport.get";
-        }
-
-
-        public void Validate()
-        {
-
+            return "yun.payment.orders.list.get";
         }
 
         public IDictionary<string, string> GetParameters()
@@ -101,12 +87,14 @@ namespace Yun.Pay.Request
                 {"pagenum", PageNum},
                 {"pagesize", PageSize},
                 {"status", Status},
-                {"oppositename", OppositeName},
                 {"merchantorderno", MerchantOrderNo},
-                {"nick",Nick}
+                {"userid", UserId},
             };
             return parameters;
         }
 
+        public void Validate()
+        {
+        }
     }
 }

@@ -7,33 +7,33 @@ namespace Yun.Pay.Request
 {
     /// <summary>
     /// 获取现金流的记录
-    /// yun.cashflow.record.get
+    /// yun.payment.order.detail.get
     /// </summary>
-    public class GetCashFlowRecordRequest : ITopRequest<GetCashFlowRecordResponse>
+    public class GetPaymentOrderDetailRequest : ITopRequest<GetPaymentOrderDetailResponse>
     {
         /// <summary>
         /// 现金流记录ID
         /// </summary>
-        public long CashFlowRecordId { get; set; }
+        public long Id { get; set; }
 
         public string GetApiName()
         {
-            return "yun.cashflow.record.get";
+            return "yun.payment.order.detail.get";
         }
 
         public IDictionary<string, string> GetParameters()
         {
             var parameters = new YunDictionary
             {
-                {"cashflowrecordid", CashFlowRecordId}
+                {"id", Id}
             };
+
             return parameters;
         }
 
         public void Validate()
         {
-            RequestValidator.ValidateRequired("cashflowrecordid", CashFlowRecordId);
-            RequestValidator.ValidateMinValue("cashflowrecordid", CashFlowRecordId, 1);
+            RequestValidator.ValidateRequired("id", Id);
         }
     }
 }
