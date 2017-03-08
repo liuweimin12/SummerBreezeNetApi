@@ -64,6 +64,10 @@ namespace Yun.Coupon.Request
         /// </summary>
         public string BuyerNick { get; set; }
 
+        public int? ShopId { get; set; }
+
+        public int? CompanyId { get; set; }
+
         public string GetApiName()
         {
             return "chenggou.coupon.consumed.count";
@@ -82,7 +86,9 @@ namespace Yun.Coupon.Request
                 {"mobile",Mobile},
                 {"consumestatus",ConsumeStatus},
                 {"verifynick",VerifyNick},
-                {"buyernick",BuyerNick}
+                {"buyernick",BuyerNick},
+                {"companyid", CompanyId},
+                {"shopid", ShopId}
             };
             return parameters;
         }
