@@ -37,6 +37,11 @@ namespace Yun.Item.Request
         /// </summary>
         public FileItem NewImage { get; set; }
 
+        /// <summary>
+        /// 店铺ID
+        /// </summary>
+        public int? ShopId { get; set; }
+
         public IDictionary<string, FileItem> GetFileParameters()
         {
             return new Dictionary<string, FileItem> { { "newimage", NewImage } };
@@ -51,11 +56,12 @@ namespace Yun.Item.Request
         {
             var parameters = new YunDictionary
             {
-                {"id",Id},
-                {"title",Title},
-                {"sort",Sort},
-                {"display",Display},
-                {"image",Image}
+                {"id", Id},
+                {"title", Title},
+                {"sort", Sort},
+                {"display", Display},
+                {"image", Image},
+                {"shopid", ShopId}
             };
             return parameters;
         }
