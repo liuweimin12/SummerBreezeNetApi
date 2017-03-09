@@ -65,6 +65,7 @@
     <Compile Include="Request\DeleteShopCustomerServiceRequest.cs" />
     <Compile Include="Request\DeleteShopFavoriteRequest.cs" />
     <Compile Include="Request\DeleteShopQuestionRequest.cs" />
+    <Compile Include="Request\DeleteUnboundShopRequest.cs" />
     <Compile Include="Request\ExistCompanyRequest.cs" />
     <Compile Include="Request\FindCompaniesRequest.cs" />
     <Compile Include="Request\GetCompanyRequest.cs" />
