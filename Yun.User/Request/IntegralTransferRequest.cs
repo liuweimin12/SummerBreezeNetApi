@@ -68,7 +68,8 @@ namespace Yun.User.Request
                 {"integraltype",IntegralType },
                 {"serialnumber",SerialNumber },
                 {"targetuserid",TargetUserId },
-                {"currencyconversion",CurrencyConversion }
+                {"currencyconversion",CurrencyConversion },
+                {"incomedetail",IncomeDetail }
             };
 
             return parameters;
