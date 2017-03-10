@@ -48,6 +48,10 @@ namespace Yun.User.Request
         /// </summary>
         public string SerialNumber { get; set; }
 
+        /// <summary>
+        /// 币种转换
+        /// </summary>
+        public string CurrencyConversion { get; set; }
 
         public string GetApiName()
         {
@@ -63,7 +67,8 @@ namespace Yun.User.Request
                 {"detail", Detail},
                 {"integraltype",IntegralType },
                 {"serialnumber",SerialNumber },
-                {"targetuserid",TargetUserId }
+                {"targetuserid",TargetUserId },
+                {"currencyconversion",CurrencyConversion }
             };
 
             return parameters;
