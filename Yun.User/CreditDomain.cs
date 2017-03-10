@@ -4,6 +4,15 @@ namespace Yun.User
 {
     public class CreditDomain
     {
+        /// <summary>
+        /// 类型、用户、可以自定义
+        /// </summary>
+        [XmlElement("credit")]
+        public string CreditType { get; set; }
+
+        /// <summary>
+        /// ID
+        /// </summary>
         [XmlElement("id")]
         public int Id { get; set; }
 
@@ -38,7 +47,7 @@ namespace Yun.User
         public int Score { get; set; }
 
         /// <summary>
-        /// 动作
+        /// 币种
         /// </summary>
         [XmlElement("action")]
         public string Action { get; set; }
