@@ -87,6 +87,7 @@
     <Compile Include="Request\GetExchangeRateRequest.cs" />
     <Compile Include="Request\GetOnlinePaymentRequest.cs" />
     <Compile Include="Request\GetOuterRefundRequest.cs" />
+    <Compile Include="Request\GetPayAccountIdRequest.cs" />
     <Compile Include="Request\GetPayAccountRecordListRequest.cs" />
     <Compile Include="Request\GetPaymentInstitutionRequest.cs" />
     <Compile Include="Request\GetPaymentOrderDetailRequest.cs" />
