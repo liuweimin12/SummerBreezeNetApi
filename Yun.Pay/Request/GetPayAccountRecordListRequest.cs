@@ -63,7 +63,6 @@ namespace Yun.Pay.Request
 
         public void Validate()
         {
-            RequestValidator.ValidateMinValue("payaccountid", PayAccountId, 1);
         }
     }
 }
