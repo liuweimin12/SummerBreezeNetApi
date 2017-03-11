@@ -70,6 +70,7 @@
     <Compile Include="Request\CompletePayRequest.cs" />
     <Compile Include="Request\CompleteRefundRequest.cs" />
     <Compile Include="Request\CompleteWithdrawalsRequest.cs" />
+    <Compile Include="Request\CreateRechargeOrderRequest.cs" />
     <Compile Include="Request\CreateRefundLinkRequest.cs" />
     <Compile Include="Request\DeletePrepaidCardRequest.cs" />
     <Compile Include="Request\DeletePrepaidCardTypeRequest.cs" />
