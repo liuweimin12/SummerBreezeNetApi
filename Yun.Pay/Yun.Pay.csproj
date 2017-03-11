@@ -45,6 +45,7 @@
     <Compile Include="ExchangeRate.cs" />
     <Compile Include="JsApiPayResult.cs" />
     <Compile Include="OuterRefund.cs" />
+    <Compile Include="PayAccountBalance.cs" />
     <Compile Include="PaymentIns\AlipayConfig.cs" />
     <Compile Include="PaymentTradeRecord.cs" />
     <Compile Include="OnlinePaymentSetting.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Request\GetExchangeRateRequest.cs" />
     <Compile Include="Request\GetOnlinePaymentRequest.cs" />
     <Compile Include="Request\GetOuterRefundRequest.cs" />
+    <Compile Include="Request\GetPayAccountRecordListRequest.cs" />
     <Compile Include="Request\GetPaymentInstitutionRequest.cs" />
     <Compile Include="Request\GetPaymentOrderDetailRequest.cs" />
     <Compile Include="Request\GetPaymentOrdersRequest.cs" />
@@ -129,6 +131,7 @@
     <Compile Include="Response\GetDefaultPayMentRateResponse.cs" />
     <Compile Include="Response\GetExchangeRateResponse.cs" />
     <Compile Include="Response\GetOuterRefundResponse.cs" />
+    <Compile Include="Response\GetPayAccountRecordListResponse.cs" />
     <Compile Include="Response\GetPaymentInstitutionResponse.cs" />
     <Compile Include="Response\GetPaymentOrderDetailResponse.cs" />
     <Compile Include="Response\GetPaymentOrdersResponse.cs" />
