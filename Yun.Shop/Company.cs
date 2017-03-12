@@ -5,6 +5,12 @@ namespace Yun.Shop
 {
     public class Company
     {
+        /// <summary>
+        /// 管理人
+        /// </summary>
+        [XmlElement("management")]
+        public string Management { get; set; }
+
         [XmlElement("id")]
         public long Id { get; set; }
 

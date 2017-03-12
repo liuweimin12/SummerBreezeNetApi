@@ -85,6 +85,7 @@
     <Compile Include="Request\GetCompanyPaymentRateRequest.cs" />
     <Compile Include="Request\GetDefaultPaymentRateRequest.cs" />
     <Compile Include="Request\GetExchangeRateRequest.cs" />
+    <Compile Include="Request\GetExpiredPrepaidCardsListRequest.cs" />
     <Compile Include="Request\GetOnlinePaymentRequest.cs" />
     <Compile Include="Request\GetOuterRefundRequest.cs" />
     <Compile Include="Request\GetPayAccountIdRequest.cs" />
