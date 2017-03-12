@@ -88,6 +88,7 @@
     <Compile Include="Request\ReplyShopQuestionRequest.cs" />
     <Compile Include="Request\SaveShopHomeSeoRequest.cs" />
     <Compile Include="Request\SearchShopsRequest.cs" />
+    <Compile Include="Request\UpdateCompanyManagementRequest.cs" />
     <Compile Include="Request\UpdateCompanyRequest.cs" />
     <Compile Include="Request\UpdateShopAlumbRequest.cs" />
     <Compile Include="Request\UpdateShopAreaRequest.cs" />
