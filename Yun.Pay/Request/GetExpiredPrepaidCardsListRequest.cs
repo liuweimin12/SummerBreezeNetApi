@@ -44,6 +44,18 @@ namespace Yun.Pay.Request
         /// </summary>
         public DateTime? ExpiredDateTime { get; set; }
 
+
+        /// <summary>
+        /// 需要查询某店铺下的所有充值卡
+        /// </summary>
+        public int? ShopId { get; set; }
+
+
+        /// <summary>
+        /// 需要查询某公司下的所有充值卡
+        /// </summary>
+        public int? CompanyId { get; set; }
+
         public string GetApiName()
         {
             return "yun.prepaidcard.expired.list.get";
@@ -56,6 +68,8 @@ namespace Yun.Pay.Request
                 {"expireddatetime",ExpiredDateTime},
                 {"pagenum",PageNum},
                 {"pagesize",PageSize},
+                {"shopid",ShopId},
+                {"companyid",CompanyId},
             };
             return parameters;
         }
