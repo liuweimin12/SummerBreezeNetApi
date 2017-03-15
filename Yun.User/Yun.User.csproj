@@ -70,6 +70,7 @@
     <Compile Include="Request\GetInviteStatusRequest.cs" />
     <Compile Include="Request\GetLastTimeInvoiceRequest.cs" />
     <Compile Include="Request\GetSourcesOfExpenditureRequest.cs" />
+    <Compile Include="Request\GetUserGroupDevicesRequest.cs" />
     <Compile Include="Request\InviteFriendsRequest.cs" />
     <Compile Include="Request\ReconstructionIntegralDataRequest.cs" />
     <Compile Include="Request\RefuseInvitationRequest.cs" />
@@ -175,6 +176,7 @@
     <Compile Include="Response\GetOAuth2LoginInfoResponse.cs" />
     <Compile Include="Response\GetSourcesOfExpenditureResponse.cs" />
     <Compile Include="Response\GetUserFriendsResponse.cs" />
+    <Compile Include="Response\GetUserGroupDevicesResponse.cs" />
     <Compile Include="Response\GetUserLeastTokenResponse.cs" />
     <Compile Include="Response\GetUserScoreGroupByDateResponse.cs" />
     <Compile Include="Response\GetUserScoreListResponse.cs" />
@@ -203,6 +205,7 @@
     <Compile Include="TotalPoints.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="UserDevice.cs" />
+    <Compile Include="UserGroupDevices.cs" />
     <Compile Include="UserTagDomain.cs" />
   </ItemGroup>
   <ItemGroup>
