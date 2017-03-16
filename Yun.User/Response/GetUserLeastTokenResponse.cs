@@ -35,7 +35,7 @@ namespace Yun.User.Response
         /// <summary>
         /// 设备信息
         /// </summary>
-        [XmlElement("device_id")]
-        public string DeviceId { get; set; }
+        [XmlElement("device_info")]
+        public UserDevice DeviceInfo { get; set; }
     }
 }
