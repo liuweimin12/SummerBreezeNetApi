@@ -67,9 +67,16 @@ namespace Yun.Marketing.Request
         public int ValidityPeriod { get; set; }
 
         /// <summary>
-        /// 状态
+        /// 状态 0-启用，1-禁用
         /// </summary>
         public int? Status { get; set; }
+
+        /// <summary>
+        /// 领取状态
+        /// 空为全部，0：未领完，1：已领完
+        /// </summary>
+        public int? ReceiveStatus { get; set; }
+
 
         /// <summary>
         /// 显示位置
@@ -93,7 +100,8 @@ namespace Yun.Marketing.Request
                 {"name",Name},
                 {"validityperiod",ValidityPeriod},
                 {"status",Status},
-                {"displayposition",DisplayPosition }
+                {"displayposition",DisplayPosition },
+                {"receivestatus", ReceiveStatus}
             };
             return parameters;
         }
