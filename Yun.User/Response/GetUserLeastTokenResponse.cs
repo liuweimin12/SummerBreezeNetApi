@@ -17,5 +17,25 @@ namespace Yun.User.Response
         /// </summary>
         [XmlElement("login_time")]
         public string LoginTime { get; set; }
+
+
+        /// <summary>
+        /// 登录类型
+        /// </summary>
+        [XmlElement("login_type")]
+        public int LoginType { get; set; }
+
+
+        /// <summary>
+        /// 客户端信息
+        /// </summary>
+        [XmlElement("client_info")]
+        public string ClientInfo { get; set; }
+
+        /// <summary>
+        /// 设备信息
+        /// </summary>
+        [XmlElement("device_id")]
+        public string DeviceId { get; set; }
     }
 }
