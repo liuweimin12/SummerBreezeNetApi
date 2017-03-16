@@ -39,7 +39,6 @@ namespace Yun.User.Request
 
         public void Validate()
         {
-            RequestValidator.ValidateRequired("deviceid", DeviceId);
         }
     }
 }
