@@ -20,7 +20,7 @@ namespace Yun.User.Request
         /// <summary>
         /// 用户ID
         /// </summary>
-        public int UserId { get; set; }
+        public int? UserId { get; set; }
 
         public string GetApiName()
         {
