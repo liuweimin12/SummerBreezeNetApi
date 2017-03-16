@@ -17,6 +17,11 @@ namespace Yun.User.Request
         public string DeviceId { get; set; }
 
 
+        /// <summary>
+        /// 用户ID
+        /// </summary>
+        public int UserId { get; set; }
+
         public string GetApiName()
         {
             return "yun.user.least.token.get";
@@ -26,7 +31,8 @@ namespace Yun.User.Request
         {
             var parameters = new YunDictionary
             {
-                {"deviceid", DeviceId}
+                {"deviceid", DeviceId},
+                {"userid",UserId }
             };
             return parameters;
         }
