@@ -10,6 +10,7 @@ namespace Yun.User
         [XmlElement("app_id")]
         public int AppId { get; set; }
 
+
         [XmlElement("id")]
         public int Id { get; set; }
 
