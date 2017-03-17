@@ -11,10 +11,16 @@ namespace Yun.Site.Request
     /// </summary>
     public class FindSiteVersionsRequest: ITopRequest<FindSiteVersionsResponse>
     {
+
+        /// <summary>
+        /// 公司ID
+        /// </summary> 
+        public int? CompanyId { get; set; }
+
         /// <summary>
         /// 类型
         /// </summary>
-        public int? Type { get; set; }
+        public string Type { get; set; }
 
         /// <summary>
         /// 页码
@@ -59,6 +65,7 @@ namespace Yun.Site.Request
                 {"pagenum",PageNum},
                 {"pagesize",PageSize},
                 {"type",Type},
+                {"companyid", CompanyId }
             };
             return parameters;
         }

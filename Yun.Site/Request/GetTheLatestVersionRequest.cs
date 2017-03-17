@@ -13,7 +13,7 @@ namespace Yun.Site.Request
         /// <summary>
         /// 类型 买家-0，卖家-1
         /// </summary>
-        public int? Type { get; set; }
+        public string Type { get; set; }
 
         public string GetApiName()
         {

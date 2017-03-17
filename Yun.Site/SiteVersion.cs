@@ -52,5 +52,12 @@ namespace Yun.Site
         /// </summary>
         [XmlElement("update_time")]
         public string UpdateTime { get; set; }
+
+
+        /// <summary>
+        /// 公司ID
+        /// </summary>
+        [XmlElement("company_id")]
+        public int CompanyId { get; set; }
     }
 }

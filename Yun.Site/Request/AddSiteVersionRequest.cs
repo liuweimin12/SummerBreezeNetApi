@@ -21,7 +21,7 @@ namespace Yun.Site.Request
         /// <summary>
         /// 类型
         /// </summary>
-        public int Type { get; set; }
+        public string Type { get; set; }
 
         /// <summary>
         /// 标题
@@ -43,6 +43,13 @@ namespace Yun.Site.Request
         /// </summary>
         public DateTime? UpdateTime { get; set; }
 
+        /// <summary>
+        /// 公司ID
+        /// </summary> 
+        public int CompanyId { get; set; }
+
+
+
 
         public string GetApiName()
         {
@@ -58,7 +65,8 @@ namespace Yun.Site.Request
                 {"title",Title},
                 {"url",Url },
                 {"version",Version },
-                {"updatetime",UpdateTime }
+                {"updatetime",UpdateTime },
+                {"companyid",CompanyId }
             };
             return parameters;
         }
