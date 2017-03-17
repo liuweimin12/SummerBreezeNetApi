@@ -43,6 +43,7 @@
     <Compile Include="JsonCustomSkus.cs" />
     <Compile Include="Request\AddFavoritesItemRequest.cs" />
     <Compile Include="Request\AddItemBookRequest.cs" />
+    <Compile Include="Request\BatchMatchItemCatRequest.cs" />
     <Compile Include="Request\BatchUpdateItemCatSortRequest.cs" />
     <Compile Include="Request\BatchUpdateShopItemCategorySortRequest.cs" />
     <Compile Include="Request\ChangeBookStatusRequest.cs" />
