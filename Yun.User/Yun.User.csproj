@@ -44,6 +44,7 @@
     <Compile Include="InviteFriendHistory.cs" />
     <Compile Include="InviteStatus.cs" />
     <Compile Include="Invoice.cs" />
+    <Compile Include="LoginInfo.cs" />
     <Compile Include="LoginRecord.cs" />
     <Compile Include="OAth2SettingJson.cs" />
     <Compile Include="Oauth2Login.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Request\GetLastTimeInvoiceRequest.cs" />
     <Compile Include="Request\GetSourcesOfExpenditureRequest.cs" />
     <Compile Include="Request\GetUserGroupDevicesRequest.cs" />
+    <Compile Include="Request\GetUserLogininfoRequest.cs" />
     <Compile Include="Request\InviteFriendsRequest.cs" />
     <Compile Include="Request\ReconstructionIntegralDataRequest.cs" />
     <Compile Include="Request\RefuseInvitationRequest.cs" />
@@ -178,6 +180,7 @@
     <Compile Include="Response\GetUserFriendsResponse.cs" />
     <Compile Include="Response\GetUserGroupDevicesResponse.cs" />
     <Compile Include="Response\GetUserLeastTokenResponse.cs" />
+    <Compile Include="Response\GetUserLoginInfoResponse.cs" />
     <Compile Include="Response\GetUserScoreGroupByDateResponse.cs" />
     <Compile Include="Response\GetUserScoreListResponse.cs" />
     <Compile Include="Response\GetUserSignInRecordListResponse.cs" />

@@ -4,6 +4,12 @@ namespace Yun.User
 {
     public class UserDevice
     {
+        /// <summary>
+        /// APPID
+        /// </summary>
+        [XmlElement("app_id")]
+        public int AppId { get; set; }
+
         [XmlElement("id")]
         public int Id { get; set; }
 
