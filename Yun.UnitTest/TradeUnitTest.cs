@@ -111,7 +111,6 @@ namespace Yun.UnitTest
                     Ext2 = null,
                     GiftsJson = null,
                     Integral = 10,
-
                 }, YunClient.GetAdminToken());
             Assert.IsTrue(req != null);
         }

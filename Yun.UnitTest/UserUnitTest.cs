@@ -402,7 +402,7 @@ namespace Yun.UnitTest
                     Credit = 10000,
                     Detail = "测试",
                     SerialNumber = Guid.NewGuid().ToString(),
-                    IntegralType = "GameIncome"
+                    IntegralType = "default"
                 }, YunClient.GetAdminToken());
 
             Assert.IsTrue(req != null);

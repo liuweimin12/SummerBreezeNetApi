@@ -287,19 +287,6 @@ namespace Yun.UnitTest
         }
 
         [TestMethod]
-        public void GetAccountReportRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new GetAccountReportRequest
-                {
-                    PageSize = 1,
-                    PageNum = 10,
-                });
-            Assert.IsTrue(req != null);
-        }
-
-        [TestMethod]
         public void GetBandBankRequest()
         {
             YunClient.Format = "json";
@@ -335,30 +322,7 @@ namespace Yun.UnitTest
                 });
             Assert.IsTrue(req != null);
         }
-
-        [TestMethod]
-        public void GetCompanyReportRequest()
-        {
-            YunClient.Format = "json";
-            var req =
-                YunClient.Instance.Execute(new GetCompanyReportRequest
-                {
-                    CompanyId = 1,
-                    Direction = null,
-                    StartTime = DateTime.Now,
-                    EndTime = DateTime.Now,
-                    MerchantOrderNo = null,
-                    PageSize = 1,
-                    PageNum = 10,
-                    OppositeName = null,
-                    OwnerId = 1,
-                    ShopId = 1,
-                    Status = null,
-                    TradeType = null,
-
-                });
-            Assert.IsTrue(req != null);
-        }
+        
 
         //[TestMethod]
         //public void GetDefaultPayMentRateResponse()
@@ -789,18 +753,6 @@ namespace Yun.UnitTest
         //
         //    Assert.IsTrue(req.OnlineMoney==0.01);
         //}
-        [TestMethod]
-        public void GetCashFlowRecordRequest()
-        {
-            YunClient.Format = "xml";
-            var req =
-                YunClient.Instance.Execute(new GetCashFlowRecordRequest
-                {
-                   CashFlowRecordId = 1,
-
-                }, YunClient.GetAdminToken());
-            Assert.IsTrue(req != null);
-        }
         
 
 

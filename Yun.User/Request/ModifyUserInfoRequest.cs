@@ -110,6 +110,10 @@ namespace Yun.User.Request
         /// </summary>
         public double? Weight { get; set; }
 
+        /// <summary>
+        /// 允许重复真实姓名
+        /// </summary>
+        public bool AllowDuplicateRealNames { get; set; }
 
         public string GetApiName()
         {
@@ -121,22 +125,23 @@ namespace Yun.User.Request
             var parameters = new YunDictionary
             {
                 {"nick", Nick},
-                {"ismale",IsMale},
-                {"avatar",Avatar},
-                {"email",Email},
-                {"mobile",Mobile},
-                {"realname",RealName},
-                {"birthday",Birthday},
-                {"province",Province},
-                {"city",City},
-                {"area",Area},
-                {"address",Address},
-                {"remark",Remark},
-                {"phone",Phone},
-                {"idcard",IdCard },
-                {"age",Age},
-                {"height",Height},
-                {"weight",Weight }
+                {"ismale", IsMale},
+                {"avatar", Avatar},
+                {"email", Email},
+                {"mobile", Mobile},
+                {"realname", RealName},
+                {"birthday", Birthday},
+                {"province", Province},
+                {"city", City},
+                {"area", Area},
+                {"address", Address},
+                {"remark", Remark},
+                {"phone", Phone},
+                {"idcard", IdCard},
+                {"age", Age},
+                {"height", Height},
+                {"weight", Weight},
+                {"allowduplicaterealnames", AllowDuplicateRealNames}
             };
             return parameters;
         }
