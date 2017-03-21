@@ -6,6 +6,12 @@ namespace Yun.Domain
    public class UserDetail
     {
         /// <summary>
+        /// 用户名更新次数
+        /// </summary>
+        [XmlElement("modify_name_time")]
+        public string ModifyNameTime { get; set; }
+
+        /// <summary>
         /// 身份证
         /// </summary>
         [XmlElement("id_card")]
