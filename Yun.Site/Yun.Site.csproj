@@ -71,6 +71,7 @@
     <Compile Include="Request\GetNotifySettingRequest.cs" />
     <Compile Include="Request\GetOperationRecordRequest.cs" />
     <Compile Include="Request\GetPageModuleRequest.cs" />
+    <Compile Include="Request\GetSiteVersionRequest.cs" />
     <Compile Include="Request\GetStationMessageRequest.cs" />
     <Compile Include="Request\GetSubscriptionListRequest.cs" />
     <Compile Include="Request\GetTextsSiteElementRequest.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Response\GetNotifySettingResponse.cs" />
     <Compile Include="Response\GetPageModuleResponse.cs" />
     <Compile Include="Response\GetOperationRecordsResponse.cs" />
+    <Compile Include="Response\GetSiteVersionResponse.cs" />
     <Compile Include="Response\GetStationMessageResponse.cs" />
     <Compile Include="Response\GetSubscriptionListResponse.cs" />
     <Compile Include="Response\GetTheLatestVersionResponse.cs" />
