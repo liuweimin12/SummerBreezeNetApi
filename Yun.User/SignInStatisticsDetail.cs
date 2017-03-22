@@ -2,7 +2,7 @@
 
 namespace Yun.User
 {
-    public class SignInStatistics
+    public class SignInStatisticsDetail
     {
         /// <summary>
         /// 下次签到所得积分

@@ -70,6 +70,7 @@
     <Compile Include="Request\GetInviteFriendsListRequest.cs" />
     <Compile Include="Request\GetInviteStatusRequest.cs" />
     <Compile Include="Request\GetLastTimeInvoiceRequest.cs" />
+    <Compile Include="Request\GetmutipleUserSignInStatisticsRequest.cs" />
     <Compile Include="Request\GetSourcesOfExpenditureRequest.cs" />
     <Compile Include="Request\GetUserGroupDevicesRequest.cs" />
     <Compile Include="Request\GetUserLogininfoRequest.cs" />
@@ -174,6 +175,7 @@
     <Compile Include="Response\GetInviteFriendsListResponse.cs" />
     <Compile Include="Response\GetInviteStatusResponse.cs" />
     <Compile Include="Response\GetLastTimeInvoiceResponse.cs" />
+    <Compile Include="Response\GetmutipleUserSignInStatisticsResponse.cs" />
     <Compile Include="Response\GetOAuth2ConfigResponse.cs" />
     <Compile Include="Response\GetOAuth2LoginInfoResponse.cs" />
     <Compile Include="Response\GetSourcesOfExpenditureResponse.cs" />
@@ -203,7 +205,8 @@
     <Compile Include="Response\UsersResponse.cs" />
     <Compile Include="Roles.cs" />
     <Compile Include="SignInHistory.cs" />
-    <Compile Include="SignInStatistics.cs" />
+    <Compile Include="SignInStatisticsDetail.cs" />
+    <Compile Include="SignStatistics.cs" />
     <Compile Include="SourcesOfExpenditure.cs" />
     <Compile Include="TotalPoints.cs" />
     <Compile Include="Employee.cs" />

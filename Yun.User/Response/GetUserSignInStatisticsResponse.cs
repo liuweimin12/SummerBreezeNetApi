@@ -13,6 +13,6 @@ namespace Yun.User.Response
         /// 签到统计
         /// </summary>
         [XmlElement("sign_in_statistics")]
-        public SignInStatistics SignInStatistics { get; set; }
+        public SignInStatisticsDetail SignInStatistics { get; set; }
     }
 }
