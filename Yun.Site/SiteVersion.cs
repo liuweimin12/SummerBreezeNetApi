@@ -27,7 +27,7 @@ namespace Yun.Site
         /// 类型
         /// </summary>
         [XmlElement("type")]
-        public int Type { get; set; }
+        public string Type { get; set; }
 
         /// <summary>
         /// 标题
