@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Yun.Interface;
 using Yun.Response;
 using Yun.Util;
@@ -14,6 +11,12 @@ namespace Yun.User.Request
     /// </summary>
     public class RefuseRealNameAuthenticationRequest : ITopRequest<IntResultResponse>
     {
+        /// <summary>
+        /// 是否同时重置
+        /// </summary>
+        public bool IsReset { get; set; }
+
+
         /// <summary>
         /// 用户ID
         /// </summary>
@@ -34,7 +37,8 @@ namespace Yun.User.Request
             var parameters = new YunDictionary
             {
                 {"userid",UserId},
-                {"reason",Reason}
+                {"reason",Reason},
+                {"isreset",IsReset}
             };
             return parameters;
         }
