@@ -16,6 +16,10 @@ namespace Yun.User.Request
         /// </summary>
         public string Password { get; set; }
 
+        /// <summary>
+        /// 强制执行
+        /// </summary>
+        public bool Enforced { get; set; }
 
         /// <summary>
         /// APP密匙
@@ -32,14 +36,14 @@ namespace Yun.User.Request
         {
             var parameters = new YunDictionary
             {
-                {"password", Password.Length == 32 ? Password : TopUtils.EncryptAes(Password, AppSecret)},
+                {"password",  (Password.Length == 32 || string.IsNullOrEmpty(Password)) ? Password : TopUtils.EncryptAes(Password, AppSecret)},
+                {"enforced", Enforced}
             };
             return parameters;
         }
 
         public void Validate()
         {
-            RequestValidator.ValidateRequired("password", Password);
         }
     }
 }
