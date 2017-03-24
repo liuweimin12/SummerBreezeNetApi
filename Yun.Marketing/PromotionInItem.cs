@@ -9,6 +9,18 @@ namespace Yun.Marketing
 {
     public class PromotionInItem
     {
+        /// <summary>
+        /// 积分数量
+        /// </summary>
+        [XmlElement("item_integral_quantity")]
+        public int ItemIntegralQuantity { get; set; }
+
+        /// <summary>
+        /// 积分限制
+        /// </summary>
+        [XmlElement("item_integral_limit")]
+        public double ItemIntegrallimit { get; set; }
+
 
         [XmlElement("activity_id")]
         public int ActivityId { get; set; }
