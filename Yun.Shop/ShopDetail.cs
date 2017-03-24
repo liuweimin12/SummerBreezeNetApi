@@ -6,6 +6,11 @@ namespace Yun.Shop
 {
     public class ShopDetail
     {
+        /// <summary>
+        /// 虚拟类目
+        /// </summary>
+        [XmlElement("virtual_category")]
+        public string VirtualCategory { get; set; }
 
         /// <summary>
         /// 省
