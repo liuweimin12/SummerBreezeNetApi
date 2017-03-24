@@ -103,6 +103,7 @@
     <Compile Include="Request\FindIntegralGameWinningListRequest.cs" />
     <Compile Include="Request\FindLotteryAwardsRequest.cs" />
     <Compile Include="Request\FindPlayGameRecordsRequest.cs" />
+    <Compile Include="Request\FindPromotionalItemsRequest.cs" />
     <Compile Include="Request\GenerateCashCouponRequest.cs" />
     <Compile Include="Request\GenerateCustomCashCouponRequest.cs" />
     <Compile Include="Request\GenerateLotteryAwardRequest.cs" />
@@ -160,6 +161,7 @@
     <Compile Include="Response\FindIntegralTypeResponse.cs" />
     <Compile Include="Response\FindLotteryAwardsResponse.cs" />
     <Compile Include="Response\FindPlayGameRecordsResponse.cs" />
+    <Compile Include="Response\FindPromotionalItemsResponse.cs" />
     <Compile Include="Response\GetCashCouponCategoryResponse.cs" />
     <Compile Include="Response\GetCashCouponResponse.cs" />
     <Compile Include="Response\GetCombinationBuyDetailResponse.cs" />
