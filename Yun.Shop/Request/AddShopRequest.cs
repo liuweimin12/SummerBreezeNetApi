@@ -8,6 +8,10 @@ namespace Yun.Shop.Request
 {
     public class AddShopRequest : ITopUploadRequest<IntResultResponse>
     {
+        /// <summary>
+        /// 虚拟类目
+        /// </summary>
+        public string VirtualCategory { get; set; }
 
         /// <summary>
         /// 是否允许开票
@@ -255,7 +259,8 @@ namespace Yun.Shop.Request
                 {"province", Province},
                 {"city", City},
                 {"area", Area},
-                {"town", Town}
+                {"town", Town},
+                {"virtualcategory",VirtualCategory }
             };
             return parameters;
         }

@@ -221,10 +221,16 @@ namespace Yun.Shop.Request
                 {"province", Province},
                 {"city", City},
                 {"area", Area},
-                {"town", Town}
+                {"town", Town},
+                {"virtualcategory",VirtualCategory }
             };
             return parameters;
         }
+
+        /// <summary>
+        /// 虚拟类目
+        /// </summary>
+        public string VirtualCategory { get; set; }
 
         public void Validate()
         {
