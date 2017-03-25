@@ -6,7 +6,7 @@ namespace Yun.Trade.Request
 {
     /// <summary>
     /// 获取评价
-    /// chenggou.tradeevaluates.get
+    ///yun.trade.evaluates.get
     /// </summary>
     public class GetEvaluateRecordRequest : ITopRequest<EvaluateRecordResponse>
     {
@@ -45,16 +45,34 @@ namespace Yun.Trade.Request
         /// </summary>
         public int? ItemId { get; set; }
 
+        /// <summary>
+        /// 店铺ID
+        /// </summary>
         public int? ShopId { get; set; }
+
+        /// <summary>
+        /// 用户ID
+        /// </summary>
+        public int? UserId { get; set; }
 
         /// <summary>
         /// 星级，0，1，2，3，4，5
         /// </summary>
         public int? StarRating { get; set; }
 
+        /// <summary>
+        /// 是否有买家的评价内容
+        /// </summary>
+        public bool? HasBuyerContent { get; set; }
+
+        /// <summary>
+        /// 买家是否评论
+        /// </summary>
+        public bool? SellerHasComment { get; set; }
+
         public string GetApiName()
         {
-            return "chenggou.tradeevaluates.get";
+            return "yun.trade.evaluates.get";
         }
 
         public IDictionary<string, string> GetParameters()
@@ -65,7 +83,11 @@ namespace Yun.Trade.Request
                 {"pagesize", PageSize},
                 {"itemid", ItemId},
                 {"shopid", ShopId},
-                {"hascontent",HasContent}
+                {"hascontent",HasContent},
+                {"userid",UserId},
+                {"starrating",StarRating},
+                {"hasbuyercontent",HasBuyerContent},
+                {"sellerhascomment",SellerHasComment}
             };
             return parameters;
         }
