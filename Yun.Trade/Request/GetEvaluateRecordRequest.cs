@@ -10,8 +10,6 @@ namespace Yun.Trade.Request
     /// </summary>
     public class GetEvaluateRecordRequest : ITopRequest<EvaluateRecordResponse>
     {
-        public bool? HasContent { get; set; }
-
         /// <summary>
         /// 页码
         /// </summary>
@@ -66,7 +64,7 @@ namespace Yun.Trade.Request
         public bool? HasBuyerContent { get; set; }
 
         /// <summary>
-        /// 买家是否评论
+        /// 卖家是否评论
         /// </summary>
         public bool? SellerHasComment { get; set; }
 
@@ -83,7 +81,6 @@ namespace Yun.Trade.Request
                 {"pagesize", PageSize},
                 {"itemid", ItemId},
                 {"shopid", ShopId},
-                {"hascontent",HasContent},
                 {"userid",UserId},
                 {"starrating",StarRating},
                 {"hasbuyercontent",HasBuyerContent},
