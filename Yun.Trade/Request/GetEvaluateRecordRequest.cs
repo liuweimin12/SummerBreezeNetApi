@@ -4,6 +4,10 @@ using Yun.Trade.Response;
 
 namespace Yun.Trade.Request
 {
+    /// <summary>
+    /// 获取评价
+    /// chenggou.tradeevaluates.get
+    /// </summary>
     public class GetEvaluateRecordRequest : ITopRequest<EvaluateRecordResponse>
     {
         public bool? HasContent { get; set; }
@@ -39,10 +43,14 @@ namespace Yun.Trade.Request
         /// <summary>
         /// 商品ID
         /// </summary>
-        public int ItemId { get; set; }
+        public int? ItemId { get; set; }
 
         public int? ShopId { get; set; }
 
+        /// <summary>
+        /// 星级，0，1，2，3，4，5
+        /// </summary>
+        public int? StarRating { get; set; }
 
         public string GetApiName()
         {
