@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Yun.Interface;
 using Yun.Response;
+using Yun.Util;
 
 namespace Yun.User.Request
 {
@@ -39,9 +37,9 @@ namespace Yun.User.Request
         public string Ip { get; set; }
 
         /// <summary>
-        /// 允许负值
+        /// 交易号
         /// </summary>
-        public bool AllowNegative { get; set; }
+        public string TradeNo { get; set; }
 
         public string GetApiName()
         {
@@ -56,14 +54,16 @@ namespace Yun.User.Request
                 {"userid",UserId},
                 {"money",Money},
                 {"remark",Remark},
-                {"allownegative",AllowNegative}
+                {"tradeno",TradeNo}
             };
             return parameters;
         }
 
         public void Validate()
         {
-            
+            RequestValidator.ValidateRequired("tradeno", TradeNo);
+            RequestValidator.ValidateRequired("remark", Remark);
+            RequestValidator.ValidateRequired("money", Money);
         }
     }
 }
