@@ -56,6 +56,7 @@
     <Compile Include="PromotionsInOrder.cs" />
     <Compile Include="RefundDetail.cs" />
     <Compile Include="RefundHistory.cs" />
+    <Compile Include="Request\AddSellerTradeRateRequest.cs" />
     <Compile Include="Request\AddRefundRemarkRequest.cs" />
     <Compile Include="Request\BatchConfirmTradeRequest.cs" />
     <Compile Include="Request\BatchSaveMemoTradeRequest.cs" />
@@ -103,7 +104,7 @@
     <Compile Include="Request\AddExpressTradeRequest.cs" />
     <Compile Include="Request\AddMultiexpressTradeRequest.cs" />
     <Compile Include="Request\AddToCartRequest.cs" />
-    <Compile Include="Request\AddTradeRateRequest.cs" />
+    <Compile Include="Request\AddBuyerTradeRateRequest.cs" />
     <Compile Include="Request\CloseTradeRequest.cs" />
     <Compile Include="Request\DelayReceiveTimeRequest.cs" />
     <Compile Include="Request\GenerateCombinedPayTradeRequest.cs" />

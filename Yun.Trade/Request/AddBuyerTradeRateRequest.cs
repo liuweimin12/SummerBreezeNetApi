@@ -5,7 +5,11 @@ using Yun.Util;
 
 namespace Yun.Trade.Request
 {
-    public class AddTradeRateRequest : ITopRequest<BoolResultResponse>
+    /// <summary>
+    /// 新增买家对卖家的评价
+    /// yun.buyer.traderate.add
+    /// </summary>
+    public class AddBuyerTradeRateRequest : ITopRequest<BoolResultResponse>
     {
         /// <summary>
         /// 订单号
@@ -34,7 +38,7 @@ namespace Yun.Trade.Request
 
         public string GetApiName()
         {
-            return "chenggou.traderate.add";
+            return "yun.buyer.traderate.add";
         }
 
         public IDictionary<string, string> GetParameters()

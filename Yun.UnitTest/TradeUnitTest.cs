@@ -162,7 +162,7 @@ namespace Yun.UnitTest
              AppSecret = YunClient.AppSecret
          }).Token;
             var req =
-                YunClient.Instance.Execute(new AddTradeRateRequest
+                YunClient.Instance.Execute(new AddBuyerTradeRateRequest
                 {
                    OrderId = 145159,
                    Content = "五颗星好评",
