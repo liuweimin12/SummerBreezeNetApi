@@ -7,6 +7,12 @@ namespace Yun.Marketing
     public class PromotionInItem
     {
         /// <summary>
+        /// 原始价格
+        /// </summary>
+        [XmlElement("original_price")]
+        public string OriginalPrice { get; set; }
+
+        /// <summary>
         /// 积分数量
         /// </summary>
         [XmlElement("item_integral_quantity")]
