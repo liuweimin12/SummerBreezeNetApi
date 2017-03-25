@@ -45,6 +45,7 @@
     <Compile Include="AddRewardGiftJson.cs" />
     <Compile Include="CashCoupon.cs" />
     <Compile Include="CashCouponCateogry.cs" />
+    <Compile Include="CashCouponCateogryWithReceiveStatus.cs" />
     <Compile Include="CombinationBuyDetail.cs" />
     <Compile Include="CombinationBuyList.cs" />
     <Compile Include="CombinationItem.cs" />
@@ -117,6 +118,7 @@
     <Compile Include="Request\GetIntegralGameWinningRequest.cs" />
     <Compile Include="Request\GetIntegralRuleListRequest.cs" />
     <Compile Include="Request\GetIntegralRuleRequest.cs" />
+    <Compile Include="Request\GetItemCashCouponRequest.cs" />
     <Compile Include="Request\GetItemPromotionsRequest.cs" />
     <Compile Include="Request\GetLimitDiscountListRequest.cs" />
     <Compile Include="Request\GetGroupBuyRequest.cs" />
@@ -174,6 +176,7 @@
     <Compile Include="Response\GetIntegralRuleListResponse.cs" />
     <Compile Include="Response\GetIntegralRuleResponse.cs" />
     <Compile Include="Response\GetIntegralTypeResponse.cs" />
+    <Compile Include="Response\GetItemCashCouponResponse.cs" />
     <Compile Include="Response\GetItemPromotionsResponse.cs" />
     <Compile Include="Response\GetLimitDiscountListResponse.cs" />
     <Compile Include="Response\GetLimitDiscountResponse.cs" />
