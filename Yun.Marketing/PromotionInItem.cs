@@ -18,13 +18,19 @@ namespace Yun.Marketing
         [XmlElement("item_integral_limit")]
         public double ItemIntegrallimit { get; set; }
 
-
+        /// <summary>
+        /// 活动ID
+        /// </summary>
         [XmlElement("activity_id")]
         public int ActivityId { get; set; }
-
+        /// <summary>
+        /// 活动名字
+        /// </summary>
         [XmlElement("name")]
         public string Name { get; set; }
-
+        /// <summary>
+        /// 活动描述
+        /// </summary>
         [XmlElement("description")]
         public string Description { get; set; }
 
@@ -39,12 +45,16 @@ namespace Yun.Marketing
         /// </summary>
         [XmlElement("user_type")]
         public string UserType { get; set; }
-
-
+        
+        /// <summary>
+        /// 活动的优惠价格
+        /// </summary>
         [XmlElement("item_promo_price")]
         public double ItemPromoPrice { get; set; }
 
-
+        /// <summary>
+        /// 商品SKU中优惠的价格
+        /// </summary>
         [XmlArray("sku_prices")]
         [XmlArrayItem("sku_price")]
         public List<YunKeyValuePair<int, double>> SkuPrice { get; set; }
@@ -54,6 +64,34 @@ namespace Yun.Marketing
         /// </summary>
         [XmlElement("shop_id")]
         public int ShopId { get; set; }
+
+        /// <summary>
+        /// 商品标题
+        /// </summary>
+        [XmlElement("item_title")]
+        public string ItemTitle { get; set; }
+
+
+        /// <summary>
+        /// 商品描述
+        /// </summary>
+        [XmlElement("item_description")]
+        public string ItemDescription { get; set; }
+
+
+        /// <summary>
+        /// 商品详情
+        /// </summary>
+        [XmlElement("item_detail")]
+        public string ItemDetail { get; set; }
+
+
+        /// <summary>
+        /// 商品预览图
+        /// </summary>
+        [XmlElement("item_images")]
+        public string ItemImages { get; set; }
+
 
         /// <summary>
         /// 限量
