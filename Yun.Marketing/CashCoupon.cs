@@ -5,6 +5,12 @@ namespace Yun.Marketing
     public class CashCoupon
     {
         /// <summary>
+        /// 店铺名称
+        /// </summary>
+        [XmlElement("shop_name")]
+        public string ShopName { get; set; }
+
+        /// <summary>
         /// 代金券类型
         /// </summary>
         [XmlElement("coupon_type")]
