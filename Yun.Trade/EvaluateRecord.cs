@@ -9,6 +9,17 @@ namespace Yun.Trade
         [XmlElement("user_avatar")]
         public string Avatar { get; set; }
 
+        /// <summary>
+        /// 卖家评论内容
+        /// </summary>
+        [XmlElement("seller_evaluate")]
+        public string SellerEvaluate { get; set; }
+
+        /// <summary>
+        /// 评价时间
+        /// </summary>
+        [XmlElement("seller_evaluate_time")]
+        public string SellerEvaluateTime { get; set; }
 
         /// <summary>
         /// 商品名字
@@ -53,9 +64,15 @@ namespace Yun.Trade
         /// <summary>
         /// 所选择的SKU
         /// </summary>
-        [XmlArray("Sku")]
-        [XmlArrayItem("Sku")]
-        public List<StringKeyValuePair> Sku { get; set; }
+        [XmlArray("sku_names")]
+        [XmlArrayItem("sku_name")]
+        public List<StringKeyValuePair> SkuNames { get; set; }
+
+        /// <summary>
+        /// 评价图片
+        /// </summary>
+        [XmlElement("evaluate_imgs")]
+        public string EvaluateImgs { get; set; }
 
         /// <summary>
         /// 购买数量

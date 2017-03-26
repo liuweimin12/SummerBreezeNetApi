@@ -68,6 +68,12 @@ namespace Yun.Trade.Request
         /// </summary>
         public bool? SellerHasComment { get; set; }
 
+
+        /// <summary>
+        /// 是否有买家图片
+        /// </summary>
+        public bool? HasImages { get; set; }
+
         public string GetApiName()
         {
             return "yun.trade.evaluates.get";
@@ -84,7 +90,8 @@ namespace Yun.Trade.Request
                 {"userid",UserId},
                 {"starrating",StarRating},
                 {"hasbuyercontent",HasBuyerContent},
-                {"sellerhascomment",SellerHasComment}
+                {"sellerhascomment",SellerHasComment},
+                {"hasimages",HasImages }
             };
             return parameters;
         }
