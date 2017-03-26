@@ -9,6 +9,13 @@ namespace Yun.Trade
         [XmlElement("user_avatar")]
         public string Avatar { get; set; }
 
+
+        /// <summary>
+        /// 动态评分
+        /// </summary>
+        [XmlElement("dynamic_ratings")]
+        public DynamicRatings DynamicRatings { get; set; }
+
         /// <summary>
         /// 卖家评论内容
         /// </summary>
@@ -79,12 +86,7 @@ namespace Yun.Trade
         /// </summary>
         [XmlElement("quantity")]
         public long Quantity { get; set; }
-
-        /// <summary>
-        /// 成长值
-        /// </summary>
-        [XmlElement("growing")]
-        public long Growing { get; set; }
+        
 
         /// <summary>
         /// 评价时间
