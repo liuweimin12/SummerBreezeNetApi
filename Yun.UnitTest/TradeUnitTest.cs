@@ -378,13 +378,11 @@ namespace Yun.UnitTest
             YunClient.Format = "json";
             var req =
                 YunClient.Instance.Execute(new GetEvaluateRecordRequest
-                {
-                    ShopId = 0,
-                    ItemId = 1,
+                { 
                     PageSize = 10,
                     PageNum = 1,
-                    HasContent = true,
-  
+                    ItemId = 1105
+
                 });
             Assert.IsTrue(req != null);
         }

@@ -14,7 +14,7 @@ namespace Yun.Shop.Request
         /// <summary>
         /// 店铺ID
         /// </summary>
-        public int Id { get; set; }
+        public string Ids { get; set; }
 
         public string GetApiName()
         {
@@ -25,14 +25,14 @@ namespace Yun.Shop.Request
         {
             var parameters = new YunDictionary
             {
-               {"id",Id}
+               {"ids",Ids}
             };
             return parameters;
         }
 
         public void Validate()
         {
-            RequestValidator.ValidateRequired("id", Id);
+            RequestValidator.ValidateRequired("id", Ids);
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Yun.Trade.Request
         /// <summary>
         /// 评价结果
         /// </summary>
-        public string RateResult { get; set; }
+        public string Result { get; set; }
 
         /// <summary>
         /// 内容
@@ -46,7 +46,7 @@ namespace Yun.Trade.Request
             var parameters = new YunDictionary
             {
                 {"orderid", OrderId},
-                {"rateresult", RateResult},
+                {"result", Result},
                 {"content", Content},
                 {"ratingjson", RatingJson},
                 {"imgs",Imgs }
@@ -57,7 +57,7 @@ namespace Yun.Trade.Request
         public void Validate()
         {
             RequestValidator.ValidateRequired("orderid", OrderId);
-            RequestValidator.ValidateRequired("rateresult", RateResult);
+            RequestValidator.ValidateRequired("result", Result);
         }
     }
 }

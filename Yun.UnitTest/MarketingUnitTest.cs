@@ -92,10 +92,9 @@ namespace Yun.UnitTest
         public void FindCashCouponRequest()
         {
             var req =
-                YunClient.Instance.Execute(new FindCashCouponRequest {PageNum = 1, PageSize = 20, CategoryId = 1})
-                    .CashCoupons;
+                YunClient.Instance.Execute(new FindCashCouponRequest {PageNum = 14, PageSize = 1, BindUserId = 52192 });
 
-            Assert.IsTrue(req!=null&&req.Any());
+            Assert.IsTrue(req!=null);
         }
 
         //[TestMethod]
@@ -131,8 +130,8 @@ namespace Yun.UnitTest
             var reqLogin =
           YunClient.Instance.Execute(new LoginRequest
                 {
-                  UserName = "18606683125",
-                  Password = "111111",
+                  UserName = "消费搜",
+                  Password = "888999",
               AppSecret = YunClient.AppSecret
         }).Token;
             var req =
@@ -181,7 +180,7 @@ namespace Yun.UnitTest
                 YunClient.Instance.Execute(new FindCashCouponCategoriesRequest
                 {
                     PageNum = 1,
-                    PageSize = 10,
+                    PageSize = 10 
 
                 }, YunClient.GetAdminToken());
 
@@ -194,15 +193,56 @@ namespace Yun.UnitTest
             var req =
                 YunClient.Instance.Execute(new UpdateCashCouponCategoryRequest
                 {
-                   Name = "11",
-                   CategoryId = 1,
+                   Name = "119",
+                   CategoryId = 119,
                    Credit = 10,
+                   ItemsId =""
 
                 }, YunClient.GetAdminToken());
 
             Assert.IsTrue(req != null);
         }
-        
 
+        [TestMethod]
+        public void FindPromotionalItemsRequest()
+        {
+            YunClient.Format = "json2";
+
+            var req = YunClient.Instance.Execute(new FindPromotionalItemsRequest()
+            {
+                 PageNum = 3,
+                 PageSize = 10
+                 
+            });
+            Assert.IsTrue(req != null);
+        }
+
+
+        
+        [TestMethod]
+        public void GetLimitDiscountRequest()
+        {
+            YunClient.Format = "json2";
+
+            var req = YunClient.Instance.Execute(new GetLimitDiscountRequest()
+            {
+                ActivityId = 16
+
+            });
+            Assert.IsTrue(req != null);
+        }
+
+        
+        [TestMethod]
+        public void GetItemCashCouponRequest()
+        {
+            YunClient.Format = "json2";
+
+            var req = YunClient.Instance.Execute(new GetItemCashCouponRequest()
+            {
+                ItemId = 1216
+            });
+            Assert.IsTrue(req != null);
+        }
     }
 }

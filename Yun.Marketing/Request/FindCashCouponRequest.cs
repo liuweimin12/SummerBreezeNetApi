@@ -77,7 +77,7 @@ namespace Yun.Marketing.Request
 
         /// <summary>
         /// 交易号
-        /// 0:未使用，-1已使用，空则为全部，其他正数则对应使用的交易
+        /// 0:未使用，-1已使用，-2已过期，空则为全部，其他正数则对应使用的交易
         /// </summary>
         public int? TradeId { get; set; }
 

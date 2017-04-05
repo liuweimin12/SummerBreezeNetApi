@@ -579,10 +579,21 @@ namespace Yun.UnitTest
                 }, reqLogin);
             Assert.IsTrue(req != null);
         }
-       
 
 
+         
+        [TestMethod]
+        public void DeleteUnboundShopRequest()
+        {
+            YunClient.Format = "json"; 
+            var req =
+                YunClient.Instance.Execute(new DeleteUnboundShopRequest
+                {
+                    Ids = "242,244",
 
+                }, "bD1KMEJFOWlqaXpEbS9zVERBaEN1eDhna3JBdTkvaWlEWEp3WFdDNURGS3REaUJqQT09");
+            Assert.IsTrue(req != null);
+        }
 
 
 

@@ -34,6 +34,12 @@ namespace Yun.Trade
         [XmlElement("product")]
         public string Product { get; set; }
 
+        /// <summary>
+        /// 商品图片
+        /// </summary>
+        [XmlElement("item_image")]
+        public string ItemImage { get; set; }
+
 
         [XmlElement("item_id")]
         public long ItemId { get; set; }
@@ -98,6 +104,7 @@ namespace Yun.Trade
         /// 评价内容
         /// </summary>
         [XmlElement("evaluate")]
-        public string Evaluate { get; set; }
+        public string Evaluate { get; set; } 
+
     }
 }
