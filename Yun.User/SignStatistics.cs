@@ -39,9 +39,9 @@ namespace Yun.User
         public int TotalCount { get; set; }
 
         /// <summary>
-        /// 最近一次时间
+        /// 最近一次签到时间
         /// </summary>
-        [XmlElement("last_time")]
-        public string LastTime { get; set; }
+        [XmlElement("last_sign_time")]
+        public string LastSignTime { get; set; }
     }
 }
