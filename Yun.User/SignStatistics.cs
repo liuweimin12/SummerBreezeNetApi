@@ -7,6 +7,13 @@ namespace Yun.User
         [XmlElement("id")]
         public int Id { get; set; }
 
+
+        /// <summary>
+        /// 最近一次获取的积分
+        /// </summary>
+        [XmlElement("last_gain_score")]
+        public int LastGainScore { get; set; }
+
         /// <summary>
         ///用户ID 
         /// </summary>
