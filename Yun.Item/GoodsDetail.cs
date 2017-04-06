@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Serialization;
+using Yun.Domain;
 
 namespace Yun.Item
 {
@@ -11,6 +12,11 @@ namespace Yun.Item
         [XmlElement("price_range")]
         public string PriceRange { get; set; }
 
+        /// <summary>
+        /// 商品动态评分
+        /// </summary>
+        [XmlElement("item_score")]
+        public DynamicRatings ItemScore { get; set; }
 
         /// <summary>
         /// 是否分销

@@ -123,7 +123,7 @@ namespace Yun.UnitTest
             {
                 Images = new List<FileItem>
                 {
-                    new FileItem(@"F:\1.jpg"),
+                    new FileItem(@"C:\testble.apk"),
 
                 }
             });

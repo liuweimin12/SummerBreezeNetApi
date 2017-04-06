@@ -30,5 +30,11 @@ namespace Yun.User
         /// </summary>
         [XmlElement("total_count")]
         public int TotalCount { get; set; }
+
+        /// <summary>
+        /// 最近一次时间
+        /// </summary>
+        [XmlElement("last_time")]
+        public string LastTime { get; set; }
     }
 }

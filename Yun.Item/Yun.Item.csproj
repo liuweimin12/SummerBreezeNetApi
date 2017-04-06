@@ -50,6 +50,7 @@
     <Compile Include="Request\CopyItemToShopRequest.cs" />
     <Compile Include="Request\DeleteFavoritesItemRequest.cs" />
     <Compile Include="Request\DeleteItemBookRequest.cs" />
+    <Compile Include="Request\FindItemCatsRequest.cs" />
     <Compile Include="Request\GetFavoritesItemRequest.cs" />
     <Compile Include="Request\GetGroupingShopItemRequest.cs" />
     <Compile Include="Request\GetItemBookListRequest.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Request\UpdateItemStockRequest.cs" />
     <Compile Include="Response\AddFavoritesItemResponse.cs" />
     <Compile Include="Response\DeleteFavoritesItemResponse.cs" />
+    <Compile Include="Response\FindItemCatsResponse.cs" />
     <Compile Include="Response\GetCategoryPrevsResponse.cs" />
     <Compile Include="Request\GetShopItemCategorysRequest.cs" />
     <Compile Include="Response\CategorysResponse.cs" />

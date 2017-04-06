@@ -151,7 +151,10 @@ namespace Yun.Item.Request
         public int? ElectronicCouponsTemplateId { get; set; }
 
 
-
+        /// <summary>
+        /// 限时折扣ID,多个用空个分割，如果需要搜索所有的参加限时折扣的商品，输入-1
+        /// </summary>
+        public string DiscountActivityId { get; set; }
 
         public string GetApiName()
         {
@@ -188,8 +191,8 @@ namespace Yun.Item.Request
                 {"needpromotion", NeedPromotion},
                 {"logisticstemplateid", LogisticsTemplateId},
                 {"electroniccouponstemplateid", ElectronicCouponsTemplateId},
-                {"isdistribution",IsDistribution }
-
+                {"isdistribution", IsDistribution},
+                {"discountactivityid", DiscountActivityId}
             };
             return parameters;
         }
