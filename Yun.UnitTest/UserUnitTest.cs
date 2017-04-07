@@ -121,11 +121,7 @@ namespace Yun.UnitTest
         {
             var req = YunClient.Instance.Execute(new FileUploadRequest
             {
-                Images = new List<FileItem>
-                {
-                    new FileItem(@"C:\testble.apk"),
-
-                }
+                RemoteFileUrl = "http://img.alicdn.com/bao/uploaded/i1/TB1OHpUPXXXXXX6XVXXXXXXXXXX_!!0-item_pic.jpg"
             });
 
             Assert.IsTrue(req.Files != null);
