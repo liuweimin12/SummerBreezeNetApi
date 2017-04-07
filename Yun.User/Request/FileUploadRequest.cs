@@ -12,7 +12,7 @@ namespace Yun.User.Request
         /// 远程文件路径
         /// 根据传入的远程图片路径自动下载文件
         /// </summary>
-        public string RemoteFileUrl { get; set; }
+        public string[] RemoteFileUrl { get; set; }
 
         public string GetApiName()
         {
